@@ -17,8 +17,8 @@ class OnboardController: UIViewController {
     
     func onboardingCompletionHandler() {
         
-        let loginStoryboard = UIStoryboard(name: "main", bundle: nil)
-        guard let targetVC = loginStoryboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
+        let authStoryboard = UIStoryboard(name: "Auth", bundle: nil)
+        guard let targetVC = authStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         
         self.dismiss(animated: true, completion: nil)
         self.present(targetVC, animated: true)
