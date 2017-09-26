@@ -50,12 +50,14 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - Onboard (2.3.1)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - Onboard
 
 SPEC CHECKSUMS:
   Firebase: 052c0de688fc87b414996eea13e223dd9fee3fa2
@@ -69,7 +71,8 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 5ad62e8200fa00ed011fe5e08d27fef72c5b1429
   leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  Onboard: b6871f25ac753175b2ab9a362fb2feb26a81a311
 
-PODFILE CHECKSUM: b617f102757107a5f2a5281a742600bf30175265
+PODFILE CHECKSUM: ed486f0f8455044896607507693f74b980572659
 
 COCOAPODS: 1.3.1

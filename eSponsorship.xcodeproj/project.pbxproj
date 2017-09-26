@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E326EE5C1F7A03BB00EEAB36 /* OnboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E326EE5B1F7A03BB00EEAB36 /* OnboardController.swift */; };
 		E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB771F79F6100088E174 /* AppDelegate.swift */; };
 		E3F4DB7A1F79F6100088E174 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB791F79F6100088E174 /* ViewController.swift */; };
 		E3F4DB7D1F79F6100088E174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB7B1F79F6100088E174 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		3B2820F88C8596FC71644B58 /* Pods-eSponsorship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E326EE5B1F7A03BB00EEAB36 /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OnboardController.swift; path = /Users/jeremytay/Documents/Programming/NEXT/eSponsorship/eSponsorship/OnboardController.swift; sourceTree = "<absolute>"; };
 		E3F4DB741F79F6100088E174 /* eSponsorship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSponsorship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F4DB771F79F6100088E174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F4DB791F79F6100088E174 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,9 +85,10 @@
 			children = (
 				E3F4DB771F79F6100088E174 /* AppDelegate.swift */,
 				E3F4DB791F79F6100088E174 /* ViewController.swift */,
+				E326EE5B1F7A03BB00EEAB36 /* OnboardController.swift */,
 				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
-				E3F4DB811F79F6100088E174 /* Assets.xcassets */,
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
+				E3F4DB811F79F6100088E174 /* Assets.xcassets */,
 				E3F4DB861F79F6100088E174 /* Info.plist */,
 				E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */,
 				E3F4DB7E1F79F6100088E174 /* eSponsorship.xcdatamodeld */,
@@ -206,6 +209,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -213,6 +217,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -231,6 +236,7 @@
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
 				E3F4DB7A1F79F6100088E174 /* ViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
+				E326EE5C1F7A03BB00EEAB36 /* OnboardController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
