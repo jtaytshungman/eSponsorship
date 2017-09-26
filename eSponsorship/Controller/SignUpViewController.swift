@@ -64,6 +64,11 @@ class SignUpViewController: UIViewController {
                 ref.child("users").child(validUser.uid).setValue(post)
                 
                 self.navigationController?.popViewController(animated: true)
+                
+                let mainStoryboard = UIStoryboard(name: "Auth", bundle: nil)
+                guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+                self.dismiss(animated: true, completion: nil)
+                self.present(targetVC, animated: true, completion: nil)
             }
         }
     }

@@ -12,7 +12,7 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-//    var dict : [String : AnyObject]!
+    var dict : [String : AnyObject]!
     
     @IBOutlet weak var usernameTextField: UITextField!
     
@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         
-        
+      correctSignInHandler()
         
         
     }
@@ -69,6 +69,7 @@ class LoginViewController: UIViewController {
             if let validUser = user {
                 print(validUser)
                 self.correctSignInHandler()
+                
             } //valid user
             
         } //auth
@@ -83,18 +84,14 @@ class LoginViewController: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
     func correctSignInHandler(){
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "UITabBarController") as? UITabBarController else { return }
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        
+    
         self.present(targetVC, animated: true, completion: nil)
     }
-
-
-
-    
-
 
 }
 
