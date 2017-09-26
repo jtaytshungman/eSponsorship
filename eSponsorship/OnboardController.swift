@@ -16,6 +16,7 @@ class OnboardController: UIViewController {
     }
     
     func onboardingCompletionHandler() {
+        
         let loginStoryboard = UIStoryboard(name: "main", bundle: nil)
         guard let targetVC = loginStoryboard.instantiateViewController(withIdentifier: "ViewController") as? ViewController else { return }
         
@@ -68,6 +69,9 @@ class OnboardController: UIViewController {
         onboardingVC.skipHandler = {() -> Void in
             self.onboardingCompletionHandler()
         }
+        
         present(onboardingVC, animated: true, completion: nil)
+        
     }
+    
 }
