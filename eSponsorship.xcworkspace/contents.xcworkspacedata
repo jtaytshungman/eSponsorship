@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/jeremytay/Documents/Programming/NEXT/eSponsorship/eSponsorship/OnboardController.swift">
+   </FileRef>
+   <FileRef
       location = "group:eSponsorship.xcodeproj">
    </FileRef>
    <FileRef
