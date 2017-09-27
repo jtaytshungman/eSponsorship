@@ -10,6 +10,11 @@ import UIKit
 
 class TournamentsViewController: UIViewController {
 
+    let tournamentName = "Monash Dota Competition"
+    let organizerName = "Monash University"
+    let participation = "12 Teams"
+    let location = "Cyberjaya Launchpad"
+    
     @IBOutlet weak var tournamentsTableView: UITableView!{
         didSet{
             tournamentsTableView.delegate = self
@@ -30,7 +35,16 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tournamentsTableView.dequeueReusableCell(withIdentifier: TournamentTableViewCell.cellIdentifier) as? TournamentTableViewCell else {
+            return UITableViewCell()
+        }
         
+        cell.tournamentName.text = tournamentName
+        cell.locationOfTournament.text = location
+        cell.organizerName.text = organizerName
+        cell.numberOfParticipants.text = participation
+        
+        return cell
     }
     
     
