@@ -9,66 +9,100 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="a3C-Ja-gvn">
+        <!--Add Tour View Controller-->
+        <scene sceneID="4cg-Gc-CE0">
             <objects>
-                <viewController id="v6U-zA-mUg" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="y5Z-8Z-ZGn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="u2T-7M-15U"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Lsx-H1-PMY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="edf-YM-PwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-397" y="219"/>
-        </scene>
-        <!--TURNAMENTS-->
-        <scene sceneID="o88-Uz-maJ">
-            <objects>
-                <viewController storyboardIdentifier="tournamentsViewController" id="mrM-Nm-za1" customClass="tournamentsViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tj7-3m-uxd">
+                <viewController storyboardIdentifier="addTourViewController" id="07W-bC-Wcy" customClass="addTourViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ap2-Ke-9bG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-Qi-xp4">
-                                <rect key="frame" x="12" y="20" width="120" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmK-e2-S0b">
+                                <rect key="frame" x="77" y="343" width="220" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Log Out"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6IU-hZ-4ju">
+                                <rect key="frame" x="77" y="399" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hsQ-ed-z1c">
+                                <rect key="frame" x="77" y="454" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfx-fY-xhC">
+                                <rect key="frame" x="77" y="506" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Prize pool" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kix-5d-Jao">
+                                <rect key="frame" x="77" y="556" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Tournaments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OsR-It-LLP">
+                                <rect key="frame" x="77" y="20" width="220" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vY-uI-HFx">
+                                <rect key="frame" x="77" y="608" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="logoutButton:" destination="mrM-Nm-za1" eventType="touchUpInside" id="cCV-nc-VlQ"/>
+                                    <action selector="SaveBtnTapped:" destination="07W-bC-Wcy" eventType="touchUpInside" id="IIY-4L-Xdh"/>
+                                    <action selector="saveTappButtonPressed:" destination="07W-bC-Wcy" eventType="touchUpInside" id="elA-1Z-xZU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diE-ky-r1b">
+                                <rect key="frame" x="77" y="120" width="220" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2o0-6t-u7b">
+                                <rect key="frame" x="77" y="120" width="220" height="112"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I2d-CV-Mp2">
+                                <rect key="frame" x="77" y="262" width="220" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload from Gallery"/>
+                                <connections>
+                                    <action selector="GalleryViewTapped:" destination="07W-bC-Wcy" eventType="touchUpInside" id="YIc-LF-99D"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="UDU-9T-M1P"/>
+                        <viewLayoutGuide key="safeArea" id="WUY-dp-MRe"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TURNAMENTS" id="IYk-i8-dKU"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4p9-Wj-atf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-397.60000000000002" y="-445.72713643178412"/>
-        </scene>
-        <!--UITabBarController-->
-        <scene sceneID="uEn-uv-LvJ">
-            <objects>
-                <tabBarController storyboardIdentifier="UITabBarController" title="UITabBarController" id="x1V-s0-5rr" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kLA-6R-vzV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
                     <connections>
-                        <segue destination="mrM-Nm-za1" kind="relationship" relationship="viewControllers" id="Etl-Ou-OJk"/>
-                        <segue destination="v6U-zA-mUg" kind="relationship" relationship="viewControllers" id="ded-to-CSM"/>
+                        <outlet property="dateTextField" destination="hsQ-ed-z1c" id="A7y-xq-oFx"/>
+                        <outlet property="gameTextField" destination="Bfx-fY-xhC" id="AqP-13-m3a"/>
+                        <outlet property="imagePicked" destination="2o0-6t-u7b" id="lI2-D5-VGC"/>
+                        <outlet property="locationTextField" destination="6IU-hZ-4ju" id="iGI-qU-wLt"/>
+                        <outlet property="nameTextField" destination="hmK-e2-S0b" id="S53-DV-9IM"/>
+                        <outlet property="prizeTextField" destination="kix-5d-Jao" id="5HP-yb-i0R"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1HX-05-eEo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hr0-uL-NB7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1350" y="-113"/>
+            <point key="canvasLocation" x="-191.19999999999999" y="99.400299850074973"/>
         </scene>
     </scenes>
 </document>

@@ -86,7 +86,7 @@ class LoginViewController: UIViewController {
     }
     func correctSignInHandler(){
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "UITabBarController") as? UITabBarController else { return }
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else { return }
 //        self.dismiss(animated: true, completion: nil)
         
     

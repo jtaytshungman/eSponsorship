@@ -17,9 +17,11 @@
 		FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */; };
 		FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA378121F7A4EEB00195EAC /* Auth.storyboard */; };
 		FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA378141F7A567D00195EAC /* OnboardController.swift */; };
-		FDA378191F7A688600195EAC /* tournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA378181F7A688600195EAC /* tournamentsViewController.swift */; };
 		FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAA9951F7A0BF7003FB159 /* Users.swift */; };
 		FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */; };
+		FDE10F411F7B4DD000F2BB79 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE10F401F7B4DD000F2BB79 /* TourViewController.swift */; };
+		FDE10F431F7B4FB400F2BB79 /* addTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */; };
+		FDE10F441F7B5BC900F2BB79 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB861F79F6100088E174 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +39,10 @@
 		E8D1F635BD38230403636730 /* Pods-eSponsorship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.release.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.release.xcconfig"; sourceTree = "<group>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
-		FDA378181F7A688600195EAC /* tournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tournamentsViewController.swift; sourceTree = "<group>"; };
 		FDBAA9951F7A0BF7003FB159 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FDE10F401F7B4DD000F2BB79 /* TourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
+		FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTourViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +79,6 @@
 			children = (
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
-				FDA378181F7A688600195EAC /* tournamentsViewController.swift */,
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -88,6 +90,8 @@
 				FDA378141F7A567D00195EAC /* OnboardController.swift */,
 				E3A752C61F7A581D00AD9244 /* LoginViewController.swift */,
 				FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */,
+				FDE10F401F7B4DD000F2BB79 /* TourViewController.swift */,
+				FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,6 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE10F441F7B5BC900F2BB79 /* Info.plist in Resources */,
 				FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */,
 				E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */,
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
@@ -264,12 +269,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDE10F431F7B4FB400F2BB79 /* addTourViewController.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
+				FDE10F411F7B4DD000F2BB79 /* TourViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
-				FDA378191F7A688600195EAC /* tournamentsViewController.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
