@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="HtM-NJ-eZO">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="ENx-Io-PIX" customClass="HomeViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0MN-pH-SDf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBQ-GN-PJJ">
+                                <rect key="frame" x="12" y="76" width="351" height="579"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-Hu-3rd">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="179.5"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Gamers"/>
+                                        <connections>
+                                            <action selector="gamersButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="brL-eb-qrQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MK-QL-wTN">
+                                        <rect key="frame" x="0.0" y="199.5" width="351" height="180"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Teams"/>
+                                        <connections>
+                                            <action selector="teamsButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="P4p-OV-hvn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aA-Cd-PQy">
+                                        <rect key="frame" x="0.0" y="399.5" width="351" height="179.5"/>
+                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Tournaments"/>
+                                        <connections>
+                                            <action selector="tournamentsButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="gCG-Wg-zwo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="leading" secondItem="Doo-5f-JEo" secondAttribute="leading" constant="12" id="7c6-pD-niJ"/>
+                            <constraint firstItem="Doo-5f-JEo" firstAttribute="bottom" secondItem="rBQ-GN-PJJ" secondAttribute="bottom" constant="12" id="PhL-Wy-FNf"/>
+                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="top" secondItem="Doo-5f-JEo" secondAttribute="top" constant="12" id="nKX-Kj-1hc"/>
+                            <constraint firstItem="Doo-5f-JEo" firstAttribute="trailing" secondItem="rBQ-GN-PJJ" secondAttribute="trailing" constant="12" id="uZ8-jj-Lhe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Doo-5f-JEo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Jgu-km-EzL"/>
+                    <connections>
+                        <outletCollection property="imageViews" destination="rBQ-GN-PJJ" collectionClass="NSMutableArray" id="iev-iv-Jzk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-s2-JkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="84.107946026986511"/>
+        </scene>
+        <!--Gamers View Controller-->
+        <scene sceneID="QvL-0s-vhs">
+            <objects>
+                <viewController storyboardIdentifier="GamersViewController" id="5YL-65-O8F" customClass="GamersViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fhM-B7-6LI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="585-I1-vCQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vmg-cZ-BNa" firstAttribute="bottom" secondItem="585-I1-vCQ" secondAttribute="bottom" id="eJl-Sg-7sf"/>
+                            <constraint firstItem="Vmg-cZ-BNa" firstAttribute="trailing" secondItem="585-I1-vCQ" secondAttribute="trailing" id="lY1-7g-Jda"/>
+                            <constraint firstItem="585-I1-vCQ" firstAttribute="leading" secondItem="Vmg-cZ-BNa" secondAttribute="leading" id="rZQ-Rg-6Tp"/>
+                            <constraint firstItem="585-I1-vCQ" firstAttribute="top" secondItem="Vmg-cZ-BNa" secondAttribute="top" id="z3g-zs-8Xd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vmg-cZ-BNa"/>
+                    </view>
+                    <connections>
+                        <outlet property="gamersTableView" destination="585-I1-vCQ" id="cjT-tp-0e1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gAN-bH-UCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="783"/>
+        </scene>
+        <!--Tournaments View Controller-->
+        <scene sceneID="vie-ir-qvJ">
+            <objects>
+                <viewController storyboardIdentifier="TournamentsViewController" id="Qp2-pG-NcJ" customClass="TournamentsViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tmt-BH-1TU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-SE-AmR">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0Fr-z9-9Tk" firstAttribute="trailing" secondItem="wpA-SE-AmR" secondAttribute="trailing" id="01D-Fa-Sy9"/>
+                            <constraint firstItem="wpA-SE-AmR" firstAttribute="leading" secondItem="0Fr-z9-9Tk" secondAttribute="leading" id="4sp-bS-P0i"/>
+                            <constraint firstItem="0Fr-z9-9Tk" firstAttribute="bottom" secondItem="wpA-SE-AmR" secondAttribute="bottom" id="Ida-0S-TJb"/>
+                            <constraint firstItem="wpA-SE-AmR" firstAttribute="top" secondItem="0Fr-z9-9Tk" secondAttribute="top" id="cBT-Wq-sSh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Fr-z9-9Tk"/>
+                    </view>
+                    <connections>
+                        <outlet property="tournamentsTableView" destination="wpA-SE-AmR" id="2Xa-m7-fWp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KE0-ut-Gi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="244" y="783"/>
+        </scene>
+        <!--Teams View Controller-->
+        <scene sceneID="aQK-PH-zQe">
+            <objects>
+                <viewController storyboardIdentifier="TeamsViewController" id="Ejo-4f-kTg" customClass="TeamsViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e1l-nI-yKX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uez-oX-dwD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6DT-Vp-13l" firstAttribute="trailing" secondItem="uez-oX-dwD" secondAttribute="trailing" id="b4K-Qw-bXi"/>
+                            <constraint firstItem="uez-oX-dwD" firstAttribute="top" secondItem="6DT-Vp-13l" secondAttribute="top" id="keY-Ml-cb4"/>
+                            <constraint firstItem="6DT-Vp-13l" firstAttribute="bottom" secondItem="uez-oX-dwD" secondAttribute="bottom" id="wWf-4L-bpr"/>
+                            <constraint firstItem="uez-oX-dwD" firstAttribute="leading" secondItem="6DT-Vp-13l" secondAttribute="leading" id="x4p-WT-M6O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6DT-Vp-13l"/>
+                    </view>
+                    <connections>
+                        <outlet property="teamsTableView" destination="uez-oX-dwD" id="jez-w8-BMb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4g-HK-51t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996" y="783"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wlC-gR-o52">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pGk-OZ-nzr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GJH-pZ-BPs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ENx-Io-PIX" kind="relationship" relationship="rootViewController" id="guu-ng-5uG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94X-Oj-T4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="84"/>
+        </scene>
+    </scenes>
+</document>
