@@ -29,60 +29,36 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
-        
     }
-//    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-//        if ((error) != nil) {
-//            // Process error
-//        }
-//        else if result.isCancelled {
-//            // Handle cancellations
-//        }
-//        else {
-//            // Navigate to other view
-//        }
-//    }
+    
     func loginUser() {
-        guard let email = usernameTextField.text else {return}
-        
-        guard let password = passwordTextField.text else {return}
+        guard let email = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             
             if self.usernameTextField.text == "" {
-                self.createErrorAlert("Empty email field", "Please input valid Email")
+                ErrorHandler.errorPrompt(title: "Empty Email Field", message: "Please input valid Email", in: self)
                 return
             } else if self.passwordTextField.text == "" {
-                self.createErrorAlert("Empty password field", "Please input valid password")
+                //self.createErrorAlert("Empty password field", "Please input valid password")
+                ErrorHandler.errorPrompt(title: "Empty Password Field", message: "Please input valid password", in: self)
                 return
             }
             
             if let validError = error {
                 print(validError.localizedDescription)
-                self.createErrorAlert("Error", validError.localizedDescription)
+                //self.createErrorAlert("Error", validError.localizedDescription)
+                ErrorHandler.errorPrompt(title: "Error", message: "\(validError.localizedDescription)", in: self)
             }
             
             if let validUser = user {
                 print(validUser)
                 self.correctSignInHandler()
+                
             } //valid user
-            
         } //auth
-        
     } //login user
-    
-    func createErrorAlert(_ title: String, _ message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(action)
-        
-        self.present(alert, animated: true, completion: nil)
-    }
     
     func correctSignInHandler(){
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -90,11 +66,5 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         self.present(targetVC, animated: true, completion: nil)
     }
-
-
-
-    
-
-
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E3522A4D1F7B4B2A007FA16F /* Universal Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A4C1F7B4B2A007FA16F /* Universal Functions.swift */; };
 		E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A752C61F7A581D00AD9244 /* LoginViewController.swift */; };
 		E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB771F79F6100088E174 /* AppDelegate.swift */; };
 		E3F4DB7D1F79F6100088E174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB7B1F79F6100088E174 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		3B2820F88C8596FC71644B58 /* Pods-eSponsorship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3522A4C1F7B4B2A007FA16F /* Universal Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Universal Functions.swift"; path = "eSponsorship/Universal Functions.swift"; sourceTree = SOURCE_ROOT; };
 		E3A752C61F7A581D00AD9244 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E3F4DB741F79F6100088E174 /* eSponsorship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSponsorship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F4DB771F79F6100088E174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				E3A752C81F7A582B00AD9244 /* Storyboard */,
 				E3A752C91F7A583900AD9244 /* Controller */,
 				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
+				E3522A4C1F7B4B2A007FA16F /* Universal Functions.swift */,
 				E3F4DB811F79F6100088E174 /* Assets.xcassets */,
 				E3F4DB861F79F6100088E174 /* Info.plist */,
 				E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */,
@@ -265,6 +268,7 @@
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
+				E3522A4D1F7B4B2A007FA16F /* Universal Functions.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
 			);
