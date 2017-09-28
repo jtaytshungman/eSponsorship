@@ -12,6 +12,7 @@
 		E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */; };
 		E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */; };
 		E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A752C61F7A581D00AD9244 /* LoginViewController.swift */; };
+		E3AE94041F7D129C0099C3CC /* addHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE94031F7D129C0099C3CC /* addHomeViewController.swift */; };
 		E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */; };
 		E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */; };
 		E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */; };
@@ -26,7 +27,6 @@
 		FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */; };
 		FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38331F7BC2D000F53525 /* myExtension.swift */; };
 		FD42E1231F7CFD0E00451FF6 /* addTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42E1221F7CFD0E00451FF6 /* addTeamsController.swift */; };
-		FD42E1271F7D005E00451FF6 /* addHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD42E1261F7D005E00451FF6 /* addHomeViewController.swift */; };
 		FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */; };
 		FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA378121F7A4EEB00195EAC /* Auth.storyboard */; };
 		FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA378141F7A567D00195EAC /* OnboardController.swift */; };
@@ -44,6 +44,7 @@
 		E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TournamentTableViewCell.xib; sourceTree = "<group>"; };
 		E3A752C61F7A581D00AD9244 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E3AE94031F7D129C0099C3CC /* addHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addHomeViewController.swift; sourceTree = "<group>"; };
 		E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
 		E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersViewController.swift; sourceTree = "<group>"; };
 		E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		FD2D38331F7BC2D000F53525 /* myExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myExtension.swift; sourceTree = "<group>"; };
 		FD42E1221F7CFD0E00451FF6 /* addTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTeamsController.swift; sourceTree = "<group>"; };
-		FD42E1261F7D005E00451FF6 /* addHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = addHomeViewController.swift; path = /Users/salemabdulla/eSponsorship/eSponsorship/Controller/addHomeViewController.swift; sourceTree = "<absolute>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
 		FDBAA9951F7A0BF7003FB159 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		E3A752C91F7A583900AD9244 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FD42E1261F7D005E00451FF6 /* addHomeViewController.swift */,
+				E3AE94031F7D129C0099C3CC /* addHomeViewController.swift */,
 				FDA378141F7A567D00195EAC /* OnboardController.swift */,
 				FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */,
 				E3D00D681F7CA5F300932FE5 /* Login controllers */,
@@ -351,9 +351,9 @@
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FDE10F431F7B4FB400F2BB79 /* addTourViewController.swift in Sources */,
 				FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */,
+				E3AE94041F7D129C0099C3CC /* addHomeViewController.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
 				E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */,
-				FD42E1271F7D005E00451FF6 /* addHomeViewController.swift in Sources */,
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				FD42E1231F7CFD0E00451FF6 /* addTeamsController.swift in Sources */,
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,
