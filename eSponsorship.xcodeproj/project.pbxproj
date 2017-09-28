@@ -14,6 +14,11 @@
 		E3F4DB821F79F6100088E174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB811F79F6100088E174 /* Assets.xcassets */; };
 		E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */; };
 		E52CFE236ECF96708D93D555 /* Pods_eSponsorship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */; };
+		FD2D382E1F7BBF2D00F53525 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D382D1F7BBF2D00F53525 /* HomeViewController.swift */; };
+		FD2D38301F7BC10900F53525 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D382F1F7BC10900F53525 /* Post.swift */; };
+		FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */; };
+		FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38331F7BC2D000F53525 /* myExtension.swift */; };
+		FD2D38371F7BC7DD00F53525 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD2D382C1F7BBED300F53525 /* Home.storyboard */; };
 		FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */; };
 		FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA378121F7A4EEB00195EAC /* Auth.storyboard */; };
 		FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA378141F7A567D00195EAC /* OnboardController.swift */; };
@@ -37,6 +42,11 @@
 		E3F4DB861F79F6100088E174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8D1F635BD38230403636730 /* Pods-eSponsorship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.release.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.release.xcconfig"; sourceTree = "<group>"; };
+		FD2D382C1F7BBED300F53525 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Home.storyboard; path = /Users/salemabdulla/eSponsorship/eSponsorship/Storyboard/Home.storyboard; sourceTree = "<absolute>"; };
+		FD2D382D1F7BBF2D00F53525 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = eSponsorship/Controller/HomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		FD2D382F1F7BC10900F53525 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		FD2D38331F7BC2D000F53525 /* myExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myExtension.swift; sourceTree = "<group>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
 		FDBAA9951F7A0BF7003FB159 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -77,6 +87,7 @@
 		E3A752C81F7A582B00AD9244 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				FD2D382C1F7BBED300F53525 /* Home.storyboard */,
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
@@ -88,8 +99,12 @@
 			isa = PBXGroup;
 			children = (
 				FDA378141F7A567D00195EAC /* OnboardController.swift */,
+				FD2D38331F7BC2D000F53525 /* myExtension.swift */,
+				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
+				FD2D382F1F7BC10900F53525 /* Post.swift */,
 				E3A752C61F7A581D00AD9244 /* LoginViewController.swift */,
 				FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */,
+				FD2D382D1F7BBF2D00F53525 /* HomeViewController.swift */,
 				FDE10F401F7B4DD000F2BB79 /* TourViewController.swift */,
 				FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */,
 			);
@@ -191,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2D38371F7BC7DD00F53525 /* Home.storyboard in Resources */,
 				FDE10F441F7B5BC900F2BB79 /* Info.plist in Resources */,
 				FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */,
 				E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */,
@@ -269,14 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FDE10F431F7B4FB400F2BB79 /* addTourViewController.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
+				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
+				FD2D382E1F7BBF2D00F53525 /* HomeViewController.swift in Sources */,
 				FDE10F411F7B4DD000F2BB79 /* TourViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
+				FD2D38301F7BC10900F53525 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,7 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 87T555YMMN;
+				DEVELOPMENT_TEAM = KZC5853CN7;
 				INFOPLIST_FILE = eSponsorship/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.StoryBoard-intro.eSponsorship";
@@ -431,7 +451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 87T555YMMN;
+				DEVELOPMENT_TEAM = KZC5853CN7;
 				INFOPLIST_FILE = eSponsorship/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.StoryBoard-intro.eSponsorship";

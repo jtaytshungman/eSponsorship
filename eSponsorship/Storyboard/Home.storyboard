@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="oG7-6I-WDh">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="1mq-8z-HwA" customClass="HomeViewController" customModule="eSponsorship" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZT6-js-hQx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IqN-dt-sDF">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="PostTableViewCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="230" id="bJ7-lh-1TO" customClass="PostTableViewCell" customModule="eSponsorship">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="230"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bJ7-lh-1TO" id="hr1-PJ-X4T">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="229.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HuV-IR-d2J">
+                                                    <rect key="frame" x="8" y="8" width="359" height="214"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="postImagevIEW" destination="HuV-IR-d2J" id="6ks-GS-93L"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IqN-dt-sDF" firstAttribute="top" secondItem="EfY-tw-o7u" secondAttribute="top" id="Q5m-4Z-dw2"/>
+                            <constraint firstItem="IqN-dt-sDF" firstAttribute="leading" secondItem="EfY-tw-o7u" secondAttribute="leading" id="Z7L-9u-Xoa"/>
+                            <constraint firstItem="EfY-tw-o7u" firstAttribute="trailing" secondItem="IqN-dt-sDF" secondAttribute="trailing" id="njd-ZQ-Rff"/>
+                            <constraint firstItem="EfY-tw-o7u" firstAttribute="bottom" secondItem="IqN-dt-sDF" secondAttribute="bottom" id="oot-97-G7E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EfY-tw-o7u"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="IqN-dt-sDF" id="k1j-hJ-MPK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tj2-nI-V85" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3308" y="-1780.6596701649178"/>
+        </scene>
+    </scenes>
+</document>
