@@ -57,9 +57,6 @@
                         <viewLayoutGuide key="safeArea" id="Doo-5f-JEo"/>
                     </view>
                     <navigationItem key="navigationItem" id="Jgu-km-EzL"/>
-                    <connections>
-                        <outletCollection property="imageViews" destination="rBQ-GN-PJJ" collectionClass="NSMutableArray" id="iev-iv-Jzk"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-s2-JkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
