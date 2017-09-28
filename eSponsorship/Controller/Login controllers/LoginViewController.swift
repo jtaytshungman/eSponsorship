@@ -24,7 +24,15 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //check if the user already signed in
+        if Auth.auth().currentUser != nil {
+//            let mainStoryboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+//            guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else { return }
+//            
+//            self.present(targetVC, animated: true, completion: nil)
+//            
       correctSignInHandler()
+    }
     }
 
     func loginUser() {
@@ -66,12 +74,13 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     func correctSignInHandler(){
+        
         let mainStoryboard = UIStoryboard(name: "Home", bundle: nil)
         guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else { return }
         
 //        self.dismiss(animated: true, completion: nil)
         
     
-        self.present(targetVC, animated: true, completion: nil)
+        present(targetVC, animated: true, completion: nil)
     }
 }

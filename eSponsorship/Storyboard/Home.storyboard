@@ -59,7 +59,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Doo-5f-JEo"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Jgu-km-EzL"/>
+                    <navigationItem key="navigationItem" id="Jgu-km-EzL">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="cu0-e7-pDQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yYC-yX-EYo">
+                                <rect key="frame" x="299" y="7" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sign Out"/>
+                            </button>
+                            <connections>
+                                <action selector="signOut:" destination="ENx-Io-PIX" id="Sip-Na-OPn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-s2-JkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

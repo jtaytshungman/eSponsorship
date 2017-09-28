@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import CoreData
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,9 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         // Override point for customization after application launch.
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        window?.rootViewController = UINavigationController(rootViewController: OnboardController())
+        checkIfLoggedIn()
+
         
         return true
     }
@@ -49,6 +49,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func checkIfLoggedIn() {
+        if Auth.auth().currentUser != nil {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.makeKeyAndVisible()
+            let storyboard = UIStoryboard(name: "Home", bundle: nil)
+            guard let vc = storyboard.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else {return}
+            window?.rootViewController = vc
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+            window?.makeKeyAndVisible()
+            window?.rootViewController = UINavigationController(rootViewController: OnboardController())
+        }
     }
 
     // MARK: - Core Data stack

@@ -7,9 +7,33 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
+    @IBAction func signOut(_ sender: Any) {
+        
+        
+        print("sign out button tapped")
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+//            sharedInstance.signedIn = false
+            dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: \(signOutError)")
+        } catch {
+            print("Unknown error.")
+        }
+    }
+        
+        
+        
+
+    
+    
+
     @IBAction func gamersButtonTapped(_ sender: Any) {
         
     }

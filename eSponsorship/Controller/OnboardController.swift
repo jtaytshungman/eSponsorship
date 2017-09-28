@@ -21,7 +21,7 @@ class OnboardController: UIViewController {
         guard let targetVC = authStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         
         self.dismiss(animated: true, completion: nil)
-        self.present(targetVC, animated: true)
+        present(targetVC, animated: true)
     }
     
     func generateStandardOnboardingVC() {
