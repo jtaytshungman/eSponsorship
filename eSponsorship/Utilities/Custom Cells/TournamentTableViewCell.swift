@@ -31,4 +31,12 @@ class TournamentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        contentView.layer.borderWidth = 5
+        contentView.layer.borderColor = UIColor.blue.cgColor
+        contentView.layer.cornerRadius = 5
+    }
+    
 }

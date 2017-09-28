@@ -15,17 +15,24 @@ class Post {
     
     var imageurl : String = ""
     
+    var tournamentName : String = ""
+    
+    var location : String = ""
+    
     
     //        : UIImage = UIImage(named: "unknown") ?? UIImage()
     
     
     init() {}
     
-    init(anID: String, imageName : String) {
+    init(anID: String,theTournamentName: String, theLocation: String, imageName : String) {
         
         
         userid = anID
         imageurl = imageName
+        tournamentName = theTournamentName
+        location = theLocation
+        
         
         //        if let userImage = UIImage(named: imageName){
         //            self.imageurl = userImage
