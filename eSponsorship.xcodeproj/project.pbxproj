@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* Home.storyboard */; };
+		E3522A4F1F7B51D3007FA16F /* JeremyHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */; };
 		E3522A511F7B531D007FA16F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A501F7B531D007FA16F /* HomeViewController.swift */; };
 		E3522A751F7B79CA007FA16F /* GamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A741F7B79CA007FA16F /* GamersViewController.swift */; };
 		E3522A771F7B79F6007FA16F /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A761F7B79F6007FA16F /* TournamentsViewController.swift */; };
@@ -32,7 +32,7 @@
 /* Begin PBXFileReference section */
 		3B2820F88C8596FC71644B58 /* Pods-eSponsorship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3522A4E1F7B51D3007FA16F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JeremyHome.storyboard; sourceTree = "<group>"; };
 		E3522A501F7B531D007FA16F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E3522A741F7B79CA007FA16F /* GamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GamersViewController.swift; path = eSponsorship/Controller/GamersViewController.swift; sourceTree = SOURCE_ROOT; };
 		E3522A761F7B79F6007FA16F /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TournamentsViewController.swift; path = eSponsorship/Controller/TournamentsViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -108,7 +108,7 @@
 			children = (
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
-				E3522A4E1F7B51D3007FA16F /* Home.storyboard */,
+				E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
 			);
 			path = Storyboard;
@@ -228,7 +228,7 @@
 				E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */,
 				E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */,
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
-				E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */,
+				E3522A4F1F7B51D3007FA16F /* JeremyHome.storyboard in Resources */,
 				E3F4DB821F79F6100088E174 /* Assets.xcassets in Resources */,
 				E3F4DB7D1F79F6100088E174 /* Main.storyboard in Resources */,
 			);
