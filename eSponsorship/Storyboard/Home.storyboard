@@ -61,15 +61,18 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Jgu-km-EzL">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="0QL-it-kLb">
+                        <barButtonItem key="leftBarButtonItem" springLoaded="YES" style="plain" id="0QL-it-kLb">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVV-It-orJ">
-                                <rect key="frame" x="16" y="7" width="91" height="30"/>
+                                <rect key="frame" x="16" y="7" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Registeration"/>
+                                <state key="normal" title="Menu"/>
                                 <connections>
                                     <action selector="addHome:" destination="ENx-Io-PIX" eventType="touchUpInside" id="Dr8-0p-hOz"/>
                                 </connections>
                             </button>
+                            <connections>
+                                <segue destination="xMP-6M-pJq" kind="presentation" id="dyb-da-Ftu"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="cu0-e7-pDQ">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yYC-yX-EYo">
@@ -86,7 +89,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-s2-JkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="84.107946026986511"/>
+            <point key="canvasLocation" x="263" y="82"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="560-j6-Xyq">
+            <objects>
+                <tableViewController id="m4b-AN-cTX" customClass="MenuItemsTableViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="917-Q4-yJY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCells" id="g6A-rp-9GK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g6A-rp-9GK" id="p2o-8g-vNe">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m4b-AN-cTX" id="w6d-pt-hgU"/>
+                            <outlet property="delegate" destination="m4b-AN-cTX" id="OMP-Pk-Sr5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="75O-BQ-a4o"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bb6-wv-tY9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1836" y="81"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="jWq-BL-tgK">
+            <objects>
+                <navigationController id="xMP-6M-pJq" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aYH-j0-LbT">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="m4b-AN-cTX" kind="relationship" relationship="rootViewController" id="I4L-d8-I2i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y91-YU-S6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="81"/>
         </scene>
         <!--Gamers View Controller-->
         <scene sceneID="QvL-0s-vhs">
@@ -116,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAN-bH-UCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-548" y="1219"/>
+            <point key="canvasLocation" x="-529" y="886"/>
         </scene>
         <!--Tournaments View Controller-->
         <scene sceneID="vie-ir-qvJ">
@@ -146,7 +200,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE0-ut-Gi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="244" y="1218"/>
+            <point key="canvasLocation" x="263" y="885"/>
         </scene>
         <!--Teams View Controller-->
         <scene sceneID="aQK-PH-zQe">
@@ -176,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4g-HK-51t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="1218"/>
+            <point key="canvasLocation" x="1015" y="885"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wlC-gR-o52">
@@ -194,7 +248,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94X-Oj-T4q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="84"/>
+            <point key="canvasLocation" x="262" y="-665"/>
         </scene>
     </scenes>
 </document>

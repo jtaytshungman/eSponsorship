@@ -19,6 +19,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Sign Up"
     }
     
     @IBOutlet weak var signUpButton: UIButton! {
