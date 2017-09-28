@@ -1,6 +1,0 @@
-framework module Pods_eSponsorship {
-  umbrella header "Pods-eSponsorship-umbrella.h"
-
-  export *
-  module * { export * }
-}

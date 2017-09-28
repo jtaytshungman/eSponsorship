@@ -12,24 +12,28 @@ import FirebaseAuth
 
 class HomeViewController: UIViewController {
     
+    @IBAction func addHome(_ sender: Any) {
+        
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "NavigationControllerR") as? UINavigationController else { return }
+        
+        present(targetVC, animated: true, completion: nil)
+        
+    }
+    
     @IBAction func signOut(_ sender: Any) {
         
         
-        print("sign out button tapped")
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-//            sharedInstance.signedIn = false
-            dismiss(animated: true, completion: nil)
-        } catch let signOutError as NSError {
-            print ("Error signing out: \(signOutError)")
-        } catch {
-            print("Unknown error.")
-        }
+        let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        //        self.dismiss(animated: true, completion: nil)
+        
+        
+        self.present(targetVC, animated: true, completion: nil)
+        
+        
     }
-        
-        
-        
 
     
     
