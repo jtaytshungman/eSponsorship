@@ -24,31 +24,28 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
       correctSignInHandler()
-        
-        
     }
 
     func loginUser() {
-        guard let email = usernameTextField.text else {return}
-        
-        guard let password = passwordTextField.text else {return}
+        guard let email = usernameTextField.text else { return }
+        guard let password = passwordTextField.text else { return }
         
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             
             if self.usernameTextField.text == "" {
-                self.createErrorAlert("Empty email field", "Please input valid Email")
+                ErrorHandler.errorPrompt(title: "Empty Email Field", message: "Please input valid Email", in: self)
                 return
             } else if self.passwordTextField.text == "" {
-                self.createErrorAlert("Empty password field", "Please input valid password")
+                //self.createErrorAlert("Empty password field", "Please input valid password")
+                ErrorHandler.errorPrompt(title: "Empty Password Field", message: "Please input valid password", in: self)
                 return
             }
             
             if let validError = error {
                 print(validError.localizedDescription)
-                self.createErrorAlert("Error", validError.localizedDescription)
+                //self.createErrorAlert("Error", validError.localizedDescription)
+                ErrorHandler.errorPrompt(title: "Error", message: "\(validError.localizedDescription)", in: self)
             }
             
             if let validUser = user {
