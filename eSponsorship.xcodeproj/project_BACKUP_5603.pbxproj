@@ -121,13 +121,19 @@
 		E3A752C81F7A582B00AD9244 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
+<<<<<<< HEAD
 				FD2D382C1F7BBED300F53525 /* Home.storyboard */,
+=======
+				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
+>>>>>>> b0be0c3eb752a13b8a7e55a25d73bb08d352cd9a
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
 				E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
+<<<<<<< HEAD
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
+=======
 				FDA378181F7A688600195EAC /* tournamentsViewController.swift */,
+>>>>>>> b0be0c3eb752a13b8a7e55a25d73bb08d352cd9a
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -141,13 +147,16 @@
 				FD2D382F1F7BC10900F53525 /* Post.swift */,
 				E3A752C61F7A581D00AD9244 /* LoginViewController.swift */,
 				FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */,
+<<<<<<< HEAD
+				FD2D382D1F7BBF2D00F53525 /* HomeViewController.swift */,
+				FDE10F401F7B4DD000F2BB79 /* TourViewController.swift */,
+				FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */,
+=======
 				E3522A501F7B531D007FA16F /* HomeViewController.swift */,
 				E3522A741F7B79CA007FA16F /* GamersViewController.swift */,
 				E3522A781F7BA75E007FA16F /* TeamsViewController.swift */,
 				E3522A761F7B79F6007FA16F /* TournamentsViewController.swift */,
-				FD2D382D1F7BBF2D00F53525 /* HomeViewController.swift */,
-				FDE10F401F7B4DD000F2BB79 /* TourViewController.swift */,
-				FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */,
+>>>>>>> b0be0c3eb752a13b8a7e55a25d73bb08d352cd9a
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -329,9 +338,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3522A791F7BA75E007FA16F /* TeamsViewController.swift in Sources */,
+<<<<<<< HEAD
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FDE10F431F7B4FB400F2BB79 /* addTourViewController.swift in Sources */,
+=======
+				E3522A791F7BA75E007FA16F /* TeamsViewController.swift in Sources */,
+>>>>>>> b0be0c3eb752a13b8a7e55a25d73bb08d352cd9a
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
@@ -345,8 +357,11 @@
 				FDE10F411F7B4DD000F2BB79 /* TourViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
-				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
+<<<<<<< HEAD
 				FD2D38301F7BC10900F53525 /* Post.swift in Sources */,
+=======
+				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
+>>>>>>> b0be0c3eb752a13b8a7e55a25d73bb08d352cd9a
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

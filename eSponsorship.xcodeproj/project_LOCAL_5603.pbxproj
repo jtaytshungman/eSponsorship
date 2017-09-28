@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E3522A4F1F7B51D3007FA16F /* JeremyHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */; };
-		E3522A511F7B531D007FA16F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A501F7B531D007FA16F /* HomeViewController.swift */; };
-		E3522A751F7B79CA007FA16F /* GamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A741F7B79CA007FA16F /* GamersViewController.swift */; };
-		E3522A771F7B79F6007FA16F /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A761F7B79F6007FA16F /* TournamentsViewController.swift */; };
-		E3522A791F7BA75E007FA16F /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A781F7BA75E007FA16F /* TeamsViewController.swift */; };
-		E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Universal Functions.swift */; };
-		E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */; };
-		E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */; };
 		E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A752C61F7A581D00AD9244 /* LoginViewController.swift */; };
 		E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB771F79F6100088E174 /* AppDelegate.swift */; };
 		E3F4DB7D1F79F6100088E174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB7B1F79F6100088E174 /* Main.storyboard */; };
@@ -40,14 +32,6 @@
 /* Begin PBXFileReference section */
 		3B2820F88C8596FC71644B58 /* Pods-eSponsorship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JeremyHome.storyboard; sourceTree = "<group>"; };
-		E3522A501F7B531D007FA16F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E3522A741F7B79CA007FA16F /* GamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GamersViewController.swift; path = eSponsorship/Controller/GamersViewController.swift; sourceTree = SOURCE_ROOT; };
-		E3522A761F7B79F6007FA16F /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TournamentsViewController.swift; path = eSponsorship/Controller/TournamentsViewController.swift; sourceTree = SOURCE_ROOT; };
-		E3522A781F7BA75E007FA16F /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamsViewController.swift; path = eSponsorship/Controller/TeamsViewController.swift; sourceTree = SOURCE_ROOT; };
-		E3522A811F7BFB27007FA16F /* Universal Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Universal Functions.swift"; sourceTree = "<group>"; };
-		E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
-		E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TournamentTableViewCell.xib; sourceTree = "<group>"; };
 		E3A752C61F7A581D00AD9244 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E3F4DB741F79F6100088E174 /* eSponsorship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSponsorship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F4DB771F79F6100088E174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,34 +84,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E3522A801F7BFAE4007FA16F /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				E3522A871F7C0DEE007FA16F /* Custom Cells */,
-				E3522A811F7BFB27007FA16F /* Universal Functions.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
-		E3522A871F7C0DEE007FA16F /* Custom Cells */ = {
-			isa = PBXGroup;
-			children = (
-				E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */,
-				E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */,
-			);
-			path = "Custom Cells";
-			sourceTree = "<group>";
-		};
 		E3A752C81F7A582B00AD9244 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
 				FD2D382C1F7BBED300F53525 /* Home.storyboard */,
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
-				E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
-				FDA378181F7A688600195EAC /* tournamentsViewController.swift */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -141,10 +104,6 @@
 				FD2D382F1F7BC10900F53525 /* Post.swift */,
 				E3A752C61F7A581D00AD9244 /* LoginViewController.swift */,
 				FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */,
-				E3522A501F7B531D007FA16F /* HomeViewController.swift */,
-				E3522A741F7B79CA007FA16F /* GamersViewController.swift */,
-				E3522A781F7BA75E007FA16F /* TeamsViewController.swift */,
-				E3522A761F7B79F6007FA16F /* TournamentsViewController.swift */,
 				FD2D382D1F7BBF2D00F53525 /* HomeViewController.swift */,
 				FDE10F401F7B4DD000F2BB79 /* TourViewController.swift */,
 				FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */,
@@ -176,7 +135,6 @@
 				E3F4DB771F79F6100088E174 /* AppDelegate.swift */,
 				E3A752C81F7A582B00AD9244 /* Storyboard */,
 				E3A752C91F7A583900AD9244 /* Controller */,
-				E3522A801F7BFAE4007FA16F /* Utilities */,
 				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
 				E3F4DB811F79F6100088E174 /* Assets.xcassets */,
 				E3F4DB861F79F6100088E174 /* Info.plist */,
@@ -252,9 +210,7 @@
 				FDE10F441F7B5BC900F2BB79 /* Info.plist in Resources */,
 				FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */,
 				E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */,
-				E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */,
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
-				E3522A4F1F7B51D3007FA16F /* JeremyHome.storyboard in Resources */,
 				E3F4DB821F79F6100088E174 /* Assets.xcassets in Resources */,
 				E3F4DB7D1F79F6100088E174 /* Main.storyboard in Resources */,
 			);
@@ -329,23 +285,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3522A791F7BA75E007FA16F /* TeamsViewController.swift in Sources */,
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FDE10F431F7B4FB400F2BB79 /* addTourViewController.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
-				E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */,
-				E3522A751F7B79CA007FA16F /* GamersViewController.swift in Sources */,
-				E3522A511F7B531D007FA16F /* HomeViewController.swift in Sources */,
-				E3522A771F7B79F6007FA16F /* TournamentsViewController.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
 				FD2D382E1F7BBF2D00F53525 /* HomeViewController.swift in Sources */,
 				FDE10F411F7B4DD000F2BB79 /* TourViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
-				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
 				FD2D38301F7BC10900F53525 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

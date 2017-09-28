@@ -126,7 +126,6 @@
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
 				E3522A4E1F7B51D3007FA16F /* JeremyHome.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
-				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
 				FDA378181F7A688600195EAC /* tournamentsViewController.swift */,
 			);
 			path = Storyboard;
@@ -330,8 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3522A791F7BA75E007FA16F /* TeamsViewController.swift in Sources */,
-				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
-				FDE10F431F7B4FB400F2BB79 /* addTourViewController.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
