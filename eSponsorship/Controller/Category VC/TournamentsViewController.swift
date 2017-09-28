@@ -60,16 +60,19 @@ class TournamentsViewController: UIViewController {
             
             
             if let imageurl = mypost["imagePost"] as? String,
-            let tournamentName = mypost["name"] as? String,
-            let location = mypost["location"] as? String,
-            let userid = mypost["userID"] as? String {
+                let tournamentName = mypost["name"] as? String,
+                let location = mypost["location"] as? String,
+                let gameName = mypost["game"] as? String,
+                let dateName = mypost["date"] as? String,
+                let prizeName = mypost["prize"] as? String,
+                let userid = mypost["userID"] as? String {
                 
                 
                 //            let newPost = mypost(imageName: post)
                 
                 
             DispatchQueue.main.async {
-                let newPost = Post(anID: userid,theTournamentName: tournamentName, theLocation: location,  imageName: imageurl)
+                let newPost = Post(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theDate : dateName, theGame: gameName, prize: prizeName)
                 
                 
                 self.posts.append(newPost)
@@ -101,15 +104,10 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
 
         cell.tournamentName.text = post.tournamentName
         cell.locationOfTournament.text = post.location
-//        cell.useri.text = post.userid
+        cell.organizerName.text = post.gameName
+        cell.numberOfParticipants.text = post.prizeName
+        
         print(post.imageurl)
-//        let itemSize = CGSize(width: 20, height: 20)
-//        UIGraphicsBeginImageContextWithOptions(itemSize, false, UIScreen.main.scale)
-//        
-//        let imageRect : CGRect = CGRect(x: 0, y: 0, width: itemSize.width, height: itemSize.height)
-////        cell.backgroundImageCell.drawInRect(imageRect)
-//        cell.imageView!.image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
         cell.backgroundImageCell.loadImage(from: post.imageurl)
         
         
