@@ -11,36 +11,31 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBAction func gamersButtonTapped(_ sender: Any) {
-        dismissDetail()
-        presentDetail(GamersViewController())
+        
     }
     
     @IBAction func teamsButtonTapped(_ sender: Any) {
-        dismissDetail()
-        presentDetail(TeamsViewController())
+        
     }
     
     @IBAction func tournamentsButtonTapped(_ sender: Any) {
-        dismissDetail()
-        presentDetail(TournamentsViewController())
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Home"
     }
 }
 
-extension UIViewController {
-    
+extension HomeViewController {
     func presentDetail(_ viewControllerToPresent: UIViewController) {
         let transition = CATransition()
         transition.duration = 0.20
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
         self.view.window!.layer.add(transition, forKey: kCATransition)
-        
-        present(viewControllerToPresent, animated: false)
+        present(viewControllerToPresent, animated: false, completion: nil)
     }
     
     func dismissDetail() {
@@ -49,7 +44,8 @@ extension UIViewController {
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromLeft
         self.view.window!.layer.add(transition, forKey: kCATransition)
-        
-        dismiss(animated: false)
+        dismiss(animated: false, completion: nil)
     }
 }
+
+

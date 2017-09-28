@@ -66,8 +66,9 @@ class LoginViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     func correctSignInHandler(){
-        let mainStoryboard = UIStoryboard(name: "JeremyHome", bundle: nil)
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else { return }
+        let mainStoryboard = UIStoryboard(name: "Home", bundle: nil)
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else { return }
+        
 //        self.dismiss(animated: true, completion: nil)
         
     

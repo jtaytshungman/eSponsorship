@@ -29,7 +29,8 @@ extension TeamsViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       return UITableViewCell()
+        let cell = teamsTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        return  cell
     }
     
     
