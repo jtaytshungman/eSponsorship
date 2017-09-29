@@ -31,6 +31,10 @@
 		FD3121161F7E29C30044D8DD /* addTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3121141F7E29C30044D8DD /* addTeamsController.swift */; };
 		FD3121171F7E29C30044D8DD /* addTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3121151F7E29C30044D8DD /* addTourViewController.swift */; };
 		FD3121191F7E2BB10044D8DD /* TeamsPOST.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3121181F7E2BB10044D8DD /* TeamsPOST.swift */; };
+		FD31211B1F7E2E590044D8DD /* GamersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */; };
+		FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */; };
+		FD31211F1F7E301B0044D8DD /* GamersPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211E1F7E301B0044D8DD /* GamersPost.swift */; };
+		FD3121231F7E31000044D8DD /* addGamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3121221F7E31000044D8DD /* addGamersViewController.swift */; };
 		FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */; };
 		FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA378121F7A4EEB00195EAC /* Auth.storyboard */; };
 		FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA378141F7A567D00195EAC /* OnboardController.swift */; };
@@ -69,6 +73,10 @@
 		FD3121141F7E29C30044D8DD /* addTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTeamsController.swift; sourceTree = "<group>"; };
 		FD3121151F7E29C30044D8DD /* addTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTourViewController.swift; sourceTree = "<group>"; };
 		FD3121181F7E2BB10044D8DD /* TeamsPOST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamsPOST.swift; path = eSponsorship/Controller/TeamsPOST.swift; sourceTree = SOURCE_ROOT; };
+		FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamersTableViewCell.xib; sourceTree = "<group>"; };
+		FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersTableViewCell.swift; sourceTree = "<group>"; };
+		FD31211E1F7E301B0044D8DD /* GamersPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersPost.swift; sourceTree = "<group>"; };
+		FD3121221F7E31000044D8DD /* addGamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGamersViewController.swift; sourceTree = "<group>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
 		FDBAA9951F7A0BF7003FB159 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 				E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */,
 				FD31210E1F7E031F0044D8DD /* TeamsTableViewCell.xib */,
 				FD3121101F7E034F0044D8DD /* TeamsTableViewCell.swift */,
+				FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */,
+				FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -153,6 +163,7 @@
 				E3D00D681F7CA5F300932FE5 /* Auth Controllers */,
 				E396FC671F7DE0920062596D /* Home Controllers */,
 				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
+				FD31211E1F7E301B0044D8DD /* GamersPost.swift */,
 				FD2D382F1F7BC10900F53525 /* Post.swift */,
 				FD3121181F7E2BB10044D8DD /* TeamsPOST.swift */,
 			);
@@ -217,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				FD3121141F7E29C30044D8DD /* addTeamsController.swift */,
+				FD3121221F7E31000044D8DD /* addGamersViewController.swift */,
 				FD3121151F7E29C30044D8DD /* addTourViewController.swift */,
 			);
 			name = "Adding Controllers";
@@ -287,6 +299,7 @@
 			files = (
 				FDE10F441F7B5BC900F2BB79 /* Info.plist in Resources */,
 				FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */,
+				FD31211B1F7E2E590044D8DD /* GamersTableViewCell.xib in Resources */,
 				E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */,
 				FD31210F1F7E031F0044D8DD /* TeamsTableViewCell.xib in Resources */,
 				E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */,
@@ -370,15 +383,18 @@
 			files = (
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */,
+				FD31211F1F7E301B0044D8DD /* GamersPost.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
 				E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */,
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,
 				FD3121161F7E29C30044D8DD /* addTeamsController.swift in Sources */,
+				FD3121231F7E31000044D8DD /* addGamersViewController.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
 				E34311321F7D529100F571CE /* MenuItemsTableViewController.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
 				E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */,
+				FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */,
 				E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
 				FD3121171F7E29C30044D8DD /* addTourViewController.swift in Sources */,
