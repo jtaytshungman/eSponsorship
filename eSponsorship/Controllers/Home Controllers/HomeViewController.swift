@@ -31,11 +31,9 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func menuButtonTapped(_ sender: Any) {
-        guard let sideMenuNC = SideMenuManager.menuLeftNavigationController else {
-            return
-        }
-        present(sideMenuNC, animated: true, completion: nil)
+        print("Menu Button Tapped")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenuHandler()
@@ -45,23 +43,6 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController {
-    func presentDetail(_ viewControllerToPresent: UIViewController) {
-        let transition = CATransition()
-        transition.duration = 0.20
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromRight
-        self.view.window!.layer.add(transition, forKey: kCATransition)
-        present(viewControllerToPresent, animated: false, completion: nil)
-    }
-    
-    func dismissDetail() {
-        let transition = CATransition()
-        transition.duration = 0.20
-        transition.type = kCATransitionPush
-        transition.subtype = kCATransitionFromLeft
-        self.view.window!.layer.add(transition, forKey: kCATransition)
-        dismiss(animated: false, completion: nil)
-    }
     
     func confirmSignOutHandler () {
         let alert = UIAlertController(title: "Confirm Sign Out", message: "You are signing out from the application", preferredStyle: .alert)
@@ -83,22 +64,12 @@ extension HomeViewController {
     }
     
     func sideMenuHandler () {
-        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: SideMenuTableViewController())
-        
+        // Define the menus
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: MenuListViewController())
         menuLeftNavigationController.leftSide = true
-        
         SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
-        
-        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: SideMenuTableViewController())
-        
-        SideMenuManager.menuRightNavigationController = menuRightNavigationController
-
-        guard let navigation = UIViewController().navigationController?.navigationBar else {
-            return print("Error in Navigation in Side Menu")
-        }
-        
-        SideMenuManager.menuAddPanGestureToPresent(toView: navigation)
-        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: navigation)
+        SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
+        SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
     }
 }
