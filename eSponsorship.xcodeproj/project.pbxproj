@@ -17,7 +17,7 @@
 		E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */; };
 		E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */; };
 		E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB771F79F6100088E174 /* AppDelegate.swift */; };
-		E3F4DB7D1F79F6100088E174 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB7B1F79F6100088E174 /* Main.storyboard */; };
+		E3F4DB7D1F79F6100088E174 /* Adding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB7B1F79F6100088E174 /* Adding.storyboard */; };
 		E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB7E1F79F6100088E174 /* eSponsorship.xcdatamodeld */; };
 		E3F4DB821F79F6100088E174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB811F79F6100088E174 /* Assets.xcassets */; };
 		E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */; };
@@ -50,7 +50,7 @@
 		E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
 		E3F4DB741F79F6100088E174 /* eSponsorship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSponsorship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F4DB771F79F6100088E174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E3F4DB7C1F79F6100088E174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E3F4DB7C1F79F6100088E174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Adding.storyboard; sourceTree = "<group>"; };
 		E3F4DB7F1F79F6100088E174 /* eSponsorship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = eSponsorship.xcdatamodel; sourceTree = "<group>"; };
 		E3F4DB811F79F6100088E174 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3F4DB841F79F6100088E174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,28 +118,37 @@
 			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
+		E396FC671F7DE0920062596D /* Home Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */,
+				E3D00D671F7CA5D400932FE5 /* Category VC */,
+			);
+			path = "Home Controllers";
+			sourceTree = "<group>";
+		};
 		E3A752C81F7A582B00AD9244 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
 				E3522A4E1F7B51D3007FA16F /* Home.storyboard */,
-				E3F4DB7B1F79F6100088E174 /* Main.storyboard */,
+				E3F4DB7B1F79F6100088E174 /* Adding.storyboard */,
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		E3A752C91F7A583900AD9244 /* Controller */ = {
+		E3A752C91F7A583900AD9244 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E3D00D671F7CA5D400932FE5 /* Category VC */,
-				E3D00D681F7CA5F300932FE5 /* Login controllers */,
 				FDA378141F7A567D00195EAC /* OnboardController.swift */,
-				FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */,
+				E3D00D681F7CA5F300932FE5 /* Auth Controllers */,
+				E396FC671F7DE0920062596D /* Home Controllers */,
+				FD42E1211F7CFC5E00451FF6 /* Adding Controllers */,
 				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
 				FD2D382F1F7BC10900F53525 /* Post.swift */,
 			);
-			path = Controller;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		E3D00D671F7CA5D400932FE5 /* Category VC */ = {
@@ -152,15 +161,14 @@
 			path = "Category VC";
 			sourceTree = "<group>";
 		};
-		E3D00D681F7CA5F300932FE5 /* Login controllers */ = {
+		E3D00D681F7CA5F300932FE5 /* Auth Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				E3A752C61F7A581D00AD9244 /* LoginViewController.swift */,
 				FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */,
 				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
-				FD42E1211F7CFC5E00451FF6 /* CategoryPost VC */,
 			);
-			path = "Login controllers";
+			path = "Auth Controllers";
 			sourceTree = "<group>";
 		};
 		E3F4DB6B1F79F6100088E174 = {
@@ -186,7 +194,7 @@
 			children = (
 				E3F4DB771F79F6100088E174 /* AppDelegate.swift */,
 				E3A752C81F7A582B00AD9244 /* Storyboard */,
-				E3A752C91F7A583900AD9244 /* Controller */,
+				E3A752C91F7A583900AD9244 /* Controllers */,
 				E3522A801F7BFAE4007FA16F /* Utilities */,
 				E3F4DB811F79F6100088E174 /* Assets.xcassets */,
 				E3F4DB861F79F6100088E174 /* Info.plist */,
@@ -196,14 +204,14 @@
 			path = eSponsorship;
 			sourceTree = "<group>";
 		};
-		FD42E1211F7CFC5E00451FF6 /* CategoryPost VC */ = {
+		FD42E1211F7CFC5E00451FF6 /* Adding Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				FDE10F421F7B4FB400F2BB79 /* addTourViewController.swift */,
 				FD42E1221F7CFD0E00451FF6 /* addTeamsController.swift */,
 			);
-			name = "CategoryPost VC";
-			path = ../../..;
+			name = "Adding Controllers";
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +283,7 @@
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
 				E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */,
 				E3F4DB821F79F6100088E174 /* Assets.xcassets in Resources */,
-				E3F4DB7D1F79F6100088E174 /* Main.storyboard in Resources */,
+				E3F4DB7D1F79F6100088E174 /* Adding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,12 +382,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E3F4DB7B1F79F6100088E174 /* Main.storyboard */ = {
+		E3F4DB7B1F79F6100088E174 /* Adding.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				E3F4DB7C1F79F6100088E174 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Adding.storyboard;
 			sourceTree = "<group>";
 		};
 		E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */ = {

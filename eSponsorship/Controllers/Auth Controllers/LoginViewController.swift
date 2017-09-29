@@ -21,20 +21,19 @@ class LoginViewController: UIViewController {
             loginButton.addTarget(self, action: #selector(loginUser), for: .touchUpInside)
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //check if the user already signed in
         if Auth.auth().currentUser != nil {
-//            let mainStoryboard = UIStoryboard(name: "Home", bundle: Bundle.main)
-//            guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else { return }
-//            
-//            self.present(targetVC, animated: true, completion: nil)
-//            
-      correctSignInHandler()
+            correctSignInHandler()
+        }
     }
-    }
+    
+}
 
+extension LoginViewController {
+    
     func loginUser() {
         guard let email = usernameTextField.text else { return }
         guard let password = passwordTextField.text else { return }
@@ -42,45 +41,32 @@ class LoginViewController: UIViewController {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             
             if self.usernameTextField.text == "" {
-                ErrorHandler.errorPrompt(title: "Empty Email Field", message: "Please input valid Email", in: self)
+                PromptHandler.showPrompt(title: "Empty Email Field", message: "Please input valid Email", in: self)
                 return
             } else if self.passwordTextField.text == "" {
-                //self.createErrorAlert("Empty password field", "Please input valid password")
-                ErrorHandler.errorPrompt(title: "Empty Password Field", message: "Please input valid password", in: self)
+                PromptHandler.showPrompt(title: "Empty Password Field", message: "Please input valid password", in: self)
                 return
             }
             
             if let validError = error {
                 print(validError.localizedDescription)
                 //self.createErrorAlert("Error", validError.localizedDescription)
-                ErrorHandler.errorPrompt(title: "Error", message: "\(validError.localizedDescription)", in: self)
+                PromptHandler.showPrompt(title: "Error", message: "\(validError.localizedDescription)", in: self)
             }
             
             if let validUser = user {
                 print(validUser)
                 self.correctSignInHandler()
             }
-            
         }
-        
     }
     
-    func createErrorAlert(_ title: String, _ message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(action)
-        
-        self.present(alert, animated: true, completion: nil)
-    }
     func correctSignInHandler(){
-        
         let mainStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "NavigationController") as? UINavigationController else { return }
-        
-//        self.dismiss(animated: true, completion: nil)
-        
-    
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeNavigationController") as? UINavigationController else {
+            return print("Error Alert")
+        }
         present(targetVC, animated: true, completion: nil)
     }
+    
 }

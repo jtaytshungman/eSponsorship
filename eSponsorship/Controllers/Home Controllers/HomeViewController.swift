@@ -14,7 +14,7 @@ import FirebaseAuth
 class HomeViewController: UIViewController {
     
     @IBAction func signOut(_ sender: Any) {
-        signOutHandler()
+        confirmSignOutHandler()
     }
     
     // MARK: Category Selected
@@ -30,6 +30,12 @@ class HomeViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func menuButtonTapped(_ sender: Any) {
+        guard let sideMenuNC = SideMenuManager.menuLeftNavigationController else {
+            return
+        }
+        present(sideMenuNC, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
@@ -56,33 +62,53 @@ extension HomeViewController {
         dismiss(animated: false, completion: nil)
     }
     
+    func confirmSignOutHandler () {
+        let alert = UIAlertController(title: "Confirm Sign Out", message: "You are signing out from the application", preferredStyle: .alert)
+        let confirm = UIAlertAction(title: "Sign Out", style: .default) { (action) in
+            self.signOutHandler()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(confirm)
+        alert.addAction(cancel)
+        
+        present(alert,animated: true,completion: nil)
+    }
+    
     func signOutHandler(){
-        let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
+        let mainStoryboard = UIStoryboard(name: "Auth", bundle: nil)
         guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         dismiss(animated: true, completion: nil)
         self.present(targetVC, animated: true, completion: nil)
     }
     
-    func sideMenuHandler(){
+    func sideMenuHandler () {
+        
         // Define the menus
         let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: HomeViewController())
         menuLeftNavigationController.leftSide = true
+        
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
+        // let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
         SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
         
         let menuRightNavigationController = UISideMenuNavigationController(rootViewController: HomeViewController())
+        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
+        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
+        // let menuRightNavigationController = storyboard!.instantiateViewController(withIdentifier: "RightMenuNavigationController") as! UISideMenuNavigationController
         SideMenuManager.menuRightNavigationController = menuRightNavigationController
         
+        // Enable gestures. The left and/or right menus must be set up above for these to work.
+        // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
+        
         guard let navigation = UIViewController().navigationController?.navigationBar else {
-            return
+            return print("Error in Navigation in Side Menu")
         }
+        
         SideMenuManager.menuAddPanGestureToPresent(toView: navigation)
         SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: navigation)
         
-        present(SideMenuManager.menuLeftNavigationController!, animated: true, completion: nil)
-        
-        dismiss(animated: true, completion: nil)
     }
-    
 }
 
 

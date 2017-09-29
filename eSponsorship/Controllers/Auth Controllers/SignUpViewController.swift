@@ -28,6 +28,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    // MARK: SignUpUser() Function is Here
     func signUpUser() {
         guard let name = nameTextField.text,
             let email = emailTextField.text,
@@ -35,16 +36,18 @@ class SignUpViewController: UIViewController {
             let confirmPassword = confirmTextField.text else {return}
         
         if password != confirmPassword {
-            createErrorAlert("Password Error", "Passwords do not match")
+            PromptHandler.showPrompt(title: "Password Error", message:  "Passwords do not match", in: self)
             return
+            
         } else if name == "" || email == "" || password == ""{
-            createErrorAlert("Missing input field", "Input field must be filled")
+            PromptHandler.showPrompt(title: "Missing input field", message: "Input field must be filled", in: self)
             return
+            
         }
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if let validError = error {
-                self.createErrorAlert("Error", validError.localizedDescription)
+                PromptHandler.showPrompt(title: "Error", message: "\(validError.localizedDescription)", in: self)
             }
             
             if let validUser = user {
@@ -61,12 +64,5 @@ class SignUpViewController: UIViewController {
                 self.present(targetVC, animated: true, completion: nil)
             }
         }
-    }
-    
-    func createErrorAlert(_ title: String, _ message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true, completion: nil)
     }
 }
