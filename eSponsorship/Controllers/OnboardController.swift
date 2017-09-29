@@ -32,6 +32,7 @@ class OnboardController: UIViewController {
             buttonText: "", action: {() -> Void in
                 
         })
+        
         firstPage.movesToNextViewController = true
         
         let secondPage = OnboardingContentViewController.content(
@@ -41,6 +42,7 @@ class OnboardController: UIViewController {
             buttonText: "", action: {() -> Void in
                 
         })
+        
         secondPage.movesToNextViewController = true
         
         let thirdPage = OnboardingContentViewController.content(
@@ -65,6 +67,7 @@ class OnboardController: UIViewController {
         onboardingVC.fadePageControlOnLastPage = true
         onboardingVC.fadeSkipButtonOnLastPage = true
         
+        // Customization
         onboardingVC.allowSkipping = true
         onboardingVC.skipHandler = {() -> Void in
             self.onboardingCompletionHandler()

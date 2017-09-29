@@ -12,5 +12,9 @@ pod 'Firebase/Auth'
 pod 'Firebase/Storage’
 pod 'Onboard'
 
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+pod 'SideMenu'
 
 end

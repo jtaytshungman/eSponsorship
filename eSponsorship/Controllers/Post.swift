@@ -9,8 +9,6 @@
 import Foundation
 class Post {
     
-    
-    
     var userid : String = ""
     
     var imageurl : String = ""
@@ -25,14 +23,9 @@ class Post {
     
     var prizeName : String = ""
     
-    
-    //        : UIImage = UIImage(named: "unknown") ?? UIImage()
-    
-    
     init() {}
     
     init(anID: String,theTournamentName: String, theLocation: String, imageName : String, theDate : String, theGame: String, prize: String) {
-        
         
         userid = anID
         imageurl = imageName
@@ -41,14 +34,5 @@ class Post {
         dateName = theDate
         gameName = theGame
         prizeName = prize
-        
-        
-        //        if let userImage = UIImage(named: imageName){
-        //            self.imageurl = userImage
-        //
-        //        }else{
-        //            self.imageurl = UIImage()
-        //        }
-        
     }
 }

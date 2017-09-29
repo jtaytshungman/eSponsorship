@@ -16,42 +16,29 @@ class addTourViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func logout(_ sender: Any) {
-        
         let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
-        //        self.dismiss(animated: true, completion: nil)
         
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         
         self.present(targetVC, animated: true, completion: nil)
-        
-        
     }
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var dateTextField: UITextField!
-    
-    
     @IBOutlet weak var gameTextField: UITextField!
-    
-    
     @IBOutlet weak var prizeTextField: UITextField!
-    
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBAction func saveTappButtonPressed(_ sender: Any) {
-        
-        
         
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
+        
         
     }
     //open gallery
@@ -67,55 +54,25 @@ class addTourViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     //save
     @IBAction func SaveBtnTapped(_ sender: Any) {
-  
-        
         RegisterUser()
         saveToLibrary()
-        let vc = LoginViewController(
-            nibName: "LoginViewController",
-            bundle: nil)
-        navigationController?.pushViewController(vc,
-                                                 animated: true )
-        
-        
-        
+        let vc = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true )
     }
     
-    //        uploadMedia(completion: imagePicked)
-    
-    func saveToLibrary(){
-
+    func saveToLibrary() {
+        
         if imagePicked.image == nil {
-             createErrorAlert("Missing input field", "Input field must be filled")
+            PromptHandler.showPrompt(title: "Missing Input Field", message: "Important Fields must be filled out", in: self)
             return
         }
-
+        
         let imageData = UIImageJPEGRepresentation(imagePicked.image!, 0.6)
         let compressedJPGImage = UIImage(data: imageData!)
         UIImageWriteToSavedPhotosAlbum(compressedJPGImage!, nil, nil, nil)
-
-        let alert = UIAlertController(title: "Thank you", message: "your information is saved", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
-
-        alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
         
-
+        PromptHandler.showPrompt(title: "Photo Saved", message: "Your information is saved", in: self)
     }
-    
-//    func saveToLibrary() {
-//
-//        if let error = error {
-//            // we got back an error!
-//            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
-//            ac.addAction(UIAlertAction(title: "OK", style: .default))
-//            present(ac, animated: true)
-//        } else {
-//            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
-//            ac.addAction(UIAlertAction(title: "OK", style: .default))
-//            present(ac, animated: true)
-//        }
-//    }
     
     func uploadMedia(completion: @escaping (_ url: String?) -> Void) {
         let storageRef = Storage.storage().reference().child("myImage.jpeg")
@@ -130,19 +87,6 @@ class addTourViewController: UIViewController, UIImagePickerControllerDelegate, 
                 }
             }
         }
-        
-    }
-    
-    func createErrorAlert(_ title: String, _ message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-        
-        alert.addAction(action)
-        
-        //        vc(alert, animated: true, completion: nil)
-        self.present(alert, animated: true, completion: nil)
-        
-        
     }
     
     
@@ -153,51 +97,42 @@ class addTourViewController: UIViewController, UIImagePickerControllerDelegate, 
         dismiss(animated:true, completion: nil)
     }
     
-    
-   
     func RegisterUser() {
         
-        
-        guard let name = nameTextField.text,
+        guard
+            let name = nameTextField.text,
             let tourName = nameTextField.text,
             let location = locationTextField.text,
             let date = dateTextField.text,
             let game = gameTextField.text,
-          
-            let prize = prizeTextField.text else {return}
-           if tourName == "" || location == "" || date == "" || game == "" || prize == "" {
-           createErrorAlert("Missing input field", "Input field must be filled")
+            let prize = prizeTextField.text else {
+                return
+        }
+        
+        if tourName == "" || location == "" || date == "" || game == "" || prize == "" {
+            PromptHandler.showPrompt(title: "Missing Field", message: "Important Field Must Be Filled", in: self)
             return
         }
+        
         if imagePicked == nil{
-             createErrorAlert("Missing input field", "Input field must be filled")
+            PromptHandler.showPrompt(title: "Missing Field", message: "Important Field Must Be Filled", in: self)
         }
+        
         uploadMedia { (downloadURL) in
-            
             if let url = downloadURL {
+                
                 let ref = Database.database().reference()
                 let imagePost : String = url
-
-        let postRef = Database.database().reference()
-        guard let id = Auth.auth().currentUser?.uid else {return}
-        let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "date" : date, "game" : game, "prize" : prize, "imagePost" : imagePost]
-        
-        postRef.child("posts").childByAutoId().setValue(post)
-
+                let postRef = Database.database().reference()
+                
+                guard let id = Auth.auth().currentUser?.uid else { return }
+                
+                let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "date" : date, "game" : game, "prize" : prize, "imagePost" : imagePost]
+                
+                postRef.child("posts").childByAutoId().setValue(post)
+            }
         }
     }
-
-
-}
-//    func BackToBack(){
-//        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else { return }
-//                self.dismiss(animated: true, completion: nil)
-//
-//
-//        self.present(targetVC, animated: true, completion: nil)
-//    }
-
 }
 
 
