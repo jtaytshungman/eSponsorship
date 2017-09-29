@@ -159,7 +159,7 @@
                         <viewLayoutGuide key="safeArea" id="Vmg-cZ-BNa"/>
                     </view>
                     <connections>
-                        <outlet property="gamersTableView" destination="585-I1-vCQ" id="cjT-tp-0e1"/>
+                        <outlet property="gamersTableView" destination="585-I1-vCQ" id="Csm-6L-dN6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAN-bH-UCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
