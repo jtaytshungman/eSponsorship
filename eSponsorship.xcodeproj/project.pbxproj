@@ -18,6 +18,7 @@
 		E3DC94011F7E46BA004948BA /* MenuItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3DC93FF1F7E46BA004948BA /* MenuItemsTableViewCell.xib */; };
 		E3DC94031F7E4AA7004948BA /* MenuItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC94021F7E4AA6004948BA /* MenuItemsTableViewCell.swift */; };
 		E3DC94081F7E4B51004948BA /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC94071F7E4B51004948BA /* SideMenuTableViewController.swift */; };
+		E3DC940C1F7E5AC8004948BA /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3DC940B1F7E5AC6004948BA /* SideMenuViewController.swift */; };
 		E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB771F79F6100088E174 /* AppDelegate.swift */; };
 		E3F4DB7D1F79F6100088E174 /* Adding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB7B1F79F6100088E174 /* Adding.storyboard */; };
 		E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB7E1F79F6100088E174 /* eSponsorship.xcdatamodeld */; };
@@ -56,6 +57,7 @@
 		E3DC93FF1F7E46BA004948BA /* MenuItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemsTableViewCell.xib; sourceTree = "<group>"; };
 		E3DC94021F7E4AA6004948BA /* MenuItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemsTableViewCell.swift; sourceTree = "<group>"; };
 		E3DC94071F7E4B51004948BA /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SideMenuTableViewController.swift; path = ../../../SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		E3DC940B1F7E5AC6004948BA /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		E3F4DB741F79F6100088E174 /* eSponsorship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eSponsorship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3F4DB771F79F6100088E174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3F4DB7C1F79F6100088E174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Adding.storyboard; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				E3DC94071F7E4B51004948BA /* SideMenuTableViewController.swift */,
+				E3DC940B1F7E5AC6004948BA /* SideMenuViewController.swift */,
 				E3DC93FF1F7E46BA004948BA /* MenuItemsTableViewCell.xib */,
 				E3DC94021F7E4AA6004948BA /* MenuItemsTableViewCell.swift */,
 			);
@@ -396,6 +399,7 @@
 				FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */,
 				FD31211F1F7E301B0044D8DD /* GamersPost.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
+				E3DC940C1F7E5AC8004948BA /* SideMenuViewController.swift in Sources */,
 				E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */,
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,

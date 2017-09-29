@@ -53,6 +53,11 @@ class SideMenuTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let currentIndex = menuItemsArray[indexPath.row]
         
+        
+        
+        
+        
+        
     }
 
 }
