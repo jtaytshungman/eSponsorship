@@ -39,7 +39,7 @@ class TeamsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Tournaments"
+        self.title = "Teams"
         
         fetchpost()
         
