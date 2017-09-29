@@ -22,7 +22,7 @@ class MenuItemsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Menu"
-        tableView.reloadData()
+        tableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
     }
 
     // MARK: - Table view data source
@@ -37,8 +37,10 @@ class MenuItemsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuCells", for: indexPath)
-        cell.textLabel?.text = menuItems[indexPath.row]
+        //let cell = tableView.dequeueReusableCell(withIdentifier: "cellMenu", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: TournamentTableViewCell.cellIdentifier, for: indexPath) as? TournamentTableViewCell else {return UITableViewCell()}
+        //cell.textLabel?.text = menuItems[indexPath.row]
         return cell
+        //return UITableViewCell()
     }
 }

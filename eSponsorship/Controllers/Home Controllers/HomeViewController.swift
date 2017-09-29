@@ -38,8 +38,9 @@ class HomeViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Home"
         sideMenuHandler()
+        self.title = "Home"
+        
     }
 }
 
@@ -82,25 +83,16 @@ extension HomeViewController {
     }
     
     func sideMenuHandler () {
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: MenuItemsTableViewController())
         
-        // Define the menus
-        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: HomeViewController())
         menuLeftNavigationController.leftSide = true
         
-        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
-        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
-        // let menuLeftNavigationController = storyboard!.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as! UISideMenuNavigationController
         SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
         
-        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: HomeViewController())
-        // UISideMenuNavigationController is a subclass of UINavigationController, so do any additional configuration
-        // of it here like setting its viewControllers. If you're using storyboards, you'll want to do something like:
-        // let menuRightNavigationController = storyboard!.instantiateViewController(withIdentifier: "RightMenuNavigationController") as! UISideMenuNavigationController
+        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: MenuItemsTableViewController())
+        
         SideMenuManager.menuRightNavigationController = menuRightNavigationController
-        
-        // Enable gestures. The left and/or right menus must be set up above for these to work.
-        // Note that these continue to work on the Navigation Controller independent of the view controller it displays!
-        
+
         guard let navigation = UIViewController().navigationController?.navigationBar else {
             return print("Error in Navigation in Side Menu")
         }
