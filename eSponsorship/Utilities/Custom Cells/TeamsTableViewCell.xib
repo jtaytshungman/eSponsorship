@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="r3o-sp-em7" customClass="TeamsTableViewCell" customModule="eSponsorship" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="360" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r3o-sp-em7" id="6zR-6X-FS3">
+                <rect key="frame" x="0.0" y="0.0" width="360" height="89.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sponsor" translatesAutoresizingMaskIntoConstraints="NO" id="bE2-eR-aou">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="89.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="90" id="V8M-5o-O89"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CwU-pE-sSU">
+                        <rect key="frame" x="8" y="8" width="214" height="73.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-7b-wA8">
+                                <rect key="frame" x="0.0" y="0.0" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQO-ia-seI">
+                                <rect key="frame" x="0.0" y="26" width="214" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sle-DK-l4Q">
+                                <rect key="frame" x="0.0" y="52.5" width="214" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iIE-gp-SXX">
+                        <rect key="frame" x="252" y="33.5" width="100" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="8Ee-b1-A9I"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="bE2-eR-aou" secondAttribute="bottom" id="4EV-EG-GxQ"/>
+                    <constraint firstItem="iIE-gp-SXX" firstAttribute="leading" secondItem="CwU-pE-sSU" secondAttribute="trailing" constant="30" id="6Zr-XP-Y2G"/>
+                    <constraint firstItem="CwU-pE-sSU" firstAttribute="top" secondItem="6zR-6X-FS3" secondAttribute="topMargin" id="AVV-X9-eET"/>
+                    <constraint firstItem="iIE-gp-SXX" firstAttribute="trailing" secondItem="6zR-6X-FS3" secondAttribute="trailingMargin" id="HI6-zi-267"/>
+                    <constraint firstItem="bE2-eR-aou" firstAttribute="top" secondItem="6zR-6X-FS3" secondAttribute="top" id="HW0-16-KDa"/>
+                    <constraint firstAttribute="trailing" secondItem="bE2-eR-aou" secondAttribute="trailing" id="Y6N-Uk-gz7"/>
+                    <constraint firstItem="CwU-pE-sSU" firstAttribute="leading" secondItem="6zR-6X-FS3" secondAttribute="leadingMargin" id="bfm-lk-c2H"/>
+                    <constraint firstItem="iIE-gp-SXX" firstAttribute="centerY" secondItem="6zR-6X-FS3" secondAttribute="centerY" id="hnd-Di-9iP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="CwU-pE-sSU" secondAttribute="bottom" id="kIr-so-Bsm"/>
+                    <constraint firstItem="CwU-pE-sSU" firstAttribute="leading" secondItem="6zR-6X-FS3" secondAttribute="leadingMargin" id="moN-DY-A5a"/>
+                    <constraint firstItem="bE2-eR-aou" firstAttribute="leading" secondItem="6zR-6X-FS3" secondAttribute="leading" id="nd3-9Y-BVr"/>
+                    <constraint firstItem="CwU-pE-sSU" firstAttribute="top" secondItem="6zR-6X-FS3" secondAttribute="topMargin" id="r9W-qo-DLU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="iFT-gS-CXa"/>
+            <connections>
+                <outlet property="backgroundImageCellq" destination="bE2-eR-aou" id="iMh-el-g6R"/>
+                <outlet property="locationOfTournamentq" destination="Sle-DK-l4Q" id="fCL-mX-0LX"/>
+                <outlet property="numberOfParticipantsq" destination="qQO-ia-seI" id="bCZ-Hf-jcx"/>
+                <outlet property="organizerNameq" destination="iIE-gp-SXX" id="9Sq-3G-525"/>
+                <outlet property="tournamentNameq" destination="cDa-7b-wA8" id="och-VE-3tp"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="90"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="sponsor" width="50" height="50"/>
+    </resources>
+</document>

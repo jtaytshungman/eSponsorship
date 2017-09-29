@@ -161,11 +161,10 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
         guard let name = nameTextField.text,
             let tourName = nameTextField.text,
             let location = locationTextField.text,
-            let date = dateTextField.text,
-            let game = gameTextField.text,
             
-            let prize = prizeTextField.text else {return}
-        if tourName == "" || location == "" || date == "" || game == "" || prize == "" {
+            let game = gameTextField.text
+            else {return}
+        if tourName == "" || location == "" || game == "" {
             createErrorAlert("Missing input field", "Input field must be filled")
             return
         }
@@ -180,9 +179,9 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
                 
                 let postRef = Database.database().reference()
                 guard let id = Auth.auth().currentUser?.uid else {return}
-                let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "date" : date, "game" : game, "prize" : prize, "imagePost" : imagePost]
+                let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "game" : game, "imagePost" : imagePost]
                 
-                postRef.child("posts").childByAutoId().setValue(post)
+                postRef.child("TeamsPosts").childByAutoId().setValue(post)
                 
             }
         }

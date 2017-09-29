@@ -29,7 +29,7 @@ class TournamentsViewController: UIViewController {
     
     @IBOutlet weak var tournamentsTableView: UITableView!{
         didSet{
-            tournamentsTableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
+        tournamentsTableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
             tournamentsTableView.delegate = self
             tournamentsTableView.dataSource = self
             tournamentsTableView.estimatedRowHeight = 80
