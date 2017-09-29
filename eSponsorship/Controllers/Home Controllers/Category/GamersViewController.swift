@@ -14,7 +14,7 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class GamersViewController: UIViewController {
-
+    
     var posts: [GamersPost] = []
     
     
@@ -91,9 +91,11 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = gamersTableView.dequeueReusableCell(withIdentifier: TeamsTableViewCell.cellIdentifier) as? TeamsTableViewCell else {
             return UITableViewCell()
         }
+        
         let post = posts[indexPath.row]
         
         //        cell.tournamentName.text = tournamentName

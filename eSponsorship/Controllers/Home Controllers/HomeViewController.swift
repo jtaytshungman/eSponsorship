@@ -83,13 +83,13 @@ extension HomeViewController {
     }
     
     func sideMenuHandler () {
-        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: MenuItemsTableViewController())
+        let menuLeftNavigationController = UISideMenuNavigationController(rootViewController: SideMenuTableViewController())
         
         menuLeftNavigationController.leftSide = true
         
         SideMenuManager.menuLeftNavigationController = menuLeftNavigationController
         
-        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: MenuItemsTableViewController())
+        let menuRightNavigationController = UISideMenuNavigationController(rootViewController: SideMenuTableViewController())
         
         SideMenuManager.menuRightNavigationController = menuRightNavigationController
 
