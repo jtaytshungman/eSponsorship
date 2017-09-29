@@ -115,7 +115,7 @@
         <!--Add Teams Controller-->
         <scene sceneID="QQ5-Q9-KGz">
             <objects>
-                <viewController storyboardIdentifier="addTeamsController" id="02N-ho-qye" customClass="addTeamsController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addTeamsController" id="02N-ho-qye" customClass="addTeamsController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l2E-fa-zD0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
