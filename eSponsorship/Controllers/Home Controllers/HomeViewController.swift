@@ -9,7 +9,7 @@
 import UIKit
 import SideMenu
 import Firebase
-import FirebaseAuth
+
 
 class HomeViewController: UIViewController {
     
