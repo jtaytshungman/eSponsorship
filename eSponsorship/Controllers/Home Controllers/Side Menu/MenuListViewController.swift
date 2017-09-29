@@ -1,13 +1,14 @@
 //
-//  SideMenuViewController.swift
-//  GoogleToolboxForMac
+//  MenuListViewController.swift
+//  eSponsorship
 //
 //  Created by Jeremy Tay on 29/09/2017.
+//  Copyright © 2017 Jeremy Tay. All rights reserved.
 //
 
 import UIKit
 
-class SideMenuViewController: UIViewController {
+class MenuListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
