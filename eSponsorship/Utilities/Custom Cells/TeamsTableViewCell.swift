@@ -36,8 +36,8 @@ override func layoutSubviews() {
     super.layoutSubviews()
 
     contentView.layer.borderWidth = 5
-    contentView.layer.borderColor = UIColor.blue.cgColor
-    contentView.layer.cornerRadius = 5
+    contentView.layer.borderColor = UIColor.black.cgColor
+    contentView.layer.cornerRadius = 0
 }
 
 }

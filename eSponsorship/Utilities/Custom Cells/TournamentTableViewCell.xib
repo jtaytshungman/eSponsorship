@@ -73,6 +73,7 @@
                     <constraint firstItem="TUi-ld-wGj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wGM-vr-wQC"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="backgroundImageCell" destination="TUi-ld-wGj" id="3XN-a9-VOf"/>
