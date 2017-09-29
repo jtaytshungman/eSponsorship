@@ -49,5 +49,10 @@ class SideMenuTableViewController: UITableViewController {
         cell.textLabel?.text = menuItemsArray[indexPath.row]
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let currentIndex = menuItemsArray[indexPath.row]
+        
+    }
 
 }
