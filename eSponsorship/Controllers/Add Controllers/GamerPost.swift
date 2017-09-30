@@ -6,7 +6,7 @@
 //  Copyright © 2017 Jeremy Tay. All rights reserved.
 //
 import Foundation
-class GamersPost {
+class GamerPost {
     
     
     
