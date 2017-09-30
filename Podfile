@@ -17,6 +17,7 @@ use_frameworks!
 
 pod 'SideMenu'
 
-pod 'Eureka'
+pod ’Eureka’
+
 
 end
