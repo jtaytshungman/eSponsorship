@@ -145,9 +145,9 @@
 		E3A752C81F7A582B00AD9244 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				E3F4DB7B1F79F6100088E174 /* Adding.storyboard */,
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
 				E3522A4E1F7B51D3007FA16F /* Home.storyboard */,
-				E3F4DB7B1F79F6100088E174 /* Adding.storyboard */,
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -157,10 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				FDA378141F7A567D00195EAC /* OnboardController.swift */,
+				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
+				FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */,
 				E3D00D681F7CA5F300932FE5 /* Auth Controllers */,
 				E396FC671F7DE0920062596D /* Home Controllers */,
-				FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */,
-				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,14 +214,14 @@
 		E3F4DB761F79F6100088E174 /* eSponsorship */ = {
 			isa = PBXGroup;
 			children = (
-				E3F4DB771F79F6100088E174 /* AppDelegate.swift */,
-				E3A752C81F7A582B00AD9244 /* Storyboard */,
-				E3A752C91F7A583900AD9244 /* Controllers */,
-				E3522A801F7BFAE4007FA16F /* Utilities */,
-				E3F4DB811F79F6100088E174 /* Assets.xcassets */,
-				E3F4DB861F79F6100088E174 /* Info.plist */,
 				E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */,
+				E3F4DB861F79F6100088E174 /* Info.plist */,
+				E3F4DB771F79F6100088E174 /* AppDelegate.swift */,
+				E3F4DB811F79F6100088E174 /* Assets.xcassets */,
 				E3F4DB7E1F79F6100088E174 /* eSponsorship.xcdatamodeld */,
+				E3A752C91F7A583900AD9244 /* Controllers */,
+				E3A752C81F7A582B00AD9244 /* Storyboard */,
+				E3522A801F7BFAE4007FA16F /* Utilities */,
 			);
 			path = eSponsorship;
 			sourceTree = "<group>";
@@ -358,6 +358,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
@@ -367,6 +368,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
