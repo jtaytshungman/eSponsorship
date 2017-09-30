@@ -8,8 +8,8 @@ target 'eSponsorship' do
 # Pods for eSponsorship
 pod ‘Firebase/Core’
 pod ‘Firebase/Database’
-pod 'Firebase/Auth'
 pod 'Firebase/Storage’
+pod ‘Firebase/Auth’
 pod 'Onboard'
 
 source 'https://github.com/CocoaPods/Specs.git'
