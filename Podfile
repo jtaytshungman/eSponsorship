@@ -16,5 +16,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 pod 'SideMenu'
+pod 'PageMenu'
 
 end

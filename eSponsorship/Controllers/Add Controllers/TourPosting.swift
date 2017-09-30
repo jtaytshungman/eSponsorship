@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class TournamentPost {
+class TourPosting {
     
     var userid : String = ""
     

@@ -6,10 +6,8 @@
 //  Copyright © 2017 Jeremy Tay. All rights reserved.
 //
 import Foundation
-class GamerPost {
-    
-    
-    
+
+class GamerPosting {
     var userid : String = ""
     
     var imageurl : String = ""

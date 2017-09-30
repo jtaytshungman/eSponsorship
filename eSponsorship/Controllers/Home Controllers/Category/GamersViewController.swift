@@ -15,7 +15,7 @@ import FirebaseDatabase
 
 class GamersViewController: UIViewController {
     
-    var posts: [GamerPost] = []
+    var posts: [GamerPosting] = []
     
     
     var databaseRef: DatabaseReference!
@@ -71,7 +71,7 @@ class GamersViewController: UIViewController {
                 
                 
                 DispatchQueue.main.async {
-                    let teamPost = GamerPost(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theGame: gameName)
+                    let teamPost = GamerPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theGame: gameName)
                     
                     
                     self.posts.append(teamPost)
