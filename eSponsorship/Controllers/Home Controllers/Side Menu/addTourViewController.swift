@@ -16,11 +16,14 @@ class addTourViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     @IBAction func logout(_ sender: Any) {
-        let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
+        let mainStoryboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeNavigationController") as? UINavigationController else { return }
+        //        self.dismiss(animated: true, completion: nil)
         
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         
         self.present(targetVC, animated: true, completion: nil)
+        
+        
     }
     
     @IBOutlet weak var nameTextField: UITextField!

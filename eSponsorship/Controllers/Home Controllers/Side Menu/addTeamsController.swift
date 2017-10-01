@@ -17,12 +17,13 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
 
     @IBAction func logout(_ sender: Any) {
         
-        let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        let mainStoryboard = UIStoryboard(name: "Home", bundle: Bundle.main)
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeNavigationController") as? UINavigationController else { return }
         //        self.dismiss(animated: true, completion: nil)
         
         
         self.present(targetVC, animated: true, completion: nil)
+        
         
         
     }
