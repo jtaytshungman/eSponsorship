@@ -9,11 +9,8 @@
 import UIKit
 import Firebase
 import SideMenu
-import PageMenu
 
 class HomeViewController: UIViewController {
-    
-    var pageMenu : CAPSPageMenu?
     
     @IBAction func signOut(_ sender: Any) {
         confirmSignOutHandler()
@@ -39,7 +36,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenuHandler()
-        pageMenuHandler()
         self.title = "Gaming Ship"
         
     }
@@ -75,7 +71,7 @@ extension HomeViewController {
         SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
     }
-    
+    /*
     func pageMenuHandler(){
         // Array to keep track of controllers in page menu
         var controllerArray : [UIViewController] = []
@@ -114,6 +110,7 @@ extension HomeViewController {
         // or use pageMenu controller in you view hierachy as desired
         self.view.addSubview(pageMenu!.view)
     }
+ */
 }
 
 

@@ -21,12 +21,11 @@
 		E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB7E1F79F6100088E174 /* eSponsorship.xcdatamodeld */; };
 		E3F4DB821F79F6100088E174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB811F79F6100088E174 /* Assets.xcassets */; };
 		E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */; };
+		E3F92CC11F809F66004ED397 /* addTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F92CBF1F809F65004ED397 /* addTeamsController.swift */; };
+		E3F92CC21F809F66004ED397 /* addTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F92CC01F809F66004ED397 /* addTourViewController.swift */; };
 		E52CFE236ECF96708D93D555 /* Pods_eSponsorship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */; };
 		FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */; };
-		FD2D21F51F800EBB005C1C2D /* addTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3BB5D1F7E400A005DDD54 /* addTeamsController.swift */; };
-		FD2D21F61F800EE4005C1C2D /* addGamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3BB5C1F7E400A005DDD54 /* addGamersViewController.swift */; };
-		FD2D21F71F800EE6005C1C2D /* addTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC3BB5B1F7E400A005DDD54 /* addTourViewController.swift */; };
-		FD2D38301F7BC10900F53525 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D382F1F7BC10900F53525 /* Post.swift */; };
+		FD2D38301F7BC10900F53525 /* TourPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D382F1F7BC10900F53525 /* TourPosting.swift */; };
 		FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */; };
 		FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38331F7BC2D000F53525 /* myExtension.swift */; };
 		FD31210F1F7E031F0044D8DD /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD31210E1F7E031F0044D8DD /* TeamsTableViewCell.xib */; };
@@ -63,6 +62,8 @@
 		E3F4DB841F79F6100088E174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3F4DB861F79F6100088E174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3F92CBF1F809F65004ED397 /* addTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTeamsController.swift; sourceTree = "<group>"; };
+		E3F92CC01F809F66004ED397 /* addTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTourViewController.swift; sourceTree = "<group>"; };
 		E8D1F635BD38230403636730 /* Pods-eSponsorship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.release.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.release.xcconfig"; sourceTree = "<group>"; };
 		FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FD2D382F1F7BC10900F53525 /* TourPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPosting.swift; sourceTree = "<group>"; };
@@ -78,9 +79,6 @@
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
 		FDBAA9951F7A0BF7003FB159 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		FDC3BB5B1F7E400A005DDD54 /* addTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTourViewController.swift; sourceTree = "<group>"; };
-		FDC3BB5C1F7E400A005DDD54 /* addGamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addGamersViewController.swift; sourceTree = "<group>"; };
-		FDC3BB5D1F7E400A005DDD54 /* addTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTeamsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,9 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */,
-				FDC3BB5D1F7E400A005DDD54 /* addTeamsController.swift */,
-				FDC3BB5C1F7E400A005DDD54 /* addGamersViewController.swift */,
-				FDC3BB5B1F7E400A005DDD54 /* addTourViewController.swift */,
 			);
 			path = "Side Menu";
 			sourceTree = "<group>";
@@ -234,13 +229,12 @@
 		FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E3F92CBF1F809F65004ED397 /* addTeamsController.swift */,
+				E3F92CC01F809F66004ED397 /* addTourViewController.swift */,
 				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
 				FD31211E1F7E301B0044D8DD /* GamerPosting.swift */,
 				FD3121181F7E2BB10044D8DD /* TeamPosting.swift */,
 				FD2D382F1F7BC10900F53525 /* TourPosting.swift */,
-				FDC3BB5C1F7E400A005DDD54 /* addGamersViewController.swift */,
-				FDC3BB5D1F7E400A005DDD54 /* addTeamsController.swift */,
-				FDC3BB5B1F7E400A005DDD54 /* addTourViewController.swift */,
 			);
 			path = "Add Controllers";
 			sourceTree = "<group>";
@@ -394,9 +388,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3F92CC11F809F66004ED397 /* addTeamsController.swift in Sources */,
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */,
-				FD2D21F71F800EE6005C1C2D /* addTourViewController.swift in Sources */,
 				E39FBD381F7EA15B004448A9 /* MenuListViewController.swift in Sources */,
 				FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
@@ -404,17 +398,16 @@
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
-				FD2D21F51F800EBB005C1C2D /* addTeamsController.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
 				E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */,
 				FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */,
 				E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
+				E3F92CC21F809F66004ED397 /* addTourViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
 				FD3121191F7E2BB10044D8DD /* TeamPosting.swift in Sources */,
 				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
-				FD2D21F61F800EE4005C1C2D /* addGamersViewController.swift in Sources */,
 				FD3121111F7E034F0044D8DD /* TeamsTableViewCell.swift in Sources */,
 				FD2D38301F7BC10900F53525 /* TourPosting.swift in Sources */,
 			);
