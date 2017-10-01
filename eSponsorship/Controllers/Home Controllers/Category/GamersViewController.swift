@@ -92,7 +92,7 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = gamersTableView.dequeueReusableCell(withIdentifier: TeamsTableViewCell.cellIdentifier) as? TeamsTableViewCell else {
+        guard let cell = gamersTableView.dequeueReusableCell(withIdentifier: GamersTableViewCell.cellIdentifier) as? GamersTableViewCell else {
             return UITableViewCell()
         }
         
@@ -103,13 +103,13 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         //        cell.organizerName.text = organizerName
         //        cell.numberOfParticipants.text = participation
         
-        cell.tournamentNameq.text = post.tournamentName
-        cell.locationOfTournamentq.text = post.location
-        cell.organizerNameq.text = post.gameName
+        cell.tournamentNamek.text = post.tournamentName
+        cell.locationOfTournamentk.text = post.location
+        cell.organizerNamek.text = post.gameName
         //        cell.numberOfParticipantsq.text = post.prizeName
         
         print(post.imageurl)
-        cell.backgroundImageCellq.loadImage(from: post.imageurl)
+        cell.backgroundImageCellk.loadImage(from: post.imageurl)
         
         
         return cell

@@ -76,15 +76,10 @@
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="sTB-Sn-pnK"/>
             <connections>
-                <outlet property="backgroundImageCell" destination="kat-Q1-kWJ" id="uVX-ar-Yc6"/>
                 <outlet property="backgroundImageCellk" destination="kat-Q1-kWJ" id="cDd-gy-Fj0"/>
-                <outlet property="locationOfTournament" destination="gOf-dY-Dzf" id="saU-Ag-VSb"/>
-                <outlet property="locationOfTournamentk" destination="dfh-Tr-ON7" id="CSb-2i-Zzw"/>
-                <outlet property="numberOfParticipants" destination="dfh-Tr-ON7" id="LUx-DS-94B"/>
-                <outlet property="numberOfParticipantsk" destination="gOf-dY-Dzf" id="Pon-hc-9Jh"/>
-                <outlet property="organizerName" destination="bIs-RL-7cI" id="OZN-3C-es9"/>
-                <outlet property="organizerNamek" destination="cdZ-uP-3A2" id="HV1-UP-w7T"/>
-                <outlet property="tournamentName" destination="oON-Sd-x6n" id="2dU-Tt-zEL"/>
+                <outlet property="locationOfTournamentk" destination="dfh-Tr-ON7" id="mRM-gb-r4a"/>
+                <outlet property="numberOfParticipantsk" destination="gOf-dY-Dzf" id="I5F-Ec-e0b"/>
+                <outlet property="organizerNamek" destination="bIs-RL-7cI" id="7Q9-eJ-7u9"/>
                 <outlet property="tournamentNamek" destination="oON-Sd-x6n" id="n26-of-nKm"/>
             </connections>
             <point key="canvasLocation" x="2915" y="-232"/>

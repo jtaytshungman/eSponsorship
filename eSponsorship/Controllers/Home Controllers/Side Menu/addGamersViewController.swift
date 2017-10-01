@@ -20,7 +20,7 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
         
         let mainStoryboard = UIStoryboard(name: "Home", bundle: Bundle.main)
         guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "HomeNavigationController") as? UINavigationController else { return }
-        //        self.dismiss(animated: true, completion: nil)
+                self.dismiss(animated: true, completion: nil)
         
         
         self.present(targetVC, animated: true, completion: nil)
@@ -72,8 +72,8 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
         
         RegisterUser()
         saveToLibrary()
-        let vc = LoginViewController(
-            nibName: "LoginViewController",
+        let vc = HomeViewController(
+            nibName: "HomeViewController",
             bundle: nil)
         navigationController?.pushViewController(vc,
                                                  animated: true )
@@ -197,6 +197,7 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
     //
     //        self.present(targetVC, animated: true, completion: nil)
     //    }
+
     
 }
 
