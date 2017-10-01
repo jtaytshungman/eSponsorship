@@ -7,53 +7,29 @@
 //
 
 import UIKit
-import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
 
 class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    @IBAction func logout(_ sender: Any) {
-        
-        let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
-        //        self.dismiss(animated: true, completion: nil)
-        
-        
-        self.present(targetVC, animated: true, completion: nil)
-        
-        
-    }
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var dateTextField: UITextField!
-    
-    
     @IBOutlet weak var gameTextField: UITextField!
-    
-    
     @IBOutlet weak var prizeTextField: UITextField!
-    
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBAction func saveTappButtonPressed(_ sender: Any) {
         
-        
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
     }
+    
     //open gallery
     @IBAction func GalleryViewTapped(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -68,20 +44,16 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
     //save
     @IBAction func SaveBtnTapped(_ sender: Any) {
         
-        
         RegisterUser()
         saveToLibrary()
-        let vc = LoginViewController(
+        guard let vc = LoginViewController(
             nibName: "LoginViewController",
-            bundle: nil)
-        navigationController?.pushViewController(vc,
-                                                 animated: true )
-        
-        
+            bundle: nil) else { return }
+        navigationController?.pushViewController(vc, animated: true )
         
     }
     
-    //        uploadMedia(completion: imagePicked)
+    // uploadMedia(completion: imagePicked)
     
     func saveToLibrary(){
         
@@ -141,10 +113,7 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
         
         //        vc(alert, animated: true, completion: nil)
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
-    
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -153,10 +122,7 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
         dismiss(animated:true, completion: nil)
     }
     
-    
-    
     func RegisterUser() {
-        
         
         guard let name = nameTextField.text,
             let tourName = nameTextField.text,
@@ -188,6 +154,7 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
         
         
     }
+    
     //    func BackToBack(){
     //        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
     //        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else { return }

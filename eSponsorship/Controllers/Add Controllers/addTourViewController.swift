@@ -14,6 +14,15 @@ import FirebaseStorage
 
 class addTourViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    
+    @IBAction func logout(_ sender: Any) {
+        let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
+        
+        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        
+        self.present(targetVC, animated: true, completion: nil)
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
@@ -24,6 +33,7 @@ class addTourViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func saveTappButtonPressed(_ sender: Any) {
         
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
