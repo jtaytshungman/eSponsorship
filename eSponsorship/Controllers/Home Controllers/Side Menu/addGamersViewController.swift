@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Foundation
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
@@ -15,36 +14,14 @@ import FirebaseStorage
 
 class addGamersViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
-    @IBAction func logout(_ sender: Any) {
-        
-        let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
-        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
-        //        self.dismiss(animated: true, completion: nil)
-        
-        
-        self.present(targetVC, animated: true, completion: nil)
-        
-        
-    }
-    
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var dateTextField: UITextField!
-    
-    
     @IBOutlet weak var gameTextField: UITextField!
-    
-    
     @IBOutlet weak var prizeTextField: UITextField!
-    
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBAction func saveTappButtonPressed(_ sender: Any) {
-        
-        
         
     }
     
@@ -82,7 +59,7 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
         
     }
     
-    //        uploadMedia(completion: imagePicked)
+    // uploadMedia(completion: imagePicked)
     
     func saveToLibrary(){
         
@@ -104,19 +81,21 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
         
     }
     
-    //    func saveToLibrary() {
-    //
-    //        if let error = error {
-    //            // we got back an error!
-    //            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
-    //            ac.addAction(UIAlertAction(title: "OK", style: .default))
-    //            present(ac, animated: true)
-    //        } else {
-    //            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
-    //            ac.addAction(UIAlertAction(title: "OK", style: .default))
-    //            present(ac, animated: true)
-    //        }
-    //    }
+    /*
+    func saveToLibrary() {
+
+        if let error = error {
+            // we got back an error!
+            let ac = UIAlertController(title: "Save error", message: error.localizedDescription, preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        } else {
+            let ac = UIAlertController(title: "Saved!", message: "Your altered image has been saved to your photos.", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "OK", style: .default))
+            present(ac, animated: true)
+        }
+    }
+    */
     
     func uploadMedia(completion: @escaping (_ url: String?) -> Void) {
         let storageRef = Storage.storage().reference().child("myImage.jpeg")
@@ -142,11 +121,8 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
         
         //        vc(alert, animated: true, completion: nil)
         self.present(alert, animated: true, completion: nil)
-        
-        
     }
-    
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         imagePicked.image = image
@@ -154,24 +130,26 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
         dismiss(animated:true, completion: nil)
     }
     
-    
-    
     func RegisterUser() {
-        
         
         guard let name = nameTextField.text,
             let tourName = nameTextField.text,
             let location = locationTextField.text,
-            
             let game = gameTextField.text
-            else {return}
+            else {
+                return
+                
+        }
+        
         if tourName == "" || location == "" || game == "" {
             createErrorAlert("Missing input field", "Input field must be filled")
             return
         }
+        
         if imagePicked == nil{
             createErrorAlert("Missing input field", "Input field must be filled")
         }
+        
         uploadMedia { (downloadURL) in
             
             if let url = downloadURL {
@@ -186,17 +164,18 @@ class addGamersViewController: UIViewController, UIImagePickerControllerDelegate
                 
             }
         }
-        
-        
     }
-    //    func BackToBack(){
-    //        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-    //        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else { return }
-    //                self.dismiss(animated: true, completion: nil)
-    //
-    //
-    //        self.present(targetVC, animated: true, completion: nil)
-    //    }
+    
+    /*
+     func BackToBack(){
+     let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+     guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else { return }
+     self.dismiss(animated: true, completion: nil)
+     
+     
+     self.present(targetVC, animated: true, completion: nil)
+     }
+     */
     
 }
 

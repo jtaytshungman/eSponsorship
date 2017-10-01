@@ -7,7 +7,7 @@
 //
 
 import Foundation
-class Post {
+class TourPosting {
     
     var userid : String = ""
     

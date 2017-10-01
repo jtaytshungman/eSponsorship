@@ -7,11 +7,13 @@
 //
 
 import UIKit
-import SideMenu
 import Firebase
-
+import SideMenu
+import PageMenu
 
 class HomeViewController: UIViewController {
+    
+    var pageMenu : CAPSPageMenu?
     
     @IBAction func signOut(_ sender: Any) {
         confirmSignOutHandler()
@@ -37,7 +39,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenuHandler()
-        self.title = "Home"
+        pageMenuHandler()
+        self.title = "Gaming Ship"
         
     }
 }
@@ -71,6 +74,45 @@ extension HomeViewController {
         SideMenuManager.menuAddPanGestureToPresent(toView: self.navigationController!.navigationBar)
         SideMenuManager.menuAddScreenEdgePanGesturesToPresent(toView: self.navigationController!.view)
         
+    }
+    
+    func pageMenuHandler(){
+        // Array to keep track of controllers in page menu
+        var controllerArray : [UIViewController] = []
+        
+        // Create variables for all view controllers you want to put in the
+        // page menu, initialize them, and add each to the controller array.
+        // (Can be any UIViewController subclass)
+        // Make sure the title property of all view controllers is set
+        var gamersFeed : UIViewController = UIViewController(nibName: "GamersViewController", bundle: Bundle.main)
+        gamersFeed.title = "Gamers"
+        controllerArray.append(gamersFeed)
+        
+        var tournamentsFeed : UIViewController = UIViewController(nibName: "TournamentsViewController", bundle: Bundle.main)
+        tournamentsFeed.title = "Tournament"
+        controllerArray.append(tournamentsFeed)
+        
+        var teamsFeed : UIViewController = UIViewController(nibName: "TeamsViewController", bundle: Bundle.main)
+        teamsFeed.title = "Teams"
+        controllerArray.append(teamsFeed)
+        
+        // Customize page menu to your liking (optional) or use default settings by sending nil for 'options' in the init
+        // Example:
+        var parameters: [CAPSPageMenuOption] = [
+            .menuItemSeparatorWidth(4.3),
+            .useMenuLikeSegmentedControl(true),
+            .menuItemSeparatorPercentageHeight(0.1)
+        ]
+        
+        // Initialize page menu with controller array, frame, and optional parameters
+       // pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRect (0.0, 0.0, self.view.frame.width, self.view.frame.height), pageMenuOptions: parameters)
+        let cgrectfigures = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: cgrectfigures , pageMenuOptions: parameters)
+        
+        
+        // Lastly add page menu as subview of base view controller view
+        // or use pageMenu controller in you view hierachy as desired
+        self.view.addSubview(pageMenu!.view)
     }
 }
 
