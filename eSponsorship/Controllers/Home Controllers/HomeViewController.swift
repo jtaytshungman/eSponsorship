@@ -84,15 +84,15 @@ extension HomeViewController {
         // page menu, initialize them, and add each to the controller array.
         // (Can be any UIViewController subclass)
         // Make sure the title property of all view controllers is set
-        var gamersFeed : UIViewController = UIViewController(nibName: "GamersViewController", bundle: nil)
+        var gamersFeed : UIViewController = UIViewController(nibName: "GamersViewController", bundle: Bundle.main)
         gamersFeed.title = "Gamers"
         controllerArray.append(gamersFeed)
         
-        var tournamentsFeed : UIViewController = UIViewController(nibName: "TournamentsViewController", bundle: nil)
+        var tournamentsFeed : UIViewController = UIViewController(nibName: "TournamentsViewController", bundle: Bundle.main)
         tournamentsFeed.title = "Tournament"
         controllerArray.append(tournamentsFeed)
         
-        var teamsFeed : UIViewController = UIViewController(nibName: "TeamsViewController", bundle: nil)
+        var teamsFeed : UIViewController = UIViewController(nibName: "TeamsViewController", bundle: Bundle.main)
         teamsFeed.title = "Teams"
         controllerArray.append(teamsFeed)
         
