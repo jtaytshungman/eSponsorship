@@ -31,7 +31,7 @@ class MenuListViewController: UIViewController {
         
         
     }
-    
+    /*
     @IBAction func addGamers(_ sender: Any) {
         let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
         guard let vc = storyboardNew.instantiateViewController(withIdentifier: "addGamersViewController") as? addGamersViewController else {
@@ -40,5 +40,5 @@ class MenuListViewController: UIViewController {
         present(vc, animated: true, completion: nil)
         
     }
-    
+    */
 }
