@@ -19,6 +19,7 @@ pod 'SideMenu'
 pod 'PageMenu'
 pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git'
 
+# Eureka pod install is here, don't touch
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         

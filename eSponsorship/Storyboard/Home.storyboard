@@ -72,14 +72,15 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Jgu-km-EzL">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" springLoaded="YES" id="jFX-gB-M9h">
+                        <barButtonItem key="leftBarButtonItem" image="menu" springLoaded="YES" id="jFX-gB-M9h">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="menuButtonTapped:" destination="ENx-Io-PIX" id="LrE-CS-tLY"/>
                                 <segue destination="4eg-TI-ZEr" kind="show" id="Kyj-to-JEp"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Sign Out" springLoaded="YES" style="done" id="cu0-e7-pDQ">
-                            <color key="tintColor" red="1" green="0.3843688455" blue="0.36351955520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="logout" springLoaded="YES" style="done" id="cu0-e7-pDQ">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="signOut:" destination="ENx-Io-PIX" id="Sip-Na-OPn"/>
                             </connections>
@@ -299,5 +300,7 @@
         <image name="Gamers" width="389" height="179"/>
         <image name="Teams" width="332" height="175"/>
         <image name="Tournaments" width="653" height="197"/>
+        <image name="logout" width="48" height="48"/>
+        <image name="menu" width="48" height="48"/>
     </resources>
 </document>

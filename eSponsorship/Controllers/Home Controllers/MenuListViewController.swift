@@ -15,20 +15,22 @@ class MenuListViewController: UIViewController {
     
     @IBAction func addTeams(_ sender: Any) {
      
-        let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
-        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "addTeamsController") as? addTeamsController else {
+        let storyboardNew = UIStoryboard(name: "EurekaAdd", bundle: nil)
+        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "EurekaAddTournamentsViewController") as? EurekaAddTournamentsViewController else {
             return
         }
         present(vc, animated: true, completion: nil)
     }
     
     @IBAction func addTournaments(_ sender: Any) {
+        
         let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
+        
         guard let vc = storyboardNew.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else {
             return
         }
-        present(vc, animated: true, completion: nil)
         
+        present(vc, animated: true, completion: nil)
         
     }
     /*
