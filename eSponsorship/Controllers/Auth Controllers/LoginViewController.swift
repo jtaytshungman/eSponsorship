@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
             correctSignInHandler()
         }
     }
-    
 }
 
 extension LoginViewController {

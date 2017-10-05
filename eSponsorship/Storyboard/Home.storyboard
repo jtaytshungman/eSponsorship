@@ -160,6 +160,9 @@
                                         <state key="normal" title="About">
                                             <color key="titleColor" red="0.0" green="0.50196078430000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="aboutSponsors:" destination="dai-aA-5gr" eventType="touchUpInside" id="lqJ-tr-acz"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-XU-mZl">
                                         <rect key="frame" x="0.0" y="144" width="144" height="36"/>

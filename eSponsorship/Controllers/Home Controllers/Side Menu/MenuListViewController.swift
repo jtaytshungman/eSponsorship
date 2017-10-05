@@ -41,4 +41,13 @@ class MenuListViewController: UIViewController {
         
     }
     
+    @IBAction func aboutSponsors(_ sender: Any) {
+        let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
+        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "AboutViewController") as? AboutViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
 }
