@@ -18,32 +18,20 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
     @IBAction func logout(_ sender: Any) {
         
         let mainStoryboard = UIStoryboard(name: "Auth", bundle: Bundle.main)
+        
         guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         //        self.dismiss(animated: true, completion: nil)
-        
-        
         self.present(targetVC, animated: true, completion: nil)
-        
-        
     }
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var dateTextField: UITextField!
-    
-    
     @IBOutlet weak var gameTextField: UITextField!
-    
-    
     @IBOutlet weak var prizeTextField: UITextField!
-    
     @IBOutlet weak var imagePicked: UIImageView!
     
     @IBAction func saveTappButtonPressed(_ sender: Any) {
-        
-        
         
     }
     

@@ -133,6 +133,13 @@
 			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
+		E3812C551F85E836005A2CB4 /* Eureka Adding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Eureka Adding";
+			sourceTree = "<group>";
+		};
 		E396FC671F7DE0920062596D /* Home Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,9 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				FDA378141F7A567D00195EAC /* OnboardController.swift */,
+				FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */,
 				E3D00D681F7CA5F300932FE5 /* Auth Controllers */,
 				E396FC671F7DE0920062596D /* Home Controllers */,
-				FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */,
+				E3812C551F85E836005A2CB4 /* Eureka Adding */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
