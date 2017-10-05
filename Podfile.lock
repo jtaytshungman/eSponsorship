@@ -1,4 +1,5 @@
 PODS:
+  - Eureka (4.0.0)
   - Firebase/Auth (4.3.0):
     - Firebase/Core
     - FirebaseAuth (= 4.2.1)
@@ -54,6 +55,7 @@ PODS:
   - SideMenu (3.0.2)
 
 DEPENDENCIES:
+  - Eureka (from `https://github.com/xmartlabs/Eureka.git`)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -62,7 +64,17 @@ DEPENDENCIES:
   - PageMenu
   - SideMenu
 
+EXTERNAL SOURCES:
+  Eureka:
+    :git: https://github.com/xmartlabs/Eureka.git
+
+CHECKOUT OPTIONS:
+  Eureka:
+    :commit: 7bf654f2c99277e059bda115f40120c887020f5e
+    :git: https://github.com/xmartlabs/Eureka.git
+
 SPEC CHECKSUMS:
+  Eureka: cf31d9de849ce134f2eb22751d4e78160ed8e96a
   Firebase: 83283761a1ef6dc9846e03d08059f51421afbd65
   FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
   FirebaseAuth: d7f047fbeab98062b98ea933b8d934e0fb1190e2
@@ -78,6 +90,6 @@ SPEC CHECKSUMS:
   PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
   SideMenu: 8fe957e0f5dcf1a1175c8ba5d47978d4eb2a89da
 
-PODFILE CHECKSUM: 6808d248c03f9ae6077360d5470a4fb83eb2c7e3
+PODFILE CHECKSUM: 902530d7419016f08cd180e506084241e2bfb12f
 
 COCOAPODS: 1.3.1

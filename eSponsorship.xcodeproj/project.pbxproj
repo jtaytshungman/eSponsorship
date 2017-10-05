@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E337EE9B1F85FC0900E2A982 /* EurekaAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E337EE9A1F85FC0900E2A982 /* EurekaAdd.storyboard */; };
 		E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* Home.storyboard */; };
 		E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Universal Functions.swift */; };
 		E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */; };
 		E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */; };
+		E3812C571F85ECAC005A2CB4 /* EurekaAddTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3812C561F85ECAC005A2CB4 /* EurekaAddTournamentsViewController.swift */; };
+		E3812C5B1F85ED8C005A2CB4 /* TeamPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */; };
 		E39FBD381F7EA15B004448A9 /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */; };
 		E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A752C61F7A581D00AD9244 /* LoginViewController.swift */; };
 		E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */; };
@@ -30,7 +33,6 @@
 		FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38331F7BC2D000F53525 /* myExtension.swift */; };
 		FD31210F1F7E031F0044D8DD /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD31210E1F7E031F0044D8DD /* TeamsTableViewCell.xib */; };
 		FD3121111F7E034F0044D8DD /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3121101F7E034F0044D8DD /* TeamsTableViewCell.swift */; };
-		FD3121191F7E2BB10044D8DD /* TeamPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3121181F7E2BB10044D8DD /* TeamPosting.swift */; };
 		FD31211B1F7E2E590044D8DD /* GamersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */; };
 		FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */; };
 		FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211E1F7E301B0044D8DD /* GamerPosting.swift */; };
@@ -45,11 +47,14 @@
 /* Begin PBXFileReference section */
 		3B2820F88C8596FC71644B58 /* Pods-eSponsorship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.debug.xcconfig"; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E337EE9A1F85FC0900E2A982 /* EurekaAdd.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = EurekaAdd.storyboard; path = "eSponsorship/Controllers/Add Controllers/New Group/EurekaAdd.storyboard"; sourceTree = SOURCE_ROOT; };
 		E3522A4E1F7B51D3007FA16F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E3522A811F7BFB27007FA16F /* Universal Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Universal Functions.swift"; sourceTree = "<group>"; };
 		E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TournamentTableViewCell.xib; sourceTree = "<group>"; };
-		E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuListViewController.swift; path = "eSponsorship/Controllers/Home Controllers/Side Menu/MenuListViewController.swift"; sourceTree = SOURCE_ROOT; };
+		E3812C561F85ECAC005A2CB4 /* EurekaAddTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaAddTournamentsViewController.swift; sourceTree = "<group>"; };
+		E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPosting.swift; sourceTree = "<group>"; };
+		E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuListViewController.swift; path = "eSponsorship/Controllers/Home Controllers/MenuListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E3A752C61F7A581D00AD9244 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
 		E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersViewController.swift; sourceTree = "<group>"; };
@@ -71,7 +76,6 @@
 		FD2D38331F7BC2D000F53525 /* myExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myExtension.swift; sourceTree = "<group>"; };
 		FD31210E1F7E031F0044D8DD /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		FD3121101F7E034F0044D8DD /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
-		FD3121181F7E2BB10044D8DD /* TeamPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TeamPosting.swift; path = "eSponsorship/Controllers/Add Controllers/TeamPosting.swift"; sourceTree = SOURCE_ROOT; };
 		FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamersTableViewCell.xib; sourceTree = "<group>"; };
 		FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersTableViewCell.swift; sourceTree = "<group>"; };
 		FD31211E1F7E301B0044D8DD /* GamerPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerPosting.swift; sourceTree = "<group>"; };
@@ -133,11 +137,32 @@
 			path = "Custom Cells";
 			sourceTree = "<group>";
 		};
+		E3812C581F85ECB1005A2CB4 /* Add Eureka API */ = {
+			isa = PBXGroup;
+			children = (
+				E337EE9A1F85FC0900E2A982 /* EurekaAdd.storyboard */,
+				E3812C561F85ECAC005A2CB4 /* EurekaAddTournamentsViewController.swift */,
+			);
+			name = "Add Eureka API";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E3812C591F85ECCD005A2CB4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FD31211E1F7E301B0044D8DD /* GamerPosting.swift */,
+				E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */,
+				FD2D382F1F7BC10900F53525 /* TourPosting.swift */,
+				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		E396FC671F7DE0920062596D /* Home Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */,
-				E3DC94061F7E4AF5004948BA /* Side Menu */,
+				E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */,
 				E3D00D671F7CA5D400932FE5 /* Category */,
 			);
 			path = "Home Controllers";
@@ -158,9 +183,9 @@
 			isa = PBXGroup;
 			children = (
 				FDA378141F7A567D00195EAC /* OnboardController.swift */,
+				FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */,
 				E3D00D681F7CA5F300932FE5 /* Auth Controllers */,
 				E396FC671F7DE0920062596D /* Home Controllers */,
-				FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -180,17 +205,8 @@
 			children = (
 				E3A752C61F7A581D00AD9244 /* LoginViewController.swift */,
 				FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */,
-				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
 			);
 			path = "Auth Controllers";
-			sourceTree = "<group>";
-		};
-		E3DC94061F7E4AF5004948BA /* Side Menu */ = {
-			isa = PBXGroup;
-			children = (
-				E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */,
-			);
-			path = "Side Menu";
 			sourceTree = "<group>";
 		};
 		E3F4DB6B1F79F6100088E174 = {
@@ -215,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				E3F4DB771F79F6100088E174 /* AppDelegate.swift */,
+				E3812C591F85ECCD005A2CB4 /* Models */,
 				E3A752C81F7A582B00AD9244 /* Storyboard */,
 				E3A752C91F7A583900AD9244 /* Controllers */,
 				E3522A801F7BFAE4007FA16F /* Utilities */,
@@ -232,9 +249,7 @@
 				E3F92CBF1F809F65004ED397 /* addTeamsController.swift */,
 				E3F92CC01F809F66004ED397 /* addTourViewController.swift */,
 				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
-				FD31211E1F7E301B0044D8DD /* GamerPosting.swift */,
-				FD3121181F7E2BB10044D8DD /* TeamPosting.swift */,
-				FD2D382F1F7BC10900F53525 /* TourPosting.swift */,
+				E3812C581F85ECB1005A2CB4 /* Add Eureka API */,
 			);
 			path = "Add Controllers";
 			sourceTree = "<group>";
@@ -307,6 +322,7 @@
 				FD31211B1F7E2E590044D8DD /* GamersTableViewCell.xib in Resources */,
 				E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */,
 				FD31210F1F7E031F0044D8DD /* TeamsTableViewCell.xib in Resources */,
+				E337EE9B1F85FC0900E2A982 /* EurekaAdd.storyboard in Resources */,
 				E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */,
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
 				E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */,
@@ -358,6 +374,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Onboard/Onboard.framework",
@@ -368,6 +385,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Onboard.framework",
@@ -398,15 +416,16 @@
 				FD2D38341F7BC2D000F53525 /* myExtension.swift in Sources */,
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
+				E3812C571F85ECAC005A2CB4 /* EurekaAddTournamentsViewController.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
 				E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */,
 				FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */,
 				E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */,
+				E3812C5B1F85ED8C005A2CB4 /* TeamPosting.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
 				E3F92CC21F809F66004ED397 /* addTourViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
-				FD3121191F7E2BB10044D8DD /* TeamPosting.swift in Sources */,
 				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
 				FD3121111F7E034F0044D8DD /* TeamsTableViewCell.swift in Sources */,
 				FD2D38301F7BC10900F53525 /* TourPosting.swift in Sources */,
