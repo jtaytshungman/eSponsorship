@@ -18,15 +18,12 @@ class HomeViewController: UIViewController {
     
     // MARK: Category Selected
     @IBAction func gamersButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func teamsButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func tournamentsButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func menuButtonTapped(_ sender: Any) {
@@ -60,6 +57,7 @@ extension HomeViewController {
         guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         dismiss(animated: true, completion: nil)
         self.present(targetVC, animated: true, completion: nil)
+        
     }
     
     func sideMenuHandler () {
@@ -112,5 +110,4 @@ extension HomeViewController {
     }
  */
 }
-
 
