@@ -60,7 +60,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vY-uI-HFx">
+<<<<<<< HEAD
                                 <rect key="frame" x="77" y="594" width="220" height="30"/>
+=======
+                                <rect key="frame" x="77" y="593" width="220" height="30"/>
+>>>>>>> 0b61d0784af47ccc13ad54523a74b8869cbf5050
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -89,6 +93,7 @@
                                     <action selector="GalleryViewTapped:" destination="07W-bC-Wcy" eventType="touchUpInside" id="YIc-LF-99D"/>
                                 </connections>
                             </button>
+<<<<<<< HEAD
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yl7-3o-zFU">
                                 <rect key="frame" x="77" y="632" width="220" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -99,6 +104,8 @@
                                     <action selector="logout:" destination="07W-bC-Wcy" eventType="touchUpInside" id="t2y-Pw-J8g"/>
                                 </connections>
                             </button>
+=======
+>>>>>>> 0b61d0784af47ccc13ad54523a74b8869cbf5050
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="WUY-dp-MRe"/>
@@ -146,7 +153,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJd-rh-naG">
+<<<<<<< HEAD
                                 <rect key="frame" x="77" y="587" width="220" height="30"/>
+=======
+                                <rect key="frame" x="77" y="590" width="220" height="30"/>
+>>>>>>> 0b61d0784af47ccc13ad54523a74b8869cbf5050
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -230,7 +241,11 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTd-Lo-Qeg">
+<<<<<<< HEAD
                                 <rect key="frame" x="77" y="571" width="220" height="30"/>
+=======
+                                <rect key="frame" x="77" y="593" width="220" height="30"/>
+>>>>>>> 0b61d0784af47ccc13ad54523a74b8869cbf5050
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

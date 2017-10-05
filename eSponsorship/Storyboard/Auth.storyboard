@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GPx-hw-XUr">
-                                <rect key="frame" x="20" y="203.5" width="335" height="260"/>
+                                <rect key="frame" x="20" y="204" width="335" height="260"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-Ff-f1D">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="48"/>
@@ -46,7 +47,9 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-zX-Hre">
                                         <rect key="frame" x="0.0" y="212" width="335" height="48"/>
-                                        <state key="normal" title="Sign Up"/>
+                                        <state key="normal" title="Sign Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -63,12 +66,29 @@
                                     <constraint firstItem="dgl-zX-Hre" firstAttribute="leading" secondItem="GPx-hw-XUr" secondAttribute="leading" id="xNq-NR-y8G"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="IZl-s0-sPX">
+                                <rect key="frame" x="119" y="54" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="8ye-CM-Cc3"/>
+                                    <constraint firstAttribute="width" constant="150" id="C2G-Zi-IdT"/>
+                                    <constraint firstAttribute="height" constant="150" id="HQH-pI-WDn"/>
+                                    <constraint firstAttribute="width" constant="150" id="cnj-ab-1rd"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nSc-a5-jmt" firstAttribute="trailing" secondItem="GPx-hw-XUr" secondAttribute="trailing" constant="20" id="0mT-yj-qo6"/>
+                            <constraint firstItem="IZl-s0-sPX" firstAttribute="top" secondItem="yPW-Jg-1OJ" secondAttribute="top" constant="54" id="12F-Ih-s1v"/>
+                            <constraint firstItem="GPx-hw-XUr" firstAttribute="top" secondItem="IZl-s0-sPX" secondAttribute="bottom" id="4Mo-8G-RMM"/>
+                            <constraint firstItem="IZl-s0-sPX" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" constant="119" id="9dv-nM-7jw"/>
+                            <constraint firstItem="IZl-s0-sPX" firstAttribute="top" secondItem="yPW-Jg-1OJ" secondAttribute="topMargin" constant="-10" id="MIi-gh-6vi"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="centerY" secondItem="yPW-Jg-1OJ" secondAttribute="centerY" id="Pgq-kA-t7l"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="leading" secondItem="yPW-Jg-1OJ" secondAttribute="leading" constant="20" id="bY5-hg-LBy"/>
+                            <constraint firstItem="IZl-s0-sPX" firstAttribute="leading" secondItem="yPW-Jg-1OJ" secondAttribute="leading" constant="119" id="dK4-xt-TWg"/>
+                            <constraint firstItem="IZl-s0-sPX" firstAttribute="top" secondItem="yPW-Jg-1OJ" secondAttribute="top" constant="54" id="eI6-GT-3VM"/>
+                            <constraint firstItem="IZl-s0-sPX" firstAttribute="leading" secondItem="yPW-Jg-1OJ" secondAttribute="leading" constant="119" id="jc6-Sk-536"/>
+                            <constraint firstItem="nSc-a5-jmt" firstAttribute="trailing" secondItem="IZl-s0-sPX" secondAttribute="trailing" constant="106" id="joe-8L-npK"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="centerX" secondItem="yPW-Jg-1OJ" secondAttribute="centerX" id="t76-Mv-awZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nSc-a5-jmt"/>
@@ -110,7 +130,9 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xUb-3k-LLo">
                                         <rect key="frame" x="0.0" y="110" width="335" height="50"/>
-                                        <state key="normal" title="Sign In"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -118,16 +140,18 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-Nu-1oJ">
-                                <rect key="frame" x="58" y="617" width="259" height="28"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <state key="normal" title="Don't Have An Account? Sign Up here"/>
+                                <rect key="frame" x="58" y="617" width="259" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Don't Have An Account? Sign Up here">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="UQP-yT-Z4N" kind="show" id="3qU-HU-gsN">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TRo-aa-QSg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="TRo-aa-QSg">
                                 <rect key="frame" x="112" y="83.5" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Oct-qz-H2d"/>
@@ -135,7 +159,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ohl-1e-QkV" firstAttribute="trailing" secondItem="9uN-Nf-abu" secondAttribute="trailing" constant="20" id="4fX-0q-rqf"/>
                             <constraint firstItem="Ohl-1e-QkV" firstAttribute="trailing" secondItem="6MZ-Nu-1oJ" secondAttribute="trailing" constant="58" id="8T4-EK-NbW"/>
@@ -179,4 +203,7 @@
             <point key="canvasLocation" x="-2266" y="-1157"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GameShip" width="382" height="111"/>
+    </resources>
 </document>

@@ -73,6 +73,7 @@
                     <constraint firstItem="CwU-pE-sSU" firstAttribute="top" secondItem="6zR-6X-FS3" secondAttribute="topMargin" id="r9W-qo-DLU"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="iFT-gS-CXa"/>
             <connections>
                 <outlet property="backgroundImageCellq" destination="bE2-eR-aou" id="iMh-el-g6R"/>

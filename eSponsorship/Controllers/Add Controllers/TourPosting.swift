@@ -10,17 +10,11 @@ import Foundation
 class TourPosting {
     
     var userid : String = ""
-    
     var imageurl : String = ""
-    
     var tournamentName : String = ""
-    
     var location : String = ""
-    
     var dateName : String = ""
-    
     var gameName : String = ""
-    
     var prizeName : String = ""
     
     init() {}
