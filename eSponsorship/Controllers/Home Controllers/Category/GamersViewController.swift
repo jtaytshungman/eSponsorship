@@ -110,12 +110,35 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         
         print(post.imageurl)
         cell.backgroundImageCellk.loadImage(from: post.imageurl)
-        
-        
+
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedGamersViewController") as? DetailedGamersViewController else {return}
+        
+        let selectedGamer = posts[indexPath.row]
+        
+        destination.selectedGamerProfile = selectedGamer
+        navigationController?.pushViewController(destination, animated: true)
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

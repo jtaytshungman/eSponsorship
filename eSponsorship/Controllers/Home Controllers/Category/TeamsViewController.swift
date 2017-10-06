@@ -114,6 +114,20 @@ extension TeamsViewController : UITableViewDelegate,UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTeamsViewController") as? DetailedTeamsViewController else {return}
+        
+        let selectedTeam = posts[indexPath.row]
+        
+        destination.selectedTeamProfile = selectedTeam
+        navigationController?.pushViewController(destination, animated: true)
+    }
+    
+    
+    
+    
+    
+    
 }
 
 

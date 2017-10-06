@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6014919E1F85FCB800287C18 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6014919D1F85FCB800287C18 /* AboutViewController.swift */; };
+		60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B881F87485800362F2D /* DetailedGamersViewController.swift */; };
+		60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */; };
+		60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */; };
 		E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* Home.storyboard */; };
 		E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Universal Functions.swift */; };
 		E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */; };
@@ -47,6 +50,9 @@
 /* Begin PBXFileReference section */
 		3B2820F88C8596FC71644B58 /* Pods-eSponsorship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.debug.xcconfig"; sourceTree = "<group>"; };
 		6014919D1F85FCB800287C18 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		60417B881F87485800362F2D /* DetailedGamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGamersViewController.swift; sourceTree = "<group>"; };
+		60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamsViewController.swift; sourceTree = "<group>"; };
+		60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTournamentsViewController.swift; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3522A4E1F7B51D3007FA16F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E3522A811F7BFB27007FA16F /* Universal Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Universal Functions.swift"; sourceTree = "<group>"; };
@@ -103,6 +109,16 @@
 				AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		60417B871F87484600362F2D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				60417B881F87485800362F2D /* DetailedGamersViewController.swift */,
+				60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */,
+				60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9995AED24288FC4BF6C136AF /* Pods */ = {
@@ -176,6 +192,7 @@
 		E3D00D671F7CA5D400932FE5 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				60417B871F87484600362F2D /* New Group */,
 				E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */,
 				E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */,
 				E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */,
@@ -413,7 +430,10 @@
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
 				FD3121191F7E2BB10044D8DD /* TeamsPOST.swift in Sources */,
 				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
+				60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */,
+				60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */,
 				FD2D21F61F800EE4005C1C2D /* addGamersViewController.swift in Sources */,
+				60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */,
 				FD3121111F7E034F0044D8DD /* TeamsTableViewCell.swift in Sources */,
 				FD2D38301F7BC10900F53525 /* Post.swift in Sources */,
 			);

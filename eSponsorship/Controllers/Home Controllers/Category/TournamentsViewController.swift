@@ -113,6 +113,20 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
         
         return cell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else {return}
+        
+        let selectedTourmanent = posts[indexPath.row]
+        
+        destination.selectedTournamentProfile = selectedTourmanent
+        navigationController?.pushViewController(destination, animated: true)
     }
+    
+    
+    
+    
+    
+    
+}
+
 
