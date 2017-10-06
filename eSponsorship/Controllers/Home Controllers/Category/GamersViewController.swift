@@ -38,7 +38,7 @@ class GamersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Gamers"
+        self.title = "Profile"
         
         fetchpost()
         
@@ -51,7 +51,7 @@ class GamersViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseRef.child("GamersPosts").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("usersProfiles").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
@@ -62,16 +62,15 @@ class GamersViewController: UIViewController {
                 let tournamentName = mypost["name"] as? String,
                 let location = mypost["location"] as? String,
                 let gameName = mypost["game"] as? String,
-                //                let dateName = mypost["date"] as? String,
-                //                let prizeName = mypost["prize"] as? String,
+                let dob = mypost["date of birth"] as? String,
+                let level = mypost["competitive level"] as? String,
+                let desc = mypost["description"] as? String,
+
                 let userid = mypost["userID"] as? String {
                 
                 
-                //            let teamPost = mypost(imageName: post)
-                
-                
                 DispatchQueue.main.async {
-                    let teamPost = GamerPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theGame: gameName)
+                    let teamPost = GamerPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theGame: gameName,dateOfBirth: dob, descriptionText: desc, levelcomp: level)
                     
                     
                     self.posts.append(teamPost)

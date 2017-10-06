@@ -31,9 +31,10 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var gameTextField: UITextField!
-    @IBOutlet weak var prizeTextField: UITextField!
     @IBOutlet weak var imagePicked: UIImageView!
-    
+    @IBOutlet weak var dobTextField: UITextField!
+    @IBOutlet weak var DescTextField: UITextField!
+    @IBOutlet weak var levelTextField: UITextField!
     @IBAction func saveTappButtonPressed(_ sender: Any) {
         
     }
@@ -148,13 +149,16 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         guard let name = nameTextField.text,
             let tourName = nameTextField.text,
             let location = locationTextField.text,
+            let dateOfBirth = dobTextField,
+            let descriptiontext = DescTextField,
+            let levelcomp = levelTextField,
             let game = gameTextField.text
             else {
                 return
                 
         }
         
-        if tourName == "" || location == "" || game == "" {
+        if tourName == "" || location == "" || game == "" || dateOfBirth == "" || descriptiontext == "" || levelcomp == "" {
             createErrorAlert("Missing input field", "Input field must be filled")
             return
         }
@@ -171,9 +175,9 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 let postRef = Database.database().reference()
                 guard let id = Auth.auth().currentUser?.uid else {return}
-                let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "game" : game, "imagePost" : imagePost]
+                let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "game" : game, "imagePost" : imagePost, "date of birth" : dateOfBirth, "description": descriptiontext,"competitive level" : levelcomp ]
                 
-                postRef.child("GamersPosts").childByAutoId().setValue(post)
+                postRef.child("usersProfiles").childByAutoId().setValue(post)
                 
             }
         }
