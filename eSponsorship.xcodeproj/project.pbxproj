@@ -471,13 +471,10 @@
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
 				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
-<<<<<<< HEAD
-=======
 				60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */,
 				60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */,
 				FD2D21F61F800EE4005C1C2D /* addGamersViewController.swift in Sources */,
 				60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */,
->>>>>>> ha
 				FD3121111F7E034F0044D8DD /* TeamsTableViewCell.swift in Sources */,
 				FD2D38301F7BC10900F53525 /* TourPosting.swift in Sources */,
 			);

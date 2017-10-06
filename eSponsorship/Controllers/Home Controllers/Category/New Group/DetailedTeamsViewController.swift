@@ -10,7 +10,7 @@ import UIKit
 
 class DetailedTeamsViewController: UIViewController {
     
-    var selectedTeamProfile : TeamsPOST?
+    var selectedTeamProfile : TeamPosting?
     
     @IBOutlet weak var gameTeamTextField: UITextField!
     

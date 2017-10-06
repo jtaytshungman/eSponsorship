@@ -10,7 +10,7 @@ import UIKit
 
 class DetailedTournamentsViewController: UIViewController {
 
-    var selectedTournamentProfile : Post?
+    var selectedTournamentProfile : TourPosting?
     
     @IBOutlet weak var gameTourmanent: UITextField!
     

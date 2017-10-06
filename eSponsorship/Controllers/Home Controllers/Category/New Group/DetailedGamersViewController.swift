@@ -10,7 +10,7 @@ import UIKit
 
 class DetailedGamersViewController: UIViewController {
     
-    var selectedGamerProfile : GamersPost?
+    var selectedGamerProfile : GamerPosting?
     
     @IBOutlet weak var gameTextField: UITextField!
     
