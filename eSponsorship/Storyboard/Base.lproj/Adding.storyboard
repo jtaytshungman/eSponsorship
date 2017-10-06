@@ -310,6 +310,7 @@
                     </view>
                     <connections>
                         <outlet property="DescTextField" destination="589-Ke-fBL" id="z9V-IK-65C"/>
+                        <outlet property="dateTextField" destination="0YL-7s-xib" id="CP6-Tb-hmF"/>
                         <outlet property="dobTextField" destination="0YL-7s-xib" id="GDh-5m-5z2"/>
                         <outlet property="gameTextField" destination="A6y-TM-MWv" id="81y-C8-eLR"/>
                         <outlet property="imagePicked" destination="Ua1-M1-qHM" id="lIA-Gb-EE9"/>

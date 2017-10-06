@@ -34,7 +34,7 @@ class MenuListViewController: UIViewController {
         
     }
     
-     @IBAction func addGamers(_ sender: Any) {
+     @IBAction func Profile(_ sender: Any) {
      let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
      guard let vc = storyboardNew.instantiateViewController(withIdentifier: "profileViewController") as? profileViewController else {
      return

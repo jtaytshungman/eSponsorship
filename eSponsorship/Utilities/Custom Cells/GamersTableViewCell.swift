@@ -14,12 +14,8 @@ class GamersTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfParticipantsk: UILabel!
     @IBOutlet weak var locationOfTournamentk: UILabel!
     @IBOutlet weak var organizerNamek: UILabel!
-    
     @IBOutlet weak var dob: UILabel!
-    
-    
     @IBOutlet weak var descTextField: UILabel!
-    
     @IBOutlet weak var backgroundImageCellk: UIImageView!
     
     

@@ -159,7 +159,8 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         
         if tourName == "" || location == "" || game == "" || dateOfBirth == "" || descriptiontext == "" || levelcomp == "" {
-            createErrorAlert("Missing input field", "Input field must be filled")
+            
+            self.createErrorAlert("Missing input field", "Input field must be filled")
             return
         }
         

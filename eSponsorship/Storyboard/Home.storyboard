@@ -24,7 +24,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="351" height="165"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Gamers" image="Gamers">
+                                        <state key="normal" title="View Profiles ( for testing only )">
                                             <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -300,7 +300,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Gamers" width="389" height="179"/>
         <image name="Teams" width="332" height="175"/>
         <image name="Tournaments" width="653" height="197"/>
         <image name="logout" width="48" height="48"/>
