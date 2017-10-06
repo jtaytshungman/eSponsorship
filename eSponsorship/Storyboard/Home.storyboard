@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBQ-GN-PJJ">
-                                <rect key="frame" x="12" y="76" width="351" height="535"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-Hu-3rd">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="165"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="194.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="View Profiles ( for testing only )">
@@ -34,7 +34,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MK-QL-wTN">
-                                        <rect key="frame" x="0.0" y="185" width="351" height="165"/>
+                                        <rect key="frame" x="0.0" y="214.5" width="375" height="194"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Teams" image="Teams">
@@ -46,7 +46,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aA-Cd-PQy">
-                                        <rect key="frame" x="0.0" y="370" width="351" height="165"/>
+                                        <rect key="frame" x="0.0" y="428.5" width="375" height="194.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,10 +63,10 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="leading" secondItem="Doo-5f-JEo" secondAttribute="leading" constant="12" id="7c6-pD-niJ"/>
-                            <constraint firstItem="Doo-5f-JEo" firstAttribute="bottom" secondItem="rBQ-GN-PJJ" secondAttribute="bottom" constant="12" id="PhL-Wy-FNf"/>
-                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="top" secondItem="Doo-5f-JEo" secondAttribute="top" constant="12" id="nKX-Kj-1hc"/>
-                            <constraint firstItem="Doo-5f-JEo" firstAttribute="trailing" secondItem="rBQ-GN-PJJ" secondAttribute="trailing" constant="12" id="uZ8-jj-Lhe"/>
+                            <constraint firstItem="Doo-5f-JEo" firstAttribute="bottom" secondItem="rBQ-GN-PJJ" secondAttribute="bottom" id="1KY-1S-d5D"/>
+                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="top" secondItem="0MN-pH-SDf" secondAttribute="top" id="1bO-an-Fqv"/>
+                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="leading" secondItem="0MN-pH-SDf" secondAttribute="leading" id="Npf-G4-JUf"/>
+                            <constraint firstItem="Doo-5f-JEo" firstAttribute="trailing" secondItem="rBQ-GN-PJJ" secondAttribute="trailing" id="uuP-nF-6c8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Doo-5f-JEo"/>
                     </view>
