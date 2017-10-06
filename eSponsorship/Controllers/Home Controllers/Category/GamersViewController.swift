@@ -65,7 +65,7 @@ class GamersViewController: UIViewController {
                 let dob = mypost["date of birth"] as? String,
                 let level = mypost["competitive level"] as? String,
                 let desc = mypost["description"] as? String,
-
+                
                 let userid = mypost["userID"] as? String {
                 
                 

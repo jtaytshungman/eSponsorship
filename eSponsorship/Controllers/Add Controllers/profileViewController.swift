@@ -149,16 +149,16 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
         guard let name = nameTextField.text,
             let tourName = nameTextField.text,
             let location = locationTextField.text,
-            let dateOfBirth = dobTextField,
-            let descriptiontext = DescTextField,
-            let levelcomp = levelTextField,
+            let dob = dobTextField.text,
+            let descriptiontext = DescTextField.text,
+            let levelcomp = levelTextField.text,
             let game = gameTextField.text
             else {
                 return
                 
         }
         
-        if tourName == "" || location == "" || game == "" || dateOfBirth == "" || descriptiontext == "" || levelcomp == "" {
+        if tourName == "" || location == "" || game == "", dob == "" || descriptiontext == "" || levelcomp == "" {
             
             self.createErrorAlert("Missing input field", "Input field must be filled")
             return
@@ -176,7 +176,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
                 let postRef = Database.database().reference()
                 guard let id = Auth.auth().currentUser?.uid else {return}
-                let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "game" : game, "imagePost" : imagePost, "date of birth" : dateOfBirth, "description": descriptiontext,"competitive level" : levelcomp ]
+                let post : [String:Any] = ["name" : name, "userID": id, "location" : location, "game" : game, "imagePost" : imagePost, "date of birth" : dob, "description": descriptiontext,"competitive level" : levelcomp ]
                 
                 postRef.child("usersProfiles").childByAutoId().setValue(post)
                 
