@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="-410.39999999999998" y="121.88905547226388"/>
         </scene>
-        <!--Add Gamers View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="4bp-zh-cai">
             <objects>
-                <viewController storyboardIdentifier="addGamersViewController" id="UWl-Yb-CBO" customClass="addGamersViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="profileViewController" id="UWl-Yb-CBO" customClass="profileViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cXV-X0-KVI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,7 +259,7 @@
                                     <action selector="GalleryViewTapped:" destination="UWl-Yb-CBO" eventType="touchUpInside" id="Rmf-iy-ejE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Gamers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZQ-bz-ZeQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Profile " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZQ-bz-ZeQ">
                                 <rect key="frame" x="77" y="44" width="220" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
