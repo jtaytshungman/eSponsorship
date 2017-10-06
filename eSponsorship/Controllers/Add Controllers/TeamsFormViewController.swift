@@ -13,8 +13,14 @@ class TeamsFormViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        teamInfoForms()
+    }
+    
+    func teamInfoForms () {
         form +++
-            Section(header: "Forms Testing", footer: "")
+            Section(header: "Team Information", footer: "")
+            
+        
     }
 
 }

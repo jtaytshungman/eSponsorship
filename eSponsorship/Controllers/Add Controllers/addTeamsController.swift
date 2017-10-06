@@ -55,18 +55,10 @@ class addTeamsController: UIViewController , UIImagePickerControllerDelegate, UI
     
     //save
     @IBAction func SaveBtnTapped(_ sender: Any) {
-        
-        
         RegisterUser()
         saveToLibrary()
-        let vc = LoginViewController(
-            nibName: "LoginViewController",
-            bundle: nil)
-        navigationController?.pushViewController(vc,
-                                                 animated: true )
-        
-        
-        
+        let vc = LoginViewController( nibName: "LoginViewController", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true )
     }
     
     //        uploadMedia(completion: imagePicked)

@@ -1,4 +1,3 @@
-//
 //  Firebase_Eureka_Bridge.swift
 //  eSponsorship
 //
@@ -45,7 +44,7 @@ private extension BaseRow {
         get {
             if self is SwitchRow || self is CheckRow {
                 return (self.baseValue as! Bool) ? 1:0
-            } else if self is DateRow || self is TimeRow || self is DateTimeRow {
+            } else if self is DateRow || self is TimeRow || self is DateTimeRow || self is DateTimeInlineRow {
                 return (self.baseValue as! Date).timeIntervalSince1970
             } else {
                 return self.baseValue
