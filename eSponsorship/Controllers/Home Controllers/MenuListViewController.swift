@@ -9,47 +9,39 @@
 import UIKit
 
 class MenuListViewController: UIViewController {
+    
+    @IBOutlet weak var sideMenuProfileImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
+    @IBAction func viewProfileButtonTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func editProfileButtonTapped(_ sender: Any) {
+        
+    }
+    
     @IBAction func addTeams(_ sender: Any) {
-     
-        let storyboardNew = UIStoryboard(name: "EurekaAdd", bundle: nil)
-        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "EurekaAddTournamentsViewController") as? EurekaAddTournamentsViewController else {
-            return
-        }
+        let eurekaStoryBoard = UIStoryboard(name: "AddEureka", bundle: nil)
+        guard let vc = eurekaStoryBoard.instantiateViewController(withIdentifier: "TeamsFormViewController") as? TeamsFormViewController else { return }
         present(vc, animated: true, completion: nil)
     }
     
     @IBAction func addTournaments(_ sender: Any) {
-        
-        let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
-        
-        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else {
-            return
-        }
-        
-        present(vc, animated: true, completion: nil)
-        
-    }
-    /*
-    @IBAction func addGamers(_ sender: Any) {
-        let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
-        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "addGamersViewController") as? addGamersViewController else {
-            return
-        }
-        present(vc, animated: true, completion: nil)
-        
-    }
-    
-    @IBAction func aboutSponsors(_ sender: Any) {
-        let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
-        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "AboutViewController") as? AboutViewController else {
-            return
-        }
+        let eurekaStoryboard = UIStoryboard(name: "AddEureka", bundle: Bundle.main)
+        guard let vc = eurekaStoryboard.instantiateViewController(withIdentifier: "TournamentFormViewController") as? TournamentFormViewController else { return }
         present(vc, animated: true, completion: nil)
     }
     
+    @IBAction func aboutButtonTapped(_ sender: Any) {
+        
+    }
     
-}
+    @IBAction func sponsorsButtonTapped(_ sender: Any) {
+        
+    }
+    
+ }

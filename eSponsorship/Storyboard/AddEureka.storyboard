@@ -9,35 +9,37 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Eureka Add Tournaments View Controller-->
-        <scene sceneID="lOg-TQ-oHQ">
+        <!--Teams Form View Controller-->
+        <scene sceneID="xku-or-yzr">
             <objects>
-                <viewController storyboardIdentifier="EurekaAddTournamentsViewController" id="Jm4-6N-JAS" customClass="EurekaAddTournamentsViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="52C-bV-fAA">
+                <viewController storyboardIdentifier="TeamsFormViewController" id="uLA-ZQ-3U2" customClass="TeamsFormViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eNK-8x-hi0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="h08-G1-0dD"/>
+                        <viewLayoutGuide key="safeArea" id="rty-gb-02m"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0ue-Km-5Y8"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nfG-Lx-faa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLT-BO-bh9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="143" y="137"/>
+            <point key="canvasLocation" x="444" y="28.335832083958024"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="DMR-7g-Rgf">
+        <!--Tournament Form View Controller-->
+        <scene sceneID="6PN-5a-LPr">
             <objects>
-                <viewController id="rJy-On-F0q" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PyC-qa-0OH">
+                <viewController storyboardIdentifier="TournamentFormViewController" id="yt1-aD-796" customClass="TournamentFormViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1qA-fI-hbh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="1Br-vl-pUo"/>
+                        <viewLayoutGuide key="safeArea" id="K1J-2o-3oz"/>
                     </view>
+                    <navigationItem key="navigationItem" id="sIW-Pr-7ha"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AwE-7n-U2T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuh-zQ-GTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="844" y="136"/>
+            <point key="canvasLocation" x="1182" y="28"/>
         </scene>
     </scenes>
 </document>

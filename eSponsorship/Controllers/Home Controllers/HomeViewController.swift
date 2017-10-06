@@ -33,7 +33,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sideMenuHandler()
-        self.title = "Gaming Ship"
+        self.title = "Game Ship"
         
     }
 }
