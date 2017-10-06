@@ -101,7 +101,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S7r-h8-M9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="-622" y="-1157"/>
+=======
             <point key="canvasLocation" x="-742" y="-1157"/>
+>>>>>>> ha
         </scene>
         <!--Login View Controller-->
         <scene sceneID="9Eb-zn-hxH">
