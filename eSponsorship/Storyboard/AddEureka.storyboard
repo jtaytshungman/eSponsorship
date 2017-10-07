@@ -69,6 +69,9 @@
                     <navigationItem key="navigationItem" id="fXY-16-vtM">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tYP-UU-VLO">
                             <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="KqW-QF-wVO" id="e9z-f4-8oB"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>

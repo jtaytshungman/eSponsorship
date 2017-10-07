@@ -23,6 +23,10 @@ class EditProfileFormViewController: FormViewController {
         editProfileFormHandler()
     }
     
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func editProfileFormHandler () {
         form
             +++ Section(header: "Edit Profile", footer: "")
@@ -72,6 +76,34 @@ class EditProfileFormViewController: FormViewController {
                     }
             }
             
+            <<< TextRow() {
+                $0.title = "Base Location"
+                $0.tag = "user_location_based"
+                $0.placeholder = "Sungai Petani"
+                $0.value = ""
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
+                }
+                .cellUpdate { cell, row in
+                    if !row.isValid {
+                        cell.titleLabel?.textColor = .red
+                    }
+                }
+                .onRowValidationChanged { cell, row in
+                    let rowIndex = row.indexPath!.row
+                    while row.section!.count > rowIndex + 1 && row.section?[rowIndex  + 1] is LabelRow {
+                        row.section?.remove(at: rowIndex + 1)
+                    }
+                    if !row.isValid {
+                        for (index, validationMsg) in row.validationErrors.map({ $0.msg }).enumerated() {
+                            let labelRow = LabelRow() {
+                                $0.title = validationMsg
+                                $0.cell.height = { 30 }
+                            }
+                            row.section?.insert(labelRow, at: row.indexPath!.row + index + 1)
+                        }
+                    }
+            }
             
             +++ Section (header: "Player Biography", footer: "Show sponsors your personality.")
             
@@ -106,7 +138,6 @@ class EditProfileFormViewController: FormViewController {
                 $0.tag = "user_others_url"
                 $0.value = "https://www."
             }
-            
             
             // MARK : Selecting Games and Competing Level
             
@@ -191,13 +222,6 @@ class EditProfileFormViewController: FormViewController {
                     alert.addAction(save)
                     self?.present(alert, animated: true, completion: nil)
         }
-        
-        
-        
-        
-        
-        
-        
         
     }
     

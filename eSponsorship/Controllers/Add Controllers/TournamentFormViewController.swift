@@ -61,7 +61,9 @@ class TournamentFormViewController: FormViewController{
                 $0.tag = "org_contact"
                 $0.value = ""
                 $0.placeholder = "6012345678"
-            }
+                } .cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .numberPad
+                })
     }
     
     func tournamentDetails () {
@@ -69,7 +71,7 @@ class TournamentFormViewController: FormViewController{
         form +++ Section("Tournament Details")
             
             <<< ImageRow () { row in
-                row.title = "Select an image for your tournament"
+                row.title = "Tournament Image"
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
                 
