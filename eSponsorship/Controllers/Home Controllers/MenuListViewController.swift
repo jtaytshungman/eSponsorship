@@ -10,10 +10,30 @@ import UIKit
 
 class MenuListViewController: UIViewController {
     
+    @IBOutlet weak var viewProfileIcon: UIImageView!
+    @IBOutlet weak var editProfileIcon: UIImageView!
+    @IBOutlet weak var addTeamIcon: UIImageView!
+    @IBOutlet weak var addTournamentIcon: UIImageView!
+    @IBOutlet weak var aboutIcon: UIImageView!
+    @IBOutlet weak var sponsorIcon: UIImageView!
+    
     @IBOutlet weak var sideMenuProfileImage: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ImageDisplay.ProfileBounds(image: viewProfileIcon)
+        ImageDisplay.ProfileBounds(image: editProfileIcon)
+        ImageDisplay.ProfileBounds(image: addTeamIcon)
+        ImageDisplay.ProfileBounds(image: addTournamentIcon)
+        ImageDisplay.ProfileBounds(image: aboutIcon)
+        ImageDisplay.ProfileBounds(image: sponsorIcon)
+        ImageDisplay.ProfileBounds(image: sideMenuProfileImage)
+        
+        viewProfileIcon.image = UIImage(named: "icon_profile")
+        viewProfileIcon.contentMode = .scaleAspectFit
+        
     }
     
     @IBAction func viewProfileButtonTapped(_ sender: Any) {
