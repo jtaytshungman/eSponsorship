@@ -42,7 +42,7 @@
         <!--Menu List View Controller-->
         <scene sceneID="dPL-UN-WhG">
             <objects>
-                <viewController id="dai-aA-5gr" customClass="MenuListViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuListViewController" id="dai-aA-5gr" customClass="MenuListViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="nYW-98-v2B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -160,7 +160,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="viewMyTeams:" destination="dai-aA-5gr" eventType="touchUpInside" id="Ngu-Li-dKE"/>
+                                    <action selector="viewMyTournaments:" destination="dai-aA-5gr" eventType="touchUpInside" id="AB7-v3-qb1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -176,6 +176,7 @@
                         <outlet property="sideMenuProfileImage" destination="Dxj-rE-9at" id="63K-Bs-uny"/>
                         <outlet property="sponsorIcon" destination="DDa-9t-XqW" id="qwu-eX-C1z"/>
                         <outlet property="viewMyTeamsImage" destination="WwT-t3-Bmv" id="4pt-hA-6qP"/>
+                        <outlet property="viewMyTournamentsImage" destination="blE-MJ-TbM" id="dTy-KC-M91"/>
                         <outlet property="viewProfileIcon" destination="ZO1-iu-gPB" id="rJd-ag-BIj"/>
                     </connections>
                 </viewController>
@@ -435,10 +436,10 @@
             </objects>
             <point key="canvasLocation" x="1233" y="692"/>
         </scene>
-        <!--View My Teams View Controller-->
+        <!--View My Tournament View Controller-->
         <scene sceneID="Box-02-D8P">
             <objects>
-                <viewController storyboardIdentifier="ViewMyTeamsViewController" id="Qub-kY-0gE" customClass="ViewMyTeamsViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewMyTournamentViewController" id="Qub-kY-0gE" customClass="ViewMyTournamentViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qki-aY-Cdg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -451,6 +452,14 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UUc-0q-zoh">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Temporarily Back Button"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="Qub-kY-0gE" eventType="touchUpInside" id="InE-TL-B1u"/>
+                                        </connections>
+                                    </button>
                                 </tableView>
                             </tableView>
                         </subviews>
@@ -464,7 +473,7 @@
                         <viewLayoutGuide key="safeArea" id="SoZ-4i-UWM"/>
                     </view>
                     <connections>
-                        <outlet property="viewTeamzTableView" destination="NMK-HW-ECk" id="V5r-VZ-Onb"/>
+                        <outlet property="viewMyTournamentsTableView" destination="NMK-HW-ECk" id="B1x-Ak-AwR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yP-DV-xTp" userLabel="First Responder" sceneMemberID="firstResponder"/>

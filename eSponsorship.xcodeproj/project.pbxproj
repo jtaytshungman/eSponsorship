@@ -45,7 +45,7 @@
 		FD31211B1F7E2E590044D8DD /* GamersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */; };
 		FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */; };
 		FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211E1F7E301B0044D8DD /* GamerPosting.swift */; };
-		FD721A331F88D4A500D89B52 /* ViewMyTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD721A321F88D4A500D89B52 /* ViewMyTeamsViewController.swift */; };
+		FD721A351F88E50A00D89B52 /* ViewMyTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD721A341F88E50A00D89B52 /* ViewMyTournamentsViewController.swift */; };
 		FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */; };
 		FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA378121F7A4EEB00195EAC /* Auth.storyboard */; };
 		FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA378141F7A567D00195EAC /* OnboardController.swift */; };
@@ -101,7 +101,7 @@
 		FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamersTableViewCell.xib; sourceTree = "<group>"; };
 		FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersTableViewCell.swift; sourceTree = "<group>"; };
 		FD31211E1F7E301B0044D8DD /* GamerPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerPosting.swift; sourceTree = "<group>"; };
-		FD721A321F88D4A500D89B52 /* ViewMyTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMyTeamsViewController.swift; sourceTree = "<group>"; };
+		FD721A341F88E50A00D89B52 /* ViewMyTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMyTournamentsViewController.swift; sourceTree = "<group>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
 		FDA449FA1F87423100BB3824 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
@@ -235,7 +235,7 @@
 				E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */,
 				E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */,
 				E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */,
-				FD721A321F88D4A500D89B52 /* ViewMyTeamsViewController.swift */,
+				FD721A341F88E50A00D89B52 /* ViewMyTournamentsViewController.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -461,6 +461,7 @@
 				E36D24B81F875B5500BC1369 /* UploadToFirebase.swift in Sources */,
 				FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
+				FD721A351F88E50A00D89B52 /* ViewMyTournamentsViewController.swift in Sources */,
 				E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */,
 				FD2D38341F7BC2D000F53525 /* ImageCache.swift in Sources */,
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,
@@ -479,7 +480,6 @@
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
 				E3EE1B951F87C14A00A3061D /* RootHomePageViewController.swift in Sources */,
 				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
-				FD721A331F88D4A500D89B52 /* ViewMyTeamsViewController.swift in Sources */,
 				60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */,
 				60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */,
 				60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */,
