@@ -12,17 +12,13 @@ import FirebaseAuth
 import FirebaseDatabase
 
 class ViewMyTeamsViewController: UIViewController {
-
+    
     var posts: [TeamPosting] = []
     
     
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
     
-    //    let tournamentName = "Monash Dota Competition"
-    //    let organizerName = "Monash University"
-    //    let participation = "12 Teams"
-    //    let location = "Cyberjaya Launchpad"
     
     @IBOutlet weak var viewTeamzTableView: UITableView!{
         didSet{
@@ -37,15 +33,22 @@ class ViewMyTeamsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Teams"
+        if Auth.auth().currentUser != nil {
+            fetchpost()
+            
+        }
         
-        fetchpost()
         
-        //tournamentsTableView.reloadData()
         
     }
     
     
     func fetchpost(){
+        
+        
+        
+        
+        
         
         databaseRef = Database.database().reference()
         
@@ -60,13 +63,8 @@ class ViewMyTeamsViewController: UIViewController {
                 let tournamentName = mypost["name"] as? String,
                 let location = mypost["location"] as? String,
                 let gameName = mypost["game"] as? String,
-                //                let dateName = mypost["date"] as? String,
-                //                let prizeName = mypost["prize"] as? String,
+                
                 let userid = mypost["userID"] as? String {
-                
-                
-                //            let teamPost = mypost(imageName: post)
-                
                 
                 DispatchQueue.main.async {
                     let teamPost = TeamPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theGame: gameName)
@@ -94,16 +92,11 @@ extension ViewMyTeamsViewController : UITableViewDelegate,UITableViewDataSource 
         }
         let post = posts[indexPath.row]
         
-        //        cell.tournamentName.text = tournamentName
-        //        cell.locationOfTournament.text = location
-        //        cell.organizerName.text = organizerName
-        //        cell.numberOfParticipants.text = participation
+        
         
         cell.tournamentNameq.text = post.tournamentName
         cell.locationOfTournamentq.text = post.location
         cell.organizerNameq.text = post.gameName
-        //        cell.numberOfParticipantsq.text = post.prizeName
-        
         print(post.imageurl)
         cell.backgroundImageCellq.loadImage(from: post.imageurl)
         
