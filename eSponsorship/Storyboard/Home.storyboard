@@ -1,110 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X0w-Xf-Ems">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xcQ-J1-KF4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Heavy</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Home-->
-        <scene sceneID="HtM-NJ-eZO">
-            <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="ENx-Io-PIX" customClass="HomeViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0MN-pH-SDf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBQ-GN-PJJ">
-                                <rect key="frame" x="12" y="76" width="351" height="535"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-Hu-3rd">
-                                        <rect key="frame" x="0.0" y="0.0" width="351" height="165"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Gamers" image="Gamers">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="gamersButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="brL-eb-qrQ"/>
-                                            <segue destination="5YL-65-O8F" kind="show" id="372-Kt-Ypi"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MK-QL-wTN">
-                                        <rect key="frame" x="0.0" y="185" width="351" height="165"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Teams" image="Teams">
-                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="teamsButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="P4p-OV-hvn"/>
-                                            <segue destination="Ejo-4f-kTg" kind="show" id="Nzj-Bw-Pr5"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aA-Cd-PQy">
-                                        <rect key="frame" x="0.0" y="370" width="351" height="165"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Tournaments" image="Tournaments">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="tournamentsButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="gCG-Wg-zwo"/>
-                                            <segue destination="Qp2-pG-NcJ" kind="show" id="Hpy-FB-zm2"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <constraints>
-                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="leading" secondItem="Doo-5f-JEo" secondAttribute="leading" constant="12" id="7c6-pD-niJ"/>
-                            <constraint firstItem="Doo-5f-JEo" firstAttribute="bottom" secondItem="rBQ-GN-PJJ" secondAttribute="bottom" constant="12" id="PhL-Wy-FNf"/>
-                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="top" secondItem="Doo-5f-JEo" secondAttribute="top" constant="12" id="nKX-Kj-1hc"/>
-                            <constraint firstItem="Doo-5f-JEo" firstAttribute="trailing" secondItem="rBQ-GN-PJJ" secondAttribute="trailing" constant="12" id="uZ8-jj-Lhe"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Doo-5f-JEo"/>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Home" id="Jgu-km-EzL">
-                        <barButtonItem key="leftBarButtonItem" image="menu" springLoaded="YES" id="jFX-gB-M9h">
-                            <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="menuButtonTapped:" destination="ENx-Io-PIX" id="LrE-CS-tLY"/>
-                                <segue destination="4eg-TI-ZEr" kind="show" id="Kyj-to-JEp"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="logout" springLoaded="YES" style="done" id="cu0-e7-pDQ">
-                            <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="signOut:" destination="ENx-Io-PIX" id="Sip-Na-OPn"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-s2-JkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="598" y="21"/>
-        </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="EbB-uP-jMZ">
             <objects>
-                <navigationController id="4eg-TI-ZEr" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="4eg-TI-ZEr" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QPo-Jm-ruB">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iPx-kz-gTY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="menuWidth">
-                            <real key="value" value="200"/>
+                            <real key="value" value="300"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
@@ -113,139 +37,135 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X15-Xo-g3B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1417" y="19"/>
+            <point key="canvasLocation" x="1233" y="18"/>
         </scene>
         <!--Menu List View Controller-->
         <scene sceneID="dPL-UN-WhG">
             <objects>
                 <viewController id="dai-aA-5gr" customClass="MenuListViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nYW-98-v2B">
+                    <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="nYW-98-v2B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VZV-Bh-lWx">
-                                <rect key="frame" x="20" y="160.5" width="156" height="346"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-rE-9at">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="130"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="156" id="Aao-E9-OSv"/>
-                                            <constraint firstAttribute="height" constant="130" id="VjV-h0-tHg"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-XU-mZl">
-                                        <rect key="frame" x="0.0" y="130" width="156" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="View Profile">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="viewProfileButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="t8t-K4-tjA"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-dA-TyU">
-                                        <rect key="frame" x="0.0" y="166" width="156" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Edit Profile">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="editProfileButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="fM2-oU-8h9"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-DU-kfV">
-                                        <rect key="frame" x="0.0" y="202" width="156" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Add Team">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addTeams:" destination="dai-aA-5gr" eventType="touchUpInside" id="bsW-jM-avd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spk-yr-7oE">
-                                        <rect key="frame" x="0.0" y="238" width="156" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Add Tournament">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="addTournaments:" destination="dai-aA-5gr" eventType="touchUpInside" id="kwE-a9-PHc"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk2-Tu-l3z">
-                                        <rect key="frame" x="0.0" y="274" width="156" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="About">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="aboutButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="ukd-pN-BU7"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU6-gi-VFF">
-                                        <rect key="frame" x="0.0" y="310" width="156" height="36"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Sponsors ">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sponsorsButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="STy-ah-dbr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="centerX" secondItem="VZV-Bh-lWx" secondAttribute="centerX" id="1OE-r0-ii4"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="trailing" secondItem="Tld-XU-mZl" secondAttribute="trailing" id="1yV-ga-Pmq"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="centerX" secondItem="Spk-yr-7oE" secondAttribute="centerX" id="2nD-PY-MA3"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="top" secondItem="VZV-Bh-lWx" secondAttribute="top" id="4G4-XJ-h0S"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="trailing" secondItem="LW7-DU-kfV" secondAttribute="trailing" id="6EC-Pm-FDi"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dxj-rE-9at" secondAttribute="trailing" id="97D-cf-ZSe"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="Spk-yr-7oE" secondAttribute="leading" id="AK0-nE-iOi"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="top" secondItem="VZV-Bh-lWx" secondAttribute="topMargin" id="CFL-Ym-sGl"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="centerX" secondItem="K8l-dA-TyU" secondAttribute="centerX" id="ERR-8O-b8N"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="centerX" secondItem="Tld-XU-mZl" secondAttribute="centerX" id="GEQ-5K-72H"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="VZV-Bh-lWx" secondAttribute="leading" id="ImV-fQ-3pW"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="VZV-Bh-lWx" secondAttribute="leading" id="KXW-oQ-lP6"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="LW7-DU-kfV" secondAttribute="leading" id="KYP-s1-EcW"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="VZV-Bh-lWx" secondAttribute="leadingMargin" id="L9N-rv-k2W"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="top" secondItem="VZV-Bh-lWx" secondAttribute="top" id="MDP-96-Bo5"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="Tld-XU-mZl" secondAttribute="leading" id="McS-7m-hub"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="Fk2-Tu-l3z" secondAttribute="leading" id="N3e-qX-VSM"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="trailing" secondItem="Spk-yr-7oE" secondAttribute="trailing" id="Nnw-6z-zXy"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="top" secondItem="VZV-Bh-lWx" secondAttribute="top" id="XYv-Ty-7qq"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dxj-rE-9at" secondAttribute="trailing" id="b3x-q5-Iyy"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="trailing" secondItem="K8l-dA-TyU" secondAttribute="trailing" id="cIv-Tm-mLE"/>
-                                    <constraint firstItem="Tld-XU-mZl" firstAttribute="top" secondItem="Dxj-rE-9at" secondAttribute="bottom" id="eRy-cz-Q8p"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="top" secondItem="VZV-Bh-lWx" secondAttribute="top" id="fTZ-ej-aUT"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="VZV-Bh-lWx" secondAttribute="leading" id="fZP-WC-eCJ"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="centerX" secondItem="kU6-gi-VFF" secondAttribute="centerX" id="h0Z-Y5-xTc"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="centerX" secondItem="LW7-DU-kfV" secondAttribute="centerX" id="iPd-lf-h8o"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="centerX" secondItem="Fk2-Tu-l3z" secondAttribute="centerX" id="ljm-3t-Jjf"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="trailing" secondItem="Fk2-Tu-l3z" secondAttribute="trailing" id="mQK-7U-RKd"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="K8l-dA-TyU" secondAttribute="leading" id="tCC-4n-qWx"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="trailing" secondItem="kU6-gi-VFF" secondAttribute="trailing" id="vZB-RN-dsR"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="trailing" secondItem="VZV-Bh-lWx" secondAttribute="trailingMargin" id="xTz-39-Qiv"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="VZV-Bh-lWx" secondAttribute="leading" id="yh6-4O-xVa"/>
-                                    <constraint firstItem="Dxj-rE-9at" firstAttribute="leading" secondItem="kU6-gi-VFF" secondAttribute="leading" id="zzL-Lj-9qp"/>
-                                </constraints>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-rE-9at">
+                                <rect key="frame" x="66" y="124" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-dA-TyU">
+                                <rect key="frame" x="66" y="310" width="180" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Edit Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editProfileButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="fM2-oU-8h9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LW7-DU-kfV">
+                                <rect key="frame" x="66" y="358" width="180" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Add Team">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTeams:" destination="dai-aA-5gr" eventType="touchUpInside" id="bsW-jM-avd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spk-yr-7oE">
+                                <rect key="frame" x="66" y="406" width="180" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Add Tournament">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTournaments:" destination="dai-aA-5gr" eventType="touchUpInside" id="kwE-a9-PHc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kU6-gi-VFF">
+                                <rect key="frame" x="66" y="502" width="180" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="Sponsors ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sponsorsButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="STy-ah-dbr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fk2-Tu-l3z">
+                                <rect key="frame" x="66" y="454" width="180" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="About">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="aboutButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="ukd-pN-BU7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-XU-mZl">
+                                <rect key="frame" x="66" y="262" width="180" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="View Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewProfileButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="t8t-K4-tjA"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-iu-gPB">
+                                <rect key="frame" x="16" y="262" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_edit_orange" translatesAutoresizingMaskIntoConstraints="NO" id="NLR-pc-Y3a">
+                                <rect key="frame" x="16" y="310" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_profile" translatesAutoresizingMaskIntoConstraints="NO" id="m2z-VR-bLS">
+                                <rect key="frame" x="16" y="358" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blE-MJ-TbM">
+                                <rect key="frame" x="16" y="406" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eqa-TA-sSr">
+                                <rect key="frame" x="16" y="454" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-9t-XqW">
+                                <rect key="frame" x="16" y="502" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.30232747395833331" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="VZV-Bh-lWx" firstAttribute="centerY" secondItem="nYW-98-v2B" secondAttribute="centerY" id="7Fn-1e-hBb"/>
-                            <constraint firstItem="VZV-Bh-lWx" firstAttribute="leading" secondItem="fAd-a6-IGa" secondAttribute="leading" constant="20" id="NiK-eL-qfR"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fAd-a6-IGa"/>
                     </view>
                     <navigationItem key="navigationItem" id="P4A-lx-QUt"/>
                     <connections>
+                        <outlet property="aboutIcon" destination="Eqa-TA-sSr" id="bUB-Jx-yfM"/>
+                        <outlet property="addTeamIcon" destination="m2z-VR-bLS" id="DT1-9d-r4h"/>
+                        <outlet property="addTournamentIcon" destination="blE-MJ-TbM" id="MX3-fI-iZt"/>
+                        <outlet property="editProfileIcon" destination="NLR-pc-Y3a" id="Add-fs-etZ"/>
                         <outlet property="sideMenuProfileImage" destination="Dxj-rE-9at" id="63K-Bs-uny"/>
+                        <outlet property="sponsorIcon" destination="DDa-9t-XqW" id="qwu-eX-C1z"/>
+                        <outlet property="viewProfileIcon" destination="ZO1-iu-gPB" id="rJd-ag-BIj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="une-HM-STO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2248.8000000000002" y="19.340329835082461"/>
+            <point key="canvasLocation" x="1965.5999999999999" y="17.541229385307346"/>
         </scene>
         <!--Gamers View Controller-->
         <scene sceneID="QvL-0s-vhs">
@@ -256,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="585-I1-vCQ">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
@@ -276,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gAN-bH-UCn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="830"/>
+            <point key="canvasLocation" x="-217" y="693"/>
         </scene>
         <!--Detailed Gamers View Controller-->
         <scene sceneID="Ir7-DG-QhA">
@@ -324,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZF-uA-gZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-42" y="1501"/>
+            <point key="canvasLocation" x="-217" y="1371"/>
         </scene>
         <!--Detailed Teams View Controller-->
         <scene sceneID="ZKC-Pz-d9F">
@@ -372,7 +292,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWf-yH-19f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="1499"/>
+            <point key="canvasLocation" x="511" y="1371"/>
         </scene>
         <!--Detailed Tournaments View Controller-->
         <scene sceneID="rmx-u6-Qcj">
@@ -436,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUb-Ev-P97" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1241" y="1498"/>
+            <point key="canvasLocation" x="1233" y="1367"/>
         </scene>
         <!--Tournaments View Controller-->
         <scene sceneID="vie-ir-qvJ">
@@ -447,7 +367,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-SE-AmR">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -466,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KE0-ut-Gi4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598" y="830"/>
+            <point key="canvasLocation" x="511" y="696"/>
         </scene>
         <!--Teams View Controller-->
         <scene sceneID="aQK-PH-zQe">
@@ -477,7 +397,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uez-oX-dwD">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </tableView>
@@ -497,32 +417,47 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4g-HK-51t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242" y="830"/>
+            <point key="canvasLocation" x="1233" y="692"/>
+        </scene>
+        <!--Root Home Page View Controller-->
+        <scene sceneID="uGo-8n-pIb">
+            <objects>
+                <pageViewController storyboardIdentifier="RootHomePageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="USJ-As-bxc" customClass="RootHomePageViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ON9-kU-GXm">
+                        <barButtonItem key="leftBarButtonItem" image="icon_menu" springLoaded="YES" style="plain" id="bqp-xk-A3L">
+                            <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="4eg-TI-ZEr" kind="show" id="X1w-sP-ns3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYo-fg-mhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="22"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="RXj-rK-dy2">
+        <scene sceneID="Nzn-EI-KxV">
             <objects>
-                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="X0w-Xf-Ems" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomeNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="xcQ-J1-KF4" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="si8-2o-swv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MmR-e4-5Df">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="ENx-Io-PIX" kind="relationship" relationship="rootViewController" id="rJW-ZA-Xh9"/>
+                        <segue destination="USJ-As-bxc" kind="relationship" relationship="rootViewController" id="AoR-YY-4vN"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JcU-Cw-Wt6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57Q-2V-4us" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="20"/>
+            <point key="canvasLocation" x="-217" y="19"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Gamers" width="389" height="179"/>
-        <image name="Teams" width="332" height="175"/>
-        <image name="Tournaments" width="653" height="197"/>
-        <image name="logout" width="48" height="48"/>
-        <image name="menu" width="48" height="48"/>
+        <image name="icon_edit_orange" width="100" height="100"/>
+        <image name="icon_menu" width="50" height="50"/>
+        <image name="test_profile" width="25" height="25"/>
     </resources>
 </document>

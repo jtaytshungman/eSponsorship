@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import Eureka
+import ImageRow
 
 class TournamentFormViewController: FormViewController{
     
@@ -60,6 +61,16 @@ class TournamentFormViewController: FormViewController{
     func tournamentDetails () {
         
         form +++ Section("Tournament Details")
+            
+            <<< ImageRow () { row in
+                row.title = "Select an image for your tournament"
+                row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
+                row.clearAction = .yes(style: UIAlertActionStyle.destructive)
+                
+                } .cellUpdate { cell, row in
+                    cell.accessoryView?.layer.cornerRadius = 17
+                    cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+            }
             
             <<< TextRow() {
                 $0.title = "Tournament Name"
@@ -192,7 +203,7 @@ class TournamentFormViewController: FormViewController{
         
             +++ Section()
             <<< ButtonRow() { (row: ButtonRow) -> Void in
-                row.title = "Save"
+                row.title = "Save Tournament"
                 }
                 .onCellSelection { [weak self] (cell, row) in
                     guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }

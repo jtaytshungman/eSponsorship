@@ -28,7 +28,7 @@ class OnboardController: UIViewController {
         let firstPage = OnboardingContentViewController.content(
             withTitle: "For Gamers",
             body: "You don't have to be the best to get sponsored, sponsors are looking for all types of gamers, at all levels.",
-            image: UIImage(named: "console"),
+            image: UIImage(named: "icon_console"),
             buttonText: "", action: {() -> Void in
                 
         })
@@ -38,7 +38,7 @@ class OnboardController: UIViewController {
         let secondPage = OnboardingContentViewController.content(
             withTitle: "For Teams",
             body: "You don't have to be the best team to get sponsored, sponsors are looking for all types of teams, at all levels.",
-            image: UIImage(named: "team"),
+            image: UIImage(named: "icon_team"),
             buttonText: "", action: {() -> Void in
                 
         })
@@ -48,7 +48,7 @@ class OnboardController: UIViewController {
         let thirdPage = OnboardingContentViewController.content(
             withTitle: "For Tournaments",
             body: "Looking to grow your tournaments prize money and attract the best teams in the region to play in your tournament? Use attractive sponsors to contribute to your prize money.",
-            image: UIImage(named: "tournament"),
+            image: UIImage(named: "icon_tournament"),
             buttonText: "", action: {() -> Void in
                 
         })
@@ -56,7 +56,7 @@ class OnboardController: UIViewController {
         let fourthPage = OnboardingContentViewController.content(
             withTitle: "For Sponsors",
             body: "Sponsorship of gaming influencers is one of the most effective means of brand building that you can participate in today.",
-            image: UIImage(named: "sponsor"),
+            image: UIImage(named: "icon_sponsor"),
             buttonText: "Get Started", action: {() -> Void in
                 self.onboardingCompletionHandler()
         })
