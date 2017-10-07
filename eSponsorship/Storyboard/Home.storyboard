@@ -15,6 +15,89 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="HtM-NJ-eZO">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="ENx-Io-PIX" customClass="HomeViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0MN-pH-SDf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rBQ-GN-PJJ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-Hu-3rd">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="194.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="View Profiles ( for testing only )">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gamersButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="brL-eb-qrQ"/>
+                                            <segue destination="5YL-65-O8F" kind="show" id="372-Kt-Ypi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4MK-QL-wTN">
+                                        <rect key="frame" x="0.0" y="214.5" width="375" height="194"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Teams" image="Teams">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="teamsButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="P4p-OV-hvn"/>
+                                            <segue destination="Ejo-4f-kTg" kind="show" id="Nzj-Bw-Pr5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aA-Cd-PQy">
+                                        <rect key="frame" x="0.0" y="428.5" width="375" height="194.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Tournaments" image="Tournaments">
+                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tournamentsButtonTapped:" destination="ENx-Io-PIX" eventType="touchUpInside" id="gCG-Wg-zwo"/>
+                                            <segue destination="Qp2-pG-NcJ" kind="show" id="Hpy-FB-zm2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="Doo-5f-JEo" firstAttribute="bottom" secondItem="rBQ-GN-PJJ" secondAttribute="bottom" id="1KY-1S-d5D"/>
+                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="top" secondItem="0MN-pH-SDf" secondAttribute="top" id="1bO-an-Fqv"/>
+                            <constraint firstItem="rBQ-GN-PJJ" firstAttribute="leading" secondItem="0MN-pH-SDf" secondAttribute="leading" id="Npf-G4-JUf"/>
+                            <constraint firstItem="Doo-5f-JEo" firstAttribute="trailing" secondItem="rBQ-GN-PJJ" secondAttribute="trailing" id="uuP-nF-6c8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Doo-5f-JEo"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Jgu-km-EzL">
+                        <barButtonItem key="leftBarButtonItem" image="menu" springLoaded="YES" id="jFX-gB-M9h">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="menuButtonTapped:" destination="ENx-Io-PIX" id="LrE-CS-tLY"/>
+                                <segue destination="4eg-TI-ZEr" kind="show" id="Kyj-to-JEp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="logout" springLoaded="YES" style="done" id="cu0-e7-pDQ">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="signOut:" destination="ENx-Io-PIX" id="Sip-Na-OPn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f7M-s2-JkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="21"/>
+        </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="EbB-uP-jMZ">
             <objects>

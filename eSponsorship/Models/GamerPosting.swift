@@ -16,36 +16,29 @@ class GamerPosting {
     
     var location : String = ""
     
-    //    var dateName : String = ""
-    
     var gameName : String = ""
     
-    //    var prizeName : String = ""
+    var dob : String = ""
     
+    var desc : String = ""
     
-    //        : UIImage = UIImage(named: "unknown") ?? UIImage()
+    var level : String = ""
     
     
     init() {}
     
-    init(anID: String,theTournamentName: String, theLocation: String, imageName : String, theGame: String) {
+    init(anID: String,theTournamentName: String, theLocation: String, imageName : String, theGame: String, dateOfBirth : String, descriptionText : String, levelcomp : String) {
         
         
         userid = anID
         imageurl = imageName
         tournamentName = theTournamentName
         location = theLocation
-        //        dateName = theDate
         gameName = theGame
-        //        prizeName = prize
-        
-        
-        //        if let userImage = UIImage(named: imageName){
-        //            self.imageurl = userImage
-        //
-        //        }else{
-        //            self.imageurl = UIImage()
-        //        }
+        dob = dateOfBirth
+        desc = descriptionText
+        level = levelcomp
+     
         
     }
 }
