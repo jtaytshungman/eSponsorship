@@ -209,6 +209,8 @@ class TournamentFormViewController: FormViewController{
                     guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }
                     guard let currentUserID = Auth.auth().currentUser?.uid else { return }
                     FirebaseDataHandler.uploadDataToDatabaseWithUID(uid: currentUserID, values: tournamentEurekaData)
+                    print(tournamentEurekaData)
+                    
                     self?.dismiss(animated: true, completion: nil)
         }
     }
