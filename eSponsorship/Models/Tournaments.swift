@@ -14,6 +14,8 @@ class Tournaments {
     var orgAff : String?
     var orgContact : String?
     
+    var tourImageURL : String?
+    
     var tourName : String?
     var tourGame : String?
     var tourLevel : String?
@@ -39,6 +41,7 @@ class Tournaments {
         orgEmailInput : String,
         orgAffInput : String ,
         orgContactInput : String,
+        tourImageURLInput : String,
         tourNameInput : String,
         tourGameInput : String,
         tourLevelInput : String,
@@ -58,6 +61,8 @@ class Tournaments {
         orgEmail = orgEmailInput
         orgAff = orgAffInput
         orgContact = orgContactInput
+        
+        tourImageURL = tourImageURLInput
         
         tourName = tourNameInput
         tourGame = tourGameInput

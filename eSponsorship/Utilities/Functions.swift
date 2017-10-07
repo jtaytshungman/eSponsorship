@@ -36,15 +36,10 @@ public class FirebaseDataHandler {
     // MARK : Universal Update function is here
     class func uploadTournamentHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
-        
         let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
-        
-        
         let tourReference = ref.child("GameShip_Tournaments").childByAutoId()
         tourReference.child(tourReference.key).setValue("Tournaments_For_GameShip")
-        
         userReference.updateChildValues([tourReference.key : "key"])
-        
         tourReference.updateChildValues(values) { (error, ref) in
             if error != nil {
                 print(error)
@@ -55,15 +50,10 @@ public class FirebaseDataHandler {
     
     class func uploadTeamsHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
-        
         let userReference = ref.child("users").child(uid).child("User_Teams")
-        
-        
         let tourReference = ref.child("GameShip_Teams").childByAutoId()
         tourReference.child(tourReference.key).setValue("Teams_For_GameShip")
-        
         userReference.updateChildValues([tourReference.key : "key"])
-        
         tourReference.updateChildValues(values) { (error, ref) in
             if error != nil {
                 print(error)
@@ -72,23 +62,34 @@ public class FirebaseDataHandler {
         }
     }
     
-    class func uploadImageHandler(imageFor : String, imageView : UIImageView) {
+    class func uploadToUserProfileHandler (uid : String, values : [String : Any]) {
+        let ref = Database.database().reference()
+        let userReference = ref.child("users").child(uid)
+        userReference.updateChildValues(values) { (error, ref) in
+            if error != nil {
+                print(error)
+                return
+            }
+        }
+    }
+    
+    class func uploadUserProfileImageHandler(imageFor : String, image : UIImage) {
         guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
-        guard let proImage = imageView.image else { return }
+        guard let proImage = image as? UIImage else { return }
         let imageName = NSUUID().uuidString
         let storageRef = Storage.storage().reference().child("\(imageFor)").child("\(imageName).jpg")
-        
-        if let uploadData = UIImageJPEGRepresentation(proImage, 0.1) {
+
+        if let uploadData = UIImageJPEGRepresentation(proImage, 0.5) {
             storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-                
+
                 if error != nil {
                     print(error)
                     return
                 }
-                
+
                 if let profileImageURL = metadata?.downloadURL()?.absoluteString {
                     let values = ["userImageURL" : profileImageURL]
-                    FirebaseDataHandler.uploadDataToDatabaseWithUID(uid: currentUserUID, values: values)
+                    FirebaseDataHandler.uploadToUserProfileHandler(uid: currentUserUID, values: values)
                 }
             }
         }

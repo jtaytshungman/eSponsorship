@@ -41,18 +41,20 @@ class MenuListViewController: UIViewController {
     }
     
     @IBAction func editProfileButtonTapped(_ sender: Any) {
-        
+        let eurekaStoryBoard = UIStoryboard(name: "AddEureka", bundle: nil)
+        guard let vc = eurekaStoryBoard.instantiateViewController(withIdentifier: "ProfileFormNavigation") as? UINavigationController else { return }
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func addTeams(_ sender: Any) {
         let eurekaStoryBoard = UIStoryboard(name: "AddEureka", bundle: nil)
-        guard let vc = eurekaStoryBoard.instantiateViewController(withIdentifier: "TeamsFormViewController") as? TeamsFormViewController else { return }
+        guard let vc = eurekaStoryBoard.instantiateViewController(withIdentifier: "TeamsFormNavigation") as? UINavigationController else { return }
         present(vc, animated: true, completion: nil)
     }
     
     @IBAction func addTournaments(_ sender: Any) {
         let eurekaStoryboard = UIStoryboard(name: "AddEureka", bundle: Bundle.main)
-        guard let vc = eurekaStoryboard.instantiateViewController(withIdentifier: "TournamentFormViewController") as? TournamentFormViewController else { return }
+        guard let vc = eurekaStoryboard.instantiateViewController(withIdentifier: "TournamentsFormNavigation") as? UINavigationController else { return }
         present(vc, animated: true, completion: nil)
     }
     
@@ -64,14 +66,14 @@ class MenuListViewController: UIViewController {
         
     }
     
- 
-     @IBAction func Profile(_ sender: Any) {
-     let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
-     guard let vc = storyboardNew.instantiateViewController(withIdentifier: "profileViewController") as? profileViewController else {
-     return
-     }
-     present(vc, animated: true, completion: nil)
+    
+    @IBAction func Profile(_ sender: Any) {
+        let storyboardNew = UIStoryboard(name: "Adding", bundle: nil)
+        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "profileViewController") as? profileViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
     }
-     }
+}
 
 

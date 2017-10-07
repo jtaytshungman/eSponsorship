@@ -7,6 +7,7 @@
 
 import UIKit
 import Eureka
+import ImageRow
 
 public extension Form {
     public func valuesForFirebase(includeHidden: Bool = false) -> [String: Any?] {
@@ -46,10 +47,13 @@ private extension BaseRow {
                 return (self.baseValue as! Bool) ? 1:0
             } else if self is DateRow || self is TimeRow || self is DateTimeRow || self is DateTimeInlineRow {
                 return (self.baseValue as! Date).timeIntervalSince1970
+            } else if self is ImageRow {
+                return nil
             } else {
                 return self.baseValue
             }
         }
     }
 }
+
 
