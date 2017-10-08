@@ -46,6 +46,8 @@
 		FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */; };
 		FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211E1F7E301B0044D8DD /* GamerPosting.swift */; };
 		FD721A351F88E50A00D89B52 /* ViewMyTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD721A341F88E50A00D89B52 /* ViewMyTournamentsViewController.swift */; };
+		FD9DB0F71F8A588E002653A2 /* testOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DB0F61F8A588E002653A2 /* testOne.swift */; };
+		FD9DB0F91F8A5BEC002653A2 /* viewMyTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DB0F81F8A5BEC002653A2 /* viewMyTour.swift */; };
 		FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */; };
 		FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA378121F7A4EEB00195EAC /* Auth.storyboard */; };
 		FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA378141F7A567D00195EAC /* OnboardController.swift */; };
@@ -102,6 +104,8 @@
 		FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersTableViewCell.swift; sourceTree = "<group>"; };
 		FD31211E1F7E301B0044D8DD /* GamerPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerPosting.swift; sourceTree = "<group>"; };
 		FD721A341F88E50A00D89B52 /* ViewMyTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMyTournamentsViewController.swift; sourceTree = "<group>"; };
+		FD9DB0F61F8A588E002653A2 /* testOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testOne.swift; sourceTree = "<group>"; };
+		FD9DB0F81F8A5BEC002653A2 /* viewMyTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewMyTour.swift; sourceTree = "<group>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
 		FDA449FA1F87423100BB3824 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				FD31211E1F7E301B0044D8DD /* GamerPosting.swift */,
 				E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */,
 				FD2D382F1F7BC10900F53525 /* TourPosting.swift */,
+				FD9DB0F61F8A588E002653A2 /* testOne.swift */,
+				FD9DB0F81F8A5BEC002653A2 /* viewMyTour.swift */,
 				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
 			);
 			path = Models;
@@ -455,6 +461,7 @@
 				E36D24BA1F87669B00BC1369 /* Tournaments.swift in Sources */,
 				E3F92CC11F809F66004ED397 /* addTeamsController.swift in Sources */,
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
+				FD9DB0F91F8A5BEC002653A2 /* viewMyTour.swift in Sources */,
 				FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */,
 				E39FBD381F7EA15B004448A9 /* MenuListViewController.swift in Sources */,
 				E39D43DF1F86824500DCB55F /* TournamentFormViewController.swift in Sources */,
@@ -469,6 +476,7 @@
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
 				E3876A491F868A5900C69118 /* TeamsFormViewController.swift in Sources */,
 				E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */,
+				FD9DB0F71F8A588E002653A2 /* testOne.swift in Sources */,
 				FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */,
 				E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */,
 				E3812C5B1F85ED8C005A2CB4 /* TeamPosting.swift in Sources */,

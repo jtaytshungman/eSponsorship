@@ -9,7 +9,7 @@
 import Foundation
 class TourPosting {
     
-    var userid : String = ""
+//    var userid : String = ""
     var imageurl : String = ""
     var tournamentName : String = ""
     var location : String = ""
@@ -19,9 +19,9 @@ class TourPosting {
     
     init() {}
     
-    init(anID: String,theTournamentName: String, theLocation: String, imageName : String, theDate : String, theGame: String, prize: String) {
+    init(theTournamentName: String, theLocation: String, imageName : String, theDate : String, theGame: String, prize: String) {
         
-        userid = anID
+//        userid = anID
         imageurl = imageName
         tournamentName = theTournamentName
         location = theLocation

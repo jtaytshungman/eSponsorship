@@ -443,41 +443,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NMK-HW-ECk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ygp-D0-vmD">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4L0-Mq-tmp">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="sectionIndexBackgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UUc-0q-zoh">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Temporarily Back Button"/>
-                                        <connections>
-                                            <action selector="backButton:" destination="Qub-kY-0gE" eventType="touchUpInside" id="InE-TL-B1u"/>
-                                        </connections>
-                                    </button>
-                                </tableView>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-7T-d28">
+                                <rect key="frame" x="16" y="0.0" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Qub-kY-0gE" eventType="touchUpInside" id="LER-W4-rLi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SoZ-4i-UWM" firstAttribute="bottom" secondItem="NMK-HW-ECk" secondAttribute="bottom" id="DiR-0z-FCs"/>
-                            <constraint firstItem="SoZ-4i-UWM" firstAttribute="trailing" secondItem="NMK-HW-ECk" secondAttribute="trailing" id="UTh-qZ-dZ5"/>
-                            <constraint firstItem="NMK-HW-ECk" firstAttribute="leading" secondItem="SoZ-4i-UWM" secondAttribute="leading" id="V4q-U2-mCZ"/>
-                            <constraint firstItem="NMK-HW-ECk" firstAttribute="top" secondItem="SoZ-4i-UWM" secondAttribute="top" id="q8V-c8-uq7"/>
+                            <constraint firstItem="SoZ-4i-UWM" firstAttribute="trailing" secondItem="ygp-D0-vmD" secondAttribute="trailing" id="Zls-wn-yjP"/>
+                            <constraint firstItem="SoZ-4i-UWM" firstAttribute="bottom" secondItem="ygp-D0-vmD" secondAttribute="bottom" id="aj6-kI-4Ma"/>
+                            <constraint firstItem="ygp-D0-vmD" firstAttribute="leading" secondItem="SoZ-4i-UWM" secondAttribute="leading" id="mJv-th-OoN"/>
+                            <constraint firstItem="ygp-D0-vmD" firstAttribute="top" secondItem="SoZ-4i-UWM" secondAttribute="top" id="rwX-1p-H7h"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SoZ-4i-UWM"/>
                     </view>
                     <connections>
-                        <outlet property="viewMyTournamentsTableView" destination="NMK-HW-ECk" id="B1x-Ak-AwR"/>
+                        <outlet property="viewMyTournamentsTableView" destination="ygp-D0-vmD" id="Efh-nX-Caa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5yP-DV-xTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966" y="696"/>
+            <point key="canvasLocation" x="1965.5999999999999" y="694.90254872563719"/>
         </scene>
         <!--Root Home Page View Controller-->
         <scene sceneID="uGo-8n-pIb">

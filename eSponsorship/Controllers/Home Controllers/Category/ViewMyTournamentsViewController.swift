@@ -11,7 +11,8 @@ import FirebaseDatabase
 
 class ViewMyTournamentViewController: UIViewController {
     
-    var posts: [TourPosting] = []
+//    var posts: [TourPosting] = []
+    var posts: [testOne] = []
     
     
     var databaseRef: DatabaseReference!
@@ -51,7 +52,7 @@ class ViewMyTournamentViewController: UIViewController {
         
         fetchpost()
         
-        //tournamentsTableView.reloadData()
+        self.viewMyTournamentsTableView.reloadData()
         
     }
     
@@ -60,40 +61,58 @@ class ViewMyTournamentViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("users").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
+            print("info: \(mypost)")
+//            print(snapshot)
+//            print(snapshot.key)
             
-            
-            
-            if let imageurl = mypost["image_url"] as? String,
-                let tournamentName = mypost["tournament_name"] as? String,
-                let location = mypost["location_name"] as? String,
-                let gameName = mypost["competing_game"] as? String,
-                let dateName = mypost["start_time"] as? String,
-                let prizeName = mypost["prize_pool"] as? String,
-                let userid = mypost["userID"] as? String {
-                
-                
-                //            let newPost = mypost(imageName: post)
-                
-                
+            if let name = mypost["name"] as? String,
+                let email = mypost["email"] as? String{
                 DispatchQueue.main.async {
-                    let newPost = TourPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theDate : dateName, theGame: gameName, prize: prizeName)
+                    let newPost = testOne(theEmail: email, theName: name)
                     
                     
                     self.posts.append(newPost)
                     self.viewMyTournamentsTableView.reloadData()
                 }
-                
             }
-            
         })
-        
+    
+            
+//
+//            if let imageurl = mypost["image_url"] as? String,
+//                let tournamentName = mypost["tournament_name"] as? String,
+//                let location = mypost["location_name"] as? String,
+//                let gameName = mypost["competing_game"] as? String,
+//                let dateName = mypost["start_time"] as? String,
+//                let prizeName = mypost["prize_pool"] as? String {
+//                let userid = mypost["userID"] as? String {
+                
+                
+                //            let newPost = mypost(imageName: post)
+                
+                
+//                DispatchQueue.main.async {
+//                    let newPost = TourPosting(theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theDate : dateName, theGame: gameName, prize: prizeName)
+//
+//
+//                    self.posts.append(newPost)
+//                    self.viewMyTournamentsTableView.reloadData()
+//                }
+//
+//            }
+//
+////        })
+//
+//
+//
+//    }
+//}
     }
 }
-
 extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -105,30 +124,29 @@ extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSo
         }
         let post = posts[indexPath.row]
         
-        //        cell.tournamentName.text = tournamentName
-        //        cell.locationOfTournament.text = location
-        //        cell.organizerName.text = organizerName
-        //        cell.numberOfParticipants.text = participation
+
+        cell.tournamentName.text = post.name
+        cell.locationOfTournament.text = post.email
         
-        cell.tournamentName.text = post.tournamentName
-        cell.locationOfTournament.text = post.location
-        cell.organizerName.text = post.gameName
-        cell.numberOfParticipants.text = post.prizeName
+//        cell.tournamentName.text = post.tournamentName
+//        cell.locationOfTournament.text = post.location
+//        cell.organizerName.text = post.gameName
+//        cell.numberOfParticipants.text = post.prizeName
         
-        print(post.imageurl)
-        cell.backgroundImageCell.loadImage(from: post.imageurl)
+//        print(post.imageurl)
+//        cell.backgroundImageCell.loadImage(from: post.imageurl)
         
         
         return cell
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else {return}
-        
-        let selectedTourmanent = posts[indexPath.row]
-        
-        destination.selectedTournamentProfile = selectedTourmanent
-        navigationController?.pushViewController(destination, animated: true)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else {return}
+//        
+//        let selectedTourmanent = posts[indexPath.row]
+//        
+//        destination.selectedTournamentProfile = selectedTourmanent
+//        navigationController?.pushViewController(destination, animated: true)
+//    }
     
     
     

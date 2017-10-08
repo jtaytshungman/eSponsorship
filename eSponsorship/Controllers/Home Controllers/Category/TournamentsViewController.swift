@@ -72,7 +72,7 @@ class TournamentsViewController: UIViewController {
                 
                 
             DispatchQueue.main.async {
-                let newPost = TourPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theDate : dateName, theGame: gameName, prize: prizeName)
+                let newPost = TourPosting(theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theDate : dateName, theGame: gameName, prize: prizeName)
                 
                 
                 self.posts.append(newPost)
