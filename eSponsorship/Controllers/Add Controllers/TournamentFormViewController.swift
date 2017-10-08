@@ -27,7 +27,7 @@ class TournamentFormViewController: FormViewController{
         orgDetails()
         tournamentDetails()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -78,7 +78,29 @@ class TournamentFormViewController: FormViewController{
                 } .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-            }
+                } .onChange({ (imageRow) in
+//                    var tourImageURL : String = ""
+//                    if let tourImageSelected = imageRow.value {
+//                        let imageSelected = tourImageSelected
+//                        let imageName = NSUUID().uuidString
+//                        
+//                        let storageRef = Storage.storage().reference().child("tournamentImage").child("\(imageName).jpg")
+//                        
+//                        if let uploadData = UIImageJPEGRepresentation(imageSelected, 0.5) {
+//                            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+//                                
+//                                if error != nil {
+//                                    print(error)
+//                                    return
+//                                }
+//                                if let imageURL = metadata?.downloadURL()?.absoluteString {
+//                                    tourImageURL = imageURL
+//                                }
+//                            }
+//                        }
+//                    }
+//                    imageRow.baseValue = tourImageURL
+                })
             
             <<< TextRow() {
                 $0.title = "Tournament Name"
@@ -148,7 +170,7 @@ class TournamentFormViewController: FormViewController{
                 $0.placeholder = "www.tournamentname.com"
                 $0.tag = "tournament_url"
                 $0.value = ""
-            }
+        }
         
         // MARK : Time of Tournament
         form +++ Section(header: "Time of Tournament", footer: "")
@@ -165,8 +187,8 @@ class TournamentFormViewController: FormViewController{
                 $0.tag = "end_time"
                 
                 
-            }
-            
+        }
+        
         // MARK : Location of Tournament
         form +++ Section ("Location of Tournament")
             
@@ -204,23 +226,24 @@ class TournamentFormViewController: FormViewController{
                 $0.tag = "location_country"
                 $0.placeholder = "Malaysia"
             }
-        
+            
             +++ Section()
             <<< ButtonRow() { (row: ButtonRow) -> Void in
                 row.title = "Save Tournament"
                 }
+                
                 .onCellSelection { [weak self] (cell, row) in
+                    
                     let alert = UIAlertController(title: "Saving Details", message: "Your details will be saved safely at GameShip", preferredStyle: .alert)
                     let cancel = UIAlertAction(title: "Cancel", style: .cancel , handler: nil)
                     let save = UIAlertAction(title: "Save", style: .default) { (action) in
-                        
                         guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }
                         guard let currentUserID = Auth.auth().currentUser?.uid else { return }
                         FirebaseDataHandler.uploadTournamentHandler(uid: currentUserID, values: tournamentEurekaData)
                         
                         self?.dismiss(animated: true, completion: nil)
-                        
                     }
+                    
                     alert.addAction(cancel)
                     alert.addAction(save)
                     self?.present(alert, animated: true, completion: nil)

@@ -41,9 +41,28 @@ class EditProfileFormViewController: FormViewController {
                     cell.accessoryView?.layer.cornerRadius = 17
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
                 } .onChange({ (imageRow) in
+                    var profileImageURL : String = ""
                     if let profileImageSelected = imageRow.value {
-                        FirebaseDataHandler.uploadUserProfileImageHandler(imageFor: "userProfileImage", image: profileImageSelected)
+                        let imageSelected = profileImageSelected
+                        guard let userID = Auth.auth().currentUser?.uid else { return }
+                        let imageName = userID + NSUUID().uuidString
+                        
+                        let storageRef = Storage.storage().reference().child("userProfileImage").child("\(imageName).jpg")
+                        
+                        if let uploadData = UIImageJPEGRepresentation(imageSelected, 0.5) {
+                            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+                                
+                                if error != nil {
+                                    print(error)
+                                    return
+                                }
+                                if let imageURL = metadata?.downloadURL()?.absoluteString {
+                                    profileImageURL = imageURL
+                                }
+                            }
+                        }
                     }
+                    imageRow.baseValue = profileImageURL
                     
                 })
             

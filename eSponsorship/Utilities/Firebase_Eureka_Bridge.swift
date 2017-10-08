@@ -8,6 +8,8 @@
 import UIKit
 import Eureka
 import ImageRow
+import FirebaseDatabase
+import Firebase
 
 public extension Form {
     public func valuesForFirebase(includeHidden: Bool = false) -> [String: Any?] {

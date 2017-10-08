@@ -15,7 +15,6 @@ class Tournaments {
     var orgContact : String?
     
     var tourImageURL : String?
-    
     var tourName : String?
     var tourGame : String?
     var tourLevel : String?
