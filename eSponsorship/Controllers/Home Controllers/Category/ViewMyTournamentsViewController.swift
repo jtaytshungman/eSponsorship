@@ -12,7 +12,7 @@ import FirebaseDatabase
 class ViewMyTournamentViewController: UIViewController {
     
 //    var posts: [TourPosting] = []
-    var posts: [testOne] = []
+    var posts: [viewMyTour] = []
     
     
     var databaseRef: DatabaseReference!
@@ -61,7 +61,7 @@ class ViewMyTournamentViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseRef.child("users").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
@@ -69,10 +69,10 @@ class ViewMyTournamentViewController: UIViewController {
 //            print(snapshot)
 //            print(snapshot.key)
             
-            if let name = mypost["name"] as? String,
-                let email = mypost["email"] as? String{
+            if let tournament_name = mypost["tournament_name"] as? String,
+                let competing_game = mypost["competing_game"] as? String{
                 DispatchQueue.main.async {
-                    let newPost = testOne(theEmail: email, theName: name)
+                    let newPost = viewMyTour(theTournament_name: tournament_name, theCompeting_game: competing_game)
                     
                     
                     self.posts.append(newPost)
@@ -125,8 +125,8 @@ extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSo
         let post = posts[indexPath.row]
         
 
-        cell.tournamentName.text = post.name
-        cell.locationOfTournament.text = post.email
+        cell.tournamentName.text = post.tournament_name
+        cell.locationOfTournament.text = post.competing_game
         
 //        cell.tournamentName.text = post.tournamentName
 //        cell.locationOfTournament.text = post.location

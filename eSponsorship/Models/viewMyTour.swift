@@ -7,41 +7,17 @@
 //
 
 import Foundation
-
-
-
-
-
-//
-//  testOne.swift
-//  eSponsorship
-//
-//  Created by Salem Abdulla on 10/8/17.
-//  Copyright © 2017 Jeremy Tay. All rights reserved.
-//
-
-import Foundation
-class testOne {
+class viewMyTour {
     
-//
-//    var email : String = ""
-//    var name : String = ""
-
-    var tournament_name: String
-    var  competing_game: String
-
-
-
-
-//
-//
-//
-//    init() {}
-//
-//    init(theEmail :String, theName: String) {
-//        email = theEmail
-//        name = theName
-//    }
-//}
+    var tournament_name: String = ""
+    var  competing_game: String = ""
+    
+    init() { }
+    
+    init(theTournament_name :String, theCompeting_game: String) {
+        tournament_name = theTournament_name
+        competing_game = theCompeting_game
+    }
+}
 
 
