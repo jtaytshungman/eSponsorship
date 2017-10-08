@@ -146,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				E3876A4A1F86A49700C69118 /* Firebase_Eureka_Bridge.swift */,
-				FD2D38331F7BC2D000F53525 /* Extensions.swift */,
 				E3522A811F7BFB27007FA16F /* Functions.swift */,
+				FD2D38331F7BC2D000F53525 /* Extensions.swift */,
 				E3522A871F7C0DEE007FA16F /* Custom Cells */,
 			);
 			path = Utilities;

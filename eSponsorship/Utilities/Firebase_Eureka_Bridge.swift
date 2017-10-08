@@ -54,6 +54,7 @@ private extension BaseRow {
             } else {
                 return self.baseValue
             }
+            
         }
     }
 }

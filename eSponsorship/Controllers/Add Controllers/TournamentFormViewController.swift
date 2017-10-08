@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 import Firebase
 import FirebaseDatabase
 import Eureka
@@ -15,8 +16,27 @@ import ImageRow
 class TournamentFormViewController: FormViewController{
     
     var tournaments : [Tournaments] = []
-    let gameOptions = ["Dota 2", "League of Legend", "Counter Strike : GO", "HeartStrone", "StarCraft"]
+    var tournamentImage = ""
     
+    let malaysiaStates = ["Kuala Lumpur",
+                          "Labuan",
+                          "Putrajaya",
+                          "Johor",
+                          "Kedah",
+                          "Kelantan",
+                          "Malacca",
+                          "Nageri Sembilan",
+                          "Pahang",
+                          "Perak",
+                          "Perslis",
+                          "Penang",
+                          "Sabah",
+                          "Sarawak",
+                          "Selangor",
+                          "Terengganu"
+    ]
+    
+    let gameList = ["Street Fighter"]
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -71,35 +91,22 @@ class TournamentFormViewController: FormViewController{
         form +++ Section("Tournament Details")
             
             <<< ImageRow () { row in
+                row.tag = "tournament_image_url"
                 row.title = "Tournament Image"
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
-                
                 } .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-                } .onChange({ (imageRow) in
-//                    var tourImageURL : String = ""
-//                    if let tourImageSelected = imageRow.value {
-//                        let imageSelected = tourImageSelected
-//                        let imageName = NSUUID().uuidString
-//                        
-//                        let storageRef = Storage.storage().reference().child("tournamentImage").child("\(imageName).jpg")
-//                        
-//                        if let uploadData = UIImageJPEGRepresentation(imageSelected, 0.5) {
-//                            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-//                                
-//                                if error != nil {
-//                                    print(error)
-//                                    return
-//                                }
-//                                if let imageURL = metadata?.downloadURL()?.absoluteString {
-//                                    tourImageURL = imageURL
-//                                }
-//                            }
-//                        }
-//                    }
-//                    imageRow.baseValue = tourImageURL
+                    
+                }
+                .onChange({ (row) in
+                    guard let currentUserID = Auth.auth().currentUser?.uid else { return }
+                    if let image = row.value {
+                        let url = FirebaseDataHandler.convertImageRowToURL(imageToConvert: image)
+//                        FirebaseDataHandler.uploadTournamentHandler(uid: currentUserID, values: ["tour_image_url" : url])
+                    }
+                    
                 })
             
             <<< TextRow() {
@@ -132,8 +139,8 @@ class TournamentFormViewController: FormViewController{
             
             <<< PushRow<String>() {
                 $0.title = "Competing Game"
-                $0.options = ["Dota 2", "League of Legend", "Counter Strike : GO", "HeartStrone", "StarCraft"]
-                $0.value = "Dota 2"
+                $0.options = gameList
+                $0.value = ""
                 $0.tag = "competing_game"
                 $0.selectorTitle = "Select a game competing"
                 }.onPresent { from, to in
@@ -215,10 +222,12 @@ class TournamentFormViewController: FormViewController{
                 $0.placeholder = "Taman Tun Dr Ismail"
             }
             
-            <<< TextRow() {
-                $0.title = "State"
-                $0.tag = "location_state"
-                $0.placeholder = "Selangor"
+            <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
+                row.title = "State"
+                row.tag = "location_state"
+                row.options = malaysiaStates
+                row.value = ""
+                
             }
             
             <<< TextRow() {
@@ -236,10 +245,15 @@ class TournamentFormViewController: FormViewController{
                     
                     let alert = UIAlertController(title: "Saving Details", message: "Your details will be saved safely at GameShip", preferredStyle: .alert)
                     let cancel = UIAlertAction(title: "Cancel", style: .cancel , handler: nil)
+                    
                     let save = UIAlertAction(title: "Save", style: .default) { (action) in
+                        let ref = Database.database().reference()
+                        let refer = ref.child("GameShip_Tournaments").childByAutoId()
+                        let createdId = refer.key
+                        
                         guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }
-                        guard let currentUserID = Auth.auth().currentUser?.uid else { return }
-                        FirebaseDataHandler.uploadTournamentHandler(uid: currentUserID, values: tournamentEurekaData)
+                        
+                        FirebaseDataHandler.uploadTournamentHandler(uid: createdId, values: tournamentEurekaData)
                         
                         self?.dismiss(animated: true, completion: nil)
                     }
