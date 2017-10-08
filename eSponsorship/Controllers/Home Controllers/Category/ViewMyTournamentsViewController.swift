@@ -59,15 +59,29 @@ class ViewMyTournamentViewController: UIViewController {
     
     func fetchpost(){
         
+        
+        
         databaseRef = Database.database().reference()
         
         databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
-            print("info: \(mypost)")
-//            print(snapshot)
-//            print(snapshot.key)
+            
+//            let vall = snapshot.value as? NSDictionary
+            
+
+            
+//            ref.child("expatsappmembers").queryOrderedByKey().observeSingleEvent(of: .value, with: { (snapshot) in
+//
+//                // Get user value
+//                let value = snapshot.value as? NSDictionary
+//                let firstName = value?["firstname"] as? String
+//
+//                // ...
+//            }) { (error) in
+//                print(error.localizedDescription)
+//            }
             
             if let tournament_name = mypost["tournament_name"] as? String,
                 let competing_game = mypost["competing_game"] as? String{
