@@ -14,22 +14,23 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class TournamentsViewController: UIViewController {
-
+    
     
     var posts: [TourPosting] = []
+    var tournaments : [Tournaments] = []
     
     
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
     
-//    let tournamentName = "Monash Dota Competition"
-//    let organizerName = "Monash University"
-//    let participation = "12 Teams"
-//    let location = "Cyberjaya Launchpad"
+    //    let tournamentName = "Monash Dota Competition"
+    //    let organizerName = "Monash University"
+    //    let participation = "12 Teams"
+    //    let location = "Cyberjaya Launchpad"
     
     @IBOutlet weak var tournamentsTableView: UITableView!{
         didSet{
-        tournamentsTableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
+            tournamentsTableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
             tournamentsTableView.delegate = self
             tournamentsTableView.dataSource = self
             tournamentsTableView.estimatedRowHeight = 80
@@ -39,11 +40,10 @@ class TournamentsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = "Tournaments"
         
         fetchpost()
-        
-        //tournamentsTableView.reloadData()
         
     }
     
@@ -52,63 +52,79 @@ class TournamentsViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseRef.child("posts").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("tournaments").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
             
             
-            if let imageurl = mypost["imagePost"] as? String,
-                let tournamentName = mypost["name"] as? String,
-                let location = mypost["location"] as? String,
-                let gameName = mypost["game"] as? String,
-                let dateName = mypost["date"] as? String,
-                let prizeName = mypost["prize"] as? String,
-                let userid = mypost["userID"] as? String {
+            if let orgName = mypost["org_name"] as? String,
+                let orgEmail = mypost["org_email"] as? String,
+                let orgAff = mypost["org_aff"] as? String,
+                let orgContact = mypost["org_contact"] as? String,
+            
+                let tourName = mypost["tournament_name"] as? String,
+                let tourGame = mypost["competing_game"] as? String,
+                let tourLevel = mypost["Competitive Level"] as? String,
+                let tourParticipants = mypost["number_participants"] as? String,
+                let tourPrize = mypost["prize_pool"] as? String,
+                let tourURL = mypost["tournament_url"] as? String,
+//                let tourStartTime = mypost["start_time"] as? String,
+//                let tourEndTime = mypost["end_time"] as? String,
+            
+                let tourLocName = mypost["location_name"] as? String,
+                let tourLocUnit = mypost["location_unit"] as? String,
+                let tourLocStreet = mypost["location_street"] as? String,
+                let tourLocCity = mypost["location_city"] as? String,
+                let tourLocState = mypost["location_state"] as? String,
+                let tourLocCountry = mypost["location_country"] as? String
+                
+                
+            {
                 
                 
                 //            let newPost = mypost(imageName: post)
                 
                 
-            DispatchQueue.main.async {
-                let newPost = TourPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theDate : dateName, theGame: gameName, prize: prizeName)
+                DispatchQueue.main.async {
+                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
+                    
+//                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL,tourStartTimeInput: tourStartTime, tourEndTimeInput: tourEndTime, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
+                    
+                    
+                    self.tournaments.append(newTournament)
+                    self.tournamentsTableView.reloadData()
+                }
                 
-                
-                self.posts.append(newPost)
-                self.tournamentsTableView.reloadData()
             }
             
-        }
+        })
         
-    })
-    
-}
+    }
 }
 
 extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return tournaments.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tournamentsTableView.dequeueReusableCell(withIdentifier: TournamentTableViewCell.cellIdentifier) as? TournamentTableViewCell else {
             return UITableViewCell()
         }
-                let post = posts[indexPath.row]
+        let tournament = tournaments[indexPath.row]
         
-//        cell.tournamentName.text = tournamentName
-//        cell.locationOfTournament.text = location
-//        cell.organizerName.text = organizerName
-//        cell.numberOfParticipants.text = participation
-
-        cell.tournamentName.text = post.tournamentName
-        cell.locationOfTournament.text = post.location
-        cell.organizerName.text = post.gameName
-        cell.numberOfParticipants.text = post.prizeName
+        //        cell.tournamentName.text = tournamentName
+        //        cell.locationOfTournament.text = location
+        //        cell.organizerName.text = organizerName
+        //        cell.numberOfParticipants.text = participation
         
-        print(post.imageurl)
-        cell.backgroundImageCell.loadImage(from: post.imageurl)
+        cell.tournamentName.text = tournament.tourName
+        cell.locationOfTournament.text = tournament.tourLocName
+        cell.organizerName.text = tournament.tourGame
+        cell.numberOfParticipants.text = tournament.tourPrize
+       
         
         
         return cell
@@ -116,7 +132,7 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else {return}
         
-        let selectedTourmanent = posts[indexPath.row]
+        let selectedTourmanent = tournaments[indexPath.row]
         
         destination.selectedTournamentProfile = selectedTourmanent
         navigationController?.pushViewController(destination, animated: true)

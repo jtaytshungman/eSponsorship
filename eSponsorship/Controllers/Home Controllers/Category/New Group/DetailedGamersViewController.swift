@@ -24,13 +24,15 @@ class DetailedGamersViewController: UIViewController {
         super.viewDidLoad()
         
         guard let game = selectedGamerProfile?.gameName,
-            let image = selectedGamerProfile?.imageurl,
+            let imageView = selectedGamerProfile?.imageurl,
             let location = selectedGamerProfile?.location,
             let name = selectedGamerProfile?.tournamentName
             else { return}
         gameTextField.text = game
         locationTextField.text = location
         nameTextField.text = name
+        profileImage.loadImage(from: imageView)
+        
        
         
         

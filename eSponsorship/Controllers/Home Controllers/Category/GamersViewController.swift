@@ -51,7 +51,7 @@ class GamersViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseRef.child("GamersPosts").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("usersProfiles").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
@@ -120,6 +120,7 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         
         destination.selectedGamerProfile = selectedGamer
         navigationController?.pushViewController(destination, animated: true)
+        
     }
 }
 

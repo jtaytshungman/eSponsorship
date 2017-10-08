@@ -138,11 +138,6 @@ class TournamentFormViewController: FormViewController{
             <<< DateTimeInlineRow(){
                 $0.title = "Start Time"
                 $0.value = Date()
-                
-//                let dateformater = DateFormatter()
-//                dateformater.dateFormat = "dd-mm-yyyy HH:mm"
-//                let timeString = dateformater.string(from: Date())
-                
                 $0.tag = "start_time"
             }
             
@@ -150,6 +145,8 @@ class TournamentFormViewController: FormViewController{
                 $0.title = "End Time"
                 $0.value = Date()
                 $0.tag = "end_time"
+                
+                
             }
             
         // MARK : Location of Tournament
