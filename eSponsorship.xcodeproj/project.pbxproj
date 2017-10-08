@@ -10,18 +10,17 @@
 		60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B881F87485800362F2D /* DetailedGamersViewController.swift */; };
 		60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */; };
 		60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */; };
-		E337EE9B1F85FC0900E2A982 /* EurekaAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E337EE9A1F85FC0900E2A982 /* EurekaAdd.storyboard */; };
+		E3394FD91F89CB4400FD3924 /* Gamers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3394FD81F89CB4400FD3924 /* Gamers.swift */; };
 		E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* Home.storyboard */; };
-		E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Universal Functions.swift */; };
+		E3522A821F7BFB27007FA16F /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Functions.swift */; };
 		E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */; };
 		E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */; };
-		E36D24B81F875B5500BC1369 /* UploadToFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36D24B71F875B5500BC1369 /* UploadToFirebase.swift */; };
+		E362F75A1F88E5A200F8018A /* EditProfileFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362F7591F88E5A200F8018A /* EditProfileFormViewController.swift */; };
+		E362F75D1F8935E100F8018A /* DescriptionProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = E362F75C1F8935E100F8018A /* DescriptionProfile.xib */; };
 		E36D24BA1F87669B00BC1369 /* Tournaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36D24B91F87669B00BC1369 /* Tournaments.swift */; };
 		E3812C5B1F85ED8C005A2CB4 /* TeamPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */; };
 		E3876A491F868A5900C69118 /* TeamsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3876A481F868A5900C69118 /* TeamsFormViewController.swift */; };
 		E3876A4B1F86A49700C69118 /* Firebase_Eureka_Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3876A4A1F86A49700C69118 /* Firebase_Eureka_Bridge.swift */; };
-		E38C30AC1F86086800E9215C /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38C30AA1F8605E400E9215C /* AboutViewController.swift */; };
-		E38C30AF1F8610C500E9215C /* addGamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38C30AE1F8610C500E9215C /* addGamersViewController.swift */; };
 		E38C30B21F86135800E9215C /* AddEureka.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38C30B01F8612BF00E9215C /* AddEureka.storyboard */; };
 		E39D43DF1F86824500DCB55F /* TournamentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */; };
 		E39FBD381F7EA15B004448A9 /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */; };
@@ -34,13 +33,11 @@
 		E3F4DB7D1F79F6100088E174 /* Adding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB7B1F79F6100088E174 /* Adding.storyboard */; };
 		E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3F4DB7E1F79F6100088E174 /* eSponsorship.xcdatamodeld */; };
 		E3F4DB851F79F6100088E174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */; };
-		E3F92CC11F809F66004ED397 /* addTeamsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F92CBF1F809F65004ED397 /* addTeamsController.swift */; };
-		E3F92CC21F809F66004ED397 /* addTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3F92CC01F809F66004ED397 /* addTourViewController.swift */; };
 		E52CFE236ECF96708D93D555 /* Pods_eSponsorship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */; };
 		FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */; };
 		FD2D38301F7BC10900F53525 /* TourPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D382F1F7BC10900F53525 /* TourPosting.swift */; };
 		FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */; };
-		FD2D38341F7BC2D000F53525 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38331F7BC2D000F53525 /* ImageCache.swift */; };
+		FD2D38341F7BC2D000F53525 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2D38331F7BC2D000F53525 /* Extensions.swift */; };
 		FD31210F1F7E031F0044D8DD /* TeamsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD31210E1F7E031F0044D8DD /* TeamsTableViewCell.xib */; };
 		FD3121111F7E034F0044D8DD /* TeamsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3121101F7E034F0044D8DD /* TeamsTableViewCell.swift */; };
 		FD31211B1F7E2E590044D8DD /* GamersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */; };
@@ -62,17 +59,17 @@
 		60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamsViewController.swift; sourceTree = "<group>"; };
 		60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTournamentsViewController.swift; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3394FD81F89CB4400FD3924 /* Gamers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamers.swift; sourceTree = "<group>"; };
 		E3522A4E1F7B51D3007FA16F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		E3522A811F7BFB27007FA16F /* Universal Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Universal Functions.swift"; sourceTree = "<group>"; };
+		E3522A811F7BFB27007FA16F /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TournamentTableViewCell.xib; sourceTree = "<group>"; };
-		E36D24B71F875B5500BC1369 /* UploadToFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UploadToFirebase.swift; path = eSponsorship/Utilities/UploadToFirebase.swift; sourceTree = SOURCE_ROOT; };
+		E362F7591F88E5A200F8018A /* EditProfileFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFormViewController.swift; sourceTree = "<group>"; };
+		E362F75C1F8935E100F8018A /* DescriptionProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionProfile.xib; sourceTree = "<group>"; };
 		E36D24B91F87669B00BC1369 /* Tournaments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tournaments.swift; path = eSponsorship/Models/Tournaments.swift; sourceTree = SOURCE_ROOT; };
 		E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPosting.swift; sourceTree = "<group>"; };
 		E3876A481F868A5900C69118 /* TeamsFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsFormViewController.swift; sourceTree = "<group>"; };
 		E3876A4A1F86A49700C69118 /* Firebase_Eureka_Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_Eureka_Bridge.swift; sourceTree = "<group>"; };
-		E38C30AA1F8605E400E9215C /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		E38C30AE1F8610C500E9215C /* addGamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = addGamersViewController.swift; path = "eSponsorship/Controllers/Home Controllers/Side Menu/addGamersViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E38C30B01F8612BF00E9215C /* AddEureka.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddEureka.storyboard; sourceTree = "<group>"; };
 		E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentFormViewController.swift; sourceTree = "<group>"; };
 		E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuListViewController.swift; path = "eSponsorship/Controllers/Home Controllers/MenuListViewController.swift"; sourceTree = SOURCE_ROOT; };
@@ -89,13 +86,11 @@
 		E3F4DB841F79F6100088E174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3F4DB861F79F6100088E174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		E3F92CBF1F809F65004ED397 /* addTeamsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTeamsController.swift; sourceTree = "<group>"; };
-		E3F92CC01F809F66004ED397 /* addTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTourViewController.swift; sourceTree = "<group>"; };
 		E8D1F635BD38230403636730 /* Pods-eSponsorship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eSponsorship.release.xcconfig"; path = "Pods/Target Support Files/Pods-eSponsorship/Pods-eSponsorship.release.xcconfig"; sourceTree = "<group>"; };
 		FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FD2D382F1F7BC10900F53525 /* TourPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourPosting.swift; sourceTree = "<group>"; };
 		FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
-		FD2D38331F7BC2D000F53525 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		FD2D38331F7BC2D000F53525 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FD31210E1F7E031F0044D8DD /* TeamsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsTableViewCell.xib; sourceTree = "<group>"; };
 		FD3121101F7E034F0044D8DD /* TeamsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsTableViewCell.swift; sourceTree = "<group>"; };
 		FD31211A1F7E2E590044D8DD /* GamersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GamersTableViewCell.xib; sourceTree = "<group>"; };
@@ -103,7 +98,6 @@
 		FD31211E1F7E301B0044D8DD /* GamerPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerPosting.swift; sourceTree = "<group>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
 		FDA378141F7A567D00195EAC /* OnboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardController.swift; sourceTree = "<group>"; };
-		FDA449F91F873E3800BB3824 /* AboutViewController copy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AboutViewController copy.swift"; sourceTree = "<group>"; };
 		FDA449FA1F87423100BB3824 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		FDBAA9951F7A0BF7003FB159 /* Users.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Users.swift; sourceTree = "<group>"; };
 		FDBAA9971F7A0FC4003FB159 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -152,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				E3876A4A1F86A49700C69118 /* Firebase_Eureka_Bridge.swift */,
-				FD2D38331F7BC2D000F53525 /* ImageCache.swift */,
-				E3522A811F7BFB27007FA16F /* Universal Functions.swift */,
+				FD2D38331F7BC2D000F53525 /* Extensions.swift */,
+				E3522A811F7BFB27007FA16F /* Functions.swift */,
 				E3522A871F7C0DEE007FA16F /* Custom Cells */,
 			);
 			path = Utilities;
@@ -162,8 +156,8 @@
 		E3522A871F7C0DEE007FA16F /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				E362F75C1F8935E100F8018A /* DescriptionProfile.xib */,
 				E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */,
-				E36D24B71F875B5500BC1369 /* UploadToFirebase.swift */,
 				E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */,
 				FD31210E1F7E031F0044D8DD /* TeamsTableViewCell.xib */,
 				FD3121101F7E034F0044D8DD /* TeamsTableViewCell.swift */,
@@ -181,6 +175,7 @@
 				E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */,
 				FD2D382F1F7BC10900F53525 /* TourPosting.swift */,
 				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
+				E3394FD81F89CB4400FD3924 /* Gamers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,7 +193,6 @@
 			children = (
 				E3EE1B941F87C14A00A3061D /* RootHomePageViewController.swift */,
 				FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */,
-				E38C30AA1F8605E400E9215C /* AboutViewController.swift */,
 				E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */,
 				E3D00D671F7CA5D400932FE5 /* Category */,
 			);
@@ -283,23 +277,13 @@
 			path = eSponsorship;
 			sourceTree = "<group>";
 		};
-		FDA449F51F8738F000BB3824 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				FDA449F91F873E3800BB3824 /* AboutViewController copy.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E362F7591F88E5A200F8018A /* EditProfileFormViewController.swift */,
 				E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */,
 				E3876A481F868A5900C69118 /* TeamsFormViewController.swift */,
 				FDA449FA1F87423100BB3824 /* profileViewController.swift */,
-				E3F92CBF1F809F65004ED397 /* addTeamsController.swift */,
-				E3F92CC01F809F66004ED397 /* addTourViewController.swift */,
-				E38C30AE1F8610C500E9215C /* addGamersViewController.swift */,
 				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
 			);
 			path = "Add Controllers";
@@ -376,6 +360,7 @@
 				E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */,
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
 				E38C30B21F86135800E9215C /* AddEureka.storyboard in Resources */,
+				E362F75D1F8935E100F8018A /* DescriptionProfile.xib in Resources */,
 				E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */,
 				E3F4DB7D1F79F6100088E174 /* Adding.storyboard in Resources */,
 			);
@@ -458,18 +443,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E38C30AC1F86086800E9215C /* AboutViewController.swift in Sources */,
+				E3394FD91F89CB4400FD3924 /* Gamers.swift in Sources */,
 				E36D24BA1F87669B00BC1369 /* Tournaments.swift in Sources */,
-				E3F92CC11F809F66004ED397 /* addTeamsController.swift in Sources */,
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */,
 				E39FBD381F7EA15B004448A9 /* MenuListViewController.swift in Sources */,
 				E39D43DF1F86824500DCB55F /* TournamentFormViewController.swift in Sources */,
-				E36D24B81F875B5500BC1369 /* UploadToFirebase.swift in Sources */,
 				FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
+				E362F75A1F88E5A200F8018A /* EditProfileFormViewController.swift in Sources */,
 				E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */,
-				FD2D38341F7BC2D000F53525 /* ImageCache.swift in Sources */,
+				FD2D38341F7BC2D000F53525 /* Extensions.swift in Sources */,
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
@@ -478,14 +462,12 @@
 				FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */,
 				E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */,
 				E3812C5B1F85ED8C005A2CB4 /* TeamPosting.swift in Sources */,
-				E38C30AF1F8610C500E9215C /* addGamersViewController.swift in Sources */,
 				E3876A4B1F86A49700C69118 /* Firebase_Eureka_Bridge.swift in Sources */,
 				E3F4DB801F79F6100088E174 /* eSponsorship.xcdatamodeld in Sources */,
-				E3F92CC21F809F66004ED397 /* addTourViewController.swift in Sources */,
 				E3F4DB781F79F6100088E174 /* AppDelegate.swift in Sources */,
 				FDBAA9981F7A0FC4003FB159 /* SignUpViewController.swift in Sources */,
 				E3EE1B951F87C14A00A3061D /* RootHomePageViewController.swift in Sources */,
-				E3522A821F7BFB27007FA16F /* Universal Functions.swift in Sources */,
+				E3522A821F7BFB27007FA16F /* Functions.swift in Sources */,
 				60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */,
 				60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */,
 				60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */,
@@ -634,7 +616,7 @@
 				INFOPLIST_FILE = eSponsorship/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.StoryBoard-intro.eSponsorship12";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NEXT.GameShip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -651,7 +633,7 @@
 				INFOPLIST_FILE = eSponsorship/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.StoryBoard-intro.eSponsorship12";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NEXT.GameShip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

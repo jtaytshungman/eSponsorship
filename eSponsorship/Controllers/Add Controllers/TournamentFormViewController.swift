@@ -15,7 +15,13 @@ import ImageRow
 class TournamentFormViewController: FormViewController{
     
     var tournaments : [Tournaments] = []
-
+    let gameOptions = ["Dota 2", "League of Legend", "Counter Strike : GO", "HeartStrone", "StarCraft"]
+    
+    
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         orgDetails()
@@ -55,7 +61,9 @@ class TournamentFormViewController: FormViewController{
                 $0.tag = "org_contact"
                 $0.value = ""
                 $0.placeholder = "6012345678"
-            }
+                } .cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .numberPad
+                })
     }
     
     func tournamentDetails () {
@@ -63,7 +71,7 @@ class TournamentFormViewController: FormViewController{
         form +++ Section("Tournament Details")
             
             <<< ImageRow () { row in
-                row.title = "Select an image for your tournament"
+                row.title = "Tournament Image"
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
                 
@@ -116,7 +124,6 @@ class TournamentFormViewController: FormViewController{
                 $0.options = ["Professional", "Amateur", "Open"]
                 $0.value = "Open"
                 $0.selectorTitle = "Select Competing Level"
-                $0.tag = $0.title
                 }.onPresent { from, to in
                     
             }
@@ -203,12 +210,20 @@ class TournamentFormViewController: FormViewController{
                 row.title = "Save Tournament"
                 }
                 .onCellSelection { [weak self] (cell, row) in
-                    guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }
-                    guard let currentUserID = Auth.auth().currentUser?.uid else { return }
-                    FirebaseDataHandler.uploadDataToDatabaseWithUID(uid: currentUserID, values: tournamentEurekaData)
-                    print(tournamentEurekaData)
-                    
-                    self?.dismiss(animated: true, completion: nil)
+                    let alert = UIAlertController(title: "Saving Details", message: "Your details will be saved safely at GameShip", preferredStyle: .alert)
+                    let cancel = UIAlertAction(title: "Cancel", style: .cancel , handler: nil)
+                    let save = UIAlertAction(title: "Save", style: .default) { (action) in
+                        
+                        guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }
+                        guard let currentUserID = Auth.auth().currentUser?.uid else { return }
+                        FirebaseDataHandler.uploadTournamentHandler(uid: currentUserID, values: tournamentEurekaData)
+                        
+                        self?.dismiss(animated: true, completion: nil)
+                        
+                    }
+                    alert.addAction(cancel)
+                    alert.addAction(save)
+                    self?.present(alert, animated: true, completion: nil)
         }
     }
 }
