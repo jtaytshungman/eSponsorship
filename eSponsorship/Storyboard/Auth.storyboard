@@ -10,6 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Heavy</string>
+        </array>
         <array key="GeezaPro.ttc">
             <string>GeezaPro</string>
         </array>
@@ -148,28 +152,28 @@
                                     <constraint firstAttribute="height" constant="150" id="u4t-fp-7Xg"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="pMt-FL-mp7">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="pMt-FL-mp7">
                                 <rect key="frame" x="50" y="624" width="275" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-KT-dYP">
-                                        <rect key="frame" x="0.0" y="0.0" width="184" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS8-KT-dYP">
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="gis-zs-j1I"/>
                                             <constraint firstAttribute="width" constant="184" id="tWZ-yX-6c9"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-Nu-1oJ">
-                                        <rect key="frame" x="184" y="0.0" width="91" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6MZ-Nu-1oJ">
+                                        <rect key="frame" x="155" y="0.0" width="120" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="91" id="O7b-c8-B78"/>
+                                            <constraint firstAttribute="width" constant="120" id="O7b-c8-B78"/>
                                             <constraint firstAttribute="height" constant="30" id="mrl-0P-CkK"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="12"/>
                                         <state key="normal" title="Sign Up Here">
-                                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.99055606129999996" green="0.35364508630000002" blue="0.1176016852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <segue destination="UQP-yT-Z4N" kind="show" id="3qU-HU-gsN">
@@ -179,7 +183,6 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="6MZ-Nu-1oJ" firstAttribute="leading" secondItem="OS8-KT-dYP" secondAttribute="trailing" id="1zj-mn-Hc7"/>
                                     <constraint firstItem="OS8-KT-dYP" firstAttribute="centerY" secondItem="6MZ-Nu-1oJ" secondAttribute="centerY" id="46F-ba-hr4"/>
                                     <constraint firstItem="OS8-KT-dYP" firstAttribute="top" secondItem="6MZ-Nu-1oJ" secondAttribute="top" id="L03-oY-g0X"/>
                                     <constraint firstItem="OS8-KT-dYP" firstAttribute="bottom" secondItem="6MZ-Nu-1oJ" secondAttribute="bottom" id="OnA-Xa-eGI"/>
@@ -188,11 +191,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="pMt-FL-mp7" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" constant="50" id="0FN-TU-BaK"/>
                             <constraint firstItem="pMt-FL-mp7" firstAttribute="centerX" secondItem="drN-Pp-mik" secondAttribute="centerX" id="1vT-cT-29O"/>
                             <constraint firstItem="Ohl-1e-QkV" firstAttribute="trailing" secondItem="9uN-Nf-abu" secondAttribute="trailing" constant="20" id="4fX-0q-rqf"/>
                             <constraint firstItem="pMt-FL-mp7" firstAttribute="top" secondItem="9uN-Nf-abu" secondAttribute="bottom" constant="210" id="CGh-h7-5vD"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="centerX" secondItem="drN-Pp-mik" secondAttribute="centerX" id="VEq-fb-4x2"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="centerY" secondItem="drN-Pp-mik" secondAttribute="centerY" id="ZWY-eW-Z3i"/>
+                            <constraint firstItem="Ohl-1e-QkV" firstAttribute="trailing" secondItem="pMt-FL-mp7" secondAttribute="trailing" constant="50" id="abX-sO-RwL"/>
                             <constraint firstItem="TRo-aa-QSg" firstAttribute="centerX" secondItem="drN-Pp-mik" secondAttribute="centerX" id="iR7-So-GyX"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" constant="20" id="lrA-LN-hUI"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="top" secondItem="TRo-aa-QSg" secondAttribute="bottom" constant="20" id="zXz-j4-spP"/>

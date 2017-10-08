@@ -18,23 +18,6 @@ class TournamentFormViewController: FormViewController{
     var tournaments : [Tournaments] = []
     var tournamentImage = ""
     
-    let malaysiaStates = ["Kuala Lumpur",
-                          "Labuan",
-                          "Putrajaya",
-                          "Johor",
-                          "Kedah",
-                          "Kelantan",
-                          "Malacca",
-                          "Nageri Sembilan",
-                          "Pahang",
-                          "Perak",
-                          "Perslis",
-                          "Penang",
-                          "Sabah",
-                          "Sarawak",
-                          "Selangor",
-                          "Terengganu"
-    ]
     
     let gameList = ["Street Fighter"]
     
@@ -101,11 +84,6 @@ class TournamentFormViewController: FormViewController{
                     
                 }
                 .onChange({ (row) in
-                    guard let currentUserID = Auth.auth().currentUser?.uid else { return }
-                    if let image = row.value {
-                        let url = FirebaseDataHandler.convertImageRowToURL(imageToConvert: image)
-//                        FirebaseDataHandler.uploadTournamentHandler(uid: currentUserID, values: ["tour_image_url" : url])
-                    }
                     
                 })
             
@@ -139,7 +117,7 @@ class TournamentFormViewController: FormViewController{
             
             <<< PushRow<String>() {
                 $0.title = "Competing Game"
-                $0.options = gameList
+                $0.options = Constant.Data.gamesCompeting
                 $0.value = ""
                 $0.tag = "competing_game"
                 $0.selectorTitle = "Select a game competing"
@@ -150,7 +128,7 @@ class TournamentFormViewController: FormViewController{
             <<< PushRow<String>() {
                 $0.title = "Competitive Level"
                 $0.tag = "competitive_level"
-                $0.options = ["Professional", "Amateur", "Open"]
+                $0.options = Constant.Data.competingLevel
                 $0.value = "Open"
                 $0.selectorTitle = "Select Competing Level"
                 }.onPresent { from, to in
@@ -225,7 +203,7 @@ class TournamentFormViewController: FormViewController{
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "State"
                 row.tag = "location_state"
-                row.options = malaysiaStates
+                row.options = Constant.Data.states
                 row.value = ""
                 
             }
@@ -247,13 +225,11 @@ class TournamentFormViewController: FormViewController{
                     let cancel = UIAlertAction(title: "Cancel", style: .cancel , handler: nil)
                     
                     let save = UIAlertAction(title: "Save", style: .default) { (action) in
-                        let ref = Database.database().reference()
-                        let refer = ref.child("GameShip_Tournaments").childByAutoId()
-                        let createdId = refer.key
                         
-                        guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }
+                        guard let currentUID = Auth.auth().currentUser?.uid else { return }
+                        guard let tournamentData = self?.form.valuesForFirebase() else { return }
                         
-                        FirebaseDataHandler.uploadTournamentHandler(uid: createdId, values: tournamentEurekaData)
+                        FirebaseDataHandler.uploadTournamentHandler(uid: currentUID, values: tournamentData)
                         
                         self?.dismiss(animated: true, completion: nil)
                     }

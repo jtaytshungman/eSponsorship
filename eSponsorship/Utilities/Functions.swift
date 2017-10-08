@@ -33,12 +33,33 @@ public class ImageDisplay {
 
 public class FirebaseDataHandler {
     
-    // MARK : Universal Update function is here
+    
+    class func convertImageRowToURL (imageToConvert : UIImage) -> String? {
+        var urlString : String = ""
+        let ref = Database.database().reference()
+        let imageUID = "image" + NSUUID().uuidString
+        let storageReference = Storage.storage().reference().child("Tournament_Images").child("\(imageUID).jpeg")
+        if let image = imageToConvert as? UIImage  {
+            if let imageData = UIImageJPEGRepresentation(image, 0.5) {
+                storageReference.putData(imageData, metadata: nil, completion: { (metadata, error) in
+                    guard let imageURLString = metadata?.downloadURL()?.absoluteString else {
+                        return print("error converting image to string url")
+                    }
+                    urlString = imageURLString
+                })
+            }
+        }
+        return urlString
+    }
+    
+    // MARK : Tournament Update Related to FB
     class func uploadTournamentHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
-        let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
+        
         let tourReference = ref.child("GameShip_Tournaments").childByAutoId()
-        tourReference.child(tourReference.key).setValue("Tournament_UID")
+        tourReference.child("Tournament_UID").setValue(tourReference.key)
+        
+        let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
         userReference.updateChildValues([tourReference.key : "Tournament_UID"])
         
         tourReference.updateChildValues(values) { (error, ref) in
@@ -71,6 +92,7 @@ public class FirebaseDataHandler {
         }
     }
     
+    // MARK : Profile Handlers Related To FB
     class func uploadToUserProfileHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
         let userReference = ref.child("users").child(uid)
@@ -139,21 +161,4 @@ public class FirebaseDataHandler {
 //    }
     
     
-    class func convertImageRowToURL (imageToConvert : UIImage) -> String? {
-        var urlString : String = ""
-        let ref = Database.database().reference()
-        let imageUID = "image" + NSUUID().uuidString
-        let storageReference = Storage.storage().reference().child("Tournament_Images").child("\(imageUID).jpeg")
-        if let image = imageToConvert as? UIImage  {
-            if let imageData = UIImageJPEGRepresentation(image, 0.5) {
-                storageReference.putData(imageData, metadata: nil, completion: { (metadata, error) in
-                    guard let imageURLString = metadata?.downloadURL()?.absoluteString else {
-                        return print("error converting image to string url")
-                    }
-                    urlString = imageURLString
-                })
-            }
-        }
-        return urlString
-    }
 }

@@ -16,7 +16,6 @@ import FirebaseDatabase
 class EditProfileFormViewController: FormViewController {
     
     let gameOption = ["A", "B", "B", "B", "B","B","B", "B", "B", "B"]
-    let competingLevel = ["Professional", "Amatuer", "Casual", "Stream"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,42 +75,24 @@ class EditProfileFormViewController: FormViewController {
                     }
             }
             
-            <<< TextRow() {
-                $0.title = "Base Location"
-                $0.tag = "user_location_based"
-                $0.placeholder = "Sungai Petani"
-                $0.value = ""
-                $0.add(rule: RuleRequired())
-                $0.validationOptions = .validatesOnChange
-                }
-                .cellUpdate { cell, row in
-                    if !row.isValid {
-                        cell.titleLabel?.textColor = .red
-                    }
-                }
-                .onRowValidationChanged { cell, row in
-                    let rowIndex = row.indexPath!.row
-                    while row.section!.count > rowIndex + 1 && row.section?[rowIndex  + 1] is LabelRow {
-                        row.section?.remove(at: rowIndex + 1)
-                    }
-                    if !row.isValid {
-                        for (index, validationMsg) in row.validationErrors.map({ $0.msg }).enumerated() {
-                            let labelRow = LabelRow() {
-                                $0.title = validationMsg
-                                $0.cell.height = { 30 }
-                            }
-                            row.section?.insert(labelRow, at: row.indexPath!.row + index + 1)
-                        }
-                    }
+            <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
+                row.title = "Based Location"
+                row.tag = "user_location_"
+                row.options = Constant.Data.states
+                row.value = ""
+                row.add(rule: RuleRequired())
+                row.validationOptions = .validatesOnChange
+                
             }
             
-            +++ Section (header: "Player Biography", footer: "Show sponsors your personality.")
             
+            +++ Section ()
             <<< TextAreaRow () {
                 $0.title = "Player Biography"
                 $0.placeholder = "Show something about yourself."
                 $0.tag = "user_bio_desc"
             }
+            
             
             +++ Section (header: "Social Media Presence", footer: "Link your relevant streaming accounts to attact sponsorships. The more media you stream, the higher chance of getting sponsored.")
             
@@ -149,7 +130,7 @@ class EditProfileFormViewController: FormViewController {
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Game 1"
                 row.tag = "user_GameChoice_1"
-                row.options = gameOption
+                row.options = Constant.Data.gamesCompeting
                 row.value = ""
                 
             }
@@ -157,7 +138,7 @@ class EditProfileFormViewController: FormViewController {
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Competing Level"
                 row.tag = "user_GameChoice_1_level"
-                row.options = competingLevel
+                row.options = Constant.Data.competingLevel
                 row.value = ""
                 
             }
@@ -166,7 +147,7 @@ class EditProfileFormViewController: FormViewController {
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Game 2"
                 row.tag = "user_GameChoice_2"
-                row.options = gameOption
+                row.options = Constant.Data.gamesCompeting
                 row.value = ""
                 
             }
@@ -174,7 +155,7 @@ class EditProfileFormViewController: FormViewController {
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Competing Level"
                 row.tag = "user_GameChoice_2_level"
-                row.options = competingLevel
+                row.options = Constant.Data.competingLevel
                 row.value = ""
                 
             }
@@ -183,19 +164,19 @@ class EditProfileFormViewController: FormViewController {
             <<< PickerInlineRow <String> ("Game 3") { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Game 3"
                 row.tag = "user_GameChoice_3"
-                row.options = gameOption
+                row.options = Constant.Data.gamesCompeting
                 row.value = ""
                 
-        }
+            }
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Competing Level"
                 row.tag = "user_GameChoice_3_level"
-                row.options = competingLevel
+                row.options = Constant.Data.competingLevel
                 row.value = ""
                 
-        }
-        
-        +++ Section ()
+            }
+            
+            +++ Section ()
             <<< ButtonRow() { (row: ButtonRow) -> Void in
                 row.title = "Save Profile"
                 }
@@ -215,6 +196,7 @@ class EditProfileFormViewController: FormViewController {
                                 return
                             }
                         }
+                        userReference.updateChildValues(["userID" : currentUserID])
                         
                         self?.dismiss(animated: true, completion: nil)
                         
@@ -223,9 +205,9 @@ class EditProfileFormViewController: FormViewController {
                     alert.addAction(save)
                     self?.present(alert, animated: true, completion: nil)
         }
-        
     }
     
 }
+
 
 
