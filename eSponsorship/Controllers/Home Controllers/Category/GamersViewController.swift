@@ -119,6 +119,7 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         
         destination.selectedGamerProfile = selectedGamer
         navigationController?.pushViewController(destination, animated: true)
+        
     }
 }
 
