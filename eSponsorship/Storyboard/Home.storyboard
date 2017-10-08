@@ -175,7 +175,6 @@
                         <outlet property="editProfileIcon" destination="NLR-pc-Y3a" id="Add-fs-etZ"/>
                         <outlet property="sideMenuProfileImage" destination="Dxj-rE-9at" id="63K-Bs-uny"/>
                         <outlet property="sponsorIcon" destination="DDa-9t-XqW" id="qwu-eX-C1z"/>
-                        <outlet property="viewMyTeamsImage" destination="WwT-t3-Bmv" id="4pt-hA-6qP"/>
                         <outlet property="viewMyTournamentsImage" destination="blE-MJ-TbM" id="dTy-KC-M91"/>
                         <outlet property="viewProfileIcon" destination="ZO1-iu-gPB" id="rJd-ag-BIj"/>
                     </connections>

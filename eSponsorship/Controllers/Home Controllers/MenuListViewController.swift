@@ -77,7 +77,7 @@ class MenuListViewController: UIViewController {
     
     @IBAction func viewMyTournaments(_ sender: Any) {
         let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
-        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "viewMyTournamentsTableView") as? viewMyTournamentsTableView else {
+        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "ViewMyTournamentViewController") as? ViewMyTournamentViewController else {
             return
         }
         present(vc, animated: true, completion: nil)

@@ -60,19 +60,19 @@ class ViewMyTournamentViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseRef.child("posts").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
             
             
-            if let imageurl = mypost["imagePost"] as? String,
-                let tournamentName = mypost["name"] as? String,
-                let location = mypost["location"] as? String,
-                let gameName = mypost["game"] as? String,
-                let dateName = mypost["date"] as? String,
-                let prizeName = mypost["prize"] as? String,
+            if let imageurl = mypost["image_url"] as? String,
+                let tournamentName = mypost["tournament_name"] as? String,
+                let location = mypost["location_name"] as? String,
+                let gameName = mypost["competing_game"] as? String,
+                let dateName = mypost["start_time"] as? String,
+                let prizeName = mypost["prize_pool"] as? String,
                 let userid = mypost["userID"] as? String {
                 
                 
