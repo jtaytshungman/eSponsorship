@@ -38,8 +38,8 @@ public class FirebaseDataHandler {
         let ref = Database.database().reference()
         let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
         let tourReference = ref.child("GameShip_Tournaments").childByAutoId()
-        tourReference.child(tourReference.key).setValue("Tournaments_For_GameShip")
-        userReference.updateChildValues([tourReference.key : "key"])
+        tourReference.child(tourReference.key).setValue("Tournament_UID")
+        userReference.updateChildValues([tourReference.key : "Tournament_UID"])
         tourReference.updateChildValues(values) { (error, ref) in
             if error != nil {
                 print(error)
@@ -51,10 +51,10 @@ public class FirebaseDataHandler {
     class func uploadTeamsHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
         let userReference = ref.child("users").child(uid).child("User_Teams")
-        let tourReference = ref.child("GameShip_Teams").childByAutoId()
-        tourReference.child(tourReference.key).setValue("Teams_For_GameShip")
-        userReference.updateChildValues([tourReference.key : "key"])
-        tourReference.updateChildValues(values) { (error, ref) in
+        let teamReference = ref.child("GameShip_Teams").childByAutoId()
+        teamReference.child(teamReference.key).setValue("Teams_For_GameShip")
+        userReference.updateChildValues([teamReference.key : "key"])
+        teamReference.updateChildValues(values) { (error, ref) in
             if error != nil {
                 print(error)
                 return
@@ -93,5 +93,43 @@ public class FirebaseDataHandler {
                 }
             }
         }
+    }
+    
+    class func uploadToTournamentHandler (uid : String, values : [String : Any]) {
+        let ref = Database.database().reference()
+        let tourReference = ref.child("GameShip_Teams").child(uid)
+        tourReference.updateChildValues(values) { (error, ref) in
+            if error != nil {
+                print(error)
+                return
+            }
+        }
+    }
+    
+//    class func uploadTournamentImageHandler (imageFor : String, image : UIImage) {
+//        let ref = Database.database().reference()
+//
+//        guard let tourImage = image as? UIImage else { return }
+//        let imageName = NSUUID().uuidString
+//        let storageRef = Storage.storage().reference().child("\(imageFor)").child("\(imageName).jpg")
+//
+//        if let uploadData = UIImageJPEGRepresentation(tourImage, 0.5) {
+//            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
+//
+//                if error != nil {
+//                    print(error)
+//                    return
+//                }
+//
+//                if let profileImageURL = metadata?.downloadURL()?.absoluteString {
+//                    let values = ["tournamentImageURL" : profileImageURL]
+//                    FirebaseDataHandler.uploadTournamentHandler(uid: tourKey, values: values)
+//                }
+//            }
+//        }
+//    }
+    
+    class func convertImageRowToURL () {
+        
     }
 }

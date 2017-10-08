@@ -9,37 +9,106 @@
 import UIKit
 
 class DetailedTournamentsViewController: UIViewController {
-
-    var selectedTournamentProfile : TourPosting?
     
-    @IBOutlet weak var gameTourmanent: UITextField!
+    var selectedTournamentProfile : Tournaments?
     
-    @IBOutlet weak var profileTourmanent: UIImageView!
+    @IBOutlet weak var orgNameTxt: UITextField!
     
-    @IBOutlet weak var locationTourmanent: UITextField!
+    @IBOutlet weak var orgEmailTxt: UITextField!
     
-    @IBOutlet weak var nameTourmanent: UITextField!
+    @IBOutlet weak var orgAffTxt: UITextField!
     
-    @IBOutlet weak var dateTourmanent: UITextField!
+    @IBOutlet weak var orgContactTxt: UITextField!
     
-    @IBOutlet weak var prizeTourmanent: UITextField!
+    @IBOutlet weak var tourNameTxt: UITextField!
+    
+    @IBOutlet weak var tourGameTxt: UITextField!
+    
+    @IBOutlet weak var tourLevelTxt: UITextField!
+    
+    @IBOutlet weak var tourParticipantsTxt: UITextField!
+    
+    @IBOutlet weak var tourPrizeTxt: UITextField!
+    
+    @IBOutlet weak var tourURLTxt: UITextField!
+    
+    @IBOutlet weak var tourStartTimeTxt: UITextField!
+    
+    @IBOutlet weak var tourEndTimeTxt: UITextField!
+    
+    @IBOutlet weak var tourLocNameTxt: UITextField!
+    
+    @IBOutlet weak var tourLocUnitTxt: UITextField!
+    
+    @IBOutlet weak var tourLocStreetTxt: UITextField!
+    
+    @IBOutlet weak var tourLocCityTxt: UITextField!
+    
+    @IBOutlet weak var tourLocStateTxt: UITextField!
+    
+    @IBOutlet weak var tourLocCountryTxt: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let game = selectedTournamentProfile?.gameName,
-            let image = selectedTournamentProfile?.imageurl,
-            let location = selectedTournamentProfile?.location,
-            let name = selectedTournamentProfile?.tournamentName,
-            let date = selectedTournamentProfile?.dateName,
-            let prize = selectedTournamentProfile?.prizeName
+        guard let orgName = selectedTournamentProfile?.orgName,
+            let orgEmail = selectedTournamentProfile?.orgEmail,
+            let orgAff = selectedTournamentProfile?.orgAff,
+            let orgContact = selectedTournamentProfile?.orgContact,
+            
+            let tourName = selectedTournamentProfile?.tourName,
+            let tourGame = selectedTournamentProfile?.tourGame,
+            let tourLevel = selectedTournamentProfile?.tourLevel,
+            let tourParticipants = selectedTournamentProfile?.tourParticipants,
+            let tourPrize = selectedTournamentProfile?.tourPrize,
+            let tourURL = selectedTournamentProfile?.tourURL,
+//            let tourStartTime = selectedTournamentProfile?.tourStartTime,
+//            let tourEndTime = selectedTournamentProfile?.tourEndTime,
+            
+            let tourLocName = selectedTournamentProfile?.tourLocName,
+            let tourLocUnit = selectedTournamentProfile?.tourLocUnit,
+            let tourLocStreet = selectedTournamentProfile?.tourLocStreet,
+            let tourLocCity = selectedTournamentProfile?.tourLocCity,
+            let tourLocState = selectedTournamentProfile?.tourLocState,
+            let tourLocCountry = selectedTournamentProfile?.tourLocCountry
             else { return}
-        gameTourmanent.text = game
-        //        profileImage. = UIImage
-        locationTourmanent.text = location
-        nameTourmanent.text = name
-        dateTourmanent.text = date
-        prizeTourmanent.text = prize
+        
+        orgNameTxt.text =  orgName
+        orgEmailTxt.text = orgEmail
+        orgAffTxt.text = orgAff
+        orgContactTxt.text = orgContact
+        
+        tourNameTxt.text = tourName
+        tourGameTxt.text = tourGame
+        tourLevelTxt.text = tourLevel
+        tourParticipantsTxt.text = tourParticipants
+        tourPrizeTxt.text = tourPrize
+        tourURLTxt.text = tourURL
+        
+//        let dateformater1 = DateFormatter()
+//        dateformater1.dateFormat = "dd-mm-yyyy HH:mm a"
+//        var timeString = dateformater1.string(from: Date())
+//        tourStartTimeTxt.text = timeString
+//        timeString = tourStartTime
+//
+        
+        
+        
+//        tourStartTimeTxt.text = tourStartTime
+        //tourEndTimeTxt.text = tourEndTime
+        
+        tourLocNameTxt.text = tourLocName
+        tourLocUnitTxt.text = tourLocUnit
+        tourLocStreetTxt.text = tourLocStreet
+        tourLocCityTxt.text = tourLocCity
+        tourLocStateTxt.text = tourLocState
+        tourLocCountryTxt.text = tourLocCountry
+        
+
+    
+        
+        
         
         
         

@@ -15,15 +15,14 @@ class Tournaments {
     var orgContact : String?
     
     var tourImageURL : String?
-    
     var tourName : String?
     var tourGame : String?
     var tourLevel : String?
     var tourParticipants : String?
     var tourPrize : String?
     var tourURL : String?
-    var tourStartTime : Date?
-    var tourEndTime : Date?
+//    var tourStartTime : String?
+//    var tourEndTime : String?
     
     var tourLocName : String?
     var tourLocUnit : String?
@@ -32,9 +31,7 @@ class Tournaments {
     var tourLocState : String?
     var tourLocCountry : String?
 
-    init() {
-        
-    }
+    init() {}
     
     init(
         orgNameInput : String,
@@ -48,8 +45,9 @@ class Tournaments {
         tourParticipantsInput : String,
         tourPrizeInput : String,
         tourURLInput : String,
-        tourStartTimeInput : Date,
-        tourEndTimeInput : Date,
+//        tourStartTimeInput : String,
+//        tourEndTimeInput : String,
+
         tourLocNameInput : String,
         tourLocUnitInput : String,
         tourLocStreetInput : String,
@@ -70,8 +68,8 @@ class Tournaments {
         tourParticipants = tourParticipantsInput
         tourPrize = tourPrizeInput
         tourURL = tourURLInput
-        tourStartTime = tourStartTimeInput
-        tourEndTime = tourEndTimeInput
+//        tourStartTime = tourStartTimeInput
+//        tourEndTime = tourEndTimeInput
         
         tourLocName = tourLocNameInput
         tourLocUnit = tourLocUnitInput
