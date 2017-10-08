@@ -9,6 +9,7 @@ class Users {
     init() {
         
     }
+    
     init(userName : String, description : String, imageAccount : String){
         self.userName = userName
         self.description = description

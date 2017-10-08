@@ -10,6 +10,7 @@
 		60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B881F87485800362F2D /* DetailedGamersViewController.swift */; };
 		60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */; };
 		60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */; };
+		E3394FD91F89CB4400FD3924 /* Gamers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3394FD81F89CB4400FD3924 /* Gamers.swift */; };
 		E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* Home.storyboard */; };
 		E3522A821F7BFB27007FA16F /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Functions.swift */; };
 		E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */; };
@@ -58,6 +59,7 @@
 		60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamsViewController.swift; sourceTree = "<group>"; };
 		60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTournamentsViewController.swift; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3394FD81F89CB4400FD3924 /* Gamers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamers.swift; sourceTree = "<group>"; };
 		E3522A4E1F7B51D3007FA16F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E3522A811F7BFB27007FA16F /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */,
 				FD2D382F1F7BC10900F53525 /* TourPosting.swift */,
 				FDBAA9951F7A0BF7003FB159 /* Users.swift */,
+				E3394FD81F89CB4400FD3924 /* Gamers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3394FD91F89CB4400FD3924 /* Gamers.swift in Sources */,
 				E36D24BA1F87669B00BC1369 /* Tournaments.swift in Sources */,
 				FD2D38321F7BC1B300F53525 /* PostTableViewCell.swift in Sources */,
 				FD1AF8C31F7C9FA50058C182 /* HomeViewController.swift in Sources */,

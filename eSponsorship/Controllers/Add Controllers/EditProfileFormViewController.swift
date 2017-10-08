@@ -153,6 +153,7 @@ class EditProfileFormViewController: FormViewController {
                 row.value = ""
                 
             }
+            
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Competing Level"
                 row.tag = "user_GameChoice_1_level"
