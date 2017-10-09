@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageRow
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
@@ -56,11 +57,9 @@ public class FirebaseDataHandler {
     class func uploadTournamentHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
         
+        // creates tournament child notes name "GameShip_Tournaments"
         let tourReference = ref.child("GameShip_Tournaments").childByAutoId()
         tourReference.child("Tournament_UID").setValue(tourReference.key)
-        
-        let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
-        userReference.updateChildValues([tourReference.key : "Tournament_UID"])
         
         tourReference.updateChildValues(values) { (error, ref) in
             if error != nil {
@@ -69,6 +68,15 @@ public class FirebaseDataHandler {
             }
         }
         
+        if let image = ImageRow().value {
+            let url  = convertImageRowToURL(imageToConvert: image)
+            tourReference.updateChildValues(["image_url" : url])
+        }
+        
+        // creates specifically the tournament key in users
+        let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
+        userReference.updateChildValues([tourReference.key : "Tournament_UID"])
+    
 //        tourReference.updateChildValues(imageValues) { (error, ref) in
 //            if error != nil {
 //                print(error)
@@ -78,6 +86,7 @@ public class FirebaseDataHandler {
 
     }
     
+    // Team upload to gameship_teams
     class func uploadTeamsHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
         let userReference = ref.child("users").child(uid).child("User_Teams")
@@ -103,6 +112,8 @@ public class FirebaseDataHandler {
             }
         }
     }
+    
+    // handles profile image only
     
     class func uploadUserProfileImageHandler(imageFor : String, image : UIImage) {
         guard let currentUserUID = Auth.auth().currentUser?.uid else { return }

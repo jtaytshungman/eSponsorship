@@ -15,8 +15,6 @@ import FirebaseDatabase
 
 class EditProfileFormViewController: FormViewController {
     
-    let gameOption = ["A", "B", "B", "B", "B","B","B", "B", "B", "B"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         editProfileFormHandler()

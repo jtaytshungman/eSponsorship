@@ -21,6 +21,7 @@ class DetailedGamersViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         guard let game = selectedGamerProfile?.gameName,
@@ -32,9 +33,6 @@ class DetailedGamersViewController: UIViewController {
         locationTextField.text = location
         nameTextField.text = name
         profileImage.loadImage(from: imageView)
-        
-       
-        
         
     }
     
