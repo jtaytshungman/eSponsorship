@@ -15,9 +15,7 @@ class ViewMyTournamentViewController: UIViewController {
             return
         }
         present(vc, animated: true, completion: nil)
-     
     }
-
     @IBOutlet weak var viewMyTournamentsTableView: UITableView!{
         didSet{
             viewMyTournamentsTableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
@@ -25,9 +23,8 @@ class ViewMyTournamentViewController: UIViewController {
             viewMyTournamentsTableView.dataSource = self
             viewMyTournamentsTableView.estimatedRowHeight = 80
             viewMyTournamentsTableView.rowHeight = UITableViewAutomaticDimension
-        }
-    }
-    
+ }
+ }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "view My Tournaments TableView"

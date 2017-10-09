@@ -647,28 +647,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hh9-MK-gHm">
-                                <rect key="frame" x="0.0" y="20" width="375" height="575"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV4-DU-NHM">
-                                <rect key="frame" x="0.0" y="593" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Escape This View">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButton:" destination="1eI-vD-F6o" eventType="touchUpInside" id="ySO-up-3Hl"/>
-                                </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hh9-MK-gHm" firstAttribute="trailing" secondItem="Db2-79-Fqa" secondAttribute="trailing" id="8wY-fB-NUb"/>
-                            <constraint firstItem="hh9-MK-gHm" firstAttribute="leading" secondItem="Db2-79-Fqa" secondAttribute="leading" id="ED4-Mj-DcJ"/>
-                            <constraint firstItem="Db2-79-Fqa" firstAttribute="bottom" secondItem="hh9-MK-gHm" secondAttribute="bottom" constant="28" id="g11-xR-RDv"/>
-                            <constraint firstItem="hh9-MK-gHm" firstAttribute="top" secondItem="Db2-79-Fqa" secondAttribute="top" id="vZ1-vb-a7L"/>
+                            <constraint firstItem="Db2-79-Fqa" firstAttribute="bottom" secondItem="hh9-MK-gHm" secondAttribute="bottom" id="34Z-bi-Kww"/>
+                            <constraint firstItem="hh9-MK-gHm" firstAttribute="top" secondItem="Db2-79-Fqa" secondAttribute="top" id="K09-G1-lcf"/>
+                            <constraint firstItem="hh9-MK-gHm" firstAttribute="trailing" secondItem="Db2-79-Fqa" secondAttribute="trailing" id="Orq-wu-7ED"/>
+                            <constraint firstItem="hh9-MK-gHm" firstAttribute="leading" secondItem="Db2-79-Fqa" secondAttribute="leading" id="xwL-kj-RSS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Db2-79-Fqa"/>
                     </view>
