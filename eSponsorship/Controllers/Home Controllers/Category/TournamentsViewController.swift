@@ -111,7 +111,7 @@ class TournamentsViewController: UIViewController {
                     
                     let newTournament = Tournaments(userID_sub_Input : userId_sub, orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
                     
-//                    self.tournaments.append()
+                    self.tournaments.append(newTournament)
                     self.tournamentsTableView.reloadData()
                 }
                 

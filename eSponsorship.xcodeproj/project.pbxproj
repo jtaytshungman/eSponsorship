@@ -24,6 +24,8 @@
 		E39D43DF1F86824500DCB55F /* TournamentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */; };
 		E39FBD381F7EA15B004448A9 /* MenuListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */; };
 		E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A752C61F7A581D00AD9244 /* LoginViewController.swift */; };
+		E3CD53AF1F8B5CEC00C1A47F /* StaticVCs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CD53AE1F8B5CEC00C1A47F /* StaticVCs.storyboard */; };
+		E3CD53B51F8B5D9700C1A47F /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CD53B41F8B5D9700C1A47F /* AboutViewController.swift */; };
 		E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */; };
 		E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */; };
 		E3D00D6E1F7CA66C00932FE5 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */; };
@@ -77,6 +79,8 @@
 		E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentFormViewController.swift; sourceTree = "<group>"; };
 		E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MenuListViewController.swift; path = "eSponsorship/Controllers/Home Controllers/MenuListViewController.swift"; sourceTree = SOURCE_ROOT; };
 		E3A752C61F7A581D00AD9244 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E3CD53AE1F8B5CEC00C1A47F /* StaticVCs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StaticVCs.storyboard; sourceTree = "<group>"; };
+		E3CD53B41F8B5D9700C1A47F /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E3D00D691F7CA66C00932FE5 /* TournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentsViewController.swift; sourceTree = "<group>"; };
 		E3D00D6A1F7CA66C00932FE5 /* GamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersViewController.swift; sourceTree = "<group>"; };
 		E3D00D6B1F7CA66C00932FE5 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +207,7 @@
 				E3EE1B941F87C14A00A3061D /* RootHomePageViewController.swift */,
 				FD1AF8C21F7C9FA50058C182 /* HomeViewController.swift */,
 				E39FBD371F7EA15B004448A9 /* MenuListViewController.swift */,
+				E3CD53B21F8B5D2600C1A47F /* Static */,
 				E3D00D671F7CA5D400932FE5 /* Category */,
 			);
 			path = "Home Controllers";
@@ -216,6 +221,7 @@
 				FD84FD211F8B243800C78A76 /* Home.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Adding.storyboard */,
 				E38C30B01F8612BF00E9215C /* AddEureka.storyboard */,
+				E3CD53AE1F8B5CEC00C1A47F /* StaticVCs.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -229,6 +235,14 @@
 				FDC3BB5A1F7E3FF6005DDD54 /* Add Controllers */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E3CD53B21F8B5D2600C1A47F /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				E3CD53B41F8B5D9700C1A47F /* AboutViewController.swift */,
+			);
+			path = Static;
 			sourceTree = "<group>";
 		};
 		E3D00D671F7CA5D400932FE5 /* Category */ = {
@@ -373,6 +387,7 @@
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
 				E38C30B21F86135800E9215C /* AddEureka.storyboard in Resources */,
 				E3F4DB7D1F79F6100088E174 /* Adding.storyboard in Resources */,
+				E3CD53AF1F8B5CEC00C1A47F /* StaticVCs.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +496,7 @@
 				E3EE1B951F87C14A00A3061D /* RootHomePageViewController.swift in Sources */,
 				E3522A821F7BFB27007FA16F /* Functions.swift in Sources */,
 				60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */,
+				E3CD53B51F8B5D9700C1A47F /* AboutViewController.swift in Sources */,
 				60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */,
 				60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */,
 				FD3121111F7E034F0044D8DD /* TeamsTableViewCell.swift in Sources */,

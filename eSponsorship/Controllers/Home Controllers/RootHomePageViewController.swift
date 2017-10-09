@@ -13,11 +13,12 @@ class RootHomePageViewController: UIPageViewController, UIPageViewControllerData
     var viewControllerList : [UIViewController] = {
         let sbPageVC = UIStoryboard(name: "Home", bundle: nil)
         
-        let teamTable = sbPageVC.instantiateViewController(withIdentifier: "TeamsViewController")
+        
         let gamerTable = sbPageVC.instantiateViewController(withIdentifier: "GamersViewController")
         let tourTable = sbPageVC.instantiateViewController(withIdentifier: "TournamentsViewController")
+//        let teamTable = sbPageVC.instantiateViewController(withIdentifier: "TeamsViewController")
         
-        return [teamTable, gamerTable, tourTable]
+        return [tourTable, gamerTable]
         
     }()
     
