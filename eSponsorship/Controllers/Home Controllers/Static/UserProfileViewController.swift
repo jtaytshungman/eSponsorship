@@ -57,7 +57,7 @@ class UserProfileViewController: UIViewController {
         Database.database().reference().child("users").child(currentUserUID).observeSingleEvent(of: .value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String: Any] {
                 
-                if let profilePicURL = dictionary["user_profile_image_url"] as? String {
+                if let profilePicURL = dictionary["user_image_url"] as? String {
                     guard let url = URL(string : profilePicURL) else {
                         return
                     }
