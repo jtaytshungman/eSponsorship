@@ -31,7 +31,6 @@ class EditProfileFormViewController: FormViewController {
             <<< ImageRow () { row in
                 row.title = "Select A Profile Image"
                 row.tag = "user_profile_image_url"
-                row.value = nil
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
                 
@@ -90,7 +89,7 @@ class EditProfileFormViewController: FormViewController {
                 $0.title = "Player Biography"
                 $0.placeholder = "Show something about yourself."
                 $0.tag = "user_bio_desc"
-                $0.value = ""
+//                $0.value = ""
             }
             
             
@@ -187,16 +186,10 @@ class EditProfileFormViewController: FormViewController {
                         
                         guard let editProfileEurekaData = self?.form.valuesForFirebase() else { return }
                         guard let currentUserID = Auth.auth().currentUser?.uid else { return }
-                        
                         let ref = Database.database().reference()
                         let userReference = ref.child("users").child(currentUserID)
-                        userReference.updateChildValues(editProfileEurekaData) { (error, ref) in
-                            if error != nil {
-                                print(error)
-                                return
-                            }
-                        }
-                        userReference.updateChildValues(["userID" : currentUserID])
+                       
+                        FirebaseDataHandler.uploadToUserProfileHandler(uid: currentUserID, values: editProfileEurekaData)
                         
                         self?.dismiss(animated: true, completion: nil)
                         

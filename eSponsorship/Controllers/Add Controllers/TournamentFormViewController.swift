@@ -119,7 +119,7 @@ class TournamentFormViewController: FormViewController{
             <<< PushRow<String>() {
                 $0.title = "Competing Game"
                 $0.options = Constant.Data.gamesCompeting
-                $0.value = Constant.Data.gamesCompeting[0]
+                $0.value = Constant.Data.gamesCompeting[1]
                 $0.tag = "competing_game"
                 $0.selectorTitle = "Select a game competing"
                 }.onPresent { from, to in
@@ -140,13 +140,13 @@ class TournamentFormViewController: FormViewController{
                 $0.title = "Number of Participants"
                 $0.tag = "number_participants"
                 $0.value = ""
-                $0.placeholder = "999"
+                $0.placeholder = "0"
                 
             }
             
             <<< TextRow () {
                 $0.title = "Prize Pool"
-                $0.placeholder = "999"
+                $0.placeholder = "0"
                 $0.tag = "prize_pool"
                 $0.value = ""
             }
@@ -171,7 +171,6 @@ class TournamentFormViewController: FormViewController{
                 $0.title = "End Time"
                 $0.value = Date()
                 $0.tag = "end_time"
-                
                 
         }
         

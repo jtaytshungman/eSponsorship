@@ -9,9 +9,14 @@
 import UIKit
 
 class AboutViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
+    
+    @IBAction func doneButtonTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
