@@ -12,7 +12,6 @@
 		60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */; };
 		E3234B981F8A88FB003CDFE4 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3234B971F8A88FB003CDFE4 /* Lists.swift */; };
 		E3394FD91F89CB4400FD3924 /* Gamers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3394FD81F89CB4400FD3924 /* Gamers.swift */; };
-		E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3522A4E1F7B51D3007FA16F /* Home.storyboard */; };
 		E3522A821F7BFB27007FA16F /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Functions.swift */; };
 		E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */; };
 		E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */; };
@@ -64,7 +63,6 @@
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3234B971F8A88FB003CDFE4 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Lists.swift; path = eSponsorship/Models/Lists.swift; sourceTree = SOURCE_ROOT; };
 		E3394FD81F89CB4400FD3924 /* Gamers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamers.swift; sourceTree = "<group>"; };
-		E3522A4E1F7B51D3007FA16F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		E3522A811F7BFB27007FA16F /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		E3522A831F7C04D3007FA16F /* TournamentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentTableViewCell.swift; sourceTree = "<group>"; };
 		E3522A841F7C04D3007FA16F /* TournamentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TournamentTableViewCell.xib; sourceTree = "<group>"; };
@@ -100,6 +98,7 @@
 		FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamersTableViewCell.swift; sourceTree = "<group>"; };
 		FD31211E1F7E301B0044D8DD /* GamerPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerPosting.swift; sourceTree = "<group>"; };
 		FD721A341F88E50A00D89B52 /* ViewMyTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewMyTournamentsViewController.swift; sourceTree = "<group>"; };
+		FD84FD211F8B243800C78A76 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		FD9DB0F61F8A588E002653A2 /* testOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testOne.swift; sourceTree = "<group>"; };
 		FD9DB0F81F8A5BEC002653A2 /* viewMyTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewMyTour.swift; sourceTree = "<group>"; };
 		FDA378121F7A4EEB00195EAC /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
@@ -212,7 +211,7 @@
 			children = (
 				E3F4DB831F79F6100088E174 /* LaunchScreen.storyboard */,
 				FDA378121F7A4EEB00195EAC /* Auth.storyboard */,
-				E3522A4E1F7B51D3007FA16F /* Home.storyboard */,
+				FD84FD211F8B243800C78A76 /* Home.storyboard */,
 				E3F4DB7B1F79F6100088E174 /* Adding.storyboard */,
 				E38C30B01F8612BF00E9215C /* AddEureka.storyboard */,
 			);
@@ -369,7 +368,6 @@
 				E3522A861F7C04D3007FA16F /* TournamentTableViewCell.xib in Resources */,
 				FDA378131F7A4EEB00195EAC /* Auth.storyboard in Resources */,
 				E38C30B21F86135800E9215C /* AddEureka.storyboard in Resources */,
-				E3522A4F1F7B51D3007FA16F /* Home.storyboard in Resources */,
 				E3F4DB7D1F79F6100088E174 /* Adding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
