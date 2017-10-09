@@ -172,7 +172,7 @@
                     <navigationItem key="navigationItem" title="About Us" largeTitleDisplayMode="always" id="0Mn-qG-eir">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Hbz-Sx-xYZ"/>
                         <barButtonItem key="leftBarButtonItem" title="Done" style="done" id="8tf-TV-mBn">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                             <connections>
                                 <action selector="doneButtonTapped:" destination="X2m-ok-KMv" id="drW-Fn-Dwx"/>
                             </connections>

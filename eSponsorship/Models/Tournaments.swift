@@ -22,8 +22,8 @@ class Tournaments {
     var tourParticipants : String?
     var tourPrize : String?
     var tourURL : String?
-//    var tourStartTime : String?
-//    var tourEndTime : String?
+    var tourStartTime : Double?
+    var tourEndTime : Double?
     
     var tourLocName : String?
     var tourLocUnit : String?
@@ -47,8 +47,8 @@ class Tournaments {
         tourParticipantsInput : String,
         tourPrizeInput : String,
         tourURLInput : String,
-//        tourStartTimeInput : String,
-//        tourEndTimeInput : String,
+        tourStartTimeInput : Double?,
+        tourEndTimeInput : Double?,
 
         tourLocNameInput : String,
         tourLocUnitInput : String,
@@ -71,8 +71,8 @@ class Tournaments {
         self.tourParticipants = tourParticipantsInput
         self.tourPrize = tourPrizeInput
         self.tourURL = tourURLInput
-//        tourStartTime = tourStartTimeInput
-//        tourEndTime = tourEndTimeInput
+        tourStartTime = tourStartTimeInput
+        tourEndTime = tourEndTimeInput
         
         self.tourLocName = tourLocNameInput
         self.tourLocUnit = tourLocUnitInput

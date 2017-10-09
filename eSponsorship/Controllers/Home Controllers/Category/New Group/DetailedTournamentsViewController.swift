@@ -66,8 +66,8 @@ class DetailedTournamentsViewController: UIViewController {
             let tourParticipants = selectedTournamentProfile?.tourParticipants,
             let tourPrize = selectedTournamentProfile?.tourPrize,
             let tourURL = selectedTournamentProfile?.tourURL,
-//            let tourStartTime = selectedTournamentProfile?.tourStartTime,
-//            let tourEndTime = selectedTournamentProfile?.tourEndTime,
+            let tourStartTime = selectedTournamentProfile?.tourStartTime,
+            let tourEndTime = selectedTournamentProfile?.tourEndTime,
             
             let tourLocName = selectedTournamentProfile?.tourLocName,
             let tourLocUnit = selectedTournamentProfile?.tourLocUnit,
@@ -90,6 +90,9 @@ class DetailedTournamentsViewController: UIViewController {
         tourPrizeTxt.text = tourPrize
         tourURLTxt.text = tourURL
         
+        tourStartTimeTxt.text = convertToDate(tourStartTime)
+        tourEndTimeTxt.text = convertToDate(tourEndTime)
+        
 //        let dateformater1 = DateFormatter()
 //        dateformater1.dateFormat = "dd-mm-yyyy HH:mm a"
 //        var timeString = dateformater1.string(from: Date())
@@ -108,15 +111,16 @@ class DetailedTournamentsViewController: UIViewController {
         tourLocCityTxt.text = tourLocCity
         tourLocStateTxt.text = tourLocState
         tourLocCountryTxt.text = tourLocCountry
-        
 
+    }
     
+    func convertToDate(_ timeInterval: Double) -> String {
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd HH:mm"
+        let timeString = dateFormatter.string(from: date)
         
-        
-        
-        
-        
-        
+        return timeString
     }
     
 }

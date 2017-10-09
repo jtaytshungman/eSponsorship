@@ -1,41 +1,21 @@
-
-//
 //  Created by Salem Abdulla on 10/7/17.
 //  Copyright © 2017 Jeremy Tay. All rights reserved.
-//
-
 import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
 class ViewMyTournamentViewController: UIViewController {
-    
-//    var posts: [TourPosting] = []
     var posts: [viewMyTour] = []
-    
-    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
-    
-    
     @IBAction func backButton(_ sender: Any) {
-        
-        
         let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
         guard let vc = storyboardNew.instantiateViewController(withIdentifier: "HomeNavigationController") as? UINavigationController else {
             return
         }
         present(vc, animated: true, completion: nil)
-        
-        
-        
     }
-    
-
-    
-    
-    
     @IBOutlet weak var viewMyTournamentsTableView: UITableView!{
         didSet{
             viewMyTournamentsTableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
@@ -43,9 +23,8 @@ class ViewMyTournamentViewController: UIViewController {
             viewMyTournamentsTableView.dataSource = self
             viewMyTournamentsTableView.estimatedRowHeight = 80
             viewMyTournamentsTableView.rowHeight = UITableViewAutomaticDimension
-        }
-    }
-    
+ }
+ }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "view My Tournaments TableView"
@@ -58,41 +37,23 @@ class ViewMyTournamentViewController: UIViewController {
     
     
     func fetchpost(){
-        
-        
-        
         databaseRef = Database.database().reference()
         
         databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
-            
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
-            
-//            ref.child("expatsappmembers").queryOrderedByKey().observeSingleEvent(of: .value, with: { (snapshot) in
-//
-//                // Get user value
-//                let value = snapshot.value as? NSDictionary
-//                let firstName = value?["firstname"] as? String
-//
-//                // ...
-//            }) { (error) in
-//                print(error.localizedDescription)
-//            }
-            
             if let tournament_name = mypost["tournament_name"] as? String,
-                let competing_game = mypost["competing_game"] as? String{
-                DispatchQueue.main.async {
-                    let newPost = viewMyTour(theTournament_name: tournament_name, theCompeting_game: competing_game)
-                    
-                    
-                    self.posts.append(newPost)
-                    self.viewMyTournamentsTableView.reloadData()
+                let competing_game = mypost["competing_game"] as? String,
+                let creatorID = mypost["UserID_sub"] as? String {
+                if creatorID == Auth.auth().currentUser?.uid {
+                    DispatchQueue.main.async {
+                        let newPost = viewMyTour(theTournament_name: tournament_name, theCompeting_game: competing_game)
+                        self.posts.append(newPost)
+                        self.viewMyTournamentsTableView.reloadData()
+                    }
                 }
             }
         })
-    
-            
-
     }
 }
 extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSource {
@@ -105,14 +66,8 @@ extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSo
             return UITableViewCell()
         }
         let post = posts[indexPath.row]
-        
-
         cell.tournamentName.text = post.tournament_name
         cell.locationOfTournament.text = post.competing_game
-        
-
-        
-        
         return cell
     }
 

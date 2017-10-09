@@ -16,7 +16,9 @@ class MenuListViewController: UIViewController {
 //    @IBOutlet weak var addTeamIcon: UIImageView!
     @IBOutlet weak var addTournamentIcon: UIImageView!
     @IBOutlet weak var aboutIcon: UIImageView!
-   
+    
+    @IBOutlet weak var logoutIcon: UIImageView!
+    
     @IBOutlet weak var sideMenuProfileImage: UIImageView!
     
     @IBOutlet weak var viewMyTournamentsImage: UIImageView!
@@ -30,10 +32,16 @@ class MenuListViewController: UIViewController {
         ImageDisplay.ProfileBounds(image: addTournamentIcon)
         ImageDisplay.ProfileBounds(image: aboutIcon)
         ImageDisplay.ProfileBounds(image: sideMenuProfileImage)
+        ImageDisplay.ProfileBounds(image: logoutIcon)
         
     }
     
     @IBAction func viewProfileButtonTapped(_ sender: Any) {
+        let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
+        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "UserProfileViewController") as? UserProfileViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
         
     }
     
