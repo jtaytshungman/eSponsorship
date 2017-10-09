@@ -15,7 +15,7 @@ import FirebaseDatabase
 
 class GamersViewController: UIViewController {
     
-    var posts: [GamerPosting] = []
+    var posts: [Gamers] = []
     
     
     var databaseRef: DatabaseReference!
@@ -51,26 +51,34 @@ class GamersViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseRef.child("usersProfiles").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("users").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
             
             
-            if let imageurl = mypost["imagePost"] as? String,
-                let tournamentName = mypost["name"] as? String,
-                let location = mypost["location"] as? String,
-                let gameName = mypost["game"] as? String,
-                let dob = mypost["date of birth"] as? String,
-                let level = mypost["competitive level"] as? String,
-                let desc = mypost["description"] as? String,
+            if let userName = mypost["name"] as? String,
+                //let userProfileImageURL = mypost["userImageURL"] as? String,
+                let userLocationBased = mypost["user_location_based"] as? String,
+                let userDescription = mypost["user_bio_desc"] as? String,
                 
-                let userid = mypost["userID"] as? String {
+                let userTwitchURL = mypost["user_twitch_url"] as? String,
+                let userYoutubeURL = mypost["user_youtube_url"] as? String,
+                let userFacebookURL = mypost["user_facebook_url"] as? String,
+                let userOtherURL = mypost["user_others_url"] as? String,
+                
+                let userGameChoice1 = mypost["user_GameChoice_1"] as? String,
+                let userGameChoice1Level = mypost["user_GameChoice_1_level"] as? String,
+                let userGameChoice2 = mypost["user_GameChoice_2"] as? String,
+                let userGameChoice2Level = mypost["user_GameChoice_2_level"] as? String,
+                let userGameChoice3 = mypost["user_GameChoice_3"] as? String,
+                let userGameChoice3Level = mypost["user_GameChoice_3_level"] as? String
+            {
                 
                 
                 DispatchQueue.main.async {
-                    let teamPost = GamerPosting(anID: userid,theTournamentName: tournamentName, theLocation: location, imageName : imageurl, theGame: gameName,dateOfBirth: dob, descriptionText: desc, levelcomp: level)
+                    let teamPost = Gamers(userNameInput: userName, userLocationBasedInput: userLocationBased, userDescriptionInput: userDescription, userTwitchURLInput: userTwitchURL, userYoutubeURLInput: userYoutubeURL, userFacebookURLInput: userFacebookURL, userOtherURLInput: userOtherURL, userGameChoice1Input: userGameChoice1, userGameChoice1LevelInput: userGameChoice1Level, userGameChoice2Input: userGameChoice2, userGameChoice2LevelInput: userGameChoice2Level, userGameChoice3Input: userGameChoice3, userGameChoice3LevelInput: userGameChoice3Level)
                     
                     
                     self.posts.append(teamPost)
@@ -102,13 +110,13 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         //        cell.organizerName.text = organizerName
         //        cell.numberOfParticipants.text = participation
         
-        cell.tournamentNamek.text = post.tournamentName
-        cell.locationOfTournamentk.text = post.location
-        cell.organizerNamek.text = post.gameName
+        cell.tournamentNamek.text = post.userName
+        cell.locationOfTournamentk.text = post.userLocationBased
+        cell.organizerNamek.text = post.userDescription
         //        cell.numberOfParticipantsq.text = post.prizeName
         
-        print(post.imageurl)
-        cell.backgroundImageCellk.loadImage(from: post.imageurl)
+//        print(post.userProfileImageURL)
+//        cell.backgroundImageCellk.loadImage(from: post.userProfileImageURL!)
 
         return cell
     }
