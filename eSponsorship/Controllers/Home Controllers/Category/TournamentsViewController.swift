@@ -91,10 +91,10 @@ class TournamentsViewController: UIViewController {
                 DispatchQueue.main.async {
                     //                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact,tourImageURLInput: tourImageURL, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
                     
-                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
+//                    let newTournament = Tournaments(userID_subInput : userID_sub, orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
+
                     
-                    
-                    self.tournaments.append(newTournament)
+//                    self.tournaments.append()
                     self.tournamentsTableView.reloadData()
                 }
                 
