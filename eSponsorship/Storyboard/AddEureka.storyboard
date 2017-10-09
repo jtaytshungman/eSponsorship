@@ -21,7 +21,7 @@
                         <viewLayoutGuide key="safeArea" id="rty-gb-02m"/>
                     </view>
                     <navigationItem key="navigationItem" title="Teams" id="0ue-Km-5Y8">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rfw-eN-c2f">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="rfw-eN-c2f">
                             <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="uLA-ZQ-3U2" id="deH-Be-fhW"/>
@@ -44,7 +44,7 @@
                         <viewLayoutGuide key="safeArea" id="K1J-2o-3oz"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tournaments" id="sIW-Pr-7ha">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="P8H-8N-MzQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="P8H-8N-MzQ">
                             <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="yt1-aD-796" id="1j7-J3-Yd9"/>
@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="1449" y="51"/>
         </scene>
-        <!--Edit Profile Form View Controller-->
+        <!--Edit Profile-->
         <scene sceneID="Bva-Ys-b7K">
             <objects>
                 <viewController storyboardIdentifier="EditProfileFormViewController" id="KqW-QF-wVO" customClass="EditProfileFormViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,8 +66,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="SgB-JN-6H4"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fXY-16-vtM">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tYP-UU-VLO">
+                    <navigationItem key="navigationItem" title="Edit Profile" id="fXY-16-vtM">
+                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="tYP-UU-VLO">
                             <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="cancelButtonTapped:" destination="KqW-QF-wVO" id="e9z-f4-8oB"/>
