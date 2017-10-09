@@ -74,7 +74,7 @@ class TournamentsViewController: UIViewController {
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
-            print(mypost)
+//            print(mypost)
             
             if let userId_sub = mypost["UserID_sub"] as? String,
                 let orgName = mypost["org_name"] as? String,
