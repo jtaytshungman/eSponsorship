@@ -14,25 +14,20 @@ import FirebaseStorage
 import FirebaseDatabase
 
 class TournamentsViewController: UIViewController {
-    
-    
-    //var posts: [TourPosting] = []
+
     var tournaments : [Tournaments] = []
+    var refresher : UIRefreshControl!
+    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
-    
-    //    let tournamentName = "Monash Dota Competition"
-    //    let organizerName = "Monash University"
-    //    let participation = "12 Teams"
-    //    let location = "Cyberjaya Launchpad"
     
     @IBOutlet weak var tournamentsTableView: UITableView!{
         didSet{
             tournamentsTableView.register(TournamentTableViewCell.cellNib, forCellReuseIdentifier: TournamentTableViewCell.cellIdentifier)
             tournamentsTableView.delegate = self
             tournamentsTableView.dataSource = self
-            tournamentsTableView.estimatedRowHeight = 80
-            tournamentsTableView.rowHeight = UITableViewAutomaticDimension
+            tournamentsTableView.estimatedRowHeight = 225
+            tournamentsTableView.rowHeight = 225
         }
     }
     
@@ -40,24 +35,21 @@ class TournamentsViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Tournaments"
-        
         fetchpost()
+        reloadTableWhenAddChild()
         self.tournamentsTableView.reloadData()
-        
     }
-    
+
     func fetchpost(){
         
         databaseRef = Database.database().reference()
-        
         databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
-//            print(mypost)
-            
-            if let userId_sub = mypost["UserID_sub"] as? String,
+            if
+                let userId_sub = mypost["UserID_sub"] as? String,
                 let orgName = mypost["org_name"] as? String,
                 let orgEmail = mypost["org_email"] as? String,
                 let orgAff = mypost["org_aff"] as? String,
@@ -82,11 +74,6 @@ class TournamentsViewController: UIViewController {
                 
                 
             {
-                
-                
-                //            let newPost = mypost(imageName: post)
-                
-                
                 DispatchQueue.main.async {
                     let newTournament = Tournaments(
                                                     userID_sub_Input : userId_sub,
@@ -121,12 +108,19 @@ class TournamentsViewController: UIViewController {
         
     }
     
+    func reloadTableWhenAddChild () {
+        databaseRef.database.reference().child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
+            self.tournamentsTableView.reloadData()
+        }, withCancel: nil)
+    }
+    
 }
 
 
 extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tournaments.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -136,33 +130,28 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
         }
         let tournament = tournaments[indexPath.row]
         
-        //        cell.tournamentName.text = tournamentName
-        //        cell.locationOfTournament.text = location
-        //        cell.organizerName.text = organizerName
-        //        cell.numberOfParticipants.text = participation
-        
-        cell.tournamentName.text = tournament.tourName
-        cell.locationOfTournament.text = tournament.tourLocName
-        cell.organizerName.text = tournament.tourGame
-        cell.numberOfParticipants.text = tournament.tourParticipants
-        
+//        cell.tournamentName.text = tournament.tourName
+//        cell.locationOfTournament.text = tournament.tourLocName
+//        cell.organizerName.text = tournament.tourGame
+//        cell.numberOfParticipants.text = tournament.tourParticipants
+//        
+//        
+    
+        cell.topRightLabel.text = tournament.tourLevel
+        cell.mainHeaderLabel.text = tournament.tourName
+        cell.subHeaderLabel.text = tournament.tourGame
+        cell.dateLabel.text = converter.convertToDate(tournament.tourStartTime!)
+        cell.locationLabel.text = tournament.tourLocName
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else {return}
-        
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else { return }
         let selectedTourmanent = tournaments[indexPath.row]
-        
         destination.selectedTournamentProfile = selectedTourmanent
         navigationController?.pushViewController(destination, animated: true)
     }
-    
-    
-    
-    
-    
     
 }
 

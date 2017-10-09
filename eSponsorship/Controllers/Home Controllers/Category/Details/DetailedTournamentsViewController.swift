@@ -90,8 +90,8 @@ class DetailedTournamentsViewController: UIViewController {
         tourPrizeTxt.text = tourPrize
         tourURLTxt.text = tourURL
         
-        tourStartTimeTxt.text = convertToDate(tourStartTime)
-        tourEndTimeTxt.text = convertToDate(tourEndTime)
+        tourStartTimeTxt.text = converter.convertToDate(tourStartTime)
+        tourEndTimeTxt.text = converter.convertToDate(tourEndTime)
         
 //        let dateformater1 = DateFormatter()
 //        dateformater1.dateFormat = "dd-mm-yyyy HH:mm a"
@@ -114,13 +114,6 @@ class DetailedTournamentsViewController: UIViewController {
 
     }
     
-    func convertToDate(_ timeInterval: Double) -> String {
-        let date = Date(timeIntervalSince1970: timeInterval)
-        let dateFormatter : DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd HH:mm"
-        let timeString = dateFormatter.string(from: date)
-        
-        return timeString
-    }
+    
     
 }

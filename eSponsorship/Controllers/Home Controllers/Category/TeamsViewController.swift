@@ -92,7 +92,7 @@ extension TeamsViewController : UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = teamsTableView.dequeueReusableCell(withIdentifier: TeamsTableViewCell.cellIdentifier) as? TeamsTableViewCell else {
+        guard let cell = teamsTableView.dequeueReusableCell(withIdentifier: TteamsTableViewcellIdentifier) as? TeamsTableViewCell else {
             return UITableViewCell()
         }
         let post = posts[indexPath.row]

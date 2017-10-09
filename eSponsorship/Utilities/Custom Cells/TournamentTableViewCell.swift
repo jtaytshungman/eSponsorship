@@ -10,19 +10,32 @@ import UIKit
 
 class TournamentTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var tournamentName: UILabel!
-    @IBOutlet weak var numberOfParticipants: UILabel!
-    @IBOutlet weak var locationOfTournament: UILabel!
-    @IBOutlet weak var organizerName: UILabel!
     
-    @IBOutlet weak var backgroundImageCell: UIImageView!
+    @IBOutlet weak var bgView: UIView!
+    
+    @IBOutlet weak var topRightLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var subHeaderLabel: UILabel!
+    @IBOutlet weak var mainHeaderLabel: UILabel!
+    
+    @IBOutlet weak var imageHeader: UIImageView!
+    
     
     static let cellIdentifier = "TournamentCell"
     static let cellNib = UINib(nibName: "TournamentTableViewCell", bundle: Bundle.main)
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+       // aestheticsFunction ()
+        
+    }
+    
+    func aestheticsFunction () {
+        bgView.layer.cornerRadius = 10
+        imageHeader.layer.cornerRadius = 20
+        topRightLabel.layer.cornerRadius = 20
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,9 +47,9 @@ class TournamentTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        contentView.layer.borderWidth = 5
-        contentView.layer.borderColor = UIColor.black.cgColor
-        contentView.layer.cornerRadius = 0
+//        contentView.layer.borderWidth = 5
+//        contentView.layer.borderColor = UIColor.black.cgColor
+//        contentView.layer.cornerRadius = 0
     }
     
 }

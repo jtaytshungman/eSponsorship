@@ -110,7 +110,7 @@
                     <constraint firstItem="kat-Q1-kWJ" firstAttribute="leading" secondItem="Zhu-kd-Rsd" secondAttribute="leadingMargin" id="xm8-6i-fj0"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="1" green="0.92144097219999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <viewLayoutGuide key="safeArea" id="sTB-Sn-pnK"/>
             <connections>
                 <outlet property="descTextField" destination="KxV-QR-FqT" id="IM0-nv-OeB"/>

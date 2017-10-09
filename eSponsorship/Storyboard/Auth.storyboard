@@ -251,6 +251,7 @@
         <image name="GameShip" width="382" height="111"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="3qU-HU-gsN"/>
         <segue reference="B8g-h3-KAd"/>
     </inferredMetricsTieBreakers>
 </document>

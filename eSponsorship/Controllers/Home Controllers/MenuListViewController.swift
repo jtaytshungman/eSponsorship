@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 import FirebaseAuth
 
 class MenuListViewController: UIViewController {
@@ -26,9 +27,9 @@ class MenuListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadProfileImageHandler()
         ImageDisplay.ProfileBounds(image: viewProfileIcon)
         ImageDisplay.ProfileBounds(image: editProfileIcon)
-//        ImageDisplay.ProfileBounds(image: addTeamIcon)
         ImageDisplay.ProfileBounds(image: addTournamentIcon)
         ImageDisplay.ProfileBounds(image: aboutIcon)
         ImageDisplay.ProfileBounds(image: sideMenuProfileImage)
@@ -89,8 +90,6 @@ class MenuListViewController: UIViewController {
         }
         present(vc, animated: true, completion: nil)
         
-        
-        
     }
     
     @IBAction func logoutButtonTapped(_ sender: Any) {
@@ -106,6 +105,34 @@ class MenuListViewController: UIViewController {
         guard let vc = signInSB.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
         present(vc, animated: true, completion: nil)
         
+    }
+    
+    func loadProfileImageHandler() {
+        guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
+        Database.database().reference().child("users").child(currentUserUID).observeSingleEvent(of: .value, with: { (snapshot) in
+            if let dictionary = snapshot.value as? [String: Any] {
+                
+                if let profilePicURL = dictionary["user_image_url"] as? String {
+                    guard let url = URL(string : profilePicURL) else { return }
+                    
+                    self.sideMenuProfileImage.loadImage(from: profilePicURL)
+                    
+//                    let session = URLSession.shared
+//                    let task = session.dataTask(with: url) { (data, response, error) in
+//                        if let error = error {
+//                            print ("Error : \(error.localizedDescription)")
+//                            return
+//                        }
+//                        if let data = data {
+//                            DispatchQueue.main.async {
+//                                self.sideMenuProfileImage.image = UIImage(data: data)
+//                            }
+//                        }
+//                    }
+//                    task.resume()
+                }
+            }
+        }, withCancel: nil)
     }
     
 }

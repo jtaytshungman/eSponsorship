@@ -33,13 +33,3 @@ extension UIImageView {
         task.resume()
     }
 }
-
-class NavigationController: UINavigationController, UIViewControllerTransitioningDelegate {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.barTintColor = UIColor.black
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.orange]
-        
-    }
-}

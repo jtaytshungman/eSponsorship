@@ -6,87 +6,101 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Black</string>
+            <string>Avenir-Heavy</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="TournamentTableViewCell" customModule="eSponsorship" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="310" id="KGk-i7-Jjw" customClass="TournamentTableViewCell" customModule="eSponsorship" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="225"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sponsor" translatesAutoresizingMaskIntoConstraints="NO" id="TUi-ld-wGj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="90" id="guU-dA-Mbs"/>
-                        </constraints>
-                    </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WUi-kt-BLi">
-                        <rect key="frame" x="8" y="8" width="229" height="73.5"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISe-Qk-rm5">
+                        <rect key="frame" x="10" y="10" width="355" height="200"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-29-lcp">
-                                <rect key="frame" x="0.0" y="0.0" width="229" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lol_stadium" translatesAutoresizingMaskIntoConstraints="NO" id="maA-kW-EDT">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="120"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle of NEXT" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6v-9h-dbL">
+                                <rect key="frame" x="8" y="128" width="250" height="35"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3d-V6-clI">
-                                <rect key="frame" x="0.0" y="26" width="229" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="League of Legends" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8H-3E-8bo">
+                                <rect key="frame" x="8" y="162" width="177" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25A-8A-mLZ">
-                                <rect key="frame" x="0.0" y="52.5" width="229" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NEXT Academy" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TTT-Xw-zLA">
+                                <rect key="frame" x="193" y="162" width="154" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Professional" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kr-Ho-dJE">
+                                <rect key="frame" x="228" y="8" width="119" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14/03/2017" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ern-fB-FVT">
+                                <rect key="frame" x="260" y="131" width="87" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                    </stackView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgI-h6-KHH">
-                        <rect key="frame" x="267" y="33.5" width="100" height="24"/>
+                        <color key="backgroundColor" red="0.99215686270000003" green="0.35364508630000002" blue="0.1176016852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="100" id="bcW-Td-Zu4"/>
+                            <constraint firstAttribute="bottom" secondItem="maA-kW-EDT" secondAttribute="bottom" constant="80" id="8oQ-4a-3dE"/>
+                            <constraint firstItem="maA-kW-EDT" firstAttribute="top" secondItem="ISe-Qk-rm5" secondAttribute="top" id="EwL-q6-H6U"/>
+                            <constraint firstItem="E6v-9h-dbL" firstAttribute="leading" secondItem="ISe-Qk-rm5" secondAttribute="leading" constant="8" id="ZIm-Qu-h22"/>
+                            <constraint firstAttribute="trailing" secondItem="E6v-9h-dbL" secondAttribute="trailing" constant="97" id="bsq-vl-9hF"/>
+                            <constraint firstAttribute="trailing" secondItem="maA-kW-EDT" secondAttribute="trailing" id="cfm-XU-qzM"/>
+                            <constraint firstItem="E6v-9h-dbL" firstAttribute="top" secondItem="maA-kW-EDT" secondAttribute="bottom" constant="8" id="hmJ-et-V9U"/>
+                            <constraint firstItem="maA-kW-EDT" firstAttribute="leading" secondItem="ISe-Qk-rm5" secondAttribute="leading" id="j47-EP-XTR"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="WUi-kt-BLi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3fv-MA-lXu"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="WUi-kt-BLi" secondAttribute="bottom" id="478-bu-we9"/>
-                    <constraint firstItem="WUi-kt-BLi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="626-sz-nPR"/>
-                    <constraint firstItem="WUi-kt-BLi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7iT-G2-ztw"/>
-                    <constraint firstItem="WUi-kt-BLi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="NG2-7v-XAO"/>
-                    <constraint firstItem="JgI-h6-KHH" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="WeN-Tk-Zyu"/>
-                    <constraint firstItem="TUi-ld-wGj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="fkp-Cr-DJf"/>
-                    <constraint firstAttribute="trailing" secondItem="TUi-ld-wGj" secondAttribute="trailing" id="g2J-B3-y8N"/>
-                    <constraint firstAttribute="bottom" secondItem="TUi-ld-wGj" secondAttribute="bottom" id="ny5-5s-dUo"/>
-                    <constraint firstItem="JgI-h6-KHH" firstAttribute="leading" secondItem="WUi-kt-BLi" secondAttribute="trailing" constant="30" id="qNR-em-4cD"/>
-                    <constraint firstItem="JgI-h6-KHH" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vVA-tS-MO8"/>
-                    <constraint firstItem="TUi-ld-wGj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="wGM-vr-wQC"/>
+                    <constraint firstItem="ISe-Qk-rm5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JCU-Ri-yEy"/>
+                    <constraint firstItem="ISe-Qk-rm5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="l3G-3R-7DQ"/>
+                    <constraint firstAttribute="trailing" secondItem="ISe-Qk-rm5" secondAttribute="trailing" constant="10" id="pm8-f8-leb"/>
+                    <constraint firstAttribute="bottom" secondItem="ISe-Qk-rm5" secondAttribute="bottom" constant="14.5" id="uMf-Ka-zEy"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="backgroundImageCell" destination="TUi-ld-wGj" id="3XN-a9-VOf"/>
-                <outlet property="locationOfTournament" destination="n3d-V6-clI" id="tgZ-Vd-8uE"/>
-                <outlet property="numberOfParticipants" destination="25A-8A-mLZ" id="a0h-Ib-yYd"/>
-                <outlet property="organizerName" destination="JgI-h6-KHH" id="O77-0Q-y3Y"/>
-                <outlet property="tournamentName" destination="mgb-29-lcp" id="0z9-ef-Abf"/>
+                <outlet property="bgView" destination="ISe-Qk-rm5" id="H5O-dG-PVn"/>
+                <outlet property="dateLabel" destination="ern-fB-FVT" id="7N6-Bz-JxD"/>
+                <outlet property="imageHeader" destination="maA-kW-EDT" id="GmJ-0Q-Zkh"/>
+                <outlet property="locationLabel" destination="TTT-Xw-zLA" id="DWK-pv-3GR"/>
+                <outlet property="mainHeaderLabel" destination="E6v-9h-dbL" id="Lhd-bz-hyZ"/>
+                <outlet property="subHeaderLabel" destination="j8H-3E-8bo" id="gwp-do-J81"/>
+                <outlet property="topRightLabel" destination="6Kr-Ho-dJE" id="qJB-Vz-D1U"/>
             </connections>
-            <point key="canvasLocation" x="30.5" y="90"/>
+            <point key="canvasLocation" x="34.5" y="199.5"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="sponsor" width="50" height="50"/>
+        <image name="lol_stadium" width="2048" height="1152"/>
     </resources>
 </document>
