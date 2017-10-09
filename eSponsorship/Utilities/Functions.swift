@@ -56,7 +56,7 @@ public class FirebaseDataHandler {
     // MARK : Tournament Update Related to FB
     class func uploadTournamentHandler (uid : String, values : [String : Any]) {
         let ref = Database.database().reference()
-        
+        guard let currentUSER = Auth.auth().currentUser?.uid else { return }
         // creates tournament child notes name "GameShip_Tournaments"
         let tourReference = ref.child("GameShip_Tournaments").childByAutoId()
         tourReference.child("Tournament_UID").setValue(tourReference.key)
@@ -67,6 +67,7 @@ public class FirebaseDataHandler {
                 return
             }
         }
+        tourReference.updateChildValues(["UserID_sub" : currentUSER])
         
         if let image = ImageRow().value {
             let url  = convertImageRowToURL(imageToConvert: image)
@@ -88,10 +89,15 @@ public class FirebaseDataHandler {
     
     // Team upload to gameship_teams
     class func uploadTeamsHandler (uid : String, values : [String : Any]) {
+        
+        
+        
         let ref = Database.database().reference()
         let userReference = ref.child("users").child(uid).child("User_Teams")
+        
         let teamReference = ref.child("GameShip_Teams").childByAutoId()
         teamReference.child(teamReference.key).setValue("Teams_For_GameShip")
+        
         userReference.updateChildValues([teamReference.key : "key"])
         teamReference.updateChildValues(values) { (error, ref) in
             if error != nil {

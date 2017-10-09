@@ -31,6 +31,7 @@ class EditProfileFormViewController: FormViewController {
             <<< ImageRow () { row in
                 row.title = "Select A Profile Image"
                 row.tag = "user_profile_image_url"
+                row.value = nil
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
                 
@@ -89,6 +90,7 @@ class EditProfileFormViewController: FormViewController {
                 $0.title = "Player Biography"
                 $0.placeholder = "Show something about yourself."
                 $0.tag = "user_bio_desc"
+                $0.value = ""
             }
             
             

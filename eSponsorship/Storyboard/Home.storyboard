@@ -103,26 +103,17 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tld-XU-mZl">
-                                <rect key="frame" x="66" y="262" width="180" height="40"/>
+                                <rect key="frame" x="66" y="598" width="180" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                <state key="normal" title="View Profile">
+                                <state key="normal" title="Logout">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="viewProfileButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="t8t-K4-tjA"/>
+                                    <action selector="logoutButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="OcE-nx-gnC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-design_0005s_0001s_0000s_0002_Textbox" translatesAutoresizingMaskIntoConstraints="NO" id="WCk-N3-0N2">
-                                <rect key="frame" x="16" y="550" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_team_orange" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-iu-gPB">
-                                <rect key="frame" x="16" y="262" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_edit_orange" translatesAutoresizingMaskIntoConstraints="NO" id="NLR-pc-Y3a">
                                 <rect key="frame" x="16" y="310" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,13 +151,34 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="sponsorsButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="dcH-Ip-Av8"/>
+                                    <action selector="viewMyTournaments:" destination="dai-aA-5gr" eventType="touchUpInside" id="shp-8P-HcQ"/>
                                     <segue destination="1eI-vD-F6o" kind="show" id="dli-lr-e99"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-mZ-RoF">
                                 <rect key="frame" x="16" y="262" width="42" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lw-NU-zOl">
+                                <rect key="frame" x="65" y="262" width="180" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="View Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Profile:" destination="dai-aA-5gr" eventType="touchUpInside" id="ypy-b0-WOo"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zk7-U0-Rno">
+                                <rect key="frame" x="18" y="262" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-iu-gPB">
+                                <rect key="frame" x="18" y="598" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99055606126785278" green="0.35364508628845215" blue="0.11760168522596359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -180,7 +192,6 @@
                         <outlet property="editProfileIcon" destination="NLR-pc-Y3a" id="Add-fs-etZ"/>
                         <outlet property="sideMenuProfileImage" destination="Dxj-rE-9at" id="63K-Bs-uny"/>
                         <outlet property="sponsorIcon" destination="DDa-9t-XqW" id="qwu-eX-C1z"/>
-                        <outlet property="viewMyTournamentsImage" destination="WCk-N3-0N2" id="i1e-29-K10"/>
                         <outlet property="viewProfileIcon" destination="ZO1-iu-gPB" id="rJd-ag-BIj"/>
                     </connections>
                 </viewController>
@@ -690,7 +701,9 @@
                         <barButtonItem key="leftBarButtonItem" title="Menu" springLoaded="YES" id="WxX-rY-BHg">
                             <color key="tintColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="4eg-TI-ZEr" kind="show" id="xyu-3L-Nwh"/>
+                                <segue destination="4eg-TI-ZEr" kind="popoverPresentation" popoverAnchorBarButtonItem="WxX-rY-BHg" id="xyu-3L-Nwh">
+                                    <popoverArrowDirection key="popoverArrowDirection" left="YES"/>
+                                </segue>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -720,14 +733,5 @@
             <point key="canvasLocation" x="-217" y="19"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="GameShip" width="382" height="111"/>
-        <image name="app-design_0005s_0001s_0000s_0002_Textbox" width="640" height="1136"/>
-        <image name="icon_about_orange" width="100" height="100"/>
         <image name="icon_edit_orange" width="100" height="100"/>
-        <image name="icon_sponsor_orange" width="100" height="100"/>
-        <image name="icon_team_orange" width="100" height="100"/>
-        <image name="icon_tournament_orange" width="100" height="100"/>
-        <image name="user" width="100" height="100"/>
-    </resources>
 </document>

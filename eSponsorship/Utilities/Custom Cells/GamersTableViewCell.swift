@@ -16,9 +16,7 @@ class GamersTableViewCell: UITableViewCell {
     @IBOutlet weak var organizerNamek: UILabel!
     @IBOutlet weak var dob: UILabel!
     @IBOutlet weak var descTextField: UILabel!
-    @IBOutlet weak var backgroundImageCellk: UIImageView!
-    
-    
+    @IBOutlet weak var userProfileImage: UIImageView!
     
     static let cellIdentifier = "GamersCell"
     static let cellNib = UINib(nibName: "GamersTableViewCell", bundle: Bundle.main)
@@ -37,9 +35,9 @@ class GamersTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
     
-        contentView.layer.borderWidth = 5
-        contentView.layer.borderColor = UIColor.black.cgColor
-        contentView.layer.cornerRadius = 0
+//        contentView.layer.borderWidth = 5
+//        contentView.layer.borderColor = UIColor.black.cgColor
+//        contentView.layer.cornerRadius = 0
     }
     
 }
