@@ -13,13 +13,11 @@ class MenuListViewController: UIViewController {
     
     @IBOutlet weak var viewProfileIcon: UIImageView!
     @IBOutlet weak var editProfileIcon: UIImageView!
-    @IBOutlet weak var addTeamIcon: UIImageView!
+//    @IBOutlet weak var addTeamIcon: UIImageView!
     @IBOutlet weak var addTournamentIcon: UIImageView!
     @IBOutlet weak var aboutIcon: UIImageView!
-    @IBOutlet weak var sponsorIcon: UIImageView!
-    
+   
     @IBOutlet weak var sideMenuProfileImage: UIImageView!
-    
     
     @IBOutlet weak var viewMyTournamentsImage: UIImageView!
     
@@ -28,14 +26,10 @@ class MenuListViewController: UIViewController {
         super.viewDidLoad()
         ImageDisplay.ProfileBounds(image: viewProfileIcon)
         ImageDisplay.ProfileBounds(image: editProfileIcon)
-        ImageDisplay.ProfileBounds(image: addTeamIcon)
+//        ImageDisplay.ProfileBounds(image: addTeamIcon)
         ImageDisplay.ProfileBounds(image: addTournamentIcon)
         ImageDisplay.ProfileBounds(image: aboutIcon)
-        ImageDisplay.ProfileBounds(image: sponsorIcon)
         ImageDisplay.ProfileBounds(image: sideMenuProfileImage)
-        
-        viewProfileIcon.image = UIImage(named: "icon_profile")
-        viewProfileIcon.contentMode = .scaleAspectFit
         
     }
     
@@ -54,11 +48,11 @@ class MenuListViewController: UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
-    @IBAction func addTeams(_ sender: Any) {
-        let eurekaStoryBoard = UIStoryboard(name: "AddEureka", bundle: nil)
-        guard let vc = eurekaStoryBoard.instantiateViewController(withIdentifier: "TeamsFormNavigation") as? UINavigationController else { return }
-        present(vc, animated: true, completion: nil)
-    }
+//    @IBAction func addTeams(_ sender: Any) {
+//        let eurekaStoryBoard = UIStoryboard(name: "AddEureka", bundle: nil)
+//        guard let vc = eurekaStoryBoard.instantiateViewController(withIdentifier: "TeamsFormNavigation") as? UINavigationController else { return }
+//        present(vc, animated: true, completion: nil)
+//    }
     
     @IBAction func addTournaments(_ sender: Any) {
         let eurekaStoryboard = UIStoryboard(name: "AddEureka", bundle: Bundle.main)
@@ -67,7 +61,9 @@ class MenuListViewController: UIViewController {
     }
     
     @IBAction func aboutButtonTapped(_ sender: Any) {
-        
+        let staticStoryBoard = UIStoryboard(name: "StaticVCs", bundle: nil)
+        guard let vc = staticStoryBoard.instantiateViewController(withIdentifier: "AboutNavigation") as? UINavigationController else { return }
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func sponsorsButtonTapped(_ sender: Any) {

@@ -19,7 +19,6 @@
 		E362F75A1F88E5A200F8018A /* EditProfileFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E362F7591F88E5A200F8018A /* EditProfileFormViewController.swift */; };
 		E36D24BA1F87669B00BC1369 /* Tournaments.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36D24B91F87669B00BC1369 /* Tournaments.swift */; };
 		E3812C5B1F85ED8C005A2CB4 /* TeamPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */; };
-		E3876A491F868A5900C69118 /* TeamsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3876A481F868A5900C69118 /* TeamsFormViewController.swift */; };
 		E3876A4B1F86A49700C69118 /* Firebase_Eureka_Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3876A4A1F86A49700C69118 /* Firebase_Eureka_Bridge.swift */; };
 		E38C30B21F86135800E9215C /* AddEureka.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38C30B01F8612BF00E9215C /* AddEureka.storyboard */; };
 		E39D43DF1F86824500DCB55F /* TournamentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */; };
@@ -75,7 +74,6 @@
 		E362F7591F88E5A200F8018A /* EditProfileFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileFormViewController.swift; sourceTree = "<group>"; };
 		E36D24B91F87669B00BC1369 /* Tournaments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Tournaments.swift; path = eSponsorship/Models/Tournaments.swift; sourceTree = SOURCE_ROOT; };
 		E3812C5A1F85ED8B005A2CB4 /* TeamPosting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPosting.swift; sourceTree = "<group>"; };
-		E3876A481F868A5900C69118 /* TeamsFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsFormViewController.swift; sourceTree = "<group>"; };
 		E3876A4A1F86A49700C69118 /* Firebase_Eureka_Bridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase_Eureka_Bridge.swift; sourceTree = "<group>"; };
 		E38C30B01F8612BF00E9215C /* AddEureka.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddEureka.storyboard; sourceTree = "<group>"; };
 		E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TournamentFormViewController.swift; sourceTree = "<group>"; };
@@ -309,7 +307,6 @@
 			children = (
 				E362F7591F88E5A200F8018A /* EditProfileFormViewController.swift */,
 				E39D43DE1F86824500DCB55F /* TournamentFormViewController.swift */,
-				E3876A481F868A5900C69118 /* TeamsFormViewController.swift */,
 				FDA449FA1F87423100BB3824 /* profileViewController.swift */,
 				FD2D38311F7BC1B300F53525 /* PostTableViewCell.swift */,
 			);
@@ -487,7 +484,6 @@
 				E3D00D6D1F7CA66C00932FE5 /* GamersViewController.swift in Sources */,
 				FDBAA9961F7A0BF7003FB159 /* Users.swift in Sources */,
 				FDA378151F7A567D00195EAC /* OnboardController.swift in Sources */,
-				E3876A491F868A5900C69118 /* TeamsFormViewController.swift in Sources */,
 				E3522A851F7C04D3007FA16F /* TournamentTableViewCell.swift in Sources */,
 				FD9DB0F71F8A588E002653A2 /* testOne.swift in Sources */,
 				FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */,

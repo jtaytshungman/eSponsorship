@@ -13,6 +13,7 @@ import SideMenu
 class HomeViewController: UIViewController {
     
     @IBAction func signOut(_ sender: Any) {
+        self.navigationController?.navigationBar.barTintColor = UIColor.orange
         confirmSignOutHandler()
     }
     
