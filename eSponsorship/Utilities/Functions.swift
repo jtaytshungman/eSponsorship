@@ -32,6 +32,18 @@ public class ImageDisplay {
     }
 }
 
+public class converter {
+    class func convertToDate(_ timeInterval: Double) -> String {
+        let date = Date(timeIntervalSince1970: timeInterval)
+        let dateFormatter : DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd HH:mm"
+        let timeString = dateFormatter.string(from: date)
+        
+        return timeString
+    }
+}
+
+
 public class FirebaseDataHandler {
     
     
@@ -41,7 +53,7 @@ public class FirebaseDataHandler {
         let imageUID = "IMAGE_" + NSUUID().uuidString
         let storageReference = Storage.storage().reference().child("Uploaded_Images").child("\(imageUID).jpeg")
         if let image = imageToConvert as? UIImage  {
-            if let imageData = UIImageJPEGRepresentation(image, 0.5) {
+            if let imageData = UIImageJPEGRepresentation(image, 0.2) {
                 storageReference.putData(imageData, metadata: nil, completion: { (metadata, error) in
                     guard let imageURLString = metadata?.downloadURL()?.absoluteString else {
                         return print("error converting image to string url")
