@@ -18,10 +18,6 @@ class TournamentsViewController: UIViewController {
     
     //var posts: [TourPosting] = []
     var tournaments : [Tournaments] = []
-    var refresher : UIRefreshControl!
-    
-    
-    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
     
@@ -43,27 +39,12 @@ class TournamentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        refresher = UIRefreshControl()
-//        refresher.attributedTitle = NSAttributedString(string :"Pull to refresh")
-//        refresher.addTarget(self, action: #selector(TournamentsViewController.populate), for: UIControlEvents.valueChanged)
-//        tournamentsTableView.addSubview(refresher)
-        
         self.title = "Tournaments"
         
         fetchpost()
         self.tournamentsTableView.reloadData()
         
     }
-    
-//    func populate() {
-//        let selectedTournament = tournaments.count
-//        for i in 1...selectedTournament{
-//            tournaments.append(i)
-//        }
-//        refresher.endRefreshing()
-//        tournamentsTableView.reloadData()
-//    }
-    
     
     func fetchpost(){
         
@@ -107,9 +88,8 @@ class TournamentsViewController: UIViewController {
                 
                 
                 DispatchQueue.main.async {
-                    //                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact,tourImageURLInput: tourImageURL, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
-                    
-                    let newTournament = Tournaments(userID_sub_Input : userId_sub,
+                    let newTournament = Tournaments(
+                                                    userID_sub_Input : userId_sub,
                                                     orgNameInput: orgName,
                                                     orgEmailInput: orgEmail,
                                                     orgAffInput: orgAff,
