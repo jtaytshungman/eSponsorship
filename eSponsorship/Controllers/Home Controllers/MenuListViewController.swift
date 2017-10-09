@@ -20,6 +20,8 @@ class MenuListViewController: UIViewController {
     @IBOutlet weak var sideMenuProfileImage: UIImageView!
     
     
+    @IBOutlet weak var viewMyTournamentsImage: UIImageView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +76,18 @@ class MenuListViewController: UIViewController {
         }
         present(vc, animated: true, completion: nil)
     }
-}
+    
+    @IBAction func viewMyTournaments(_ sender: Any) {
+        let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
+        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "ViewMyTournamentViewController") as? ViewMyTournamentViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+     }
 
 

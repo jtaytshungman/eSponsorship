@@ -42,11 +42,16 @@
         <!--Menu List View Controller-->
         <scene sceneID="dPL-UN-WhG">
             <objects>
-                <viewController id="dai-aA-5gr" customClass="MenuListViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MenuListViewController" id="dai-aA-5gr" customClass="MenuListViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" id="nYW-98-v2B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-rE-9at">
+                                <rect key="frame" x="66" y="124" width="130" height="130"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-dA-TyU">
                                 <rect key="frame" x="66" y="310" width="180" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -160,6 +165,7 @@
                         <outlet property="editProfileIcon" destination="NLR-pc-Y3a" id="Add-fs-etZ"/>
                         <outlet property="sideMenuProfileImage" destination="Dxj-rE-9at" id="63K-Bs-uny"/>
                         <outlet property="sponsorIcon" destination="DDa-9t-XqW" id="qwu-eX-C1z"/>
+                        <outlet property="viewMyTournamentsImage" destination="blE-MJ-TbM" id="dTy-KC-M91"/>
                         <outlet property="viewProfileIcon" destination="ZO1-iu-gPB" id="rJd-ag-BIj"/>
                     </connections>
                 </viewController>
@@ -617,6 +623,44 @@
             </objects>
             <point key="canvasLocation" x="1233" y="692"/>
         </scene>
+        <!--View My Tournament View Controller-->
+        <scene sceneID="Box-02-D8P">
+            <objects>
+                <viewController storyboardIdentifier="ViewMyTournamentViewController" id="Qub-kY-0gE" customClass="ViewMyTournamentViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qki-aY-Cdg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ygp-D0-vmD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xql-7T-d28">
+                                <rect key="frame" x="16" y="0.0" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Qub-kY-0gE" eventType="touchUpInside" id="LER-W4-rLi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SoZ-4i-UWM" firstAttribute="trailing" secondItem="ygp-D0-vmD" secondAttribute="trailing" id="Zls-wn-yjP"/>
+                            <constraint firstItem="SoZ-4i-UWM" firstAttribute="bottom" secondItem="ygp-D0-vmD" secondAttribute="bottom" id="aj6-kI-4Ma"/>
+                            <constraint firstItem="ygp-D0-vmD" firstAttribute="leading" secondItem="SoZ-4i-UWM" secondAttribute="leading" id="mJv-th-OoN"/>
+                            <constraint firstItem="ygp-D0-vmD" firstAttribute="top" secondItem="SoZ-4i-UWM" secondAttribute="top" id="rwX-1p-H7h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SoZ-4i-UWM"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewMyTournamentsTableView" destination="ygp-D0-vmD" id="Efh-nX-Caa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5yP-DV-xTp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1965.5999999999999" y="694.90254872563719"/>
+        </scene>
         <!--Root Home Page View Controller-->
         <scene sceneID="uGo-8n-pIb">
             <objects>
@@ -656,6 +700,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GameShip" width="382" height="111"/>
         <image name="icon_edit_orange" width="100" height="100"/>
         <image name="test_profile" width="25" height="25"/>
     </resources>
