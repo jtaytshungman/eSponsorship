@@ -85,15 +85,6 @@
             </connections>
             <point key="canvasLocation" x="30.5" y="90"/>
         </tableViewCell>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qfp-DK-cY9">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-            <autoresizingMask key="autoresizingMask"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qfp-DK-cY9" id="0Vv-AM-NCT">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                <autoresizingMask key="autoresizingMask"/>
-            </tableViewCellContentView>
-            <point key="canvasLocation" x="31" y="-29"/>
-        </tableViewCell>
     </objects>
     <resources>
         <image name="sponsor" width="50" height="50"/>
