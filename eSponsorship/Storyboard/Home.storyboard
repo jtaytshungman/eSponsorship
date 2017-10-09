@@ -148,6 +148,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-SN-4MB">
+                                <rect key="frame" x="66" y="550" width="208" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                <state key="normal" title="View My Tournaments">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="sponsorsButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="dcH-Ip-Av8"/>
+                                    <segue destination="1eI-vD-F6o" kind="show" id="dli-lr-e99"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-52-86K">
+                                <rect key="frame" x="16" y="550" width="42" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.99055606126785278" green="0.35364508628845215" blue="0.11760168522596359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="fAd-a6-IGa"/>
@@ -616,6 +632,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N4g-HK-51t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1233" y="692"/>
+        </scene>
+        <!--View My Tournament View Controller-->
+        <scene sceneID="WaP-k9-Upd">
+            <objects>
+                <viewController storyboardIdentifier="ViewMyTournamentViewController" id="1eI-vD-F6o" customClass="ViewMyTournamentViewController" customModule="eSponsorship" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="giA-rD-BR2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hh9-MK-gHm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="swq-sf-fZ5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Back in Time"/>
+                                    <connections>
+                                        <action selector="backButton:" destination="1eI-vD-F6o" eventType="touchUpInside" id="hHJ-RC-AEK"/>
+                                    </connections>
+                                </button>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hh9-MK-gHm" firstAttribute="leading" secondItem="Db2-79-Fqa" secondAttribute="leading" id="3e5-aS-Fij"/>
+                            <constraint firstItem="Db2-79-Fqa" firstAttribute="trailing" secondItem="hh9-MK-gHm" secondAttribute="trailing" id="M8h-IB-4nr"/>
+                            <constraint firstItem="Db2-79-Fqa" firstAttribute="bottom" secondItem="hh9-MK-gHm" secondAttribute="bottom" id="mPd-U5-0Jq"/>
+                            <constraint firstItem="hh9-MK-gHm" firstAttribute="top" secondItem="Db2-79-Fqa" secondAttribute="top" id="pVt-38-U7D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Db2-79-Fqa"/>
+                    </view>
+                    <connections>
+                        <outlet property="viewMyTournamentsTableView" destination="hh9-MK-gHm" id="7D5-Pg-xyr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0l4-9E-6ad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1955" y="697"/>
         </scene>
         <!--Root Home Page View Controller-->
         <scene sceneID="uGo-8n-pIb">
