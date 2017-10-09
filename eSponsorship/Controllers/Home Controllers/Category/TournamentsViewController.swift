@@ -43,67 +43,67 @@ class TournamentsViewController: UIViewController {
         
         self.title = "Tournaments"
         
-        // fetchpost()
+        fetchpost()
         
     }
     
     
-//    func fetchpost(){
-//
-//        databaseRef = Database.database().reference()
-//
-//        databaseRef.child("tournaments").observe(.childAdded, with: { (snapshot) in
-//
-//            guard let mypost = snapshot.value as? [String: Any]
-//                else {return}
-//
-//
-//
-//            if let orgName = mypost["org_name"] as? String,
-//                let orgEmail = mypost["org_email"] as? String,
-//                let orgAff = mypost["org_aff"] as? String,
-//                let orgContact = mypost["org_contact"] as? String,
-//
-//                let tourImageURL = mypost["]
-//                let tourName = mypost["tournament_name"] as? String,
-//                let tourGame = mypost["competing_game"] as? String,
-//                let tourLevel = mypost["Competitive Level"] as? String,
-//                let tourParticipants = mypost["number_participants"] as? String,
-//                let tourPrize = mypost["prize_pool"] as? String,
-//                let tourURL = mypost["tournament_url"] as? String,
-//                let tourStartTime = mypost["start_time"] as? String,
-//                let tourEndTime = mypost["end_time"] as? String,
-//
-//                let tourLocName = mypost["location_name"] as? String,
-//                let tourLocUnit = mypost["location_unit"] as? String,
-//                let tourLocStreet = mypost["location_street"] as? String,
-//                let tourLocCity = mypost["location_city"] as? String,
-//                let tourLocState = mypost["location_state"] as? String,
-//                let tourLocCountry = mypost["location_country"] as? String
-//
-//
-//            {
-//
-//
-//                //            let newPost = mypost(imageName: post)
-//
-//
-//                DispatchQueue.main.async {
-////                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
-//
-//                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourImageURLInput: tourURL, tourNameInput: <#T##String#>, tourGameInput: <#T##String#>, tourLevelInput: <#T##String#>, tourParticipantsInput: <#T##String#>, tourPrizeInput: <#T##String#>, tourURLInput: <#T##String#>, tourLocNameInput: <#T##String#>, tourLocUnitInput: <#T##String#>, tourLocStreetInput: <#T##String#>, tourLocCityInput: <#T##String#>, tourLocStateInput: <#T##String#>, tourLocCountryInput: <#T##String#>)
-//
-//
-//                    self.tournaments.append(newTournament)
-//                    self.tournamentsTableView.reloadData()
-//                }
-//
-//            }
-//
-//        })
-//
-//    }
-
+    func fetchpost(){
+        
+        databaseRef = Database.database().reference()
+        
+        databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
+            
+            guard let mypost = snapshot.value as? [String: Any]
+                else {return}
+            
+            
+            
+            if let orgName = mypost["org_name"] as? String,
+                let orgEmail = mypost["org_email"] as? String,
+                let orgAff = mypost["org_aff"] as? String,
+                let orgContact = mypost["org_contact"] as? String,
+                
+                //let tourImageURL = mypost["image_url"] as? String,
+                let tourName = mypost["tournament_name"] as? String,
+                let tourGame = mypost["competing_game"] as? String,
+                let tourLevel = mypost["competitive_level"] as? String,
+                let tourParticipants = mypost["number_participants"] as? String,
+                let tourPrize = mypost["prize_pool"] as? String,
+                let tourURL = mypost["tournament_url"] as? String,
+                //let tourStartTime = mypost["start_time"] as? String,
+                //let tourEndTime = mypost["end_time"] as? String,
+                
+                let tourLocName = mypost["location_name"] as? String,
+                let tourLocUnit = mypost["location_unit"] as? String,
+                let tourLocStreet = mypost["location_street"] as? String,
+                let tourLocCity = mypost["location_city"] as? String,
+                let tourLocState = mypost["location_state"] as? String,
+                let tourLocCountry = mypost["location_country"] as? String
+                
+                
+            {
+                
+                
+                //            let newPost = mypost(imageName: post)
+                
+                
+                DispatchQueue.main.async {
+                    //                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact,tourImageURLInput: tourImageURL, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
+                    
+                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
+                    
+                    
+                    self.tournaments.append(newTournament)
+                    self.tournamentsTableView.reloadData()
+                }
+                
+            }
+            
+        })
+        
+    }
+    
 }
 
 
@@ -113,6 +113,7 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         guard let cell = tournamentsTableView.dequeueReusableCell(withIdentifier: TournamentTableViewCell.cellIdentifier) as? TournamentTableViewCell else {
             return UITableViewCell()
         }
@@ -126,12 +127,12 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
         cell.tournamentName.text = tournament.tourName
         cell.locationOfTournament.text = tournament.tourLocName
         cell.organizerName.text = tournament.tourGame
-        cell.numberOfParticipants.text = tournament.tourPrize
-       
+        cell.numberOfParticipants.text = tournament.tourParticipants
         
         
         return cell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else {return}
         

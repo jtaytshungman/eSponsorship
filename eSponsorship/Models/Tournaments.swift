@@ -14,7 +14,7 @@ class Tournaments {
     var orgAff : String?
     var orgContact : String?
     
-    var tourImageURL : String?
+    //var tourImageURL : String?
     var tourName : String?
     var tourGame : String?
     var tourLevel : String?
@@ -38,7 +38,7 @@ class Tournaments {
         orgEmailInput : String,
         orgAffInput : String ,
         orgContactInput : String,
-        tourImageURLInput : String,
+        //tourImageURLInput : String,
         tourNameInput : String,
         tourGameInput : String,
         tourLevelInput : String,
@@ -55,27 +55,27 @@ class Tournaments {
         tourLocStateInput : String,
         tourLocCountryInput : String) {
         
-        orgName = orgNameInput
-        orgEmail = orgEmailInput
-        orgAff = orgAffInput
-        orgContact = orgContactInput
+        self.orgName = orgNameInput
+        self.orgEmail = orgEmailInput
+        self.orgAff = orgAffInput
+        self.orgContact = orgContactInput
         
-        tourImageURL = tourImageURLInput
+        //self.tourImageURL = tourImageURLInput
         
-        tourName = tourNameInput
-        tourGame = tourGameInput
-        tourLevel = tourLevelInput
-        tourParticipants = tourParticipantsInput
-        tourPrize = tourPrizeInput
-        tourURL = tourURLInput
+        self.tourName = tourNameInput
+        self.tourGame = tourGameInput
+        self.tourLevel = tourLevelInput
+        self.tourParticipants = tourParticipantsInput
+        self.tourPrize = tourPrizeInput
+        self.tourURL = tourURLInput
 //        tourStartTime = tourStartTimeInput
 //        tourEndTime = tourEndTimeInput
         
-        tourLocName = tourLocNameInput
-        tourLocUnit = tourLocUnitInput
-        tourLocStreet = tourLocStreetInput
-        tourLocCity = tourLocCityInput
-        tourLocState = tourLocStateInput
-        tourLocCountry = tourLocCountryInput
+        self.tourLocName = tourLocNameInput
+        self.tourLocUnit = tourLocUnitInput
+        self.tourLocStreet = tourLocStreetInput
+        self.tourLocCity = tourLocCityInput
+        self.tourLocState = tourLocStateInput
+        self.tourLocCountry = tourLocCountryInput
     }
 }

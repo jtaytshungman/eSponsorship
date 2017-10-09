@@ -206,26 +206,96 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="game" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Noy-go-mk1">
-                                <rect key="frame" x="117" y="155" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDa-7i-AvI">
-                                <rect key="frame" x="56" y="231" width="240" height="128"/>
+                                <rect key="frame" x="16" y="20" width="97" height="75"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-VU-oUx">
-                                <rect key="frame" x="108" y="389" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYt-K3-E9c">
+                                <rect key="frame" x="16" y="338" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wYt-K3-E9c">
-                                <rect key="frame" x="108" y="450" width="97" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userGameChoice1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tD4-yN-FRP">
+                                <rect key="frame" x="16" y="103" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userGameChoice3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7dQ-3F-Rqu">
+                                <rect key="frame" x="16" y="255" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userGameChoice2 level" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2W-BK-vpI">
+                                <rect key="frame" x="16" y="217" width="204" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userGameChoice2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vn3-VG-HVp">
+                                <rect key="frame" x="16" y="179" width="157" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userGameChoice1 level" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fbh-jv-lEM">
+                                <rect key="frame" x="22" y="141" width="226" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="fb url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mcS-fr-hbp">
+                                <rect key="frame" x="16" y="376" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPU-VU-oUx">
+                                <rect key="frame" x="16" y="414" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7YL-vA-Fv5">
+                                <rect key="frame" x="16" y="452" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="other url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qX9-YP-ULf">
+                                <rect key="frame" x="16" y="490" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="twitch url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wS-jM-sYw">
+                                <rect key="frame" x="16" y="528" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="youtube url" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tPj-sd-drb">
+                                <rect key="frame" x="16" y="566" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="userGameChoice3 level" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="33M-AO-hcC">
+                                <rect key="frame" x="16" y="300" width="232" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -236,15 +306,25 @@
                         <viewLayoutGuide key="safeArea" id="KO8-Eg-fgS"/>
                     </view>
                     <connections>
-                        <outlet property="gameTextField" destination="Noy-go-mk1" id="WMX-Cj-jaA"/>
-                        <outlet property="locationTextField" destination="YPU-VU-oUx" id="jkf-Uy-z8a"/>
-                        <outlet property="nameTextField" destination="wYt-K3-E9c" id="pdz-Td-HkG"/>
+                        <outlet property="descriptionTxt" destination="wYt-K3-E9c" id="pvd-7N-u5I"/>
+                        <outlet property="fbURLTxt" destination="mcS-fr-hbp" id="PF1-Si-h3h"/>
+                        <outlet property="gameChoice1LevelTxt" destination="Fbh-jv-lEM" id="0uD-19-Qp0"/>
+                        <outlet property="gameChoice1Txt" destination="tD4-yN-FRP" id="BXT-g3-fyv"/>
+                        <outlet property="gameChoice2LevelTxt" destination="v2W-BK-vpI" id="fdQ-24-TyD"/>
+                        <outlet property="gameChoice2Txt" destination="vn3-VG-HVp" id="JRU-3y-tzX"/>
+                        <outlet property="gameChoice3LevelTxt" destination="33M-AO-hcC" id="BvO-cS-S9P"/>
+                        <outlet property="gameChoice3Txt" destination="7dQ-3F-Rqu" id="fsk-w5-qqB"/>
+                        <outlet property="locationTxt" destination="YPU-VU-oUx" id="Pnh-hb-T7g"/>
+                        <outlet property="otherURLTxt" destination="qX9-YP-ULf" id="h2k-4g-jb7"/>
                         <outlet property="profileImage" destination="QDa-7i-AvI" id="E0d-sF-SPc"/>
+                        <outlet property="twitchURLTxt" destination="9wS-jM-sYw" id="hJP-cW-e7l"/>
+                        <outlet property="usernameTxt" destination="7YL-vA-Fv5" id="eLL-V6-2Ev"/>
+                        <outlet property="youtubeURLTxt" destination="tPj-sd-drb" id="Rga-5p-kUY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZF-uA-gZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-226" y="1504"/>
+            <point key="canvasLocation" x="-226.40000000000001" y="1503.5982008995504"/>
         </scene>
         <!--Detailed Teams View Controller-->
         <scene sceneID="ZKC-Pz-d9F">
@@ -456,6 +536,7 @@
                         <outlet property="orgNameTxt" destination="J6b-Z8-YhX" id="VDi-9b-rEK"/>
                         <outlet property="tourEndTimeTxt" destination="Lxi-uo-Mfd" id="ep0-eJ-zHM"/>
                         <outlet property="tourGameTxt" destination="Ouq-2m-PZh" id="hqd-dJ-y93"/>
+                        <outlet property="tourImage" destination="eCc-z1-rnY" id="IwL-YY-UmL"/>
                         <outlet property="tourLevelTxt" destination="5Ic-H5-tLR" id="bUb-oG-Oe9"/>
                         <outlet property="tourLocCityTxt" destination="2io-S0-rh5" id="ExN-7r-cWi"/>
                         <outlet property="tourLocCountryTxt" destination="dci-i0-suJ" id="MEs-Dw-pNd"/>
@@ -474,21 +555,6 @@
             </objects>
             <point key="canvasLocation" x="1165.5999999999999" y="1512.5937031484259"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="YZU-wt-Pde">
-            <objects>
-                <viewController id="3k1-0L-Qyp" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bTy-7f-Sfb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="Evd-O9-C5f"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DCm-OB-Pd7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1786" y="1513"/>
-        </scene>
         <!--Tournaments View Controller-->
         <scene sceneID="vie-ir-qvJ">
             <objects>
@@ -503,6 +569,7 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="0Fr-z9-9Tk" firstAttribute="trailing" secondItem="wpA-SE-AmR" secondAttribute="trailing" id="01D-Fa-Sy9"/>
                             <constraint firstItem="wpA-SE-AmR" firstAttribute="leading" secondItem="0Fr-z9-9Tk" secondAttribute="leading" id="4sp-bS-P0i"/>
