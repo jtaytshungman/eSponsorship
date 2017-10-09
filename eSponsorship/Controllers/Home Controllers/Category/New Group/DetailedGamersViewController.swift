@@ -42,6 +42,7 @@ class DetailedGamersViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         guard let gameChoice1 = selectedGamerProfile?.userGameChoice1,
@@ -73,9 +74,6 @@ class DetailedGamersViewController: UIViewController {
         otherURLTxt.text = otherURL
         twitchURLTxt.text = twitchURL
         youtubeURLTxt.text = youtubeURL
-        
-        
-        
         
     }
     

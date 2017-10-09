@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 import Firebase
 import FirebaseDatabase
 import Eureka
@@ -15,8 +16,10 @@ import ImageRow
 class TournamentFormViewController: FormViewController{
     
     var tournaments : [Tournaments] = []
-    let gameOptions = ["Dota 2", "League of Legend", "Counter Strike : GO", "HeartStrone", "StarCraft"]
+    var tournamentImage = ""
     
+    
+    let gameList = ["Street Fighter"]
     
     @IBAction func cancelButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -71,35 +74,17 @@ class TournamentFormViewController: FormViewController{
         form +++ Section("Tournament Details")
             
             <<< ImageRow () { row in
+                row.tag = "tournament_image_url"
                 row.title = "Tournament Image"
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
-                
                 } .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-                } .onChange({ (imageRow) in
-//                    var tourImageURL : String = ""
-//                    if let tourImageSelected = imageRow.value {
-//                        let imageSelected = tourImageSelected
-//                        let imageName = NSUUID().uuidString
-//                        
-//                        let storageRef = Storage.storage().reference().child("tournamentImage").child("\(imageName).jpg")
-//                        
-//                        if let uploadData = UIImageJPEGRepresentation(imageSelected, 0.5) {
-//                            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-//                                
-//                                if error != nil {
-//                                    print(error)
-//                                    return
-//                                }
-//                                if let imageURL = metadata?.downloadURL()?.absoluteString {
-//                                    tourImageURL = imageURL
-//                                }
-//                            }
-//                        }
-//                    }
-//                    imageRow.baseValue = tourImageURL
+                    
+                }
+                .onChange({ (row) in
+                    
                 })
             
             <<< TextRow() {
@@ -132,8 +117,8 @@ class TournamentFormViewController: FormViewController{
             
             <<< PushRow<String>() {
                 $0.title = "Competing Game"
-                $0.options = ["Dota 2", "League of Legend", "Counter Strike : GO", "HeartStrone", "StarCraft"]
-                $0.value = "Dota 2"
+                $0.options = Constant.Data.gamesCompeting
+                $0.value = ""
                 $0.tag = "competing_game"
                 $0.selectorTitle = "Select a game competing"
                 }.onPresent { from, to in
@@ -143,7 +128,7 @@ class TournamentFormViewController: FormViewController{
             <<< PushRow<String>() {
                 $0.title = "Competitive Level"
                 $0.tag = "competitive_level"
-                $0.options = ["Professional", "Amateur", "Open"]
+                $0.options = Constant.Data.competingLevel
                 $0.value = "Open"
                 $0.selectorTitle = "Select Competing Level"
                 }.onPresent { from, to in
@@ -215,10 +200,12 @@ class TournamentFormViewController: FormViewController{
                 $0.placeholder = "Taman Tun Dr Ismail"
             }
             
-            <<< TextRow() {
-                $0.title = "State"
-                $0.tag = "location_state"
-                $0.placeholder = "Selangor"
+            <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
+                row.title = "State"
+                row.tag = "location_state"
+                row.options = Constant.Data.states
+                row.value = ""
+                
             }
             
             <<< TextRow() {
@@ -236,10 +223,13 @@ class TournamentFormViewController: FormViewController{
                     
                     let alert = UIAlertController(title: "Saving Details", message: "Your details will be saved safely at GameShip", preferredStyle: .alert)
                     let cancel = UIAlertAction(title: "Cancel", style: .cancel , handler: nil)
+                    
                     let save = UIAlertAction(title: "Save", style: .default) { (action) in
-                        guard let tournamentEurekaData = self?.form.valuesForFirebase() else { return }
-                        guard let currentUserID = Auth.auth().currentUser?.uid else { return }
-                        FirebaseDataHandler.uploadTournamentHandler(uid: currentUserID, values: tournamentEurekaData)
+                        
+                        guard let currentUID = Auth.auth().currentUser?.uid else { return }
+                        guard let tournamentData = self?.form.valuesForFirebase() else { return }
+                        
+                        FirebaseDataHandler.uploadTournamentHandler(uid: currentUID, values: tournamentData)
                         
                         self?.dismiss(animated: true, completion: nil)
                     }

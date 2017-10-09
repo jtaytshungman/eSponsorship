@@ -39,7 +39,29 @@ class TeamsFormViewController: FormViewController {
                 } .cellUpdate { cell, row in
                     cell.accessoryView?.layer.cornerRadius = 17
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
-            }
+                } .onChange({ (row) in
+                    var imageURL : String = ""
+                    
+                    let ref = Database.database().reference()
+                    let imageUID = "image" + NSUUID().uuidString
+                    let storageReference = Storage.storage().reference().child("Tournament_Images").child("\(imageUID).jpeg")
+                    
+                    if let imageRowData = ImageRow().value {
+                        if let imageData = UIImageJPEGRepresentation(imageRowData, 0.5) {
+                            storageReference.putData(imageData, metadata: nil, completion: { (metadata, error) in
+                                if error != nil {
+                                    print(error)
+                                    return
+                                }
+                                guard let url = metadata?.downloadURL()?.absoluteString else { return }
+                                imageURL = url
+                            })
+                        }
+                        
+                    }
+                    
+                    row.baseValue = imageURL
+                })
             
             <<< TextRow() {
                 $0.title = "Team Name"

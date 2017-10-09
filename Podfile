@@ -16,7 +16,6 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 pod 'SideMenu'
-pod 'PageMenu'
 pod 'Eureka', :git => 'https://github.com/xmartlabs/Eureka.git'
 pod 'ImageRow', :git => 'https://github.com/EurekaCommunity/ImageRow.git'
 
@@ -31,7 +30,5 @@ post_install do |installer|
         end
     end
 end
-
-
 
 end
