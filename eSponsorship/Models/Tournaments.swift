@@ -9,9 +9,7 @@
 import Foundation
 
 class Tournaments {
-    
     var userID_sub : String?
-    
     var orgName : String?
     var orgEmail : String?
     var orgAff : String?
@@ -37,7 +35,7 @@ class Tournaments {
     init() {}
     
     init(
-        userID_subInput: String,
+        userID_sub_Input : String,
         orgNameInput : String,
         orgEmailInput : String,
         orgAffInput : String ,
@@ -59,8 +57,7 @@ class Tournaments {
         tourLocStateInput : String,
         tourLocCountryInput : String) {
         
-        self.userID_sub = userID_subInput
-        
+        self.userID_sub = userID_sub_Input
         self.orgName = orgNameInput
         self.orgEmail = orgEmailInput
         self.orgAff = orgAffInput

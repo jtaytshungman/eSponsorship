@@ -16,8 +16,10 @@ import FirebaseDatabase
 class TournamentsViewController: UIViewController {
     
     
-    var posts: [TourPosting] = []
+    //var posts: [TourPosting] = []
     var tournaments : [Tournaments] = []
+    var refresher : UIRefreshControl!
+    
     
     
     var databaseRef: DatabaseReference!
@@ -41,11 +43,26 @@ class TournamentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        refresher = UIRefreshControl()
+//        refresher.attributedTitle = NSAttributedString(string :"Pull to refresh")
+//        refresher.addTarget(self, action: #selector(TournamentsViewController.populate), for: UIControlEvents.valueChanged)
+//        tournamentsTableView.addSubview(refresher)
+        
         self.title = "Tournaments"
         
         fetchpost()
+        self.tournamentsTableView.reloadData()
         
     }
+    
+//    func populate() {
+//        let selectedTournament = tournaments.count
+//        for i in 1...selectedTournament{
+//            tournaments.append(i)
+//        }
+//        refresher.endRefreshing()
+//        tournamentsTableView.reloadData()
+//    }
     
     
     func fetchpost(){
@@ -57,9 +74,10 @@ class TournamentsViewController: UIViewController {
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
+            print(mypost)
             
-            
-            if let orgName = mypost["org_name"] as? String,
+            if let userId_sub = mypost["UserID_sub"] as? String,
+                let orgName = mypost["org_name"] as? String,
                 let orgEmail = mypost["org_email"] as? String,
                 let orgAff = mypost["org_aff"] as? String,
                 let orgContact = mypost["org_contact"] as? String,
@@ -91,8 +109,7 @@ class TournamentsViewController: UIViewController {
                 DispatchQueue.main.async {
                     //                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact,tourImageURLInput: tourImageURL, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
                     
-//                    let newTournament = Tournaments(userID_subInput : userID_sub, orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
-
+                    let newTournament = Tournaments(userID_sub_Input : userId_sub, orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
                     
 //                    self.tournaments.append()
                     self.tournamentsTableView.reloadData()

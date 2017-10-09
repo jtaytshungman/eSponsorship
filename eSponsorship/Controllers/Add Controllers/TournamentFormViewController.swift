@@ -237,6 +237,12 @@ class TournamentFormViewController: FormViewController{
                         guard let tournamentData = self?.form.valuesForFirebase() else { return }
                         
                         FirebaseDataHandler.uploadTournamentHandler(uid: currentUID, values: tournamentData)
+//                        let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
+//                        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "TournamentsViewController") as? TournamentsViewController else {
+//                            return
+//                        }
+//                        self?.present(vc, animated: true, completion: nil)
+                       
                         
                         self?.dismiss(animated: true, completion: nil)
                     }
