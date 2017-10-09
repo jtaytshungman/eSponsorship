@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class MenuListViewController: UIViewController {
     
@@ -88,6 +89,21 @@ class MenuListViewController: UIViewController {
         
     }
     
-     }
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+
+        let signInSB = UIStoryboard(name: "Auth", bundle: nil)
+        guard let vc = signInSB.instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else { return }
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
+}
 
 

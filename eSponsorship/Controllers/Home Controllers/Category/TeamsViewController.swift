@@ -32,7 +32,7 @@ class TeamsViewController: UIViewController {
             teamsTableView.register(TeamsTableViewCell.cellNib, forCellReuseIdentifier: TeamsTableViewCell.cellIdentifier)
             teamsTableView.delegate = self
             teamsTableView.dataSource = self
-            teamsTableView.estimatedRowHeight = 80
+            teamsTableView.estimatedRowHeight = 200
             teamsTableView.rowHeight = UITableViewAutomaticDimension
         }
     }

@@ -76,6 +76,7 @@ class TournamentFormViewController: FormViewController{
             <<< ImageRow () { row in
                 row.tag = "tournament_image_url"
                 row.title = "Tournament Image"
+                row.value = nil
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
                 } .cellUpdate { cell, row in
@@ -118,7 +119,7 @@ class TournamentFormViewController: FormViewController{
             <<< PushRow<String>() {
                 $0.title = "Competing Game"
                 $0.options = Constant.Data.gamesCompeting
-                $0.value = ""
+                $0.value = Constant.Data.gamesCompeting[0]
                 $0.tag = "competing_game"
                 $0.selectorTitle = "Select a game competing"
                 }.onPresent { from, to in
@@ -129,7 +130,7 @@ class TournamentFormViewController: FormViewController{
                 $0.title = "Competitive Level"
                 $0.tag = "competitive_level"
                 $0.options = Constant.Data.competingLevel
-                $0.value = "Open"
+                $0.value = Constant.Data.competingLevel[0]
                 $0.selectorTitle = "Select Competing Level"
                 }.onPresent { from, to in
                     
@@ -181,30 +182,35 @@ class TournamentFormViewController: FormViewController{
                 $0.title = "Location Name"
                 $0.tag = "location_name"
                 $0.placeholder = "NEXT Academy"
+                $0.value = ""
+                
             }
             
             <<< TextRow() {
                 $0.title = "Unit Number"
                 $0.tag = "location_unit"
                 $0.placeholder = "AG-7"
+                $0.value = ""
             }
             
             <<< TextRow() {
                 $0.title = "Street Name"
                 $0.tag = "location_street"
                 $0.placeholder = "Jalan Wan Kadir 1"
+                $0.value = ""
             }
             <<< TextRow() {
                 $0.title = "City"
                 $0.tag = "location_city"
                 $0.placeholder = "Taman Tun Dr Ismail"
+                $0.value = ""
             }
             
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "State"
                 row.tag = "location_state"
                 row.options = Constant.Data.states
-                row.value = ""
+                row.value = Constant.Data.states[0]
                 
             }
             
@@ -212,6 +218,7 @@ class TournamentFormViewController: FormViewController{
                 $0.title = "Country"
                 $0.tag = "location_country"
                 $0.placeholder = "Malaysia"
+                $0.value = ""
             }
             
             +++ Section()
