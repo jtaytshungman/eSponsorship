@@ -52,7 +52,7 @@ class ViewMyTournamentViewController: UIViewController {
         
         fetchpost()
         
-        self.viewMyTournamentsTableView.reloadData()
+//        self.viewMyTournamentsTableView.reloadData()
         
     }
     
