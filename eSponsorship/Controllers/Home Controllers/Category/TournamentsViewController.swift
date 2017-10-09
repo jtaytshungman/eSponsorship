@@ -109,9 +109,26 @@ class TournamentsViewController: UIViewController {
                 DispatchQueue.main.async {
                     //                    let newTournament = Tournaments(orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact,tourImageURLInput: tourImageURL, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
                     
-                    let newTournament = Tournaments(userID_sub_Input : userId_sub, orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL,tourStartTimeInput: tourStartTime, tourEndTimeInput: tourEndTime, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
-                    
-                    //let aTournament = Tournaments(userID_sub_Input: <#T##String#>, orgNameInput: <#T##String#>, orgEmailInput: <#T##String#>, orgAffInput: <#T##String#>, orgContactInput: <#T##String#>, tourNameInput: <#T##String#>, tourGameInput: <#T##String#>, tourLevelInput: <#T##String#>, tourParticipantsInput: <#T##String#>, tourPrizeInput: <#T##String#>, tourURLInput: <#T##String#>, tourStartTimeInput: <#T##Double?#>, tourEndTimeInput: <#T##Double?#>, tourLocNameInput: <#T##String#>, tourLocUnitInput: <#T##String#>, tourLocStreetInput: <#T##String#>, tourLocCityInput: <#T##String#>, tourLocStateInput: <#T##String#>, tourLocCountryInput: <#T##String#>)
+                    let newTournament = Tournaments(userID_sub_Input : userId_sub,
+                                                    orgNameInput: orgName,
+                                                    orgEmailInput: orgEmail,
+                                                    orgAffInput: orgAff,
+                                                    orgContactInput: orgContact,
+                                                    tourNameInput: tourName,
+                                                    tourGameInput: tourGame,
+                                                    tourLevelInput: tourLevel,
+                                                    tourParticipantsInput: tourParticipants,
+                                                    tourPrizeInput: tourPrize,
+                                                    tourURLInput: tourURL,
+                                                    tourStartTimeInput: tourStartTime,
+                                                    tourEndTimeInput: tourEndTime,
+                                                    tourLocNameInput: tourLocName,
+                                                    tourLocUnitInput: tourLocUnit,
+                                                    tourLocStreetInput: tourLocStreet,
+                                                    tourLocCityInput: tourLocCity,
+                                                    tourLocStateInput: tourLocState,
+                                                    tourLocCountryInput: tourLocCountry)
+                
                     
                     
                     self.tournaments.append(newTournament)
