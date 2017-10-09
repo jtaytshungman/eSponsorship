@@ -16,8 +16,6 @@ import FirebaseDatabase
 class GamersViewController: UIViewController {
     
     var posts: [Gamers] = []
-    
-    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
     
@@ -41,8 +39,7 @@ class GamersViewController: UIViewController {
         self.title = "Profile"
         
         fetchpost()
-        
-        //tournamentsTableView.reloadData()
+        self.gamersTableView.reloadData()
         
     }
     
@@ -56,11 +53,9 @@ class GamersViewController: UIViewController {
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
-            
-            
             if let userName = mypost["name"] as? String,
                 //let userProfileImageURL = mypost["userImageURL"] as? String,
-                let userLocationBased = mypost["user_location_based"] as? String,
+                let userLocationBased = mypost["user_location_"] as? String,
                 let userDescription = mypost["user_bio_desc"] as? String,
                 
                 let userTwitchURL = mypost["user_twitch_url"] as? String,
@@ -78,7 +73,19 @@ class GamersViewController: UIViewController {
                 
                 
                 DispatchQueue.main.async {
-                    let teamPost = Gamers(userNameInput: userName, userLocationBasedInput: userLocationBased, userDescriptionInput: userDescription, userTwitchURLInput: userTwitchURL, userYoutubeURLInput: userYoutubeURL, userFacebookURLInput: userFacebookURL, userOtherURLInput: userOtherURL, userGameChoice1Input: userGameChoice1, userGameChoice1LevelInput: userGameChoice1Level, userGameChoice2Input: userGameChoice2, userGameChoice2LevelInput: userGameChoice2Level, userGameChoice3Input: userGameChoice3, userGameChoice3LevelInput: userGameChoice3Level)
+                    let teamPost = Gamers(userNameInput: userName,
+                                          userLocationBasedInput: userLocationBased,
+                                          userDescriptionInput: userDescription,
+                                          userTwitchURLInput: userTwitchURL,
+                                          userYoutubeURLInput: userYoutubeURL,
+                                          userFacebookURLInput: userFacebookURL,
+                                          userOtherURLInput: userOtherURL,
+                                          userGameChoice1Input: userGameChoice1,
+                                          userGameChoice1LevelInput: userGameChoice1Level,
+                                          userGameChoice2Input: userGameChoice2,
+                                          userGameChoice2LevelInput: userGameChoice2Level,
+                                          userGameChoice3Input: userGameChoice3,
+                                          userGameChoice3LevelInput: userGameChoice3Level)
                     
                     
                     self.posts.append(teamPost)
@@ -115,9 +122,9 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         cell.organizerNamek.text = post.userDescription
         //        cell.numberOfParticipantsq.text = post.prizeName
         
-//        print(post.userProfileImageURL)
-//        cell.backgroundImageCellk.loadImage(from: post.userProfileImageURL!)
-
+        //        print(post.userProfileImageURL)
+        //        cell.backgroundImageCellk.loadImage(from: post.userProfileImageURL!)
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
