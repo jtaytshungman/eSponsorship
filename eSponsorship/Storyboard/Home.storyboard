@@ -113,7 +113,11 @@
                                     <action selector="viewProfileButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="t8t-K4-tjA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-iu-gPB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="app-design_0005s_0001s_0000s_0002_Textbox" translatesAutoresizingMaskIntoConstraints="NO" id="WCk-N3-0N2">
+                                <rect key="frame" x="16" y="550" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_team_orange" translatesAutoresizingMaskIntoConstraints="NO" id="ZO1-iu-gPB">
                                 <rect key="frame" x="16" y="262" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,27 +127,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="test_profile" translatesAutoresizingMaskIntoConstraints="NO" id="m2z-VR-bLS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_team_orange" translatesAutoresizingMaskIntoConstraints="NO" id="m2z-VR-bLS">
                                 <rect key="frame" x="16" y="358" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blE-MJ-TbM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_tournament_orange" translatesAutoresizingMaskIntoConstraints="NO" id="blE-MJ-TbM">
                                 <rect key="frame" x="16" y="406" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eqa-TA-sSr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_about_orange" translatesAutoresizingMaskIntoConstraints="NO" id="Eqa-TA-sSr">
                                 <rect key="frame" x="16" y="454" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-9t-XqW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_sponsor_orange" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-9t-XqW">
                                 <rect key="frame" x="16" y="502" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-rE-9at">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameShip" highlightedImage="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-rE-9at">
                                 <rect key="frame" x="16" y="87" width="130" height="130"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,8 +164,8 @@
                                     <segue destination="1eI-vD-F6o" kind="show" id="dli-lr-e99"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tk9-52-86K">
-                                <rect key="frame" x="16" y="550" width="42" height="40"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-mZ-RoF">
+                                <rect key="frame" x="16" y="262" width="42" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -176,6 +180,7 @@
                         <outlet property="editProfileIcon" destination="NLR-pc-Y3a" id="Add-fs-etZ"/>
                         <outlet property="sideMenuProfileImage" destination="Dxj-rE-9at" id="63K-Bs-uny"/>
                         <outlet property="sponsorIcon" destination="DDa-9t-XqW" id="qwu-eX-C1z"/>
+                        <outlet property="viewMyTournamentsImage" destination="WCk-N3-0N2" id="i1e-29-K10"/>
                         <outlet property="viewProfileIcon" destination="ZO1-iu-gPB" id="rJd-ag-BIj"/>
                     </connections>
                 </viewController>
@@ -710,7 +715,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GameShip" width="382" height="111"/>
+        <image name="app-design_0005s_0001s_0000s_0002_Textbox" width="640" height="1136"/>
+        <image name="icon_about_orange" width="100" height="100"/>
         <image name="icon_edit_orange" width="100" height="100"/>
-        <image name="test_profile" width="25" height="25"/>
+        <image name="icon_sponsor_orange" width="100" height="100"/>
+        <image name="icon_team_orange" width="100" height="100"/>
+        <image name="icon_tournament_orange" width="100" height="100"/>
+        <image name="user" width="100" height="100"/>
     </resources>
 </document>
