@@ -40,6 +40,11 @@ class MenuListViewController: UIViewController {
     }
     
     @IBAction func viewProfileButtonTapped(_ sender: Any) {
+        let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
+        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "UserProfileViewController") as? UserProfileViewController else {
+            return
+        }
+        present(vc, animated: true, completion: nil)
         
     }
     

@@ -10,6 +10,7 @@
 		60417B891F87485800362F2D /* DetailedGamersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B881F87485800362F2D /* DetailedGamersViewController.swift */; };
 		60417B8B1F874EAF00362F2D /* DetailedTeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */; };
 		60417B8D1F87517E00362F2D /* DetailedTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */; };
+		60D9D3091F8B6371008F7F34 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D9D3081F8B6371008F7F34 /* UserProfileViewController.swift */; };
 		E3234B981F8A88FB003CDFE4 /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3234B971F8A88FB003CDFE4 /* Lists.swift */; };
 		E3394FD91F89CB4400FD3924 /* Gamers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3394FD81F89CB4400FD3924 /* Gamers.swift */; };
 		E3522A821F7BFB27007FA16F /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3522A811F7BFB27007FA16F /* Functions.swift */; };
@@ -64,6 +65,7 @@
 		60417B881F87485800362F2D /* DetailedGamersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedGamersViewController.swift; sourceTree = "<group>"; };
 		60417B8A1F874EAF00362F2D /* DetailedTeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTeamsViewController.swift; sourceTree = "<group>"; };
 		60417B8C1F87517E00362F2D /* DetailedTournamentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedTournamentsViewController.swift; sourceTree = "<group>"; };
+		60D9D3081F8B6371008F7F34 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		AAD3B7E272D522F4880B8953 /* Pods_eSponsorship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eSponsorship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3234B971F8A88FB003CDFE4 /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Lists.swift; path = eSponsorship/Models/Lists.swift; sourceTree = SOURCE_ROOT; };
 		E3394FD81F89CB4400FD3924 /* Gamers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gamers.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 		E3CD53B21F8B5D2600C1A47F /* Static */ = {
 			isa = PBXGroup;
 			children = (
+				60D9D3081F8B6371008F7F34 /* UserProfileViewController.swift */,
 				E3CD53B41F8B5D9700C1A47F /* AboutViewController.swift */,
 			);
 			path = Static;
@@ -476,6 +479,7 @@
 				E39D43DF1F86824500DCB55F /* TournamentFormViewController.swift in Sources */,
 				FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */,
 				E3A752C71F7A581D00AD9244 /* LoginViewController.swift in Sources */,
+				60D9D3091F8B6371008F7F34 /* UserProfileViewController.swift in Sources */,
 				E362F75A1F88E5A200F8018A /* EditProfileFormViewController.swift in Sources */,
 				FD721A351F88E50A00D89B52 /* ViewMyTournamentsViewController.swift in Sources */,
 				E3D00D6C1F7CA66C00932FE5 /* TournamentsViewController.swift in Sources */,
