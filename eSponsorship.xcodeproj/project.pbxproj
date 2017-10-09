@@ -43,6 +43,7 @@
 		FD31211D1F7E2EB80044D8DD /* GamersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211C1F7E2EB80044D8DD /* GamersTableViewCell.swift */; };
 		FD31211F1F7E301B0044D8DD /* GamerPosting.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD31211E1F7E301B0044D8DD /* GamerPosting.swift */; };
 		FD721A351F88E50A00D89B52 /* ViewMyTournamentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD721A341F88E50A00D89B52 /* ViewMyTournamentsViewController.swift */; };
+		FD84FD221F8B253000C78A76 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD84FD211F8B243800C78A76 /* Home.storyboard */; };
 		FD9DB0F71F8A588E002653A2 /* testOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DB0F61F8A588E002653A2 /* testOne.swift */; };
 		FD9DB0F91F8A5BEC002653A2 /* viewMyTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD9DB0F81F8A5BEC002653A2 /* viewMyTour.swift */; };
 		FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3F4DB8C1F79F68B0088E174 /* GoogleService-Info.plist */; };
@@ -360,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD84FD221F8B253000C78A76 /* Home.storyboard in Resources */,
 				FDE10F441F7B5BC900F2BB79 /* Info.plist in Resources */,
 				FDA378111F7A3B3B00195EAC /* GoogleService-Info.plist in Resources */,
 				FD31211B1F7E2E590044D8DD /* GamersTableViewCell.xib in Resources */,
