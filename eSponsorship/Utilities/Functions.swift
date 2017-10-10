@@ -80,7 +80,7 @@ public class FirebaseDataHandler {
         tourReference.updateChildValues(firebaseValues) { (error, ref) in
             
             if error != nil {
-                print(error)
+                print(error as Any)
                 return
             }
         }
@@ -135,13 +135,16 @@ public class FirebaseDataHandler {
             convertImageRowToURL(imageToConvert: image, completion: { (imageUrl) in
                 if let url = imageUrl {
                     currentUserID.updateChildValues(["user_image_url" : url])
+                    
                 }
+                
             })
+            
         }
         
         currentUserID.updateChildValues (firebaseValues) { (error, ref) in
             if error != nil {
-                print(error)
+                print(error as Any)
                 return
             }
             
@@ -149,26 +152,18 @@ public class FirebaseDataHandler {
         
     }
     
-    // handles profile image only
+    class func deleteTournamentFromFirebase (tournamentUID : String, userUID : String) {
+        let ref = Database.database().reference()
+        ref.child("GameShip_Tournaments").child(tournamentUID).removeValue { (error, ref) in
+            if error != nil {
+                print(error as Any)
+            }
+        }
+        ref.child("users").child(userUID).child("User_Tournament_Organizing").child(tournamentUID).removeValue { (error, ref) in
+            if error != nil {
+                print(error as Any)
+            }
+        }
+    }
     
-//    class func uploadUserProfileImageHandler(imageFor : String, image : UIImage) {
-//        guard let currentUserUID = Auth.auth().currentUser?.uid else { return }
-//        guard let proImage = image as? UIImage else { return }
-//        let imageName = NSUUID().uuidString
-//        let storageRef = Storage.storage().reference().child("\(imageFor)").child("\(imageName).jpg")
-//
-//        if let uploadData = UIImageJPEGRepresentation(proImage, 0.5) {
-//            storageRef.putData(uploadData, metadata: nil) { (metadata, error) in
-//
-//                if error != nil {
-//                    print(error)
-//                    return
-//                }
-//
-//                if let profileImageURL = metadata?.downloadURL()?.absoluteString {
-//                    FirebaseDataHandler.uploadToUserProfileHandler(uid: currentUserUID, values: ["user_image_url" : profileImageURL])
-//                }
-//            }
-//        }
-//    }
 }
