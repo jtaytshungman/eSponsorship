@@ -16,8 +16,6 @@ import FirebaseDatabase
 class TournamentsViewController: UIViewController {
 
     var tournaments : [Tournaments] = []
-    var refresher : UIRefreshControl!
-    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
     
