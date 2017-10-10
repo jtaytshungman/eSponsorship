@@ -19,6 +19,10 @@ protocol TitleDelegate {
 
 class TournamentsViewController: UIViewController {
 
+    var refreshControl : UIRefreshControl?
+    
+    var initialLoad = true
+    
     var tournaments : [Tournaments] = []
     var delegate : TitleDelegate?
     var databaseRef: DatabaseReference!
@@ -36,10 +40,17 @@ class TournamentsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         fetchpost()
-        reloadTableWhenAddChild()
-        self.tournamentsTableView.reloadData()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Refresh Tournaments")
+        refreshControl?.addTarget(self, action: #selector(populateTableHandler), for: UIControlEvents.valueChanged)
+        tournamentsTableView.addSubview(refreshControl!)
+    }
+    
+    func populateTableHandler () {
+        fetchpost()
+        refreshControl?.endRefreshing()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,7 +62,7 @@ class TournamentsViewController: UIViewController {
     func fetchpost(){
         
         databaseRef = Database.database().reference()
-        databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("GameShip_Tournaments").observe(.value, with: { (snapshot) in
             
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
@@ -108,19 +119,27 @@ class TournamentsViewController: UIViewController {
                     
                     
                     self.tournaments.append(newTournament)
-                    self.tournamentsTableView.reloadData()
+                    
+                    let index = self.tournaments.count - 1
+                    let indexPath = IndexPath(row: index, section: 0)
+                    self.tournamentsTableView.insertRows(at: [indexPath], with: .right)
+                    
+                    if ( self.initialLoad == false ) { //upon first load, don't reload the tableView until all children are loaded
+                        self.tournamentsTableView.reloadData()
+                    }
+                    
                 }
                 
             }
             
         })
         
-    }
-    
-    func reloadTableWhenAddChild () {
-        databaseRef.database.reference().child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
-            self.tournamentsTableView.reloadData()
-        }, withCancel: nil)
+//        databaseRef.child("GameShip_Tournaments").observeSingleEvent(of: .value, with: { (snapshot) in
+//            print("inital data loaded so reload tableView!  \(snapshot.childrenCount)")
+//            self.tournamentsTableView.reloadData()
+//            self.initialLoad = false
+//        }, withCancel: nil)
+
     }
     
 }

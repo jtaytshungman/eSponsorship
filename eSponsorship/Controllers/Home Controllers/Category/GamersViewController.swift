@@ -15,6 +15,8 @@ import FirebaseDatabase
 
 class GamersViewController: UIViewController {
     
+    var refreshControl : UIRefreshControl?
+    
     var gamersProfiles: [Gamers] = []
     var delegate : TitleDelegate?
     var databaseRef: DatabaseReference!
@@ -31,19 +33,29 @@ class GamersViewController: UIViewController {
         }
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         fetchpost()
-        
         self.gamersTableView.reloadData()
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.attributedTitle = NSAttributedString(string: "Refresh Gamers")
+        refreshControl?.addTarget(self, action: #selector(populateTableHandler), for: UIControlEvents.valueChanged)
+        gamersTableView.addSubview(refreshControl!)
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         delegate?.changeTitle(to: "Gamers")
+    }
+    
+    func populateTableHandler () {
+        fetchpost()
+        gamersTableView.reloadData()
+        refreshControl?.endRefreshing()
     }
     
     func fetchpost(){

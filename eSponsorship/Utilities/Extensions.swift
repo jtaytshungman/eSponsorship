@@ -9,8 +9,15 @@
 import Foundation
 import UIKit
 
+let imageCache = NSCache<AnyObject, AnyObject>()
+
 extension UIImageView {
     func loadImage(from urlString: String) {
+        
+        if let cachedImage = imageCache.object(forKey: urlString as AnyObject) as? UIImage {
+            self.image = cachedImage
+            return
+        }
         
         //1. url
         //2 session, task, start
@@ -26,6 +33,11 @@ extension UIImageView {
             if let data = data {
                 //self.pokemonImageView.image = UIImage(data: data)
                 DispatchQueue.main.async {
+                    
+                    if let downloadedImage = UIImage(data : data) {
+                        imageCache.setObject(downloadedImage, forKey: urlString as AnyObject)
+                    }
+                    
                     self.image = UIImage(data: data)
                 }
             }

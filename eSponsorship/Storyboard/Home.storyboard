@@ -1056,7 +1056,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wpA-SE-AmR">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1167,10 +1167,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Untitled1" width="800" height="600"/>
         <image name="affliated_icon" width="128" height="128"/>
         <image name="black_orange_gradient" width="1436" height="691"/>
         <image name="clock_icon" width="25" height="25"/>
+        <image name="contact-me-1" width="520" height="163"/>
+        <image name="contact-me-2" width="520" height="163"/>
         <image name="email_icon" width="128" height="128"/>
+        <image name="games-icon-2" width="880" height="380"/>
+        <image name="if_Ak_Location_86047" width="128" height="128"/>
         <image name="if_brightness_1055105" width="128" height="128"/>
         <image name="if_gamecontroller_1055053" width="128" height="128"/>
         <image name="if_pencil_1055013" width="128" height="128"/>

@@ -56,6 +56,7 @@ class ViewMyTournamentViewController: UIViewController {
                 let orgEmail = mypost["org_email"] as? String,
                 let orgAff = mypost["org_aff"] as? String,
                 let orgContact = mypost["org_contact"] as? String,
+                let tournamentID = mypost["Tournament_UID"] as? String,
                 
                 let tourImageURL = mypost["image_url"] as? String,
                 let tourName = mypost["tournament_name"] as? String,
@@ -137,20 +138,19 @@ extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         print(indexPath.row)
         
-        guard let uid = Auth.auth().currentUser?.uid else {
-            return
+        let post = posts[indexPath.row]
+        
+        if let selectedTournament = post.tournamentKey, let uid = Auth.auth().currentUser?.uid {
+            FirebaseDataHandler.deleteTournamentFromFirebase(tournamentUID: selectedTournament, userUID: uid)
         }
-        let cell = self.posts[indexPath.row]
-        Database.database().reference().child("GameShip_Tournaments").child(uid).setValue(nil)
+    
         self.posts.remove(at: indexPath.row)
-        self.viewMyTournamentsTableView.deleteRows(at: [indexPath], with: .automatic)
-
-        
-
-        
+        self.viewMyTournamentsTableView.deleteRows(at: [indexPath], with: .left)
+    
     }
     
 }
