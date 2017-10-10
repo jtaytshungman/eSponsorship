@@ -12,7 +12,6 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
 
-    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmTextField: UITextField!
@@ -30,7 +29,8 @@ class SignUpViewController: UIViewController {
     
     // MARK: SignUpUser() Function is Here
     func signUpUser() {
-        guard let name = nameTextField.text,
+        
+        guard
             let email = emailTextField.text,
             let password = passwordTextField.text,
             let confirmPassword = confirmTextField.text else {return}
@@ -39,7 +39,7 @@ class SignUpViewController: UIViewController {
             PromptHandler.showPrompt(title: "Password Error", message:  "Passwords do not match", in: self)
             return
             
-        } else if name == "" || email == "" || password == ""{
+        } else if email == "" || password == ""{
             PromptHandler.showPrompt(title: "Missing input field", message: "Input field must be filled", in: self)
             return
             
@@ -53,7 +53,7 @@ class SignUpViewController: UIViewController {
             if let validUser = user {
                 let ref = Database.database().reference()
                 
-                let post : [String : Any] = ["name" : name ,"email" : email ]
+                let post : [String : Any] = ["email" : email ]
                 ref.child("users").child(validUser.uid).setValue(post)
                 
                 self.navigationController?.popViewController(animated: true)

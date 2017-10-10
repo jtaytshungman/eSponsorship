@@ -28,34 +28,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GPx-hw-XUr">
-                                <rect key="frame" x="20" y="204" width="335" height="260"/>
+                                <rect key="frame" x="20" y="226.5" width="335" height="215"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KqU-w6-ow9">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="48"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-Ff-f1D">
-                                        <rect key="frame" x="0.0" y="53" width="335" height="48"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TfH-Sz-4JU">
-                                        <rect key="frame" x="0.0" y="106" width="335" height="48"/>
+                                        <rect key="frame" x="0.0" y="55" width="335" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-v1-08C">
-                                        <rect key="frame" x="0.0" y="159" width="335" height="48"/>
+                                        <rect key="frame" x="0.0" y="110" width="335" height="50"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-zX-Hre">
-                                        <rect key="frame" x="0.0" y="212" width="335" height="48"/>
+                                        <rect key="frame" x="0.0" y="165" width="335" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.30232747399999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                         <state key="normal" title="Sign Up">
@@ -66,25 +60,23 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="QOT-Ff-f1D" secondAttribute="trailing" id="1cw-6K-dAo"/>
                                     <constraint firstAttribute="trailing" secondItem="dgl-zX-Hre" secondAttribute="trailing" id="8Gs-tM-bTz"/>
-                                    <constraint firstAttribute="trailing" secondItem="KqU-w6-ow9" secondAttribute="trailing" id="DTy-mN-NgA"/>
                                     <constraint firstItem="TfH-Sz-4JU" firstAttribute="leading" secondItem="GPx-hw-XUr" secondAttribute="leading" id="JZL-w8-FiI"/>
                                     <constraint firstAttribute="trailing" secondItem="TfH-Sz-4JU" secondAttribute="trailing" id="V2d-Zd-Wzp"/>
-                                    <constraint firstAttribute="height" constant="260" id="fOC-BT-YCa"/>
+                                    <constraint firstAttribute="height" constant="215" id="fOC-BT-YCa"/>
                                     <constraint firstItem="QOT-Ff-f1D" firstAttribute="leading" secondItem="GPx-hw-XUr" secondAttribute="leading" id="lAW-kr-9GA"/>
                                     <constraint firstItem="R3Z-v1-08C" firstAttribute="leading" secondItem="GPx-hw-XUr" secondAttribute="leading" id="n0h-Dw-FcR"/>
                                     <constraint firstAttribute="trailing" secondItem="R3Z-v1-08C" secondAttribute="trailing" id="rEH-bg-5Uw"/>
-                                    <constraint firstItem="KqU-w6-ow9" firstAttribute="leading" secondItem="GPx-hw-XUr" secondAttribute="leading" id="vmb-V8-6Gf"/>
                                     <constraint firstItem="dgl-zX-Hre" firstAttribute="leading" secondItem="GPx-hw-XUr" secondAttribute="leading" id="xNq-NR-y8G"/>
                                 </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="IZl-s0-sPX">
-                                <rect key="frame" x="38" y="73" width="300" height="111"/>
+                                <rect key="frame" x="38" y="95.5" width="300" height="111"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="UYc-tL-9zC"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4XC-ct-5Bo">
-                                <rect key="frame" x="80" y="484" width="221" height="29"/>
+                                <rect key="frame" x="80" y="461.5" width="221" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdZ-6h-ifB">
                                         <rect key="frame" x="0.0" y="0.0" width="149" height="29"/>
@@ -98,9 +90,6 @@
                                         <state key="normal" title="Sign In Here">
                                             <color key="titleColor" red="0.99055606129999996" green="0.35364508630000002" blue="0.1176016852" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
-                                        <connections>
-                                            <segue destination="GdE-sF-F09" kind="show" id="B8g-h3-KAd"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -125,7 +114,6 @@
                     <connections>
                         <outlet property="confirmTextField" destination="R3Z-v1-08C" id="Tgy-7l-vnA"/>
                         <outlet property="emailTextField" destination="QOT-Ff-f1D" id="2n8-o4-WAE"/>
-                        <outlet property="nameTextField" destination="KqU-w6-ow9" id="trN-H8-vdJ"/>
                         <outlet property="passwordTextField" destination="TfH-Sz-4JU" id="txi-Ia-PqV"/>
                         <outlet property="signUpButton" destination="dgl-zX-Hre" id="QHB-nf-W98"/>
                     </connections>
@@ -250,8 +238,4 @@
     <resources>
         <image name="GameShip" width="382" height="111"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="3qU-HU-gsN"/>
-        <segue reference="B8g-h3-KAd"/>
-    </inferredMetricsTieBreakers>
 </document>

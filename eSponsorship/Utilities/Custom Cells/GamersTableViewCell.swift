@@ -10,34 +10,27 @@ import UIKit
 
 class GamersTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var tournamentNamek: UILabel!
-    @IBOutlet weak var numberOfParticipantsk: UILabel!
-    @IBOutlet weak var locationOfTournamentk: UILabel!
-    @IBOutlet weak var organizerNamek: UILabel!
-    @IBOutlet weak var dob: UILabel!
-    @IBOutlet weak var descTextField: UILabel!
-    @IBOutlet weak var userProfileImage: UIImageView!
+    @IBOutlet weak var mainLabel: UILabel!
+    @IBOutlet weak var subMainLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     
     static let cellIdentifier = "GamersCell"
     static let cellNib = UINib(nibName: "GamersTableViewCell", bundle: Bundle.main)
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-    
-//        contentView.layer.borderWidth = 5
-//        contentView.layer.borderColor = UIColor.black.cgColor
-//        contentView.layer.cornerRadius = 0
+
     }
     
 }
