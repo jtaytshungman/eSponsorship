@@ -35,35 +35,12 @@ class ViewMyTournamentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "view My Tournaments TableView"
-        
         fetchpost()
-        
+        viewMyTournamentsTableView.allowsMultipleSelectionDuringEditing = true
         
         
     }
     
-    
-//    func fetchpost(){
-//        databaseRef = Database.database().reference()
-//
-//        databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
-//            guard let mypost = snapshot.value as? [String: Any]
-//                else {return}
-//
-//            if
-//                let tournament_name = mypost["tournament_name"] as? String,
-//                let competing_game = mypost["competing_game"] as? String,
-//                let creatorID = mypost["UserID_sub"] as? String {
-//                if creatorID == Auth.auth().currentUser?.uid {
-//                    DispatchQueue.main.async {
-//                        let newPost = viewMyTour(theTournament_name: tournament_name, theCompeting_game: competing_game)
-//                        self.posts.append(newPost)
-//                        self.viewMyTournamentsTableView.reloadData()
-//                    }
-//                }
-//            }
-//        })
-//    }
     
     func fetchpost(){
         
@@ -131,9 +108,31 @@ extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSo
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedTournamentsViewController") as? DetailedTournamentsViewController else { return }
+        let selectedTourmanent = posts[indexPath.row]
+        destination.selectedTournamentProfile = selectedTourmanent
+        navigationController?.pushViewController(destination, animated: true)
+    }
     
-    
-    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        
+        guard let uid = Auth.auth().currentUser?.uid else {
+            return
+        }
+        let cell = self.posts[indexPath.row]
+        Database.database().reference().child("GameShip_Tournaments").child(uid).setValue(nil)
+        self.posts.remove(at: indexPath.row)
+        self.viewMyTournamentsTableView.deleteRows(at: [indexPath], with: .automatic)
+
+        
+
+        
+    }
     
 }
 

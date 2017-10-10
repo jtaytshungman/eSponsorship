@@ -65,12 +65,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.1869303386" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="DMB-Vb-jm6" secondAttribute="bottom" id="5Ov-1X-DqG"/>
+                            <constraint firstItem="DMB-Vb-jm6" firstAttribute="leading" secondItem="7Fi-E7-ktP" secondAttribute="leading" id="5Zg-e5-0p1"/>
                             <constraint firstItem="DMB-Vb-jm6" firstAttribute="centerY" secondItem="7Fi-E7-ktP" secondAttribute="centerY" id="BRu-wR-Cyf"/>
                             <constraint firstItem="DMB-Vb-jm6" firstAttribute="leading" secondItem="7Fi-E7-ktP" secondAttribute="leading" id="Exh-bC-xkE"/>
+                            <constraint firstItem="DMB-Vb-jm6" firstAttribute="top" secondItem="7Fi-E7-ktP" secondAttribute="top" id="Xmb-po-Ito"/>
                             <constraint firstItem="dtZ-xk-895" firstAttribute="top" secondItem="7Fi-E7-ktP" secondAttribute="top" constant="27" id="ZVB-cc-Ssi"/>
                             <constraint firstItem="DMB-Vb-jm6" firstAttribute="top" secondItem="7Fi-E7-ktP" secondAttribute="top" id="lfk-oZ-JrI"/>
                             <constraint firstAttribute="bottom" secondItem="DMB-Vb-jm6" secondAttribute="bottom" id="pak-bl-Na8"/>
                             <constraint firstItem="dtZ-xk-895" firstAttribute="leading" secondItem="DMB-Vb-jm6" secondAttribute="trailing" constant="8" symbolic="YES" id="tHp-Nr-t5e"/>
+                            <constraint firstItem="dtZ-xk-895" firstAttribute="leading" secondItem="DMB-Vb-jm6" secondAttribute="trailing" constant="8" id="woW-Zy-vZj"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -35,6 +35,7 @@ class GamersViewController: UIViewController {
         self.title = "Profile"
         
         fetchpost()
+        
         self.gamersTableView.reloadData()
         
     }
@@ -48,8 +49,8 @@ class GamersViewController: UIViewController {
                 else {return}
             
             if
-                let userName = myGamers["name"] as? String,
-                let userProfileImageURL = myGamers["userImageURL"] as? String,
+                let userName = myGamers["user_name"] as? String,
+                let userProfileImageURL = myGamers["user_image_url"] as? String,
                 let userLocationBased = myGamers["user_location_"] as? String,
                 let userDescription = myGamers["user_bio_desc"] as? String,
                 
@@ -115,7 +116,6 @@ extension GamersViewController : UITableViewDataSource {
         if let profile_image_url = gamerSelected.userProfileImageURL {
             cell.profileImage.loadImage(from: profile_image_url)
         }
-        
         
         return cell
     }

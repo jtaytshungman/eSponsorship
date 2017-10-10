@@ -16,8 +16,6 @@ import FirebaseDatabase
 class TournamentsViewController: UIViewController {
 
     var tournaments : [Tournaments] = []
-    var refresher : UIRefreshControl!
-    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
     
@@ -39,6 +37,7 @@ class TournamentsViewController: UIViewController {
         reloadTableWhenAddChild()
         self.tournamentsTableView.reloadData()
     }
+    
 
     func fetchpost(){
         
@@ -145,6 +144,7 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
         destination.selectedTournamentProfile = selectedTourmanent
         navigationController?.pushViewController(destination, animated: true)
     }
+    
     
 }
 

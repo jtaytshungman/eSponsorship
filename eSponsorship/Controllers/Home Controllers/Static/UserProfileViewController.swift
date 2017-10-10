@@ -15,8 +15,6 @@ class UserProfileViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
-    @IBOutlet weak var nameLbl: UILabel!
-    
     @IBOutlet weak var emailLbl: UILabel!
     
     @IBOutlet weak var gameChoice1Lbl: UILabel!
@@ -68,13 +66,7 @@ class UserProfileViewController: UIViewController {
                     
                     self.emailLbl.text = email
                 }
-                
-                if let name = dictionary["name"] as? String {
-                    
-                    self.nameLbl.text = name
-                    
-                }
-                
+               
                 if let userGameChoice1 = dictionary["user_GameChoice_1"] as? String {
                     
                     self.gameChoice1Lbl.text = userGameChoice1
