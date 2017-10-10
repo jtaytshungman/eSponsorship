@@ -26,43 +26,51 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fi-E7-ktP">
-                        <rect key="frame" x="10" y="5" width="355" height="119.5"/>
+                        <rect key="frame" x="10" y="5" width="355" height="120"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DMB-Vb-jm6">
-                                <rect key="frame" x="0.0" y="0.0" width="130" height="119.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="130" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="130" id="0ud-s4-QYN"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tay Tshung Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSh-ks-u3Q">
-                                <rect key="frame" x="138" y="17" width="209" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Unknown Battle Ground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-0v-veD">
-                                <rect key="frame" x="138" y="51" width="209" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kuala Lumpur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ueh-c7-SRd">
-                                <rect key="frame" x="138" y="80" width="209" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dtZ-xk-895">
+                                <rect key="frame" x="138" y="27" width="196" height="62.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tay Tshung Man" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSh-ks-u3Q">
+                                        <rect key="frame" x="0.0" y="0.0" width="196" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Unknown Battle Ground" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpr-0v-veD">
+                                        <rect key="frame" x="0.0" y="27.5" width="196" height="19"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kuala Lumpur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ueh-c7-SRd">
+                                        <rect key="frame" x="0.0" y="46.5" width="196" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ueh-c7-SRd" firstAttribute="top" secondItem="OSh-ks-u3Q" secondAttribute="bottom" constant="19" id="NXk-oP-8Na"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rpr-0v-veD" secondAttribute="bottom" constant="16" id="g3f-IB-1Nu"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.1869303386" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="DMB-Vb-jm6" firstAttribute="centerY" secondItem="7Fi-E7-ktP" secondAttribute="centerY" id="BRu-wR-Cyf"/>
                             <constraint firstItem="DMB-Vb-jm6" firstAttribute="leading" secondItem="7Fi-E7-ktP" secondAttribute="leading" id="Exh-bC-xkE"/>
+                            <constraint firstItem="dtZ-xk-895" firstAttribute="top" secondItem="7Fi-E7-ktP" secondAttribute="top" constant="27" id="ZVB-cc-Ssi"/>
                             <constraint firstItem="DMB-Vb-jm6" firstAttribute="top" secondItem="7Fi-E7-ktP" secondAttribute="top" id="lfk-oZ-JrI"/>
                             <constraint firstAttribute="bottom" secondItem="DMB-Vb-jm6" secondAttribute="bottom" id="pak-bl-Na8"/>
+                            <constraint firstItem="dtZ-xk-895" firstAttribute="leading" secondItem="DMB-Vb-jm6" secondAttribute="trailing" constant="8" symbolic="YES" id="tHp-Nr-t5e"/>
                         </constraints>
                     </view>
                 </subviews>

@@ -69,21 +69,6 @@ class GamersViewController: UIViewController {
                 
                 
                 DispatchQueue.main.async {
-//                    let gamersPost = Gamers(userNameInput: userName,
-//                                          userNameProfileImageURLInput: userProfileImageURL,
-//                                          userLocationBasedInput: userLocationBased,
-//                                          userDescriptionInput: userDescription,
-//                                          userTwitchURLInput: userTwitchURL,
-//                                          userYoutubeURLInput: userYoutubeURL,
-//                                          userFacebookURLInput: userFacebookURL,
-//                                          userOtherURLInput: userOtherURL,
-//                                          userGameChoice1Input: userGameChoice1,
-//                                          userGameChoice1LevelInput: userGameChoice1Level,
-//                                          userGameChoice2Input: userGameChoice2,
-//                                          userGameChoice2LevelInput: userGameChoice2Level,
-//                                          userGameChoice3Input: userGameChoice3,
-//                                          userGameChoice3LevelInput: userGameChoice3Level)
-                    
                     let gamersPost = Gamers(userNameInput: userName, userNameProfileImageURLInput: userProfileImageURL, userLocationBasedInput: userLocationBased, userDescriptionInput: userDescription, userTwitchURLInput: userTwitchURL, userYoutubeURLInput: userYoutubeURL, userFacebookURLInput: userFacebookURL, userOtherURLInput: userOtherURL, userGameChoice1Input: userGameChoice1, userGameChoice1LevelInput: userGameChoice1Level, userGameChoice2Input: userGameChoice2, userGameChoice2LevelInput: userGameChoice2Level, userGameChoice3Input: userGameChoice3, userGameChoice3LevelInput: userGameChoice3Level)
                     
                     self.gamersProfiles.append(gamersPost)
@@ -95,6 +80,7 @@ class GamersViewController: UIViewController {
         })
         
     }
+    
 }
 
 extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
@@ -110,9 +96,9 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         
         let gamerSelected = gamersProfiles[indexPath.row]
         
-        if let profileImage = gamerSelected.userProfileImageURL {
-            cell.profileImage.loadImage(from: profileImage)
-        }
+//        if let profileImage = gamerSelected.userProfileImageURL {
+//            cell.profileImage.loadImage(from: profileImage)
+//        }
         
         cell.mainLabel.text = gamerSelected.userName
         cell.subMainLabel.text = gamerSelected.userGameChoice1
