@@ -129,13 +129,6 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
             return UITableViewCell()
         }
         let tournament = tournaments[indexPath.row]
-        
-//        cell.tournamentName.text = tournament.tourName
-//        cell.locationOfTournament.text = tournament.tourLocName
-//        cell.organizerName.text = tournament.tourGame
-//        cell.numberOfParticipants.text = tournament.tourParticipants
-//        
-//        
     
         cell.topRightLabel.text = tournament.tourLevel
         cell.mainHeaderLabel.text = tournament.tourName

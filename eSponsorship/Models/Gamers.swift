@@ -11,7 +11,7 @@ import Foundation
 class Gamers {
     
     var userName : String?
-    //var userProfileImageURL : String?
+    var userProfileImageURL : String?
     var userLocationBased : String?
     var userDescription : String?
     
@@ -32,6 +32,7 @@ class Gamers {
     }
     
     init (userNameInput : String,
+          userNameProfileImageURLInput : String,
           userLocationBasedInput : String,
           userDescriptionInput : String,
           userTwitchURLInput : String,
@@ -46,7 +47,7 @@ class Gamers {
           userGameChoice3LevelInput : String) {
         
         self.userName = userNameInput
-        //self.userProfileImageURL = userProfileImageURLInput
+        self.userProfileImageURL = userNameProfileImageURLInput
         self.userLocationBased = userLocationBasedInput
         self.userDescription = userDescriptionInput
         self.userTwitchURL = userTwitchURLInput
