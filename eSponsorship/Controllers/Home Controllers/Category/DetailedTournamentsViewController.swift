@@ -57,7 +57,7 @@ class DetailedTournamentsViewController: UIViewController {
             let orgAff = selectedTournamentProfile?.orgAff,
             let orgContact = selectedTournamentProfile?.orgContact,
             
-            //let tourImage = selectedTournamentProfile?.tourImageURL,
+            let tourImageURL = selectedTournamentProfile?.tourImageURL,
             
             let tourName = selectedTournamentProfile?.tourName,
             let tourGame = selectedTournamentProfile?.tourGame,
