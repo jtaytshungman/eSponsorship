@@ -37,6 +37,7 @@ class TournamentsViewController: UIViewController {
         reloadTableWhenAddChild()
         self.tournamentsTableView.reloadData()
     }
+    
 
     func fetchpost(){
         
@@ -143,6 +144,7 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
         destination.selectedTournamentProfile = selectedTourmanent
         navigationController?.pushViewController(destination, animated: true)
     }
+    
     
 }
 

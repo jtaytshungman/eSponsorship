@@ -10,8 +10,18 @@ import UIKit
 
 class AboutViewController: UIViewController {
     
+    @IBOutlet weak var orgView: UIView!
+    
+    @IBOutlet weak var gamerView: UIView!
+    
+    @IBOutlet weak var spoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        orgView.layer.cornerRadius = 20
+        gamerView.layer.cornerRadius = 20
+        spoView.layer.cornerRadius = 20
          
 
         
