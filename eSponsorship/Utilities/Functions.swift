@@ -36,7 +36,7 @@ public class converter {
     class func convertToDate(_ timeInterval: Double) -> String {
         let date = Date(timeIntervalSince1970: timeInterval)
         let dateFormatter : DateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd HH:mm"
+        dateFormatter.dateFormat = "MMM-dd HH:mm"
         let timeString = dateFormatter.string(from: date)
         
         return timeString

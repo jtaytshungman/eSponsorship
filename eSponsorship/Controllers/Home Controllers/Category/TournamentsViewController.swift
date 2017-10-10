@@ -13,9 +13,14 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
+protocol TitleDelegate {
+    func changeTitle(to str : String)
+}
+
 class TournamentsViewController: UIViewController {
 
     var tournaments : [Tournaments] = []
+    var delegate : TitleDelegate?
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
     
@@ -32,10 +37,14 @@ class TournamentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = "Tournaments"
         fetchpost()
         reloadTableWhenAddChild()
         self.tournamentsTableView.reloadData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        delegate?.changeTitle(to: "Tournaments")
     }
     
 
