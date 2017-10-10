@@ -17,12 +17,13 @@ class DetailedTournamentsViewController: UIViewController {
     @IBOutlet weak var orgView: UIView!
     @IBOutlet weak var tournamentView: UIView!
     @IBOutlet weak var locationView: UIView!
-    
     @IBOutlet weak var orgNameTxt: UITextField!
     @IBOutlet weak var orgEmailTxt: UITextField!
     @IBOutlet weak var orgAffTxt: UITextField!
     @IBOutlet weak var orgContactTxt: UITextField!
+    
     @IBOutlet weak var tourImage: UIImageView!
+    
     @IBOutlet weak var tourNameTxt: UITextField!
     @IBOutlet weak var tourGameTxt: UITextField!
     @IBOutlet weak var tourLevelTxt: UITextField!
@@ -50,7 +51,7 @@ class DetailedTournamentsViewController: UIViewController {
             let orgAff = selectedTournamentProfile?.orgAff,
             let orgContact = selectedTournamentProfile?.orgContact,
             
-            //let tourImage = selectedTournamentProfile?.tourImageURL,
+            let tourImageURL = selectedTournamentProfile?.tourImageURL,
             
             let tourName = selectedTournamentProfile?.tourName,
             let tourGame = selectedTournamentProfile?.tourGame,
@@ -73,7 +74,7 @@ class DetailedTournamentsViewController: UIViewController {
         orgEmailTxt.text = orgEmail
         orgAffTxt.text = orgAff
         orgContactTxt.text = orgContact
-        //tourImage.image
+        tourImage.loadImage(from: tourImageURL)
         tourNameTxt.text = tourName
         tourGameTxt.text = tourGame
         tourLevelTxt.text = tourLevel

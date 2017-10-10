@@ -48,12 +48,18 @@ class UserProfileViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         loadUserInfoHandler()
         
+        profileImage.layer.borderWidth = 1
+        profileImage.layer.masksToBounds = false
+        profileImage.layer.borderColor = UIColor.black.cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+        profileImage.clipsToBounds = true
         
     }
     

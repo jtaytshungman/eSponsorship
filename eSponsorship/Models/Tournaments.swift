@@ -15,7 +15,7 @@ class Tournaments {
     var orgAff : String?
     var orgContact : String?
     
-    //var tourImageURL : String?
+    var tourImageURL : String?
     var tourName : String?
     var tourGame : String?
     var tourLevel : String?
@@ -40,7 +40,7 @@ class Tournaments {
         orgEmailInput : String,
         orgAffInput : String ,
         orgContactInput : String,
-        //tourImageURLInput : String,
+        tourImageURLInput : String,
         tourNameInput : String,
         tourGameInput : String,
         tourLevelInput : String,
@@ -63,7 +63,7 @@ class Tournaments {
         self.orgAff = orgAffInput
         self.orgContact = orgContactInput
         
-        //self.tourImageURL = tourImageURLInput
+        self.tourImageURL = tourImageURLInput
         
         self.tourName = tourNameInput
         self.tourGame = tourGameInput
