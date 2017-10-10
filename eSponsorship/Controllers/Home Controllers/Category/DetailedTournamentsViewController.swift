@@ -12,34 +12,41 @@ class DetailedTournamentsViewController: UIViewController {
     
     var selectedTournamentProfile : Tournaments?
     
+    @IBOutlet weak var tournamentNameLabel: UILabel!
+    @IBOutlet weak var tournamentGameLabel: UILabel!
+    @IBOutlet weak var startTimeLabel: UILabel!
+    @IBOutlet weak var endTimeLabel: UILabel!
+    
+    @IBOutlet weak var locationName: UILabel!
+    @IBOutlet weak var locationUnit: UILabel!
+    @IBOutlet weak var locationStreet: UILabel!
+    @IBOutlet weak var locationCity: UILabel!
+    @IBOutlet weak var locationState: UILabel!
+    @IBOutlet weak var locationCountry: UILabel!
+    
+    @IBOutlet weak var orgNameLabel: UILabel!
+    @IBOutlet weak var orgAffLabel: UILabel!
+    @IBOutlet weak var orgEmailLabel: UILabel!
+    @IBOutlet weak var orgContactLabel: UILabel!
+    
+    @IBOutlet weak var levelLabel: UILabel!
+    @IBOutlet weak var participantLabel: UILabel!
+    @IBOutlet weak var prizePoolLabel: UILabel!
+    @IBOutlet weak var urlLabel: UILabel!
+    
     @IBOutlet weak var controller: UISegmentedControl!
     
     @IBOutlet weak var orgView: UIView!
     @IBOutlet weak var tournamentView: UIView!
     @IBOutlet weak var locationView: UIView!
     
-    @IBOutlet weak var orgNameTxt: UITextField!
-    @IBOutlet weak var orgEmailTxt: UITextField!
-    @IBOutlet weak var orgAffTxt: UITextField!
-    @IBOutlet weak var orgContactTxt: UITextField!
+    
+    
     @IBOutlet weak var tourImage: UIImageView!
-    @IBOutlet weak var tourNameTxt: UITextField!
-    @IBOutlet weak var tourGameTxt: UITextField!
-    @IBOutlet weak var tourLevelTxt: UITextField!
-    @IBOutlet weak var tourParticipantsTxt: UITextField!
-    @IBOutlet weak var tourPrizeTxt: UITextField!
-    @IBOutlet weak var tourURLTxt: UITextField!
-    @IBOutlet weak var tourStartTimeTxt: UITextField!
-    @IBOutlet weak var tourEndTimeTxt: UITextField!
-    @IBOutlet weak var tourLocNameTxt: UITextField!
-    @IBOutlet weak var tourLocUnitTxt: UITextField!
-    @IBOutlet weak var tourLocStreetTxt: UITextField!
-    @IBOutlet weak var tourLocCityTxt: UITextField!
-    @IBOutlet weak var tourLocStateTxt: UITextField!
-    @IBOutlet weak var tourLocCountryTxt: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         segmentedControllerHandler()
         orgView.layer.cornerRadius = 20
         tournamentView.layer.cornerRadius = 20
@@ -69,31 +76,37 @@ class DetailedTournamentsViewController: UIViewController {
             let tourLocCountry = selectedTournamentProfile?.tourLocCountry
             else { return }
         
-        orgNameTxt.text =  orgName
-        orgEmailTxt.text = orgEmail
-        orgAffTxt.text = orgAff
-        orgContactTxt.text = orgContact
+        
         //tourImage.image
-        tourNameTxt.text = tourName
-        tourGameTxt.text = tourGame
-        tourLevelTxt.text = tourLevel
-        tourParticipantsTxt.text = tourParticipants
-        tourPrizeTxt.text = tourPrize
-        tourURLTxt.text = tourURL
-        tourStartTimeTxt.text = converter.convertToDate(tourStartTime)
-        tourEndTimeTxt.text = converter.convertToDate(tourEndTime)
-        tourLocNameTxt.text = tourLocName
-        tourLocUnitTxt.text = tourLocUnit
-        tourLocStreetTxt.text = tourLocStreet
-        tourLocCityTxt.text = tourLocCity
-        tourLocStateTxt.text = tourLocState
-        tourLocCountryTxt.text = tourLocCountry
+        
+        tournamentNameLabel.text = tourName
+        tournamentGameLabel.text = tourGame
+        startTimeLabel.text = converter.convertToDate(tourStartTime)
+        endTimeLabel.text = converter.convertToDate(tourEndTime)
+        
+        locationName.text = tourLocName
+        locationUnit.text = tourLocUnit
+        locationCity.text = tourLocCity
+        locationStreet.text = tourLocStreet
+        locationState.text = tourLocState
+        locationCountry.text = tourLocCountry
+        
+        orgNameLabel.text = orgName
+        orgEmailLabel.text = orgEmail
+        orgAffLabel.text = orgAff
+        orgContactLabel.text = orgContact
+        
+        levelLabel.text = tourLevel
+        participantLabel.text = tourParticipants
+        prizePoolLabel.text = tourPrize
+        urlLabel.text = tourURL
+        
+        
         
     }
     
     @IBAction func segmentedController(_ sender: Any) {
         segmentedControllerHandler()
-        
     }
     
     func segmentedControllerHandler () {

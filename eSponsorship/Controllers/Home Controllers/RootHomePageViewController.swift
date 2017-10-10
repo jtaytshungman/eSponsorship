@@ -16,18 +16,31 @@ class RootHomePageViewController: UIPageViewController, UIPageViewControllerData
         
         let gamerTable = sbPageVC.instantiateViewController(withIdentifier: "GamersViewController")
         let tourTable = sbPageVC.instantiateViewController(withIdentifier: "TournamentsViewController")
+        
+        
 //        let teamTable = sbPageVC.instantiateViewController(withIdentifier: "TeamsViewController")
-        
+
         return [tourTable, gamerTable]
-        
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dataSource = self
         
+        self.title = "Tournaments"
         if let initialViewController = viewControllerList.first {
             self.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
+        }
+        
+        for vc in viewControllerList {
+            if let viewController = vc as? TournamentsViewController {
+                viewController.delegate = self
+                continue
+            }
+            if let viewController = vc as? GamersViewController {
+                viewController.delegate = self
+                continue
+            }
         }
         
     }
@@ -51,4 +64,10 @@ class RootHomePageViewController: UIPageViewController, UIPageViewControllerData
         return viewControllerList[nextIndex]
     }
 
+}
+
+extension RootHomePageViewController : TitleDelegate {
+    func changeTitle(to str: String) {
+        self.title = str
+    }
 }

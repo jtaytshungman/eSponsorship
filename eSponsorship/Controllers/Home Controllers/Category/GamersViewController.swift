@@ -16,6 +16,7 @@ import FirebaseDatabase
 class GamersViewController: UIViewController {
     
     var gamersProfiles: [Gamers] = []
+    var delegate : TitleDelegate?
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
 
@@ -32,12 +33,17 @@ class GamersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Profile"
+        
         
         fetchpost()
         
         self.gamersTableView.reloadData()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        delegate?.changeTitle(to: "Gamers")
     }
     
     func fetchpost(){
