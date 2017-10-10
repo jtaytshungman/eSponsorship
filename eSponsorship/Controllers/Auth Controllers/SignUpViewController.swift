@@ -18,6 +18,12 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        emailTextField.layer.cornerRadius = 10
+        passwordTextField.layer.cornerRadius = 10
+        confirmTextField.layer.cornerRadius = 10
+        signUpButton.layer.cornerRadius = 10
+        
         self.title = "Sign Up"
     }
     
@@ -25,6 +31,9 @@ class SignUpViewController: UIViewController {
         didSet {
             signUpButton.addTarget(self, action: #selector(signUpUser), for: .touchUpInside)
         }
+    }
+    @IBAction func cancelSignUpButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     // MARK: SignUpUser() Function is Here

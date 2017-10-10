@@ -30,7 +30,8 @@ class EditProfileFormViewController: FormViewController {
             
             <<< ImageRow () { row in
                 row.title = "Select A Profile Image"
-                row.tag = "user_profile_image_url"
+                row.tag = "user_image_url"
+                row.value = nil
                 row.sourceTypes = [ .PhotoLibrary, .SavedPhotosAlbum ]
                 row.clearAction = .yes(style: UIAlertActionStyle.destructive)
                 
@@ -39,9 +40,9 @@ class EditProfileFormViewController: FormViewController {
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
                     
                 } .onChange({ (imageRow) in
-                    if let profileImageSelected = imageRow.value {
-                        FirebaseDataHandler.uploadUserProfileImageHandler(imageFor: "/userProfileImage", image: profileImageSelected)
-                    }
+//                    if let profileImageSelected = imageRow.value {
+//                        FirebaseDataHandler.uploadUserProfileImageHandler(imageFor: "/userProfileImage", image: profileImageSelected)
+//                    }
                 })
             
             <<< NameRow() {

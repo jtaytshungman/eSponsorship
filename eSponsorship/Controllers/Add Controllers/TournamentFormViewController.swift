@@ -73,6 +73,7 @@ class TournamentFormViewController: FormViewController{
         
         form +++ Section("Tournament Details")
             
+            // MARK : IMAGE ROW
             <<< ImageRow () { row in
                 row.tag = "tournament_image_url"
                 row.title = "Tournament Image"
