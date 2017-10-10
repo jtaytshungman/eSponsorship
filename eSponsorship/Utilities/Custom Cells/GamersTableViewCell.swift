@@ -14,6 +14,7 @@ class GamersTableViewCell: UITableViewCell {
     @IBOutlet weak var subMainLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var bgView: UIView!
     
     static let cellIdentifier = "GamersCell"
     static let cellNib = UINib(nibName: "GamersTableViewCell", bundle: Bundle.main)

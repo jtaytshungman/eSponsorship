@@ -42,7 +42,6 @@ class GamersViewController: UIViewController {
     func fetchpost(){
         
         databaseRef = Database.database().reference()
-        
         databaseRef.child("users").observe(.childAdded, with: { (snapshot) in
             
             guard let myGamers = snapshot.value as? [String: Any]
@@ -83,29 +82,7 @@ class GamersViewController: UIViewController {
     
 }
 
-extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return gamersProfiles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = gamersTableView.dequeueReusableCell(withIdentifier: GamersTableViewCell.cellIdentifier) as? GamersTableViewCell else {
-            return UITableViewCell()
-        }
-        
-        let gamerSelected = gamersProfiles[indexPath.row]
-        
-//        if let profileImage = gamerSelected.userProfileImageURL {
-//            cell.profileImage.loadImage(from: profileImage)
-//        }
-        
-        cell.mainLabel.text = gamerSelected.userName
-        cell.subMainLabel.text = gamerSelected.userGameChoice1
-        cell.locationLabel.text = gamerSelected.userLocationBased
-        
-        return cell
-    }
+extension GamersViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let destination = storyboard?.instantiateViewController(withIdentifier: "DetailedGamersViewController") as? DetailedGamersViewController else {return}
         
@@ -115,7 +92,38 @@ extension GamersViewController : UITableViewDelegate,UITableViewDataSource {
         navigationController?.pushViewController(destination, animated: true)
         
     }
+
 }
+
+extension GamersViewController : UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return gamersProfiles.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = gamersTableView.dequeueReusableCell(withIdentifier: GamersTableViewCell.cellIdentifier, for: indexPath) as? GamersTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        let gamerSelected = gamersProfiles[indexPath.row]
+        
+        cell.mainLabel.text = gamerSelected.userName
+        cell.subMainLabel.text = gamerSelected.userGameChoice1
+        cell.locationLabel.text = gamerSelected.userLocationBased
+        
+        if let profile_image_url = gamerSelected.userProfileImageURL {
+            cell.profileImage.loadImage(from: profile_image_url)
+        }
+        
+        
+        return cell
+    }
+    
+    
+}
+
+
 
 
 
