@@ -34,15 +34,15 @@ class ViewMyTournamentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "view My Tournaments TableView"
-        fetchpost()
+        self.title = "My Tournaments"
+        fetchMyOTournaments()
         viewMyTournamentsTableView.allowsMultipleSelectionDuringEditing = true
         
         
     }
     
     
-    func fetchpost(){
+    func fetchMyOTournaments(){
         
         databaseRef = Database.database().reference()
         databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
@@ -56,7 +56,7 @@ class ViewMyTournamentViewController: UIViewController {
                 let orgEmail = mypost["org_email"] as? String,
                 let orgAff = mypost["org_aff"] as? String,
                 let orgContact = mypost["org_contact"] as? String,
-                let tournamentID = mypost["Tournament_UID"] as? String,
+//                let tournamentID = mypost["Tournament_UID"] as? String,
                 
                 let tourImageURL = mypost["image_url"] as? String,
                 let tourName = mypost["tournament_name"] as? String,
@@ -76,7 +76,9 @@ class ViewMyTournamentViewController: UIViewController {
                 let tourLocCountry = mypost["location_country"] as? String {
                 
                 if userId_sub == Auth.auth().currentUser?.uid {
+                    
                     DispatchQueue.main.async {
+                        
                         let newTournament = Tournaments(userID_sub_Input : userId_sub,
                                                         orgNameInput: orgName,
                                                         orgEmailInput: orgEmail,
@@ -99,8 +101,10 @@ class ViewMyTournamentViewController: UIViewController {
                                                         tourLocCountryInput: tourLocCountry)
                         
                         self.posts.append(newTournament)
+                        
                         self.viewMyTournamentsTableView.reloadData()
                     }
+                    
                 }
                 
             }
@@ -142,14 +146,14 @@ extension ViewMyTournamentViewController : UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         print(indexPath.row)
         
-        let post = posts[indexPath.row]
-        
-        if let selectedTournament = post.tournamentKey, let uid = Auth.auth().currentUser?.uid {
-            FirebaseDataHandler.deleteTournamentFromFirebase(tournamentUID: selectedTournament, userUID: uid)
-        }
-    
-        self.posts.remove(at: indexPath.row)
-        self.viewMyTournamentsTableView.deleteRows(at: [indexPath], with: .left)
+//        let post = posts[indexPath.row]
+//
+//        if let uid = Auth.auth().currentUser?.uid {
+//            FirebaseDataHandler.deleteTournamentFromFirebase(tournamentUID: selectedTournament, userUID: uid)
+//        }
+//
+//        self.posts.remove(at: indexPath.row)
+//        self.viewMyTournamentsTableView.deleteRows(at: [indexPath], with: .left)
     
     }
     

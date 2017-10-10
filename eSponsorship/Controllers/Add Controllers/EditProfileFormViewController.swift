@@ -39,11 +39,7 @@ class EditProfileFormViewController: FormViewController {
                     cell.accessoryView?.layer.cornerRadius = 17
                     cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
                     
-                } .onChange({ (imageRow) in
-//                    if let profileImageSelected = imageRow.value {
-//                        FirebaseDataHandler.uploadUserProfileImageHandler(imageFor: "/userProfileImage", image: profileImageSelected)
-//                    }
-                })
+            }
             
             <<< NameRow() {
                 $0.title = "User Name"
@@ -76,7 +72,7 @@ class EditProfileFormViewController: FormViewController {
             
             <<< PickerInlineRow <String> () { (row : PickerInlineRow<String>) -> Void in
                 row.title = "Based Location"
-                row.tag = "user_location_"
+                row.tag = "user_location_based"
                 row.options = Constant.Data.states
                 row.value = ""
                 row.add(rule: RuleRequired())
@@ -90,7 +86,6 @@ class EditProfileFormViewController: FormViewController {
                 $0.title = "Player Biography"
                 $0.placeholder = "Show something about yourself."
                 $0.tag = "user_bio_desc"
-//                $0.value = ""
             }
             
             
@@ -100,25 +95,33 @@ class EditProfileFormViewController: FormViewController {
                 $0.title = "Twitch"
                 $0.tag = "user_twitch_url"
                 $0.value = "https://www.twitch.com/"
-            }
+                }.cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .URL
+                })
             
             <<< TextRow(){
                 $0.title = "Youtube"
                 $0.tag = "user_youtube_url"
                 $0.value = "https://www.youtube.com/"
-            }
+                }.cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .URL
+                })
             
             <<< TextRow(){
                 $0.title = "Facebook"
                 $0.tag = "user_facebook_url"
                 $0.value = "https://www.facebook.com/"
-            }
+                }.cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .URL
+                })
             
             <<< TextRow(){
                 $0.title = "Others"
                 $0.tag = "user_others_url"
-                $0.value = "https://www."
-            }
+                $0.value = "https://"
+                }.cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .URL
+                })
             
             // MARK : Selecting Games and Competing Level
             
@@ -189,8 +192,10 @@ class EditProfileFormViewController: FormViewController {
                         guard let currentUserID = Auth.auth().currentUser?.uid else { return }
                         let ref = Database.database().reference()
                         let userReference = ref.child("users").child(currentUserID)
-                       
+                        
                         FirebaseDataHandler.uploadToUserProfileHandler(uid: currentUserID, values: editProfileEurekaData)
+                        
+                        
                         
                         self?.dismiss(animated: true, completion: nil)
                         

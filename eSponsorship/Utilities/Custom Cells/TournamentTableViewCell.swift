@@ -28,14 +28,14 @@ class TournamentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-       // aestheticsFunction ()
+        aestheticsFunction ()
         
     }
     
     func aestheticsFunction () {
         bgView.layer.cornerRadius = 10
-        imageHeader.layer.cornerRadius = 20
-        topRightLabel.layer.cornerRadius = 20
+        imageHeader.layer.cornerRadius = 10
+        topRightLabel.layer.cornerRadius = 50
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

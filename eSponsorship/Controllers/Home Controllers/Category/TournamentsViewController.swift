@@ -18,15 +18,15 @@ protocol TitleDelegate {
 }
 
 class TournamentsViewController: UIViewController {
-
-    var refreshControl : UIRefreshControl?
-    
-    var initialLoad = true
     
     var tournaments : [Tournaments] = []
+    
     var delegate : TitleDelegate?
+//    var refreshControl : UIRefreshControl?
+    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
+    var databaseHandle : DatabaseHandle?
     
     @IBOutlet weak var tournamentsTableView: UITableView!{
         didSet{
@@ -40,18 +40,19 @@ class TournamentsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchpost()
         
-        refreshControl = UIRefreshControl()
-        refreshControl?.attributedTitle = NSAttributedString(string: "Refresh Tournaments")
-        refreshControl?.addTarget(self, action: #selector(populateTableHandler), for: UIControlEvents.valueChanged)
-        tournamentsTableView.addSubview(refreshControl!)
+//        refreshControl = UIRefreshControl()
+//        refreshControl?.attributedTitle = NSAttributedString(string: "Refresh Tournaments")
+//        refreshControl?.addTarget(self, action: #selector(populateTableHandler), for: UIControlEvents.valueChanged)
+//        tournamentsTableView.addSubview(refreshControl!)
     }
     
-    func populateTableHandler () {
-        fetchpost()
-        refreshControl?.endRefreshing()
-    }
+//    func populateTableHandler () {
+//        fetchpost()
+//        refreshControl?.endRefreshing()
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -62,8 +63,8 @@ class TournamentsViewController: UIViewController {
     func fetchpost(){
         
         databaseRef = Database.database().reference()
-        databaseRef.child("GameShip_Tournaments").observe(.value, with: { (snapshot) in
-            
+        
+        databaseHandle = databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
@@ -95,51 +96,33 @@ class TournamentsViewController: UIViewController {
             {
                 DispatchQueue.main.async {
                     let newTournament = Tournaments(
-                                                    userID_sub_Input : userId_sub,
-                                                    orgNameInput: orgName,
-                                                    orgEmailInput: orgEmail,
-                                                    orgAffInput: orgAff,
-                                                    orgContactInput: orgContact,
-                                                    tourImageURLInput : tourImageURL,
-                                                    tourNameInput: tourName,
-                                                    tourGameInput: tourGame,
-                                                    tourLevelInput: tourLevel,
-                                                    tourParticipantsInput: tourParticipants,
-                                                    tourPrizeInput: tourPrize,
-                                                    tourURLInput: tourURL,
-                                                    tourStartTimeInput: tourStartTime,
-                                                    tourEndTimeInput: tourEndTime,
-                                                    tourLocNameInput: tourLocName,
-                                                    tourLocUnitInput: tourLocUnit,
-                                                    tourLocStreetInput: tourLocStreet,
-                                                    tourLocCityInput: tourLocCity,
-                                                    tourLocStateInput: tourLocState,
-                                                    tourLocCountryInput: tourLocCountry)
-                
-                    
+                        userID_sub_Input : userId_sub,
+                        orgNameInput: orgName,
+                        orgEmailInput: orgEmail,
+                        orgAffInput: orgAff,
+                        orgContactInput: orgContact,
+                        tourImageURLInput : tourImageURL,
+                        tourNameInput: tourName,
+                        tourGameInput: tourGame,
+                        tourLevelInput: tourLevel,
+                        tourParticipantsInput: tourParticipants,
+                        tourPrizeInput: tourPrize,
+                        tourURLInput: tourURL,
+                        tourStartTimeInput: tourStartTime,
+                        tourEndTimeInput: tourEndTime,
+                        tourLocNameInput: tourLocName,
+                        tourLocUnitInput: tourLocUnit,
+                        tourLocStreetInput: tourLocStreet,
+                        tourLocCityInput: tourLocCity,
+                        tourLocStateInput: tourLocState,
+                        tourLocCountryInput: tourLocCountry)
                     
                     self.tournaments.append(newTournament)
-                    
-                    let index = self.tournaments.count - 1
-                    let indexPath = IndexPath(row: index, section: 0)
-                    self.tournamentsTableView.insertRows(at: [indexPath], with: .right)
-                    
-                    if ( self.initialLoad == false ) { //upon first load, don't reload the tableView until all children are loaded
-                        self.tournamentsTableView.reloadData()
-                    }
+                    self.tournamentsTableView.reloadData()
                     
                 }
-                
             }
-            
-        })
-        
-//        databaseRef.child("GameShip_Tournaments").observeSingleEvent(of: .value, with: { (snapshot) in
-//            print("inital data loaded so reload tableView!  \(snapshot.childrenCount)")
-//            self.tournamentsTableView.reloadData()
-//            self.initialLoad = false
-//        }, withCancel: nil)
-
+        }, withCancel: nil)
     }
     
 }

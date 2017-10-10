@@ -15,8 +15,6 @@ class Tournaments {
     var orgAff : String?
     var orgContact : String?
     
-    var tournamentKey : String? 
-    
     var tourImageURL : String?
     var tourName : String?
     var tourGame : String?
