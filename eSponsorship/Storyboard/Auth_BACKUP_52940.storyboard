@@ -248,4 +248,10 @@
         <image name="GameShip" width="382" height="111"/>
         <image name="Screen Shot 2017-10-10 at 9.34.00 am" width="1436" height="691"/>
     </resources>
+<<<<<<< HEAD
+=======
+    <inferredMetricsTieBreakers>
+        <segue reference="B8g-h3-KAd"/>
+    </inferredMetricsTieBreakers>
+>>>>>>> ha
 </document>
