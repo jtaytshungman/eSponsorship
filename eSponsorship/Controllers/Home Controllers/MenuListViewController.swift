@@ -116,20 +116,7 @@ class MenuListViewController: UIViewController {
                     guard let url = URL(string : profilePicURL) else { return }
                     
                     self.sideMenuProfileImage.loadImage(from: profilePicURL)
-                    
-//                    let session = URLSession.shared
-//                    let task = session.dataTask(with: url) { (data, response, error) in
-//                        if let error = error {
-//                            print ("Error : \(error.localizedDescription)")
-//                            return
-//                        }
-//                        if let data = data {
-//                            DispatchQueue.main.async {
-//                                self.sideMenuProfileImage.image = UIImage(data: data)
-//                            }
-//                        }
-//                    }
-//                    task.resume()
+                
                 }
             }
         }, withCancel: nil)

@@ -25,10 +25,17 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //check if the user already signed in
+        loginButton.layer.cornerRadius = 10
+        usernameTextField.layer.cornerRadius = 10
+        passwordTextField.layer.cornerRadius = 10
         if Auth.auth().currentUser != nil {
             correctSignInHandler()
         }
         
+    }
+    @IBAction func toSignUpPageButtonTapped(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "SignUpViewController")
+        present(vc!, animated: true, completion: nil)
     }
 }
 
@@ -68,5 +75,7 @@ extension LoginViewController {
         }
         present(targetVC, animated: true, completion: nil)
     }
+    
+    
     
 }
