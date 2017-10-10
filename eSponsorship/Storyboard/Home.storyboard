@@ -51,6 +51,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-10-10 at 9.34.00 am" translatesAutoresizingMaskIntoConstraints="NO" id="8CQ-bl-MU1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-dA-TyU">
                                 <rect key="frame" x="66" y="310" width="180" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -73,15 +77,15 @@
                                     <action selector="viewProfileButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="t8t-K4-tjA"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_edit_orange" translatesAutoresizingMaskIntoConstraints="NO" id="NLR-pc-Y3a">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="if_pencil_1055013" translatesAutoresizingMaskIntoConstraints="NO" id="NLR-pc-Y3a">
                                 <rect key="frame" x="16" y="310" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_profile_orange" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-mZ-RoF">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="if_profle_1055000" translatesAutoresizingMaskIntoConstraints="NO" id="KF2-mZ-RoF">
                                 <rect key="frame" x="15" y="262" width="42" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Spk-yr-7oE">
                                 <rect key="frame" x="66" y="358" width="180" height="40"/>
@@ -105,15 +109,15 @@
                                     <action selector="aboutButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="ukd-pN-BU7"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_tournament_orange" translatesAutoresizingMaskIntoConstraints="NO" id="blE-MJ-TbM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="if_star_1054969" translatesAutoresizingMaskIntoConstraints="NO" id="blE-MJ-TbM">
                                 <rect key="frame" x="16" y="358" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_about_orange" translatesAutoresizingMaskIntoConstraints="NO" id="Eqa-TA-sSr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="if_brightness_1055105" translatesAutoresizingMaskIntoConstraints="NO" id="Eqa-TA-sSr">
                                 <rect key="frame" x="15" y="559" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KaL-03-Dcu">
                                 <rect key="frame" x="65" y="607" width="180" height="40"/>
@@ -126,17 +130,17 @@
                                     <action selector="logoutButtonTapped:" destination="dai-aA-5gr" eventType="touchUpInside" id="Uyo-Lh-OJD"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_logout_orange" translatesAutoresizingMaskIntoConstraints="NO" id="Ds5-iX-brm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="if_power_406864" translatesAutoresizingMaskIntoConstraints="NO" id="Ds5-iX-brm">
                                 <rect key="frame" x="15" y="607" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCk-N3-0N2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="if_gamecontroller_1055053" translatesAutoresizingMaskIntoConstraints="NO" id="WCk-N3-0N2">
                                 <rect key="frame" x="15" y="406" width="40" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFb-SN-4MB">
-                                <rect key="frame" x="65" y="406" width="156" height="40"/>
+                                <rect key="frame" x="65" y="406" width="180" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
                                 <state key="normal" title="My Tournaments">
@@ -148,7 +152,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-rE-9at">
-                                <rect key="frame" x="39" y="92" width="130" height="130"/>
+                                <rect key="frame" x="39" y="64" width="158" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
@@ -169,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="une-HM-STO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1601" y="18"/>
+            <point key="canvasLocation" x="1600.8" y="17.541229385307346"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="Ata-qf-LZF">
@@ -1129,10 +1133,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_about_orange" width="100" height="100"/>
-        <image name="icon_edit_orange" width="100" height="100"/>
-        <image name="icon_logout_orange" width="100" height="100"/>
-        <image name="icon_profile_orange" width="100" height="100"/>
-        <image name="icon_tournament_orange" width="100" height="100"/>
+        <image name="Screen Shot 2017-10-10 at 9.34.00 am" width="1436" height="691"/>
+        <image name="if_brightness_1055105" width="128" height="128"/>
+        <image name="if_gamecontroller_1055053" width="128" height="128"/>
+        <image name="if_pencil_1055013" width="128" height="128"/>
+        <image name="if_power_406864" width="128" height="128"/>
+        <image name="if_profle_1055000" width="128" height="128"/>
+        <image name="if_star_1054969" width="128" height="128"/>
     </resources>
 </document>

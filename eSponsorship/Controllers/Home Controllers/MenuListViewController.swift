@@ -28,12 +28,12 @@ class MenuListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadProfileImageHandler()
-        ImageDisplay.ProfileBounds(image: viewProfileIcon)
-        ImageDisplay.ProfileBounds(image: editProfileIcon)
-        ImageDisplay.ProfileBounds(image: addTournamentIcon)
-        ImageDisplay.ProfileBounds(image: aboutIcon)
+//        ImageDisplay.ProfileBounds(image: viewProfileIcon)
+//        ImageDisplay.ProfileBounds(image: editProfileIcon)
+//        ImageDisplay.ProfileBounds(image: addTournamentIcon)
+//        ImageDisplay.ProfileBounds(image: aboutIcon)
         ImageDisplay.ProfileBounds(image: sideMenuProfileImage)
-        ImageDisplay.ProfileBounds(image: logoutIcon)
+//        ImageDisplay.ProfileBounds(image: logoutIcon)
         
     }
     
