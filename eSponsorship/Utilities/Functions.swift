@@ -28,7 +28,7 @@ public class ImageDisplay {
         image.layer.cornerRadius = image.frame.size.width / 2
         image.clipsToBounds = true
         image.layer.borderWidth = CGFloat(3.0)
-        image.layer.borderColor = UIColor.white.cgColor
+        image.layer.borderColor = UIColor.black.cgColor
     }
 }
 
