@@ -57,7 +57,7 @@ class ViewMyTournamentViewController: UIViewController {
                 let orgAff = mypost["org_aff"] as? String,
                 let orgContact = mypost["org_contact"] as? String,
                 
-                //let tourImageURL = mypost["image_url"] as? String,
+                let tourImageURL = mypost["image_url"] as? String,
                 let tourName = mypost["tournament_name"] as? String,
                 let tourGame = mypost["competing_game"] as? String,
                 let tourLevel = mypost["competitive_level"] as? String,
@@ -76,7 +76,26 @@ class ViewMyTournamentViewController: UIViewController {
                 
                 if userId_sub == Auth.auth().currentUser?.uid {
                     DispatchQueue.main.async {
-                        let newTournament = Tournaments(userID_sub_Input : userId_sub, orgNameInput: orgName, orgEmailInput: orgEmail, orgAffInput: orgAff, orgContactInput: orgContact, tourNameInput: tourName, tourGameInput: tourGame, tourLevelInput: tourLevel, tourParticipantsInput: tourParticipants, tourPrizeInput: tourPrize, tourURLInput: tourURL,tourStartTimeInput: tourStartTime, tourEndTimeInput: tourEndTime, tourLocNameInput: tourLocName, tourLocUnitInput: tourLocUnit, tourLocStreetInput: tourLocStreet, tourLocCityInput: tourLocCity, tourLocStateInput: tourLocState, tourLocCountryInput: tourLocCountry)
+                        let newTournament = Tournaments(userID_sub_Input : userId_sub,
+                                                        orgNameInput: orgName,
+                                                        orgEmailInput: orgEmail,
+                                                        orgAffInput: orgAff,
+                                                        orgContactInput: orgContact,
+                                                        tourImageURLInput : tourImageURL,
+                                                        tourNameInput: tourName,
+                                                        tourGameInput: tourGame,
+                                                        tourLevelInput: tourLevel,
+                                                        tourParticipantsInput: tourParticipants,
+                                                        tourPrizeInput: tourPrize,
+                                                        tourURLInput: tourURL,
+                                                        tourStartTimeInput: tourStartTime,
+                                                        tourEndTimeInput: tourEndTime,
+                                                        tourLocNameInput: tourLocName,
+                                                        tourLocUnitInput: tourLocUnit,
+                                                        tourLocStreetInput: tourLocStreet,
+                                                        tourLocCityInput: tourLocCity,
+                                                        tourLocStateInput: tourLocState,
+                                                        tourLocCountryInput: tourLocCountry)
                         
                         self.posts.append(newTournament)
                         self.viewMyTournamentsTableView.reloadData()

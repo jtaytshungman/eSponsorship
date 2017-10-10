@@ -45,7 +45,14 @@ class DetailedGamersViewController: UIViewController {
         
         super.viewDidLoad()
         
-        guard let gameChoice1 = selectedGamerProfile?.userGameChoice1,
+        profileImage.layer.borderWidth = 1
+        profileImage.layer.masksToBounds = false
+        profileImage.layer.borderColor = UIColor.black.cgColor
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+        profileImage.clipsToBounds = true
+        
+        guard let profileImg = selectedGamerProfile?.userProfileImageURL,
+            let gameChoice1 = selectedGamerProfile?.userGameChoice1,
             let gameChoice1Level = selectedGamerProfile?.userGameChoice1Level,
             let gameChoice2 = selectedGamerProfile?.userGameChoice2,
             let gameChoice2Level = selectedGamerProfile?.userGameChoice2Level,
@@ -60,7 +67,7 @@ class DetailedGamersViewController: UIViewController {
             let youtubeURL = selectedGamerProfile?.userYoutubeURL
             
             else { return}
-        //profileImage.loadImage(from: imageView)
+        profileImage.loadImage(from: profileImg)
         gameChoice1Txt.text = gameChoice1
         gameChoice1LevelTxt.text = gameChoice1Level
         gameChoice2Txt.text = gameChoice2

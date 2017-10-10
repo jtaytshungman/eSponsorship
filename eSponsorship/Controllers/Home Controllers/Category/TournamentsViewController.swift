@@ -63,7 +63,7 @@ class TournamentsViewController: UIViewController {
                 let orgAff = mypost["org_aff"] as? String,
                 let orgContact = mypost["org_contact"] as? String,
                 
-                //let tourImageURL = mypost["image_url"] as? String,
+                let tourImageURL = mypost["image_url"] as? String,
                 let tourName = mypost["tournament_name"] as? String,
                 let tourGame = mypost["competing_game"] as? String,
                 let tourLevel = mypost["competitive_level"] as? String,
@@ -89,6 +89,7 @@ class TournamentsViewController: UIViewController {
                                                     orgEmailInput: orgEmail,
                                                     orgAffInput: orgAff,
                                                     orgContactInput: orgContact,
+                                                    tourImageURLInput : tourImageURL,
                                                     tourNameInput: tourName,
                                                     tourGameInput: tourGame,
                                                     tourLevelInput: tourLevel,
