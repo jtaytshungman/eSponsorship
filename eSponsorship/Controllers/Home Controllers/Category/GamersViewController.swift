@@ -57,7 +57,9 @@ class GamersViewController: UIViewController {
             if
                 let userName = myGamers["user_name"] as? String,
                 let userEmail = myGamers["email"] as? String,
+                
                 let userProfileImageURL = myGamers["user_image_url"] as? String,
+                
                 let userLocationBased = myGamers["user_location_based"] as? String,
                 let userDescription = myGamers["user_bio_desc"] as? String,
                 

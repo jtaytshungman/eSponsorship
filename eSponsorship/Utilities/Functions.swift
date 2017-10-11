@@ -86,32 +86,39 @@ public class FirebaseDataHandler {
         let ref = Database.database().reference()
         guard let currentUSER = Auth.auth().currentUser?.uid else { return }
         let tourReference = ref.child("GameShip_Tournaments").childByAutoId()
-        tourReference.child("Tournament_UID").setValue(tourReference.key)
+        //tourReference.child("Tournament_UID").setValue(tourReference.key)
         
-        tourReference.updateChildValues(firebaseValues) { (error, ref) in
-            
-            if error != nil {
-                print(error as Any)
-                return
-            }
-        }
         
-        tourReference.updateChildValues(["UserID_sub" : currentUSER])
+        firebaseValues["Tournament_UID"] = tourReference.key
+        firebaseValues["UserID_sub"] = currentUSER
         
         if let image = tournamentImage {
             convertImageRowToURL(imageToConvert: image, completion: { (imageUrl) in
                 if let url = imageUrl {
-                        tourReference.updateChildValues(["image_url" : url])
+                    firebaseValues["image_url"] = url
                 }
+                tourReference.updateChildValues(firebaseValues) { (error, ref) in
+                    if error != nil {
+                        print(error as Any)
+                        return
+                    }
+                }
+                
                 let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
                 userReference.updateChildValues([tourReference.key : "Tournament_UID"])
             })
-        } else {
-            // creates specifically the tournament key in users
+        }else{
+            
+            tourReference.updateChildValues(firebaseValues) { (error, ref) in
+                if error != nil {
+                    print(error as Any)
+                    return
+                }
+            }
+            
             let userReference = ref.child("users").child(uid).child("User_Tournament_Organizing")
             userReference.updateChildValues([tourReference.key : "Tournament_UID"])
         }
-        
     }
     
     // Team upload to gameship_teams
