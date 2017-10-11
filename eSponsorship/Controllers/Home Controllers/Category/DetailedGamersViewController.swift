@@ -14,31 +14,30 @@ class DetailedGamersViewController: UIViewController {
     
     @IBOutlet weak var profileImage: UIImageView!
     
-    @IBOutlet weak var gameChoice1Txt: UITextField!
+    @IBOutlet weak var gameChoice1Txt: UILabel!
     
-    @IBOutlet weak var gameChoice1LevelTxt: UITextField!
+    @IBOutlet weak var gameChoice1LevelTxt: UILabel!
     
-    @IBOutlet weak var gameChoice2Txt: UITextField!
+    @IBOutlet weak var gameChoice2Txt: UILabel!
     
-    @IBOutlet weak var gameChoice2LevelTxt: UITextField!
+    @IBOutlet weak var gameChoice2LevelTxt: UILabel!
     
-    @IBOutlet weak var gameChoice3Txt: UITextField!
+    @IBOutlet weak var gameChoice3Txt: UILabel!
     
-    @IBOutlet weak var gameChoice3LevelTxt: UITextField!
+    @IBOutlet weak var gameChoice3LevelTxt: UILabel!
     
     @IBOutlet weak var descriptionTxt: UITextView!
     
     @IBOutlet weak var fbURLTxt: UITextField!
-    
-    @IBOutlet weak var locationTxt: UITextField!
-    
-    @IBOutlet weak var usernameTxt: UITextField!
     
     @IBOutlet weak var otherURLTxt: UITextField!
     
     @IBOutlet weak var twitchURLTxt: UITextField!
     
     @IBOutlet weak var youtubeURLTxt: UITextField!
+    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var userLocationLabel: UILabel!
     
     @IBOutlet weak var viewTopGame: UIView!
     @IBOutlet weak var viewContact: UIView!
@@ -49,14 +48,14 @@ class DetailedGamersViewController: UIViewController {
         super.viewDidLoad()
         
         
-        viewUser.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
-        CornerRadius.CornerRadiusView(view : viewUser)
+//        viewUser.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+//        CornerRadius.CornerRadiusView(view : viewUser)
         
-        viewContact.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
-        CornerRadius.CornerRadiusView(view : viewContact)
+//        viewContact.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+//        CornerRadius.CornerRadiusView(view : viewContact)
         
-        viewTopGame.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
-        CornerRadius.CornerRadiusView(view : viewTopGame)
+//        viewTopGame.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
+//        CornerRadius.CornerRadiusView(view : viewTopGame)
         
         profileImage.layer.borderWidth = 1
         profileImage.layer.masksToBounds = false
@@ -89,8 +88,8 @@ class DetailedGamersViewController: UIViewController {
         gameChoice3LevelTxt.text = gameChoice3Level
         descriptionTxt.text = description
         fbURLTxt.text = facebookURL
-        locationTxt.text = location
-        usernameTxt.text = username
+        userLocationLabel.text = location
+        userNameLabel.text = username
         otherURLTxt.text = otherURL
         twitchURLTxt.text = twitchURL
         youtubeURLTxt.text = youtubeURL
