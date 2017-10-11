@@ -78,6 +78,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="7Fi-E7-ktP" firstAttribute="leading" secondItem="Zhu-kd-Rsd" secondAttribute="leading" constant="10" id="AZe-eh-AnJ"/>
                     <constraint firstAttribute="trailing" secondItem="7Fi-E7-ktP" secondAttribute="trailing" constant="10" id="Qht-i2-86g"/>

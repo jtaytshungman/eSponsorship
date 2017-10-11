@@ -77,7 +77,7 @@ class DetailedTournamentsViewController: UIViewController {
             else { return }
         
         
-        //tourImage.image
+        tourImage.loadImage(from: tourImageURL)
         
         tournamentNameLabel.text = tourName
         tournamentGameLabel.text = tourGame

@@ -23,8 +23,8 @@ class RootHomePageViewController: UIPageViewController, UIPageViewControllerData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.dataSource = self
-        
         self.title = "Tournaments"
         if let initialViewController = viewControllerList.first {
             self.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
