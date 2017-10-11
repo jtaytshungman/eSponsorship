@@ -26,7 +26,7 @@ class DetailedGamersViewController: UIViewController {
     
     @IBOutlet weak var gameChoice3LevelTxt: UITextField!
     
-    @IBOutlet weak var descriptionTxt: UITextField!
+    @IBOutlet weak var descriptionTxt: UITextView!
     
     @IBOutlet weak var fbURLTxt: UITextField!
     
@@ -40,10 +40,23 @@ class DetailedGamersViewController: UIViewController {
     
     @IBOutlet weak var youtubeURLTxt: UITextField!
     
+    @IBOutlet weak var viewTopGame: UIView!
+    @IBOutlet weak var viewContact: UIView!
+    @IBOutlet weak var viewUser: UIView!
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        
+        viewUser.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        CornerRadius.CornerRadiusView(view : viewUser)
+        
+        viewContact.backgroundColor = UIColor.gray.withAlphaComponent(0.5)
+        CornerRadius.CornerRadiusView(view : viewContact)
+        
+        viewTopGame.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
+        CornerRadius.CornerRadiusView(view : viewTopGame)
         
         profileImage.layer.borderWidth = 1
         profileImage.layer.masksToBounds = false

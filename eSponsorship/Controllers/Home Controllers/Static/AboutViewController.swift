@@ -22,7 +22,10 @@ class AboutViewController: UIViewController {
         orgView.layer.cornerRadius = 20
         gamerView.layer.cornerRadius = 20
         spoView.layer.cornerRadius = 20
-         
+        
+        orgView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
+        gamerView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
+        spoView.backgroundColor = UIColor.orange.withAlphaComponent(0.5)
 
         
     }

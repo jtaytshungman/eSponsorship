@@ -22,6 +22,17 @@ public class PromptHandler {
         
     }
 }
+public class CornerRadius {
+    class func CornerRadiusView (view : UIView) {
+        view.layer.cornerRadius = 20
+    }
+    class func CornerRadiusTF (textfield : UITextField) {
+        textfield.layer.cornerRadius = 20
+    }
+    class func CornerRadiusLabel (label : UILabel) {
+        label.layer.cornerRadius = 20
+    }
+}
 
 public class ImageDisplay {
     class func ProfileBounds (image : UIImageView) {
