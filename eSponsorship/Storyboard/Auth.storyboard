@@ -108,6 +108,7 @@
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="centerY" secondItem="yPW-Jg-1OJ" secondAttribute="centerY" id="Pgq-kA-t7l"/>
                             <constraint firstItem="4XC-ct-5Bo" firstAttribute="top" secondItem="GPx-hw-XUr" secondAttribute="bottom" constant="20" id="R8M-q2-21j"/>
                             <constraint firstItem="4XC-ct-5Bo" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" constant="80" id="S2I-Ix-Pgi"/>
+                            <constraint firstItem="hlJ-1b-20c" firstAttribute="top" secondItem="nSc-a5-jmt" secondAttribute="top" constant="34" id="SaN-zQ-G0m"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="leading" secondItem="yPW-Jg-1OJ" secondAttribute="leading" constant="20" id="bY5-hg-LBy"/>
                             <constraint firstItem="hlJ-1b-20c" firstAttribute="centerX" secondItem="GPx-hw-XUr" secondAttribute="centerX" id="dHi-Vn-bVZ"/>
                             <constraint firstItem="DMs-DI-xmW" firstAttribute="bottom" secondItem="nSc-a5-jmt" secondAttribute="bottom" id="gCc-iY-TaP"/>
@@ -196,7 +197,7 @@
                                     <constraint firstItem="OS8-KT-dYP" firstAttribute="height" secondItem="6MZ-Nu-1oJ" secondAttribute="height" id="Ckc-yq-E39"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gameship_appicon" translatesAutoresizingMaskIntoConstraints="NO" id="wJP-5J-UUg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameship_appicon" translatesAutoresizingMaskIntoConstraints="NO" id="wJP-5J-UUg">
                                 <rect key="frame" x="123" y="67" width="128" height="128"/>
                             </imageView>
                         </subviews>
@@ -214,6 +215,7 @@
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="top" secondItem="drN-Pp-mik" secondAttribute="top" id="qBx-Mi-qAT"/>
                             <constraint firstItem="NSg-Jg-HFf" firstAttribute="top" secondItem="9uN-Nf-abu" secondAttribute="bottom" constant="20" id="r81-iy-2yK"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="top" secondItem="wJP-5J-UUg" secondAttribute="bottom" constant="59" id="v8n-tw-LvQ"/>
+                            <constraint firstItem="wJP-5J-UUg" firstAttribute="top" secondItem="Ohl-1e-QkV" secondAttribute="top" constant="47" id="yFD-pD-pCm"/>
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" id="zDY-Jr-ffB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ohl-1e-QkV"/>
