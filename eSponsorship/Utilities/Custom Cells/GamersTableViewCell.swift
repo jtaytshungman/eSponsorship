@@ -21,6 +21,11 @@ class GamersTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        aestheticsFunction()
+    }
+    
+    func aestheticsFunction () {
+        bgView.layer.cornerRadius = 10
         
     }
     

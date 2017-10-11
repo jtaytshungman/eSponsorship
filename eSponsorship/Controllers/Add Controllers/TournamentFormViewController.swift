@@ -50,7 +50,9 @@ class TournamentFormViewController: FormViewController{
                 $0.tag = "org_email"
                 $0.value = ""
                 $0.placeholder = "Input Here"
-            }
+                }.cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .emailAddress
+                })
             
             <<< NameRow () {
                 $0.title = "Organizer Affliation"
@@ -65,7 +67,7 @@ class TournamentFormViewController: FormViewController{
                 $0.value = ""
                 $0.placeholder = "6012345678"
                 } .cellSetup({ (cell, _) in
-                    cell.textField.keyboardType = .numberPad
+                    cell.textField.keyboardType = .phonePad
                 })
     }
     
@@ -157,7 +159,9 @@ class TournamentFormViewController: FormViewController{
                 $0.placeholder = "www.tournamentname.com"
                 $0.tag = "tournament_url"
                 $0.value = ""
-        }
+                }.cellSetup({ (cell, _) in
+                    cell.textField.keyboardType = .emailAddress
+                })
         
         // MARK : Time of Tournament
         form +++ Section(header: "Time of Tournament", footer: "")
@@ -237,12 +241,12 @@ class TournamentFormViewController: FormViewController{
                         guard let tournamentData = self?.form.valuesForFirebase() else { return }
                         
                         FirebaseDataHandler.uploadTournamentHandler(uid: currentUID, values: tournamentData)
-//                        let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
-//                        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "TournamentsViewController") as? TournamentsViewController else {
-//                            return
-//                        }
-//                        self?.present(vc, animated: true, completion: nil)
-                       
+                        //                        let storyboardNew = UIStoryboard(name: "Home", bundle: nil)
+                        //                        guard let vc = storyboardNew.instantiateViewController(withIdentifier: "TournamentsViewController") as? TournamentsViewController else {
+                        //                            return
+                        //                        }
+                        //                        self?.present(vc, animated: true, completion: nil)
+                        
                         
                         self?.dismiss(animated: true, completion: nil)
                     }

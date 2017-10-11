@@ -182,28 +182,7 @@ class profileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
             }
         }
-    }
-    //    func BackToBack(){
-    //        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-    //        guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else { return }
-    //                self.dismiss(animated: true, completion: nil)
-    //
-    //
-    //        self.present(targetVC, animated: true, completion: nil)
-    //    }
-
-    
-    /*
-     func BackToBack(){
-     let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-     guard let targetVC = mainStoryboard.instantiateViewController(withIdentifier: "addTourViewController") as? addTourViewController else { return }
-     self.dismiss(animated: true, completion: nil)
-     
-     
-     self.present(targetVC, animated: true, completion: nil)
-     }
-     */
-    
+    }    
 }
 
 

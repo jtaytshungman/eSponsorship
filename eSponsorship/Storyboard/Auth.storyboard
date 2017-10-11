@@ -28,7 +28,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-10-10 at 9.34.00 am" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-DI-xmW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_orange_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-DI-xmW">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GPx-hw-XUr">
@@ -73,12 +73,6 @@
                                     <constraint firstItem="dgl-zX-Hre" firstAttribute="leading" secondItem="GPx-hw-XUr" secondAttribute="leading" id="xNq-NR-y8G"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="IZl-s0-sPX">
-                                <rect key="frame" x="38" y="95.5" width="300" height="111"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="UYc-tL-9zC"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4XC-ct-5Bo">
                                 <rect key="frame" x="80" y="461.5" width="221" height="29"/>
                                 <subviews>
@@ -111,12 +105,9 @@
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="centerY" secondItem="yPW-Jg-1OJ" secondAttribute="centerY" id="Pgq-kA-t7l"/>
                             <constraint firstItem="4XC-ct-5Bo" firstAttribute="top" secondItem="GPx-hw-XUr" secondAttribute="bottom" constant="20" id="R8M-q2-21j"/>
                             <constraint firstItem="4XC-ct-5Bo" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" constant="80" id="S2I-Ix-Pgi"/>
-                            <constraint firstItem="IZl-s0-sPX" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" constant="37.5" id="VS2-v8-sVJ"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="leading" secondItem="yPW-Jg-1OJ" secondAttribute="leading" constant="20" id="bY5-hg-LBy"/>
                             <constraint firstItem="DMs-DI-xmW" firstAttribute="bottom" secondItem="nSc-a5-jmt" secondAttribute="bottom" id="gCc-iY-TaP"/>
                             <constraint firstItem="DMs-DI-xmW" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" id="jQJ-UA-Q3w"/>
-                            <constraint firstItem="IZl-s0-sPX" firstAttribute="centerX" secondItem="yPW-Jg-1OJ" secondAttribute="centerX" id="nw3-AW-w0D"/>
-                            <constraint firstItem="GPx-hw-XUr" firstAttribute="top" secondItem="IZl-s0-sPX" secondAttribute="bottom" constant="20" id="r4n-py-7CV"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="centerX" secondItem="yPW-Jg-1OJ" secondAttribute="centerX" id="t76-Mv-awZ"/>
                             <constraint firstItem="DMs-DI-xmW" firstAttribute="trailing" secondItem="nSc-a5-jmt" secondAttribute="trailing" id="uKw-kt-43z"/>
                         </constraints>
@@ -141,7 +132,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2017-10-10 at 9.34.00 am" translatesAutoresizingMaskIntoConstraints="NO" id="C5D-PC-Wu1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_orange_gradient" translatesAutoresizingMaskIntoConstraints="NO" id="C5D-PC-Wu1">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9uN-Nf-abu">
@@ -174,13 +165,6 @@
                                     <constraint firstAttribute="height" constant="160" id="oU0-Y7-LJ7"/>
                                 </constraints>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="TRo-aa-QSg">
-                                <rect key="frame" x="38" y="84" width="300" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="Oct-qz-H2d"/>
-                                    <constraint firstAttribute="height" constant="150" id="u4t-fp-7Xg"/>
-                                </constraints>
-                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSg-Jg-HFf">
                                 <rect key="frame" x="81" y="434" width="215.5" height="29"/>
                                 <subviews>
@@ -214,12 +198,10 @@
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="centerX" secondItem="drN-Pp-mik" secondAttribute="centerX" id="VEq-fb-4x2"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="centerY" secondItem="drN-Pp-mik" secondAttribute="centerY" id="ZWY-eW-Z3i"/>
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="trailing" secondItem="Ohl-1e-QkV" secondAttribute="trailing" id="hNu-hd-gZw"/>
-                            <constraint firstItem="TRo-aa-QSg" firstAttribute="centerX" secondItem="drN-Pp-mik" secondAttribute="centerX" id="iR7-So-GyX"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" constant="20" id="lrA-LN-hUI"/>
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="top" secondItem="drN-Pp-mik" secondAttribute="top" id="qBx-Mi-qAT"/>
                             <constraint firstItem="NSg-Jg-HFf" firstAttribute="top" secondItem="9uN-Nf-abu" secondAttribute="bottom" constant="20" id="r81-iy-2yK"/>
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" id="zDY-Jr-ffB"/>
-                            <constraint firstItem="9uN-Nf-abu" firstAttribute="top" secondItem="TRo-aa-QSg" secondAttribute="bottom" constant="20" id="zXz-j4-spP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ohl-1e-QkV"/>
                     </view>
@@ -253,7 +235,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GameShip" width="382" height="111"/>
-        <image name="Screen Shot 2017-10-10 at 9.34.00 am" width="1436" height="691"/>
+        <image name="black_orange_gradient" width="1436" height="691"/>
     </resources>
 </document>

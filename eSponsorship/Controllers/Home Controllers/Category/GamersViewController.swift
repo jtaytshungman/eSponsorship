@@ -18,7 +18,9 @@ class GamersViewController: UIViewController {
     var refreshControl : UIRefreshControl?
     
     var gamersProfiles: [Gamers] = []
+    
     var delegate : TitleDelegate?
+    
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
 
@@ -33,43 +35,30 @@ class GamersViewController: UIViewController {
         }
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        fetchpost()
-        self.gamersTableView.reloadData()
-        
-        refreshControl = UIRefreshControl()
-        refreshControl?.attributedTitle = NSAttributedString(string: "Refresh Gamers")
-        refreshControl?.addTarget(self, action: #selector(populateTableHandler), for: UIControlEvents.valueChanged)
-        gamersTableView.addSubview(refreshControl!)
-        
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         delegate?.changeTitle(to: "Gamers")
     }
     
-    func populateTableHandler () {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         fetchpost()
-        gamersTableView.reloadData()
-        refreshControl?.endRefreshing()
+
     }
     
-    func fetchpost(){
+    func fetchpost () {
         
         databaseRef = Database.database().reference()
+        
         databaseRef.child("users").observe(.childAdded, with: { (snapshot) in
-            
             guard let myGamers = snapshot.value as? [String: Any]
                 else {return}
             
             if
                 let userName = myGamers["user_name"] as? String,
+                let userEmail = myGamers["email"] as? String,
                 let userProfileImageURL = myGamers["user_image_url"] as? String,
-                let userLocationBased = myGamers["user_location_"] as? String,
+                let userLocationBased = myGamers["user_location_based"] as? String,
                 let userDescription = myGamers["user_bio_desc"] as? String,
                 
                 let userTwitchURL = myGamers["user_twitch_url"] as? String,
@@ -87,15 +76,14 @@ class GamersViewController: UIViewController {
                 
                 
                 DispatchQueue.main.async {
-                    let gamersPost = Gamers(userNameInput: userName, userNameProfileImageURLInput: userProfileImageURL, userLocationBasedInput: userLocationBased, userDescriptionInput: userDescription, userTwitchURLInput: userTwitchURL, userYoutubeURLInput: userYoutubeURL, userFacebookURLInput: userFacebookURL, userOtherURLInput: userOtherURL, userGameChoice1Input: userGameChoice1, userGameChoice1LevelInput: userGameChoice1Level, userGameChoice2Input: userGameChoice2, userGameChoice2LevelInput: userGameChoice2Level, userGameChoice3Input: userGameChoice3, userGameChoice3LevelInput: userGameChoice3Level)
+                    
+                    let gamersPost = Gamers(userNameInput: userName, userEmailInput: userEmail, userProfileImageURLInput: userProfileImageURL, userLocationBasedInput: userLocationBased, userDescriptionInput: userDescription, userTwitchURLInput: userTwitchURL, userYoutubeURLInput: userYoutubeURL, userFacebookURLInput: userFacebookURL, userOtherURLInput: userOtherURL, userGameChoice1Input: userGameChoice1, userGameChoice1LevelInput: userGameChoice1Level, userGameChoice2Input: userGameChoice2, userGameChoice2LevelInput: userGameChoice2Level, userGameChoice3Input: userGameChoice3, userGameChoice3LevelInput: userGameChoice3Level)
                     
                     self.gamersProfiles.append(gamersPost)
                     self.gamersTableView.reloadData()
                 }
-                
             }
-            
-        })
+        }, withCancel: nil)
         
     }
     
@@ -134,10 +122,8 @@ extension GamersViewController : UITableViewDataSource {
         if let profile_image_url = gamerSelected.userProfileImageURL {
             cell.profileImage.loadImage(from: profile_image_url)
         }
-        
         return cell
     }
-    
     
 }
 
