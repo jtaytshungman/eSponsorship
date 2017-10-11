@@ -27,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="224.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISe-Qk-rm5">
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISe-Qk-rm5">
                         <rect key="frame" x="10" y="10" width="355" height="200"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GameShip" translatesAutoresizingMaskIntoConstraints="NO" id="maA-kW-EDT">

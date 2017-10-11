@@ -13,6 +13,7 @@ import FirebaseDatabase
 
 class UserProfileViewController: UIViewController {
     
+    @IBOutlet weak var mainGameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var emailLbl: UILabel!
@@ -54,7 +55,7 @@ class UserProfileViewController: UIViewController {
         
         super.viewDidLoad()
         loadUserInfoHandler()
-        
+        mainGameLabel.layer.cornerRadius = 20
         profileImage.layer.borderWidth = 1
         profileImage.layer.masksToBounds = false
         profileImage.layer.borderColor = UIColor.black.cgColor
