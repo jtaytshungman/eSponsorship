@@ -362,7 +362,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="My User Profile" id="9hX-aN-2No"/>
                     <connections>
-                        <outlet property="backgroundImage" destination="8IH-XT-bUa" id="U36-BY-jVj"/>
                         <outlet property="descriptionLbl" destination="l6h-2d-pC1" id="ToQ-YD-TAu"/>
                         <outlet property="emailLbl" destination="0au-IX-cqm" id="5ta-Q7-OWB"/>
                         <outlet property="fbURLLbl" destination="eWh-tM-1gj" id="K8t-Yj-DQ3"/>
