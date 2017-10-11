@@ -32,7 +32,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GPx-hw-XUr">
-                                <rect key="frame" x="20" y="226.5" width="335" height="215"/>
+                                <rect key="frame" x="20" y="226" width="335" height="215"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOT-Ff-f1D">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
@@ -74,7 +74,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="4XC-ct-5Bo">
-                                <rect key="frame" x="80" y="461.5" width="221" height="29"/>
+                                <rect key="frame" x="80" y="461" width="221" height="29"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdZ-6h-ifB">
                                         <rect key="frame" x="0.0" y="0.0" width="149" height="29"/>
@@ -97,6 +97,9 @@
                                     <constraint firstItem="XdZ-6h-ifB" firstAttribute="height" secondItem="jhm-PO-1gy" secondAttribute="height" id="GeP-Kv-VU6"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameship_appicon" translatesAutoresizingMaskIntoConstraints="NO" id="hlJ-1b-20c">
+                                <rect key="frame" x="123" y="54" width="128" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -106,10 +109,14 @@
                             <constraint firstItem="4XC-ct-5Bo" firstAttribute="top" secondItem="GPx-hw-XUr" secondAttribute="bottom" constant="20" id="R8M-q2-21j"/>
                             <constraint firstItem="4XC-ct-5Bo" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" constant="80" id="S2I-Ix-Pgi"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="leading" secondItem="yPW-Jg-1OJ" secondAttribute="leading" constant="20" id="bY5-hg-LBy"/>
+                            <constraint firstItem="hlJ-1b-20c" firstAttribute="centerX" secondItem="GPx-hw-XUr" secondAttribute="centerX" id="dHi-Vn-bVZ"/>
                             <constraint firstItem="DMs-DI-xmW" firstAttribute="bottom" secondItem="nSc-a5-jmt" secondAttribute="bottom" id="gCc-iY-TaP"/>
                             <constraint firstItem="DMs-DI-xmW" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" id="jQJ-UA-Q3w"/>
+                            <constraint firstItem="GPx-hw-XUr" firstAttribute="top" secondItem="hlJ-1b-20c" secondAttribute="bottom" constant="44" id="mlY-Uw-trF"/>
+                            <constraint firstItem="hlJ-1b-20c" firstAttribute="top" secondItem="nSc-a5-jmt" secondAttribute="top" constant="34" id="ng4-PF-1kX"/>
                             <constraint firstItem="GPx-hw-XUr" firstAttribute="centerX" secondItem="yPW-Jg-1OJ" secondAttribute="centerX" id="t76-Mv-awZ"/>
                             <constraint firstItem="DMs-DI-xmW" firstAttribute="trailing" secondItem="nSc-a5-jmt" secondAttribute="trailing" id="uKw-kt-43z"/>
+                            <constraint firstItem="hlJ-1b-20c" firstAttribute="leading" secondItem="nSc-a5-jmt" secondAttribute="leading" constant="123" id="y6B-Cp-gl1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nSc-a5-jmt"/>
                     </view>
@@ -189,6 +196,9 @@
                                     <constraint firstItem="OS8-KT-dYP" firstAttribute="height" secondItem="6MZ-Nu-1oJ" secondAttribute="height" id="Ckc-yq-E39"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gameship_appicon" translatesAutoresizingMaskIntoConstraints="NO" id="wJP-5J-UUg">
+                                <rect key="frame" x="123" y="67" width="128" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -197,10 +207,13 @@
                             <constraint firstItem="NSg-Jg-HFf" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" constant="81" id="NEo-9O-MN6"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="centerX" secondItem="drN-Pp-mik" secondAttribute="centerX" id="VEq-fb-4x2"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="centerY" secondItem="drN-Pp-mik" secondAttribute="centerY" id="ZWY-eW-Z3i"/>
+                            <constraint firstItem="Ohl-1e-QkV" firstAttribute="trailing" secondItem="wJP-5J-UUg" secondAttribute="trailing" constant="124" id="ahr-bK-2GQ"/>
+                            <constraint firstItem="wJP-5J-UUg" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" constant="123" id="bvw-AL-r6l"/>
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="trailing" secondItem="Ohl-1e-QkV" secondAttribute="trailing" id="hNu-hd-gZw"/>
                             <constraint firstItem="9uN-Nf-abu" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" constant="20" id="lrA-LN-hUI"/>
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="top" secondItem="drN-Pp-mik" secondAttribute="top" id="qBx-Mi-qAT"/>
                             <constraint firstItem="NSg-Jg-HFf" firstAttribute="top" secondItem="9uN-Nf-abu" secondAttribute="bottom" constant="20" id="r81-iy-2yK"/>
+                            <constraint firstItem="9uN-Nf-abu" firstAttribute="top" secondItem="wJP-5J-UUg" secondAttribute="bottom" constant="59" id="v8n-tw-LvQ"/>
                             <constraint firstItem="C5D-PC-Wu1" firstAttribute="leading" secondItem="Ohl-1e-QkV" secondAttribute="leading" id="zDY-Jr-ffB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ohl-1e-QkV"/>
@@ -236,5 +249,6 @@
     </scenes>
     <resources>
         <image name="black_orange_gradient" width="1436" height="691"/>
+        <image name="gameship_appicon" width="310" height="309"/>
     </resources>
 </document>
