@@ -26,7 +26,6 @@ class TournamentsViewController: UIViewController {
     
     var databaseRef: DatabaseReference!
     var storageRef: StorageReference!
-    var databaseHandle : DatabaseHandle?
     
     @IBOutlet weak var tournamentsTableView: UITableView!{
         didSet{
@@ -64,7 +63,7 @@ class TournamentsViewController: UIViewController {
         
         databaseRef = Database.database().reference()
         
-        databaseHandle = databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
+        databaseRef.child("GameShip_Tournaments").observe(.childAdded, with: { (snapshot) in
             guard let mypost = snapshot.value as? [String: Any]
                 else {return}
             
@@ -101,7 +100,9 @@ class TournamentsViewController: UIViewController {
                         orgEmailInput: orgEmail,
                         orgAffInput: orgAff,
                         orgContactInput: orgContact,
+                        
                         tourImageURLInput : tourImageURL,
+                        
                         tourNameInput: tourName,
                         tourGameInput: tourGame,
                         tourLevelInput: tourLevel,
@@ -117,8 +118,12 @@ class TournamentsViewController: UIViewController {
                         tourLocStateInput: tourLocState,
                         tourLocCountryInput: tourLocCountry)
                     
-                    self.tournaments.append(newTournament)
-                    self.tournamentsTableView.reloadData()
+//                    self.tournaments.append(newTournament)
+                    self.tournaments.insert(newTournament, at: 0)
+//                    self.tournamentsTableView.reloadData()
+//                    let index = self.tournaments.count - 1
+                    let indexPath = IndexPath(row: 0, section: 0)
+                    self.tournamentsTableView.insertRows(at: [indexPath], with: .right)
                     
                 }
             }
@@ -146,6 +151,10 @@ extension TournamentsViewController : UITableViewDelegate,UITableViewDataSource 
         cell.subHeaderLabel.text = tournament.tourGame
         cell.dateLabel.text = converter.convertToDate(tournament.tourStartTime!)
         cell.locationLabel.text = tournament.tourLocName
+        
+        if let image_url = tournament.tourImageURL {
+            cell.imageHeader.loadImage(from: image_url)
+        }
         
         return cell
     }
