@@ -88,6 +88,7 @@
                     <constraint firstAttribute="bottom" secondItem="ISe-Qk-rm5" secondAttribute="bottom" constant="14.5" id="uMf-Ka-zEy"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgView" destination="ISe-Qk-rm5" id="H5O-dG-PVn"/>
